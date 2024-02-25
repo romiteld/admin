@@ -1,0 +1,935 @@
+<!-- BEGIN #top-menu -->
+		<div id="top-menu" class="app-top-menu" data-bs-theme="dark">
+			<!-- BEGIN menu -->
+			<div class="menu">
+				<div class="menu-item has-sub@@if (context.dashboardClass) { @@dashboardClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-sitemap"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">home</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="pulse-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="tv-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-screen-desktop"></i>}
+						</div>
+						<div class="menu-text">Dashboard</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.dashboardV1Class) { @@dashboardV1Class}">
+							<a href="index.html" class="menu-link"><div class="menu-text">Dashboard v1</div></a>
+						</div>
+						<div class="menu-item@@if (context.dashboardV2Class) { @@dashboardV2Class}">
+							<a href="index_v2.html" class="menu-link"><div class="menu-text">Dashboard v2</div></a>
+						</div>
+						<div class="menu-item@@if (context.dashboardV3Class) { @@dashboardV3Class}">
+							<a href="index_v3.html" class="menu-link"><div class="menu-text">Dashboard v3</div></a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.emailClass) { @@emailClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-hdd"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">inbox</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="mail-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="mail-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-drawer"></i>}
+						</div>
+						<div class="menu-text">Email</div>
+						<div class="menu-badge">10</div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.emailInboxClass) { @@emailInboxClass}">
+							<a href="email_inbox.html" class="menu-link">
+								<div class="menu-text">Inbox</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.emailComposeClass) { @@emailComposeClass}">
+							<a href="email_compose.html" class="menu-link">
+								<div class="menu-text">Compose</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.emailDetailClass) { @@emailDetailClass}">
+							<a href="email_detail.html" class="menu-link">
+								<div class="menu-text">Detail</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item@@if (context.widgetClass) { @@widgetClass}">
+					<a href="widget.html" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fab fa-simplybuilt"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">extension</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="nutrition-outline" class="bg-blue"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="hammer-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-puzzle"></i>}
+						</div>
+						<div class="menu-text">Widgets <span class="menu-label">NEW</span></div>
+					</a>
+				</div>
+				<div class="menu-item has-sub@@if (context.uiElementsClass) { @@uiElementsClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-gem"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">toys</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="color-filter-outline" class="bg-indigo"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="brush-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-layers"></i>}
+						</div>
+						<div class="menu-text">UI Elements <span class="menu-label">NEW</span></div> 
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.uiGeneralClass) { @@uiGeneralClass}">
+							<a href="ui_general.html" class="menu-link">
+								<div class="menu-text">General @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiTypographyClass) { @@uiTypographyClass}">
+							<a href="ui_typography.html" class="menu-link">
+								<div class="menu-text">Typography</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiTabsAccordionsClass) { @@uiTabsAccordionsClass}">
+							<a href="ui_tabs_accordions.html" class="menu-link">
+								<div class="menu-text">Tabs & Accordions</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiUnlimitedTabsClass) { @@uiUnlimitedTabsClass}">
+							<a href="ui_unlimited_tabs.html" class="menu-link">
+								<div class="menu-text">Unlimited Nav Tabs</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiModalNotificationClass) { @@uiModalNotificationClass}">
+							<a href="ui_modal_notification.html" class="menu-link">
+								<div class="menu-text">Modal & Notification @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiWidgetBoxesClass) { @@uiWidgetBoxesClass}">
+							<a href="ui_widget_boxes.html" class="menu-link">
+								<div class="menu-text">Widget Boxes</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiMediaObjectClass) { @@uiMediaObjectClass}">
+							<a href="ui_media_object.html" class="menu-link">
+								<div class="menu-text">Media Object</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiButtonsClass) { @@uiButtonsClass}">
+							<a href="ui_buttons.html" class="menu-link">
+								<div class="menu-text">Buttons @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiIconFontawesomeClass) { @@uiIconFontawesomeClass}">
+							<a href="ui_icon_fontawesome.html" class="menu-link">
+								<div class="menu-text">FontAwesome</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiIconBootstrapClass) { @@uiIconBootstrapClass}">
+							<a href="ui_icon_bootstrap.html" class="menu-link">
+								<div class="menu-text">Bootstrap Icons @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiIconDuotoneClass) { @@uiIconDuotoneClass}">
+							<a href="ui_icon_duotone.html" class="menu-link">
+								<div class="menu-text">Duotone Icons @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiIconSimpleLineIconsClass) { @@uiIconSimpleLineIconsClass}">
+							<a href="ui_icon_simple_line_icons.html" class="menu-link">
+								<div class="menu-text">Simple Line Icons</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiIconIoniconsClass) { @@uiIconIoniconsClass}">
+							<a href="ui_icon_ionicons.html" class="menu-link">
+								<div class="menu-text">Ionicons</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiTreeViewClass) { @@uiTreeViewClass}">
+							<a href="ui_tree.html" class="menu-link">
+								<div class="menu-text">Tree View</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiLanguageBarIconClass) { @@uiLanguageBarIconClass}">
+							<a href="ui_language_bar_icon.html" class="menu-link">
+								<div class="menu-text">Language Bar & Icon</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiSocialButtonsClass) { @@uiSocialButtonsClass}">
+							<a href="ui_social_buttons.html" class="menu-link">
+								<div class="menu-text">Social Buttons</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiIntroJsClass) { @@uiIntroJsClass}">
+							<a href="ui_tour.html" class="menu-link">
+								<div class="menu-text">Intro JS</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.uiOffcanvasToastsClass) { @@uiOffcanvasToastsClass}">
+							<a href="ui_offcanvas_toasts.html" class="menu-link">
+								<div class="menu-text">Offcanvas & Toasts @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item @@if (context.bootstrap5Class) { @@bootstrap5Class}">
+					<a href="bootstrap_5.html" class="menu-link">
+						<div class="menu-icon-img">
+							<img src="../assets/img/logo/logo-bs5.png" alt="" />
+						</div>
+						<div class="menu-text">Bootstrap 5 <span class="menu-label">NEW</span></div> 
+					</a>
+				</div>
+				<div class="menu-item has-sub@@if (context.formStuffClass) { @@formStuffClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-list-ol"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">insert_drive_file</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="briefcase-outline" class="bg-gradient-purple-indigo"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="document-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-docs"></i>}
+						</div>
+						<div class="menu-text">Form Stuff <span class="menu-label">NEW</span></div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.formElementsClass) { @@formElementsClass}">
+							<a href="form_elements.html" class="menu-link">
+								<div class="menu-text">Form Elements @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formPluginsClass) { @@formPluginsClass}">
+							<a href="form_plugins.html" class="menu-link">
+								<div class="menu-text">Form Plugins @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formSliderSwitcherClass) { @@formSliderSwitcherClass}">
+							<a href="form_slider_switcher.html" class="menu-link">
+								<div class="menu-text">Form Slider + Switcher</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formValidationClass) { @@formValidationClass}">
+							<a href="form_validation.html" class="menu-link">
+								<div class="menu-text">Form Validation</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formWizardsClass) { @@formWizardsClass}">
+							<a href="form_wizards.html" class="menu-link">
+								<div class="menu-text">Wizards @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formWysiwygClass) { @@formWysiwygClass}">
+							<a href="form_wysiwyg.html" class="menu-link">
+								<div class="menu-text">WYSIWYG</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formEditableClass) { @@formEditableClass}">
+							<a href="form_editable.html" class="menu-link">
+								<div class="menu-text">X-Editable</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formMultipleUploadClass) { @@formMultipleUploadClass}">
+							<a href="form_multiple_upload.html" class="menu-link">
+								<div class="menu-text">Multiple File Upload</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formSummernoteClass) { @@formSummernoteClass}">
+							<a href="form_summernote.html" class="menu-link">
+								<div class="menu-text">Summernote</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.formDropzoneClass) { @@formDropzoneClass}">
+							<a href="form_dropzone.html" class="menu-link">
+								<div class="menu-text">Dropzone</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.tablesClass) { @@tablesClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-table"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">grid_on</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="grid-outline" class="bg-green"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="grid-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-grid"></i>}
+						</div>
+						<div class="menu-text">Tables</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.tableBasicClass) { @@tableBasicClass}">
+							<a href="table_basic.html" class="menu-link">
+								<div class="menu-text">Basic Tables</div>
+							</a>
+						</div>
+						<div class="menu-item has-sub@@if (context.tableManagedClass) { @@tableManagedClass}">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-text">Managed Tables</div>
+								<div class="menu-caret"></div>
+							</a>
+							<div class="menu-submenu">
+								<div class="menu-item@@if (context.tableManageClass) { @@tableManageClass}">
+									<a href="table_manage.html" class="menu-link">
+										<div class="menu-text">Default</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageButtonsClass) { @@tableManageButtonsClass}">
+									<a href="table_manage_buttons.html" class="menu-link">
+										<div class="menu-text">Buttons</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageColreorderClass) { @@tableManageColreorderClass}">
+									<a href="table_manage_colreorder.html" class="menu-link">
+										<div class="menu-text">ColReorder</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageFixedColumnsClass) { @@tableManageFixedColumnsClass}">
+									<a href="table_manage_fixed_columns.html" class="menu-link">
+										<div class="menu-text">Fixed Column</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageFixedHeaderClass) { @@tableManageFixedHeaderClass}">
+									<a href="table_manage_fixed_header.html" class="menu-link">
+										<div class="menu-text">Fixed Header</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageKeytableClass) { @@tableManageKeytableClass}">
+									<a href="table_manage_keytable.html" class="menu-link">
+										<div class="menu-text">KeyTable</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageResponsiveClass) { @@tableManageResponsiveClass}">
+									<a href="table_manage_responsive.html" class="menu-link">
+										<div class="menu-text">Responsive</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageRowreorderClass) { @@tableManageRowreorderClass}">
+									<a href="table_manage_rowreorder.html" class="menu-link">
+										<div class="menu-text">RowReorder</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageScrollerClass) { @@tableManageScrollerClass}">
+									<a href="table_manage_scroller.html" class="menu-link">
+										<div class="menu-text">Scroller</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageSelectClass) { @@tableManageSelectClass}">
+									<a href="table_manage_select.html" class="menu-link">
+										<div class="menu-text">Select</div>
+									</a>
+								</div>
+								<div class="menu-item@@if (context.tableManageCombineClass) { @@tableManageCombineClass}">
+									<a href="table_manage_combine.html" class="menu-link">
+										<div class="menu-text">Extension Combination</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.posSystemClass) { @@posSystemClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-cash-register"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">store</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="logo-apple-appstore" class="bg-lime text-black"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="logo-apple-appstore"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-bag"></i>}
+						</div>
+						<div class="menu-text">POS System <span class="menu-label">NEW</span></div> 
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item">
+							<a href="pos_customer_order.html" target="_blank" class="menu-link">
+								<div class="menu-text">Customer Order</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="pos_kitchen_order.html" target="_blank" class="menu-link">
+								<div class="menu-text">Kitchen Order</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="pos_counter_checkout.html" target="_blank" class="menu-link">
+								<div class="menu-text">Counter Checkout</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="pos_table_booking.html" target="_blank" class="menu-link">
+								<div class="menu-text">Table Booking</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="pos_menu_stock.html" target="_blank" class="menu-link">
+								<div class="menu-text">Menu Stock</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-star"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">polymer</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="infinite-outline" class="bg-gradient-cyan-blue"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="ice-cream-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-cup"></i>}
+						</div>
+						<div class="menu-text">Front End <span class="menu-label">NEW</span></div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item">
+							<a href="../../../frontend/template/template_one_page_parallax/index.html" target="_blank" class="menu-link">
+								<div class="menu-text">One Page Parallax</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../../../frontend/template/template_blog/index.html" target="_blank" class="menu-link">
+								<div class="menu-text">Blog</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../../../frontend/template/template_forum/index.html" target="_blank" class="menu-link">
+								<div class="menu-text">Forum</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../../../frontend/template/template_e_commerce/index.html" target="_blank" class="menu-link">
+								<div class="menu-text">E-Commerce</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../../../frontend/template/template_corporate/index.html" target="_blank" class="menu-link">
+								<div class="menu-text">Corporate @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-envelope"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">email</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="archive-outline" class="bg-gradient-cyan-indigo"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="briefcase-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-envelope"></i>}
+						</div>
+						<div class="menu-text">Email Template</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item">
+							<a href="email_system.html" class="menu-link">
+								<div class="menu-text">System Template</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="email_newsletter.html" class="menu-link">
+								<div class="menu-text">Newsletter Template</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.chartClass) { @@chartClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-chart-pie"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">insert_chart</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="podium-outline" class="bg-gradient-yellow-red"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="pie-chart-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-chart"></i>}
+						</div>
+						<div class="menu-text">Chart</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.chartFlotClass) { @@chartFlotClass}">
+							<a href="chart-flot.html" class="menu-link">
+								<div class="menu-text">Flot Chart</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.chartJsClass) { @@chartJsClass}">
+							<a href="chart-js.html" class="menu-link">
+								<div class="menu-text">Chart JS</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.chartD3Class) { @@chartD3Class}">
+							<a href="chart-d3.html" class="menu-link">
+								<div class="menu-text">d3 Chart</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.chartApexClass) { @@chartApexClass}">
+							<a href="chart-apex.html" class="menu-link">
+								<div class="menu-text">Apex Chart</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item@@if (context.calendarClass) { @@calendarClass}">
+					<a href="calendar.html" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-calendar"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">date_range</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="calendar-outline" class="bg-pink"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="calendar-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-calendar"></i>} 
+						</div>
+						<div class="menu-text">Calendar</div>
+					</a>
+				</div>
+				<div class="menu-item has-sub@@if (context.mapClass) { @@mapClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-map"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">place</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="map-outline" class="bg-pink"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="map-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-map"></i>}
+						</div>
+						<div class="menu-text">Map</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.mapVectorClass) { @@mapVectorClass}">
+							<a href="map_vector.html" class="menu-link">
+								<div class="menu-text">Vector Map</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.mapGoogleClass) { @@mapGoogleClass}">
+							<a href="map_google.html" class="menu-link">
+								<div class="menu-text">Google Map</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.galleryClass) { @@galleryClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-image"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">camera</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="images-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="images-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-picture"></i>}
+						</div>
+						<div class="menu-text">Gallery</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.galleryV1Class) { @@galleryV1Class}">
+							<a href="gallery.html" class="menu-link">
+								<div class="menu-text">Gallery v1</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.galleryV2Class) { @@galleryV2Class}">
+							<a href="gallery_v2.html" class="menu-link">
+								<div class="menu-text">Gallery v2</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.pageOptionsClass) { @@pageOptionsClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-cogs"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">settings</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="cog-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="settings-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-settings"></i>}
+						</div>
+						<div class="menu-text">Page Options <span class="menu-label">NEW</span></div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.pageBlankClass) { @@pageBlankClass}">
+							<a href="page_blank.html" class="menu-link">
+								<div class="menu-text">Blank Page</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithFooterClass) { @@pageWithFooterClass}">
+							<a href="page_with_footer.html" class="menu-link">
+								<div class="menu-text">Page with Footer</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithFixedFooterClass) { @@pageWithFixedFooterClass}">
+							<a href="page_with_fixed_footer.html" class="menu-link">
+								<div class="menu-text">Page with Fixed Footer @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithoutSidebarClass) { @@pageWithoutSidebarClass}">
+							<a href="page_without_sidebar.html" class="menu-link">
+								<div class="menu-text">Page without Sidebar</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithRightSidebarClass) { @@pageWithRightSidebarClass}">
+							<a href="page_with_right_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Right Sidebar</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithMinifiedSidebarClass) { @@pageWithMinifiedSidebarClass}">
+							<a href="page_with_minified_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Minified Sidebar</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithTwoSidebarClass) { @@pageWithTwoSidebarClass}">
+							<a href="page_with_two_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Two Sidebar</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithLineIconsClass) { @@pageWithLineIconsClass}">
+							<a href="page_with_line_icons.html" class="menu-link">
+								<div class="menu-text">Page with Line Icons</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithIoniconsClass) { @@pageWithIoniconsClass}">
+							<a href="page_with_ionicons.html" class="menu-link">
+								<div class="menu-text">Page with Ionicons</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageFullHeightClass) { @@pageFullHeightClass}">
+							<a href="page_full_height.html" class="menu-link">
+								<div class="menu-text">Full Height Content</div>
+							</a>
+						</div>@@if (context.theme == 'material' || context.theme == 'google'){
+						<div class="menu-item@@if (context.pageWithSmallSidebarClass) { @@pageWithSmallSidebarClass}">
+							<a href="page_with_small_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Small Sidebar</div>
+							</a>
+						</div>}@@if (context.theme != 'material' && context.theme != 'google'){
+						<div class="menu-item@@if (context.pageWithWideSidebarClass) { @@pageWithWideSidebarClass}">
+							<a href="page_with_wide_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Wide Sidebar</div>
+							</a>
+						</div>}@@if (context.theme != 'transparent' && context.theme != 'facebook'  && context.theme != 'google'){
+						<div class="menu-item@@if (context.pageWithLightSidebarClass) { @@pageWithLightSidebarClass}">
+							<a href="page_with_light_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Light Sidebar</div>
+							</a>
+						</div>}@@if (context.theme == 'google'){
+						<div class="menu-item@@if (context.pageWithDarkSidebarClass) { @@pageWithDarkSidebarClass}">
+							<a href="page_with_dark_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Dark Sidebar</div>
+							</a>
+						</div>}
+						<div class="menu-item@@if (context.pageWithMegaMenuClass) { @@pageWithMegaMenuClass}">
+							<a href="page_with_mega_menu.html" class="menu-link">
+								<div class="menu-text">Page with Mega Menu</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithTopMenuClass) { @@pageWithTopMenuClass}">
+							<a href="page_with_top_menu.html" class="menu-link">
+								<div class="menu-text">Page with Top Menu</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithBoxedLayoutClass) { @@pageWithBoxedLayoutClass}">
+							<a href="page_with_boxed_layout.html" class="menu-link">
+								<div class="menu-text">Page with Boxed Layout</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithMixedMenuClass) { @@pageWithMixedMenuClass}">
+							<a href="page_with_mixed_menu.html" class="menu-link">
+								<div class="menu-text">Page with Mixed Menu</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageBoxedLayoutWithMixedMenuClass) { @@pageBoxedLayoutWithMixedMenuClass}">
+							<a href="page_boxed_layout_with_mixed_menu.html" class="menu-link">
+								<div class="menu-text">Boxed Layout with Mixed Menu</div>
+							</a>
+						</div>@@if (context.theme != 'transparent' && context.theme != 'facebook'){
+						<div class="menu-item@@if (context.pageWithTransparentSidebarClass) { @@pageWithTransparentSidebarClass}">
+							<a href="page_with_transparent_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Transparent Sidebar</div>
+							</a>
+						</div>}
+						<div class="menu-item@@if (context.pageWithSearchSidebarClass) { @@pageWithSearchSidebarClass}">
+							<a href="page_with_search_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Search Sidebar @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.pageWithHoverSidebarClass) { @@pageWithHoverSidebarClass}">
+							<a href="page_with_hover_sidebar.html" class="menu-link">
+								<div class="menu-text">Page with Hover Sidebar @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.extraClass) { @@extraClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-gift"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">card_giftcard</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="heart-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="star-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-rocket"></i>}
+						</div>
+						<div class="menu-text">Extra <span class="menu-label">NEW</span></div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if(context.extraTimelineClass) { @@extraTimelineClass}">
+							<a href="extra_timeline.html" class="menu-link">
+								<div class="menu-text">Timeline</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraComingSoonClass) { @@extraComingSoonClass}">
+							<a href="extra_coming_soon.html" class="menu-link">
+								<div class="menu-text">Coming Soon Page</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraSearchResultsClass) { @@extraSearchResultsClass}">
+							<a href="extra_search_results.html" class="menu-link">
+								<div class="menu-text">Search Results</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraInvoiceClass) { @@extraInvoiceClass}">
+							<a href="extra_invoice.html" class="menu-link">
+								<div class="menu-text">Invoice</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extra404ErrorClass) { @@extra404ErrorClass}">
+							<a href="extra_404_error.html" class="menu-link">
+								<div class="menu-text">404 Error Page</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraProfileClass) { @@extraProfileClass}">
+							<a href="extra_profile.html" class="menu-link">
+								<div class="menu-text">Profile Page</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraScrumBoardClass) { @@extraScrumBoardClass}">
+							<a href="extra_scrum_board.html" class="menu-link">
+								<div class="menu-text">Scrum Board @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraCookieAcceptanceBannerClass) { @@extraCookieAcceptanceBannerClass}">
+							<a href="extra_cookie_acceptance_banner.html" class="menu-link">
+								<div class="menu-text">Cookie Acceptance Banner @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraOrdersClass) { @@extraOrdersClass}">
+							<a href="extra_orders.html" class="menu-link">
+								<div class="menu-text">Orders @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraOrderDetailsClass) { @@extraOrderDetailsClass}">
+							<a href="extra_order_details.html" class="menu-link">
+								<div class="menu-text">Order Details @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraProductsClass) { @@extraProductsClass}">
+							<a href="extra_products.html" class="menu-link">
+								<div class="menu-text">Products @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item@@if(context.extraProductDetailsClass) { @@extraProductDetailsClass}">
+							<a href="extra_product_details.html" class="menu-link">
+								<div class="menu-text">Product Details @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.loginRegisterClass) { @@loginRegisterClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-key"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">lock</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="lock-closed-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="person-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-login"></i>}
+						</div>
+						<div class="menu-text">Login & Register</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.loginClass) { @@loginClass}">
+							<a href="login.html" class="menu-link">
+								<div class="menu-text">Login</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.loginV2Class) { @@loginV2Class}">
+							<a href="login_v2.html" class="menu-link">
+								<div class="menu-text">Login v2</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.loginV3Class) { @@loginV3Class}">
+							<a href="login_v3.html" class="menu-link">
+								<div class="menu-text">Login v3</div>
+							</a>
+						</div>
+						<div class="menu-item@@if (context.registerV3Class) { @@registerV3Class}">
+							<a href="register_v3.html" class="menu-link">
+								<div class="menu-text">Register v3</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-cubes"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">apps</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="flower-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="cube-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-diamond"></i>}
+						</div>
+						<div class="menu-text">Version <span class="menu-label">NEW</span></div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item">
+							<a href="../template_html/index_v3.html" class="menu-link">
+								<div class="menu-text">HTML</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_ajax/" class="menu-link">
+								<div class="menu-text">AJAX</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_angularjs/" class="menu-link">
+								<div class="menu-text">ANGULAR JS</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_angularjs17/" class="menu-link">
+								<div class="menu-text">ANGULAR JS 17</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:alert('Laravel 10 Version only available in downloaded version.');" class="menu-link">
+								<div class="menu-text">LARAVEL 10</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_vuejs/" class="menu-link">
+								<div class="menu-text">VUE 3 + Vite JS</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_react/" class="menu-link">
+								<div class="menu-text">REACT 18</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:alert('.NET Core 7.0 MVC Version only available in downloaded version.');" class="menu-link">
+								<div class="menu-text">ASP.NET @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_material/index_v3.html" class="menu-link">
+								<div class="menu-text">MATERIAL DESIGN</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_apple/index_v3.html" class="menu-link">
+								<div class="menu-text">APPLE DESIGN</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_transparent/index_v3.html" class="menu-link">
+								<div class="menu-text">TRANSPARENT DESIGN @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_facebook/index_v3.html" class="menu-link">
+								<div class="menu-text">FACEBOOK DESIGN @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="../template_google/index_v3.html" class="menu-link">
+								<div class="menu-text">GOOGLE DESIGN @@if (!context.icon) {<i class="fa fa-paper-plane text-theme"></i>}@@if (context.icon == 'ionicons') {<ion-icon name="paper-plane-outline" class="text-theme"></ion-icon>}@@if (context.icon == 'lineicons') {<i class="icon-paper-plane text-theme"></i>}</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub@@if (context.helperClass) { @@helperClass}">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-medkit"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">help</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="medkit-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="medkit-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-key"></i>}
+						</div>
+						<div class="menu-text">Helper</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item@@if (context.helperCssClass) { @@helperCssClass}">
+							<a href="helper_css.html" class="menu-link">
+								<div class="menu-text">Predefined CSS Classes</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item has-sub">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon">
+							@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+							{<i class="fa fa-align-left"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+							{<i class="material-icons">list</i>}@@if (!context.icon && context.theme == 'apple')
+							{<ion-icon name="list-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+							{<ion-icon name="git-branch-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+							{<i class="icon-list"></i>}
+						</div>
+						<div class="menu-text">Menu Level</div>
+						<div class="menu-caret"></div>
+					</a>
+					<div class="menu-submenu">
+						<div class="menu-item has-sub">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-text">Menu 1.1</div>
+								<div class="menu-caret"></div>
+							</a>
+							<div class="menu-submenu">
+								<div class="menu-item has-sub">
+									<a href="javascript:;" class="menu-link">
+										<div class="menu-text">Menu 2.1</div>
+										<div class="menu-caret"></div>
+									</a>
+									<div class="menu-submenu">
+										<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 3.1</div></a></div>
+										<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 3.2</div></a></div>
+									</div>
+								</div>
+								<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 2.2</div></a></div>
+								<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 2.3</div></a></div>
+							</div>
+						</div>
+						<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 1.2</div></a></div>
+						<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 1.3</div></a></div>
+					</div>
+				</div>
+				<div class="menu-item menu-control menu-control-start">
+					<a href="javascript:;" class="menu-link" data-toggle="app-top-menu-prev"><i class="fa fa-angle-left"></i></a>
+				</div>
+				<div class="menu-item menu-control menu-control-end">
+					<a href="javascript:;" class="menu-link" data-toggle="app-top-menu-next"><i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>
+			<!-- END menu -->
+		</div>
+		<!-- END #top-menu -->
+		

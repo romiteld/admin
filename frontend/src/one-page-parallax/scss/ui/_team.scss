@@ -1,0 +1,59 @@
+.team {
+	text-align: center;
+	padding: 0 rem(30px);
+	
+	@include media-breakpoint-down(lg) {
+		padding: rem(30px) 0;
+	}
+	
+	& .image {
+		display: inline-block;
+		overflow: hidden;
+		margin-bottom: rem(15px);
+		border-radius: $border-radius-lg * 20;
+		
+		& img {
+			border-radius: $border-radius-lg * 20;
+		}
+	}
+	& .info {
+		& .name {
+			margin-bottom: rem(5px);
+		}
+		& .title {
+			font-weight: 600;
+			font-size: rem(12px);
+			margin-bottom: rem(15px);
+		}
+		& p {
+			margin-bottom: rem(15px);
+			font-size: $font-size-sm;
+		}
+	}
+	& .social {
+		& a {
+			display: inline-block;
+			border: 1px solid $gray-300;
+			color: $gray-500;
+			text-decoration: none;
+			width: rem(40px);
+			height: rem(40px);
+			line-height: rem(30px);
+			padding: rem(5px);
+			border-radius: $border-radius-lg * 10;
+			
+			& + a {
+				@if $enable-rtl {
+					margin-right: rem(5px);
+				} @else {
+					margin-left: rem(5px);
+				}
+			}
+			&:hover,
+			&:focus {
+				border-color: $gray-400;
+				color: $gray-600;
+			}
+		}
+	}
+}

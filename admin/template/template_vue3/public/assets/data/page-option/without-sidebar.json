@@ -1,0 +1,15 @@
+<script>
+import { useAppOptionStore } from '@/stores/app-option';
+
+const appOption = useAppOptionStore();
+
+export default {
+  mounted() {
+    appOption.appSidebarHide = true;
+  },
+  beforeRouteLeave (to, from, next) {
+    appOption.appSidebarHide = false;
+    next();
+  }
+}
+</script>

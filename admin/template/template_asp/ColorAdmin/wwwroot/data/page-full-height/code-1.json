@@ -1,0 +1,4 @@
+@{
+  ViewData["AppClass"] = "app-content-full-height";
+  ViewData["AppContentClass"] = "p-0";
+}

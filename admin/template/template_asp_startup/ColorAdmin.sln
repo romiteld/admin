@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorAdmin", "ColorAdmin\ColorAdmin.csproj", "{3AC5ABFE-E06F-447D-B28F-BEC7192EA47D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AC5ABFE-E06F-447D-B28F-BEC7192EA47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC5ABFE-E06F-447D-B28F-BEC7192EA47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC5ABFE-E06F-447D-B28F-BEC7192EA47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC5ABFE-E06F-447D-B28F-BEC7192EA47D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16AA98D9-F052-4308-BDA5-5BED0BAD692A}
+	EndGlobalSection
+EndGlobal

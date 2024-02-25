@@ -1,0 +1,494 @@
+<!-- BEGIN breadcrumb -->
+<ol class="breadcrumb float-xl-end">
+	<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+	<li class="breadcrumb-item"><a href="javascript:;">UI Elements</a></li>
+	<li class="breadcrumb-item active">Widget Boxes</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Widget Boxes <small>header small text goes here...</small></h1>
+<!-- END page-header -->
+
+<!-- BEGIN row -->
+<div class="row mb-3">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Panel (Default)">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code1"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel noButton="true">
+			<ng-container header>
+				<h4 class="panel-title">Panel Header with Dropdown</h4>
+				<div class="btn-group my-n1">
+					<button type="button" class="btn btn-success btn-xs">Action</button>
+					<button type="button" class="btn btn-success btn-xs dropdown-toggle" data-bs-toggle="dropdown"><b class="caret"></b></button>
+					<div class="dropdown-menu dropdown-menu-end">
+						<a href="javascript:;" class="dropdown-item">Action</a>
+						<a href="javascript:;" class="dropdown-item">Another action</a>
+						<a href="javascript:;" class="dropdown-item">Something else here</a>
+						<div class="dropdown-divider"></div>
+						<a href="javascript:;" class="dropdown-item">Separated link</a>
+					</div>
+				</div>
+			</ng-container>
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code2"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel noButton="true">
+			<ng-container header>
+				<h4 class="panel-title">Panel Header with Radio Button</h4>
+				<div class="btn-group btn-group-toggle my-n1" data-toggle="buttons">
+					<input type="radio" name="options" class="btn-check" id="option1" autocomplete="off" checked />
+					<label class="btn btn-success btn-xs" for="option1"> Option 1</label>
+					
+					<input type="radio" name="options" class="btn-check" id="option2" autocomplete="off" />
+					<label class="btn btn-success btn-xs" for="option2"> Option 2</label>
+				</div>
+			</ng-container>
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code3"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel noButton="true">
+			<ng-container header>
+				<h4 class="panel-title">Panel Header with Progress Bar</h4>
+				<div class="progress h-10px bg-gray-700 w-150px">
+					<div class="progress-bar progress-bar-striped bg-success progress-bar-animated fw-bold" style="width: 40%">40%</div>
+				</div>
+			</ng-container>
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code4"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel>
+			<ng-container header>
+				<h4 class="panel-title">Panel Header with Badge <span class="badge bg-success ms-1">NEW</span> </h4>
+			</ng-container>
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code5"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel with Alert Box" bodyClass="p-0">
+			<div class="alert alert-success alert-dismissible fade show rounded-0 mb-0">
+				<div class="d-flex">
+					<i class="fa fa-check fa-2x me-1"></i>
+					<div class="mb-0 ps-2">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac posuere lacus, quis suscipit sem. Nulla sagittis aliquam erat non convallis.
+					</div>
+				</div>
+				<button type="button" class="btn-close ms-3" data-bs-dismiss="alert"></button>
+			</div>
+			<div class="panel-body">
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code6"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel panelClass="panel-hover-icon" title="Hover View Icon">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code7"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel with Scrollbar">
+			<div>
+				<ng-scrollbar style="height: 280px">
+					<p>
+						<span class="fa-stack fa-4x float-start me-10px text-dark">
+							<i class="fab fa-twitter fa-stack-1x"></i>
+						</span>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim arcu. 
+						Ut posuere in ligula quis ultricies. In in justo turpis. Donec ut dui at massa gravida 
+						interdum nec vitae justo. Quisque ullamcorper vehicula dictum. Nullam hendrerit interdum eleifend. 
+						Aenean luctus sed arcu laoreet scelerisque. Vivamus non ullamcorper mauris, id sagittis lorem. 
+						Proin tincidunt mauris et dolor mattis imperdiet. Sed facilisis mattis diam elementum adipiscing. 
+					</p>
+					<p>
+						<span class="fa-stack fa-4x float-end ms-10px text-dark">
+							<i class="fab fa-google-plus fa-stack-1x"></i>
+						</span>
+						Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+						Ut ante velit, pretium non nisi a, egestas placerat diam. Nullam aliquet iaculis ultricies. 
+						Aliquam volutpat, sapien quis volutpat elementum, ligula purus auctor diam, at vestibulum nulla augue 
+						vel purus. Praesent ac nisl a magna tincidunt interdum sed in turpis. Maecenas nec condimentum risus. 
+						In congue pretium est, eget euismod tortor ornare quis.
+					</p>
+					<p>
+						<span class="fa-stack fa-4x float-start me-10px text-dark">
+							<i class="fab fa-facebook fa-stack-1x"></i>
+						</span>
+						Praesent eu ultrices justo. Vestibulum ante 
+						ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
+						Cras mattis ipsum quis sapien consectetur fringilla. 
+						Etiam sagittis sem tempus purus elementum, vitae pretium sapien porta. Curabitur iaculis ante ut aliquam luctus. 
+						Vivamus ullamcorper blandit imperdiet. Ut egestas, orci id rhoncus cursus, orci risus scelerisque enim, eget mattis eros lacus quis ligula. 
+						Vivamus ullamcorper urna eget hendrerit laoreet.
+					</p>
+					<p>
+						<span class="fa-stack fa-4x float-end ms-10px text-dark">
+							<i class="fab fa-apple fa-stack-1x"></i>
+						</span>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+						Morbi accumsan velit dolor. Donec convallis eleifend magna, at euismod tellus convallis a. 
+						Curabitur in nisi dolor. Cras viverra scelerisque orci, sed interdum ligula volutpat non. 
+						Nunc eu enim ac neque tempor feugiat. Duis posuere lacus non magna eleifend, 
+						non dictum sem feugiat. Duis eleifend condimentum pulvinar.
+					</p>
+				</ng-scrollbar>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code8"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel with Toolbar & Footer" bodyClass="p-0">
+			<div class="panel-toolbar">
+				<div class="btn-group me-5px">
+					<a class="btn btn-white" href="javascript:;"><i class="fa fa-bold"></i></a>
+					<a class="btn btn-white active" href="javascript:;"><i class="fa fa-italic"></i></a>
+					<a class="btn btn-white" href="javascript:;"><i class="fa fa-underline"></i></a>
+				</div>
+				<div class="btn-group">
+					<a class="btn btn-white" href="javascript:;"><i class="fa fa-align-left"></i></a>
+					<a class="btn btn-white active" href="javascript:;"><i class="fa fa-align-center"></i></a>
+					<a class="btn btn-white" href="javascript:;"><i class="fa fa-align-right"></i></a>
+					<a class="btn btn-white" href="javascript:;"><i class="fa fa-align-justify"></i></a>
+				</div>
+			</div>
+			<textarea class="form-control no-rounded-pill border-1 border-start-0 border-end-0 border-bottom-0 rounded-0 bg-gray-100" rows="5">This is a form textarea.</textarea>
+			<div class="panel-footer text-end">
+				<a href="javascript:;" class="btn btn-white btn-sm">Cancel</a>
+				<a href="javascript:;" class="btn btn-primary btn-sm ms-5px">Action</a>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code9"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel panelClass="panel-with-tabs" noButton="true" variant="default">
+			<ng-container header>
+				<h4 class="panel-title">Panel with Tabs</h4>
+				<ul class="nav nav-tabs">
+					<li class="nav-item"><a href="#home" data-bs-toggle="tab" class="nav-link active"><i class="fa fa-home"></i> <span class="d-none d-md-inline">Home</span></a></li>
+					<li class="nav-item"><a href="#profile" data-bs-toggle="tab" class="nav-link"><i class="fa fa-user"></i> <span class="d-none d-md-inline">Profile</span></a></li>
+				</ul>
+			</ng-container>
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="home">
+					<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+				</div>
+				<div class="tab-pane fade" id="profile">
+					<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+				</div>
+			</div>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code10"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->
+
+<h3 class="mb-20px">Panel Theme</h3>
+<p class="mb-20px">
+	You can customize the panel header <code>background</code> & <code>text color</code> by adding predefined CSS class. E.g <code>.bg-gray-900</code>. Full list of available predefined background class can be found <a href="helper_css.html">here</a>.
+</p>
+
+<!-- BEGIN row -->
+<div class="row mb-3">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Panel (Default)" panelClass="panel-default">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code11"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel Success" headerClass="bg-teal-700 text-white">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code12"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel Warning" headerClass="bg-orange-700 text-white">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code13"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel Danger" headerClass="bg-red-700 text-white">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code14"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Panel Inverse">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code15"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel Primary" headerClass="bg-blue-700">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code16"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Panel Info" headerClass="bg-cyan-700">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code17"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->
+
+<h3>Full Color Panel Theme</h3>
+<p class="mb-20px">
+	You can customize the panel body / header <code>background</code> & <code>text color</code> by adding predefined CSS class. E.g <code>.bg-gray-900</code>. Full list of available predefined background class can be found <a href="helper_css.html">here</a>.
+</p>
+
+<!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel bodyClass="bg-gray-800 text-white" panelClass="text-white" title="Full Color Panel">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code18"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<!-- BEGIN panel -->
+		<panel bodyClass="bg-blue" panelClass="text-white" headerClass="bg-blue-700" title="Full Color Panel">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code19"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel bodyClass="bg-teal" panelClass="text-white" headerClass="bg-teal-700" title="Full Color Panel">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code20"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel bodyClass="bg-orange" panelClass="text-white" headerClass="bg-orange-700" title="Full Color Panel">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code21"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel bodyClass="bg-red" panelClass="text-white" headerClass="bg-red-700" title="Full Color Panel">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code22"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel bodyClass="bg-cyan" panelClass="text-white" headerClass="bg-cyan-700" title="Full Color Panel">
+			<div>
+				<p>Panel Content Here</p>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code23"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->

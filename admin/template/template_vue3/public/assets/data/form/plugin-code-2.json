@@ -1,0 +1,20 @@
+<script>
+import datepicker from '@/components/plugins/Datepicker.vue';
+
+export default {
+  components: {
+    datepicker: datepicker
+  }
+}
+</script>
+
+<template>
+  <!-- default -->
+  <datepicker range />
+  
+  <!-- predefined range -->
+  <datepicker range auto-range="5" />
+  
+  <!-- multi calendar -->
+  <datepicker range multiCalendars />
+</template>

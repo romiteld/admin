@@ -1,0 +1,18 @@
+.post-desc {
+	margin-bottom: rem(30px);
+	line-height: $line-height-lg;
+	color: rgba(var(--#{$prefix}component-color-rgb), .5);
+	
+	& p {
+		margin-bottom: rem(30px);
+	}
+	@include media-breakpoint-down(md) {
+		margin-bottom: rem(25px);
+		font-size: $font-size-sm;
+		line-height: $line-height-base;
+		
+		& p {
+			margin-bottom: rem(15px);
+		}
+	}
+}

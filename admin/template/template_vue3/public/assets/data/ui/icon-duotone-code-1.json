@@ -1,0 +1,13 @@
+<script>
+import { Icon } from '@iconify/vue';
+
+export default {
+  data () {
+  components: {
+    Icon: Icon
+  }
+}
+</script>
+<template>
+  <Icon icon="solar:4k-bold-duotone" />
+</template>

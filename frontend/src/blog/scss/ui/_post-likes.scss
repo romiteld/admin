@@ -1,0 +1,15 @@
+.post-likes {
+	padding: rem(10px) 0;
+	font-size: $font-size-lg * 0.75;
+	line-height: $font-size-sm * 0.75;
+	text-align: center;
+	font-weight: $font-weight-bold;
+	color: var(--#{$prefix}component-color);
+	
+	@include media-breakpoint-down(md) {
+		padding: 0;
+		margin: 0;
+		line-height: $line-height-sm;
+		display: inline-block;
+	}
+}

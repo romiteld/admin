@@ -1,0 +1,117 @@
+.search-banner {
+	padding: rem(120px) 0 rem(60px);
+	
+	@include media-breakpoint-down(md) {
+		padding: rem(90px) 0 rem(30px);
+	}
+	
+	& h1 {
+		color: $white;
+		font-size: $font-size-lg * 2.4;
+		text-align: center;
+		margin: rem(10px) 0 rem(20px);
+		font-weight: $font-weight-bold;
+		
+		@include media-breakpoint-down(md) {
+			font-size: $font-size-lg * 2;
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: $font-size-lg * 1.6;
+			margin-top: 0;
+		}
+	}
+	& p {
+		margin-bottom: 0;
+		color: rgba($white, .8);
+	}
+	& .input-group {
+		margin-bottom: rem(30px);
+		
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(15px);
+		}
+	}
+	& .container {
+		@include media-breakpoint-up(md) {
+			max-width: rem(720px);
+		}
+	}
+	& + .content {
+		margin-top: 0;
+		padding-top: rem(45px);
+		
+		@include media-breakpoint-down(md) {
+			padding-top: rem(30px);
+		}
+	}
+	& .form-control {
+		padding-left: rem(20px);
+		padding-right: rem(20px);
+		font-size: $font-size-lg;
+		border: none;
+		height: rem(46px);
+		border-radius: $border-radius-lg;
+		
+		@include media-breakpoint-down(sm) {
+			font-size: $font-size-base;
+			height: rem(40px);
+		}
+	}
+	& .form-group {
+		position: relative;
+	}
+	& .btn {
+		background: var(--#{$prefix}component-bg);
+		color: var(--#{$prefix}component-color);
+		border-radius: $border-radius-lg;
+		
+		@include media-breakpoint-down(sm) {
+			height: rem(41px);
+		}
+	}
+	& p {
+		font-size: $font-size-lg;
+		color: $white;
+		text-align: center;
+		font-weight: 300;
+	}
+  &.has-bg {
+    position: relative;
+    overflow: hidden;
+    color: $white;
+  
+    & .bg-cover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($black, .4);
+      }
+      &.bottom {
+        background-position: bottom;
+      }
+      &.top {
+        background-position: top;
+      }
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    & .container {
+      position: relative;
+    }
+  }
+}

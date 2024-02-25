@@ -1,0 +1,12 @@
+<panel>
+  <div class="panel-toolbar">
+    <div class="btn-group me-5px">
+      <a class="btn btn-white" href="javascript:;"><i class="fa fa-bold"></i></a>
+      <a class="btn btn-white active" href="javascript:;"><i class="fa fa-italic"></i></a>
+      <a class="btn btn-white" href="javascript:;"><i class="fa fa-underline"></i></a>
+    </div>
+  </div>
+  <panel-footer class="text-end">
+    ...
+  </panel-footer>
+</panel>

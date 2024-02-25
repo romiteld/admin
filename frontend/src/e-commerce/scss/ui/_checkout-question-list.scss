@@ -1,0 +1,37 @@
+.checkout-question-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: rem(14px);
+	
+	& > li {
+		& + li {
+			margin-top: rem(10px);
+		}
+	}
+	& .question {
+		color: var(--#{$prefix}component-color);
+		font-weight: $font-weight-bold;
+		
+		& a {
+			display: block;
+			color: var(--#{$prefix}component-color);
+			text-decoration: none;
+		}
+	}
+	& .answer {
+		color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		font-size: rem(13px);
+		padding: rem(5px) 0 rem(5px) rem(20px);
+	}
+	& .dash {
+		width: rem(20px);
+		text-align: center;
+		
+		@if $enable-rtl {
+			float: right;
+		} @else {
+			float: left;
+		}
+	}
+}

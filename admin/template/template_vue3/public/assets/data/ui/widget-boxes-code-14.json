@@ -1,0 +1,6 @@
+<panel>
+  <panel-header class="bg-red-700 text-white">
+    <panel-title>...</panel-title>
+    <panel-toolbar />
+  </panel-header>
+</panel>

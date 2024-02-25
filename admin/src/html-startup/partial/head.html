@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"@@if (context.htmlAttribute) { @@htmlAttribute}>
+<head>
+	<meta charset="utf-8" />
+	<title>Color Admin | @@title</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN core-css ================== -->@@if(context.theme == 'default') {
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/default/app.min.css" rel="stylesheet" />
+	}@@if(context.theme == 'material') {
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/material/app.min.css" rel="stylesheet" />
+	}@@if(context.theme == 'apple') {
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/app.min.css" rel="stylesheet" />
+	<script src="../assets/plugins/ionicons/dist/ionicons/ionicons.js"></script>
+	}@@if(context.theme == 'transparent') {
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/transparent/app.min.css" rel="stylesheet" />
+	}@@if(context.theme == 'facebook') {
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/facebook/app.min.css" rel="stylesheet" />
+	}@@if(context.theme == 'google') {
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/google/app.min.css" rel="stylesheet" />
+	}<!-- ================== END core-css ================== -->@@if (context.css && css.length > 0) {
+	
+	<!-- ================== BEGIN page-css ================== -->@@for (var i = 0; i < css.length; i++) {
+	<link href="`+css[i]+`" rel="stylesheet" />}
+	<!-- ================== END page-css ================== -->}
+</head>
+<body@@if (context.bodyAttr) { @@bodyAttr}>
+	@@include('page-loader.html')

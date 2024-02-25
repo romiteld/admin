@@ -1,0 +1,159 @@
+@@include('./partial/head.html', {
+	"title": "Email - Detail", 
+	"css": [
+	]}
+)
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-header-fixed app-sidebar-fixed app-content-full-height@@if(context.theme == 'material' || context.theme == 'google') { app-with-wide-sidebar}">
+		@@include('./partial/header.html', {"showBg": "true"})
+		@@include('./partial/sidebar.html', {"emailClass": "active", "emailDetailClass": "active", "showBg": "true"})
+		
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content p-0">
+			<!-- BEGIN mailbox -->
+			<div class="mailbox">
+				<!-- BEGIN mailbox-sidebar -->
+				<div class="mailbox-sidebar">
+					<div class="mailbox-sidebar-header d-flex justify-content-center">
+						<a href="#emailNav" data-bs-toggle="collapse" class="btn @@if(context.theme != 'transparent'){btn-dark}@@if(context.theme == 'transparent'){btn-primary} btn-sm me-auto d-block d-lg-none">
+							<i class="fa fa-cog"></i>
+						</a>
+						<a href="email_compose.html" class="btn @@if(context.theme != 'transparent'){btn-dark}@@if(context.theme == 'transparent'){btn-primary} ps-40px pe-40px btn-sm">
+							Compose
+						</a>
+					</div>
+					<div class="mailbox-sidebar-content collapse d-lg-block" id="emailNav">
+						<!-- BEGIN scrollbar -->
+						<div data-scrollbar="true" data-height="100%" data-skip-mobile="true">
+							<div class="nav-title"><b>FOLDERS</b></div>
+							<ul class="nav nav-inbox">
+								<li class="active"><a href="email_inbox.html"><i class="fa fa-hdd fa-lg fa-fw me-2"></i> Inbox <span class="badge @@if(context.theme != 'google'){bg-gray-600}@@if(context.theme == 'google'){bg-primary} fs-10px rounded-pill ms-auto fw-bolder @@if(context.theme != 'google'){pt-4px}@@if(context.theme == 'google'){pt-5px} pb-5px px-8px">52</span></a></li>
+								<li><a href="email_inbox.html"><i class="fa fa-flag fa-lg fa-fw me-2"></i> Important</a></li>
+								<li><a href="email_inbox.html"><i class="fa fa-envelope fa-lg fa-fw me-2"></i> Sent</a></li>
+								<li><a href="email_inbox.html"><i class="fa fa-save fa-lg fa-fw me-2"></i> Drafts</a></li>
+								<li><a href="email_inbox.html"><i class="fa fa-trash-alt fa-lg fa-fw me-2"></i> Trash</a></li>
+							</ul>
+							<div class="nav-title"><b>LABEL</b></div>
+							<ul class="nav nav-inbox">
+								<li><a href="javascript:;"><i class="fa fa-fw fa-lg fs-12px me-2 fa-circle text-dark"></i> Admin</a></li>
+								<li><a href="javascript:;"><i class="fa fa-fw fa-lg fs-12px me-2 fa-circle text-blue"></i> Designer & Employer</a></li>
+								<li><a href="javascript:;"><i class="fa fa-fw fa-lg fs-12px me-2 fa-circle text-success"></i> Staff</a></li>
+								<li><a href="javascript:;"><i class="fa fa-fw fa-lg fs-12px me-2 fa-circle text-warning"></i> Sponsorer</a></li>
+								<li><a href="javascript:;"><i class="fa fa-fw fa-lg fs-12px me-2 fa-circle text-danger"></i> Client</a></li>
+							</ul>
+						</div>
+						<!-- END scrollbar -->
+					</div>
+				</div>
+				<!-- END mailbox-sidebar -->
+				<!-- BEGIN mailbox-content -->
+				<div class="mailbox-content">
+					<div class="mailbox-content-header">
+						<div class="btn-toolbar">
+							<div class="btn-group me-2">
+								<a href="javascript:;" class="btn btn-white btn-sm"><i class="fa fa-fw fa-reply"></i> <span class="d-none d-lg-inline">Reply</span></a>
+							</div>
+							<div class="btn-group me-2">
+								<a href="javascript:;" class="btn btn-white btn-sm"><i class="fa fa-fw fa-trash"></i> <span class="d-none d-lg-inline">Delete</span></a>
+								<a href="javascript:;" class="btn btn-white btn-sm"><i class="fa fa-fw fa-archive"></i> <span class="d-none d-lg-inline">Archive</span></a>
+							</div>
+							<div class="btn-group ms-auto me-2">
+								<a href="email_inbox.html" class="btn btn-white btn-sm disabled"><i class="fa fa-fw fa-arrow-up"></i></a>
+								<a href="email_inbox.html" class="btn btn-white btn-sm"><i class="fa fa-fw fa-arrow-down"></i></a>
+							</div>
+							<div class="btn-group">
+								<a href="email_inbox.html" class="btn btn-white btn-sm"><i class="fa fa-fw fa-times"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="mailbox-content-body">
+						<!-- BEGIN scrollbar -->
+						<div data-scrollbar="true" data-height="100%" data-skip-mobile="true">
+							<div class="p-3">
+								@@if(context.theme != 'google'){<h3 class="mb-3">Bootstrap v5.0 is coming soon</h3>}@@if(context.theme == 'google')
+								{<h4 class="mb-3">Bootstrap v5.0 is coming soon</h4>}
+								<div class="d-flex mb-3">
+									<a href="javascript:;">
+										<img class="rounded-pill" width="48" alt="" src="../assets/img/user/user-12.jpg" />
+									</a>
+									<div class="ps-3">
+										<div class="email-from @@if(context.theme != 'transparent'){text-dark}@@if(context.theme == 'transparent'){text-white} fs-14px mb-3px @@if(context.theme == 'google'){fw-500}@@if(context.theme != 'google'){fw-bold}">
+											from support@wrapbootstrap.com
+										</div>
+										<div class="mb-3px"><i class="fa fa-clock fa-fw"></i> Today, 8:30 AM</div>
+										<div class="email-to">
+											To: nguoksiong@live.co.uk
+										</div>
+									</div>
+								</div>
+								<hr class="bg-gray-500" />
+								<ul class="attached-document clearfix">
+									<li class="fa-file">
+										<div class="document-file">
+											<a href="javascript:;">
+												<i class="fa fa-file-pdf"></i>
+											</a>
+										</div>
+										<div class="document-name"><a href="javascript:;" class="text-decoration-none">flight_ticket.pdf</a></div>
+									</li>
+									<li class="fa-camera">
+										<div class="document-file">
+											<a href="javascript:;">
+												<img src="../assets/img/gallery/gallery-11.jpg" alt="" />
+											</a>
+										</div>
+										<div class="document-name"><a href="javascript:;" class="text-decoration-none">front_end_mockup.jpg</a></div>
+									</li>
+								</ul>
+
+								<p class="@@if(context.theme != 'transparent'){text-dark}@@if(context.theme == 'transparent'){text-white}"> 
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel auctor nisi, vel auctor orci. <br />
+									Aenean in pretium odio, ut lacinia tellus. Nam sed sem ac enim porttitor vestibulum vitae at erat.
+								</p>
+								<p class="@@if(context.theme != 'transparent'){text-dark}@@if(context.theme == 'transparent'){text-white}">
+									Curabitur auctor non orci a molestie. Nunc non justo quis orci viverra pretium id ut est. <br />
+									Nullam vitae dolor id enim consequat fermentum. Ut vel nibh tellus. <br />
+									Duis finibus ante et augue fringilla, vitae scelerisque tortor pretium. <br />
+									Phasellus quis eros erat. Nam sed justo libero.
+								</p>
+								<p class="@@if(context.theme != 'transparent'){text-dark}@@if(context.theme == 'transparent'){text-white}">
+									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br /> 
+									Sed tempus dapibus libero ac commodo.
+								</p>
+								<br />
+								<br />
+								<p class="@@if(context.theme != 'transparent'){text-dark}@@if(context.theme == 'transparent'){text-white}">
+									Best Regards,<br />
+									Sean.<br /><br />
+									Information Technology Department,<br />
+									Senior Front End Designer<br />
+								</p>
+							</div>
+						</div>
+						<!-- END scrollbar -->
+					</div>
+					<div class="mailbox-content-footer d-flex align-items-center justify-content-end">
+						<div class="btn-group me-2">
+							<a href="email_inbox.html" class="btn btn-white btn-sm disabled"><i class="fa fa-fw fa-arrow-up"></i></a>
+							<a href="email_inbox.html" class="btn btn-white btn-sm"><i class="fa fa-fw fa-arrow-down"></i></a>
+						</div>
+						<div class="btn-group">
+							<a href="email_inbox.html" class="btn btn-white btn-sm"><i class="fa fa-fw fa-times"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- END mailbox-content -->
+			</div>
+			<!-- END mailbox -->
+		</div>
+		<!-- END #content -->
+		
+		@@include('./partial/theme-panel.html')
+		@@include('./partial/scroll-top-btn.html')
+	</div>
+	<!-- END #app -->
+	
+@@include('./partial/script.html', {
+	"script": [
+	]}
+)

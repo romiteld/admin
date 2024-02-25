@@ -1,0 +1,47 @@
+.service {
+	margin-bottom: rem(30px);
+	display: flex;
+	
+	& .icon {
+		width: rem(50px);
+		height: rem(50px);
+		background: #242a30;
+		color: $white;
+		text-align: center;
+		line-height: rem(50px);
+		font-size: $font-size-lg * 1.2;
+		border-radius: $border-radius-lg * 5;
+		
+		& + .info {
+			@if $enable-rtl {
+				padding-right: rem(20px);
+			} @else {
+				padding-left: rem(20px);
+			}
+		}
+	}
+	& .info {
+		flex: 1;
+		
+		& .title {
+			margin: 0 0 rem(8px);
+		}
+		& .desc {
+			font-size: $font-size-sm;
+			color: $gray-600;
+			line-height: $line-height-base * 1.1;
+		}
+	}
+	&.service-vertical {
+		text-align: center;
+		display: block;
+		
+		& .icon {
+			margin: 0 auto rem(15px);
+		}
+		& .info {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}

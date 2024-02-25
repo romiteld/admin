@@ -1,0 +1,506 @@
+@@include('./partial/head.html', {
+	"title": "One Page Parallax Front End Theme", 
+	"bodyAttr": "class='page-navbar-fixed-top-sm'",
+	"css": [
+	]}
+)
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+		@@include('./partial/header.html', {"headerTheme": "default"})
+		
+		<!-- begin tabs / accordion -->
+		<div class="content" data-scrollview="true">
+			<!-- begin container -->
+			<div class="container" data-animation="true" data-animation-type="fadeInDown">
+				<h2 class="content-title">Tabs / Accordion</h2>
+				<!-- begin row -->
+				<div class="row">
+					<!-- begin col-6 -->
+					<div class="col-lg-6">
+						<!-- begin nav-tabs -->
+						<ul id="nav-tabs" class="nav nav-tabs">
+							<li class="nav-item me-1"><a href="#tab-1" class="nav-link active" data-bs-toggle="tab">Title 1</a></li>
+							<li class="nav-item me-1"><a href="#tab-2" class="nav-link" data-bs-toggle="tab">Title 2</a></li>
+							<li class="nav-item"><a href="#tab-3" class="nav-link" data-bs-toggle="tab">Title 3</a></li>
+						</ul>
+						<!-- end nav-tabs -->
+						<!-- begin tab-content -->
+						<div id="tab-content" class="tab-content bg-light mt-n1px border-top-0 mb-3 rounded-bottom">
+							<!-- begin tab-pane -->
+							<div class="tab-pane fade active show p-15px" id="tab-1">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut vulputate sem, quis gravida ligula. 
+									Sed faucibus faucibus nulla eu semper. Sed ut nunc velit. Integer accumsan imperdiet erat. 
+									Praesent molestie nisl vitae mi vulputate, et laoreet leo semper. Donec non ullamcorper lorem. 
+									Integer non mattis sem. Donec cursus congue lorem.
+								</p>
+								<p>
+									Phasellus laoreet massa vel nunc aliquet convallis. Praesent maximus, ex ac dictum gravida, 
+									libero lacus maximus sem, vehicula tristique nibh sapien ut massa. Etiam dapibus, dui vel malesuada tincidunt, 
+									lectus neque hendrerit ligula, et cursus lectus dolor vel sem.
+								</p>
+							</div>
+							<!-- end tab-pane -->
+							<!-- begin tab-pane -->
+							<div class="tab-pane fade p-15px" id="tab-2">
+								<p>
+									Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. 
+									Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan 
+									four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl 
+									cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. 
+								</p>
+								<p>
+									Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. 
+									Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. 
+									Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park
+								</p>
+							</div>
+							<!-- end tab-pane -->
+							<!-- begin tab-pane -->
+							<div class="tab-pane fade p-15px" id="tab-3">
+								<p>
+									Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo 
+									retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, 
+									iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. 
+								</p>
+								<p>
+									Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, 
+									carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, 
+									vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+								</p>
+							</div>
+							<!-- begin tab-pane -->
+						</div>
+						<!-- end tab-content -->
+					</div>
+					<!-- end col-6 -->
+					<!-- begin col-6 -->
+					<div class="col-lg-6">
+						<!-- begin accordion -->
+						<div class="accordion mb-3" id="accordion">
+							<!-- begin card -->
+							<div class="accordion-item border-0">
+								<div class="accordion-header">
+									<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1">
+										Accordion #1
+									</button>
+								</div>
+								<div id="accordion-1" class="collapse show" data-bs-parent="#accordion">
+									<div class="accordion-body bg-light">
+										<p>
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+											3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+											Food truck quinoa nesciunt laborum eiusmod. 
+											Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+											Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+											Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, 
+											raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end card-->
+							<!-- begin card -->
+							<div class="accordion-item border-0">
+								<div class="accordion-header">
+									<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2">
+										Accordion #2
+									</button>
+								</div>
+								<div id="accordion-2" class="collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-light">
+										<p>
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+											3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+											Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+											Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+											Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+											synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end card-->
+							<!-- begin card -->
+							<div class="accordion-item border-0">
+								<div class="accordion-header">
+									<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3">
+										Accordion #3
+									</button>
+								</div>
+								<div id="accordion-3" class="collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-light">
+										<p>
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+											3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+											Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+											Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+											Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+											synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- begin card -->
+						</div>
+						<!-- end accordion -->
+					</div>
+					<!-- end col-6 -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end tabs / accordion -->
+		
+		<!-- begin buttons -->
+		<div class="content has-bg bg-gray-900" data-scrollview="true">
+			<!-- begin container -->
+			<div class="container" data-animation="true" data-animation-type="fadeInDown">
+				<h2 class="content-title">Buttons</h2>
+				<div class="text-center">
+					<a href="#" class="btn btn-info btn-theme m-5px">Info</a>
+					<a href="#" class="btn btn-primary btn-theme m-5px">Primary</a>
+					<a href="#" class="btn btn-lime btn-theme m-5px">Lime</a>
+					<a href="#" class="btn btn-success btn-theme m-5px">Success</a>
+					<a href="#" class="btn btn-warning btn-theme m-5px">Warning</a>
+					<a href="#" class="btn btn-danger btn-theme m-5px">Danger</a>
+					<a href="#" class="btn btn-pink btn-theme m-5px">Pink</a>
+					<a href="#" class="btn btn-yellow btn-theme m-5px">Yellow</a>
+					<a href="#" class="btn btn-indigo btn-theme m-5px">Indigo</a>
+					<a href="#" class="btn btn-default btn-theme m-5px">Default</a>
+					<a href="#" class="btn btn-outline-white btn-theme m-5px">Outline</a>
+					<a href="#" class="btn btn-dark btn-theme m-5px">Inverse</a>
+				</div>
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end buttons -->
+		
+		<!-- begin pricing-table -->
+		<div class="content" data-scrollview="true">
+			<!-- begin container -->
+			<div class="container" data-animation="true" data-animation-type="fadeInDown">
+				<h2 class="content-title">Pricing Table</h2>
+				<!-- begin row -->
+				<div class="row pt-30px pb-30px">
+					<!-- begin col-12 -->
+					<div class="col-md-12">
+						<!-- begin pricing-table -->
+						<ul class="pricing-table pricing-col-4 mt-30px">
+							<li>
+								<!-- begin pricing-container -->
+								<div class="pricing-container">
+									<h3>Starter</h3>
+									<div class="price">
+										<div class="price-figure">
+											<span class="price-number">FREE</span>
+										</div>
+									</div>
+									<ul class="features">
+										<li>1GB Storage</li>
+										<li>2 Clients</li>
+										<li>5 Active Projects</li>
+										<li>5 Colors</li>
+										<li>Free Goodies</li>
+										<li>24/7 Email support</li>
+									</ul>
+									<div class="footer">
+										<a href="#" class="btn btn-dark btn-theme btn-block">Buy Now</a>
+									</div>
+								</div>
+								<!-- end pricing-container -->
+							</li>
+							<li>
+								<!-- begin pricing-container -->
+								<div class="pricing-container">
+									<h3>Basic</h3>
+									<div class="price">
+										<div class="price-figure">
+											<span class="price-number">$9.99</span>
+											<span class="price-tenure">per month</span>
+										</div>
+									</div>
+									<ul class="features">
+										<li>2GB Storage</li>
+										<li>5 Clients</li>
+										<li>10 Active Projects</li>
+										<li>10 Colors</li>
+										<li>Free Goodies</li>
+										<li>24/7 Email support</li>
+									</ul>
+									<div class="footer">
+										<a href="#" class="btn btn-dark btn-theme btn-block">Buy Now</a>
+									</div>
+								</div>
+								<!-- end pricing-container -->
+							</li>
+							<li class="highlight">
+								<!-- begin pricing-container -->
+								<div class="pricing-container">
+									<h3>Premium</h3>
+									<div class="price">
+										<div class="price-figure">
+											<span class="price-number">$19.99</span>
+											<span class="price-tenure">per month</span>
+										</div>
+									</div>
+									<ul class="features">
+										<li>5GB Storage</li>
+										<li>10 Clients</li>
+										<li>20 Active Projects</li>
+										<li>20 Colors</li>
+										<li>Free Goodies</li>
+										<li>24/7 Email support</li>
+									</ul>
+									<div class="footer">
+										<a href="#" class="btn btn-primary btn-theme btn-block">Buy Now</a>
+									</div>
+								</div>
+								<!-- end pricing-container -->
+							</li>
+							<li>
+								<!-- begin pricing-container -->
+								<div class="pricing-container">
+									<h3>Lifetime</h3>
+									<div class="price">
+										<div class="price-figure">
+											<span class="price-number">$999</span>
+										</div>
+									</div>
+									<ul class="features">
+										<li>Unlimited Storage</li>
+										<li>Unlimited Clients</li>
+										<li>Unlimited Projects</li>
+										<li>Unlimited Colors</li>
+										<li>Free Goodies</li>
+										<li>24/7 Email support</li>
+									</ul>
+									<div class="footer">
+										<a href="#" class="btn btn-dark btn-theme btn-block">Buy Now</a>
+									</div>
+								</div>
+								<!-- end pricing-container -->
+							</li>
+						</ul>
+						<!-- end pricing-table -->
+					</div>
+					<!-- end col-12 -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end pricing-table -->
+		
+		<!-- begin FAQs -->
+		<div class="content bg-light" data-scrollview="true">
+			<!-- begin container -->
+			<div class="container" data-animation="true" data-animation-type="animate__fadeInDown">
+				<h2 class="content-title">FAQs</h2>
+				<!-- begin accordion -->
+				<div class="accordion overflow-hidden rounded" id="faq">
+					<!-- begin panel -->
+					<div class="accordion-item border-0">
+						<div class="accordion-header">
+							<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1">
+								<i class="fa fa-question-circle fa-fw text-theme me-5px"></i> 
+								Question 1
+							</button>
+						</div>
+						<div id="faq-1" class="collapse show" data-bs-parent="#faq">
+							<div class="accordion-body bg-component">
+								<p class="mb-0">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+									3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+									Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+									Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+									synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- begin card -->
+					<div class="accordion-item border-0">
+						<div class="accordion-header">
+							<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">
+								<i class="fa fa-question-circle fa-fw text-theme me-5px"></i> 
+								Question 2
+							</button>
+						</div>
+						<div id="faq-2" class="collapse" data-bs-parent="#faq">
+							<div class="accordion-body bg-component">
+								<p class="mb-0">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+									3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+									Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+									Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+									synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- begin card -->
+					<div class="accordion-item border-0">
+						<div class="accordion-header">
+							<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3">
+								<i class="fa fa-question-circle fa-fw text-theme me-5px"></i> 
+								Question 3
+							</button>
+						</div>
+						<div id="faq-3" class="collapse" data-bs-parent="#faq">
+							<div class="accordion-body bg-component rounded-bottom">
+								<p class="mb-0">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+									3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+									Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+									Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+									synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+				</div>
+				<!-- end accordion -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end FAQs -->
+		
+		<!-- begin services -->
+		<div class="content" data-scrollview="true">
+			<!-- begin container -->
+			<div class="container" data-animation="true" data-animation-type="animate__fadeInDown">
+				<h2 class="content-title">Services</h2>
+				<!-- begin row -->
+				<div class="row pt-30px">
+					<!-- begin col-3 -->
+					<div class="col-lg-3 col-md-6">
+						<div class="service service-vertical">
+							<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-code"></i></div>
+							<div class="info">
+								<h4 class="title">Re-usable Code</h4>
+								<p class="desc">Aenean et elementum dui. Aenean massa enim, suscipit ut molestie quis, pretium sed orci. Ut faucibus egestas mattis.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end col-3 -->
+					<!-- begin col-3 -->
+					<div class="col-lg-3 col-md-6">
+						<div class="service service-vertical">
+							<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-paint-brush"></i></div>
+							<div class="info">
+								<h4 class="title">Clean & Careful Design</h4>
+								<p class="desc">Etiam nulla turpis, gravida et orci ac, viverra commodo ipsum. Donec nec mauris faucibus, congue nisi sit amet, lobortis arcu.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end col-3 -->
+					<!-- begin col-3 -->
+					<div class="col-lg-3 col-md-6">
+						<div class="service service-vertical">
+							<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-file"></i></div>
+							<div class="info">
+								<h4 class="title">Well Documented</h4>
+								<p class="desc">Ut vel laoreet tortor. Donec venenatis ex velit, eget bibendum purus accumsan cursus. Curabitur pulvinar iaculis diam.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end col-3 -->
+					<!-- begin col-3 -->
+					<div class="col-lg-3 col-md-6">
+						<div class="service service-vertical">
+							<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-code"></i></div>
+							<div class="info">
+								<h4 class="title">Re-usable Code</h4>
+								<p class="desc">Aenean et elementum dui. Aenean massa enim, suscipit ut molestie quis, pretium sed orci. Ut faucibus egestas mattis.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end col-3 -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end services -->
+		
+		<!-- begin carousel -->
+		<div class="content bg-light" data-scrollview="true">
+			<!-- begin container -->
+			<div class="container" data-animation="true" data-animation-type="animate__fadeInDown">
+				<h2 class="content-title">Embed & Carousel</h2>
+				<!-- begin row -->
+				<div class="row">
+					<!-- begin col-6 -->
+					<div class="col-lg-6 mb-4 mb-lg-0">
+						<!-- 4:3 aspect ratio -->
+						<div class="ratio ratio-16x9">
+							<iframe src="//www.youtube.com/embed/EX1I2LI8Wc8" allowfullscreen></iframe>
+						</div>
+					</div>
+					<!-- end col-6 -->
+					<!-- begin col-6 -->
+					<div class="col-lg-6">
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
+								<li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
+								<li data-bs-target="#carousel-example-generic" data-bs-slide-to="2"></li>
+							</ol>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="../assets/img/carousel/carousel-1.jpg" class="w-100" alt="Carousel 1">
+									<div class="carousel-caption">
+										<h4 class="m-b-5">Caption Title 1</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img src="../assets/img/carousel/carousel-2.jpg" class="w-100" alt="Carousel 2">
+									<div class="carousel-caption">
+										<h4 class="m-b-5">Caption Title 2</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img src="../assets/img/carousel/carousel-3.jpg" class="w-100" alt="Carousel 3">
+									<div class="carousel-caption">
+										<h4 class="m-b-5">Caption Title 3</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</div>
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-bs-slide="prev">
+							<i class="fa fa-chevron-left"></i>
+							</a>
+							<a class="carousel-control-next" href="#carousel-example-generic" role="button" data-bs-slide="next">
+							<i class="fa fa-chevron-right"></i>
+							</a>
+						</div>
+					</div>
+					<!-- end col-6 -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end container -->
+		</div>
+		<!-- end carousel -->
+		
+		@@include('./partial/footer.html')
+		@@include('./partial/theme-panel.html')
+	</div>
+	<!-- end #page-container -->
+	
+@@include('./partial/script.html', {
+	"script": [
+	]}
+)

@@ -1,0 +1,3 @@
+@{
+  ViewData["AppClass"] = "app-with-wide-sidebar";
+}

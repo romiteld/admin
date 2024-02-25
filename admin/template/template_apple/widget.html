@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Color Admin | Widgets Page</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/app.min.css" rel="stylesheet" />
+	<script src="../assets/plugins/ionicons/dist/ionicons/ionicons.js"></script>
+	<!-- ================== END core-css ================== -->
+	
+	<!-- ================== BEGIN page-css ================== -->
+	<link href="../assets/plugins/nvd3/build/nv.d3.css" rel="stylesheet" />
+	<!-- ================== END page-css ================== -->
+</head>
+<body>
+	<!-- BEGIN #loader -->
+	<div id="loader" class="app-loader">
+		<span class="spinner"></span>
+	</div>
+	<!-- END #loader -->
+
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-header-fixed app-sidebar-fixed">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN navbar-header -->
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand"><span class="navbar-logo"><ion-icon name="cloud"></ion-icon></span> <b class="me-1">Color</b> Admin</a>
+				<button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- END navbar-header -->
+			<!-- BEGIN header-nav -->
+			<div class="navbar-nav">
+				<div class="navbar-item navbar-form">
+					<form action="" method="POST" name="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Enter keyword" />
+							<button type="submit" class="btn btn-search"><ion-icon name="search"></ion-icon></button>
+						</div>
+					</form>
+				</div>
+				<div class="navbar-item dropdown">
+					<a href="#" data-bs-toggle="dropdown" class="navbar-link dropdown-toggle icon">
+						<ion-icon name="notifications"></ion-icon>
+						<span class="badge">5</span>
+					</a>
+					<div class="dropdown-menu media-list dropdown-menu-end">
+						<div class="dropdown-header">NOTIFICATIONS (5)</div>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-bug media-object bg-gray-400"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+								<div class="text-muted fs-10px">3 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<img src="../assets/img/user/user-1.jpg" class="media-object" alt="" />
+								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">John Smith</h6>
+								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+								<div class="text-muted fs-10px">25 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<img src="../assets/img/user/user-2.jpg" class="media-object" alt="" />
+								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">Olivia</h6>
+								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+								<div class="text-muted fs-10px">35 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-plus media-object bg-gray-400"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading"> New User Registered</h6>
+								<div class="text-muted fs-10px">1 hour ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-envelope media-object bg-gray-400"></i>
+								<i class="fab fa-google text-warning media-object-icon fs-14px"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading"> New Email From John</h6>
+								<div class="text-muted fs-10px">2 hour ago</div>
+							</div>
+						</a>
+						<div class="dropdown-footer text-center">
+							<a href="javascript:;" class="text-decoration-none">View more</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-item navbar-user dropdown">
+					<a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+						<img src="../assets/img/user/user-13.jpg" alt="" /> 
+						<span>
+							<span class="d-none d-md-inline">Adam Schwartz</span>
+							<b class="caret"></b>
+						</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end me-1">
+						<a href="extra_profile.html" class="dropdown-item">Edit Profile</a>
+						<a href="email_inbox.html" class="dropdown-item d-flex align-items-center">
+							Inbox
+							<span class="badge bg-danger rounded-pill ms-auto pb-4px">2</span> 
+						</a>
+						<a href="calendar.html" class="dropdown-item">Calendar</a>
+						<a href="extra_settings_page.html" class="dropdown-item">Settings</a>
+						<div class="dropdown-divider"></div>
+						<a href="login.html" class="dropdown-item">Log Out</a>
+					</div>
+				</div>
+			</div>
+			<!-- END header-nav -->
+		</div>
+		<!-- END #header -->
+	
+		<!-- BEGIN #sidebar -->
+		<div id="sidebar" class="app-sidebar" data-bs-theme="dark">
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+				<!-- BEGIN menu -->
+				<div class="menu">
+					<div class="menu-profile">
+						<a href="javascript:;" class="menu-profile-link" data-toggle="app-sidebar-profile" data-target="#appSidebarProfileMenu">
+							<div class="menu-profile-cover with-shadow"></div>
+							<div class="menu-profile-image">
+								<img src="../assets/img/user/user-13.jpg" alt="" />
+							</div>
+							<div class="menu-profile-info">
+								<div class="d-flex align-items-center">
+									<div class="flex-grow-1">
+										Sean Ngu
+									</div>
+									<div class="menu-caret ms-auto"></div>
+								</div>
+								<small>Frontend developer</small>
+							</div>
+						</a>
+					</div>
+					<div id="appSidebarProfileMenu" class="collapse">
+						<div class="menu-item pt-5px">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-icon"><i class="fa fa-cog"></i></div>
+								<div class="menu-text">Settings</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-icon"><i class="fa fa-pencil-alt"></i></div>
+								<div class="menu-text"> Send Feedback</div>
+							</a>
+						</div>
+						<div class="menu-item pb-5px">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-icon"><i class="fa fa-question-circle"></i></div>
+								<div class="menu-text"> Helps</div>
+							</a>
+						</div>
+						<div class="menu-divider m-0"></div>
+					</div>
+					<div class="menu-header">Navigation</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="pulse-outline"></ion-icon>							</div>
+							<div class="menu-text">Dashboard</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="index.html" class="menu-link"><div class="menu-text">Dashboard v1</div></a>
+							</div>
+							<div class="menu-item">
+								<a href="index_v2.html" class="menu-link"><div class="menu-text">Dashboard v2</div></a>
+							</div>
+							<div class="menu-item">
+								<a href="index_v3.html" class="menu-link"><div class="menu-text">Dashboard v3</div></a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="mail-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Email</div>
+							<div class="menu-badge">10</div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="email_inbox.html" class="menu-link">
+									<div class="menu-text">Inbox</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="email_compose.html" class="menu-link">
+									<div class="menu-text">Compose</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="email_detail.html" class="menu-link">
+									<div class="menu-text">Detail</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item active">
+						<a href="widget.html" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="nutrition-outline" class="bg-blue"></ion-icon>
+							</div>
+							<div class="menu-text">Widgets <span class="menu-label">NEW</span></div>
+						</a>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="color-filter-outline" class="bg-indigo"></ion-icon>
+							</div>
+							<div class="menu-text">UI Elements <span class="menu-label">NEW</span></div> 
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="ui_general.html" class="menu-link">
+									<div class="menu-text">General <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_typography.html" class="menu-link">
+									<div class="menu-text">Typography</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_tabs_accordions.html" class="menu-link">
+									<div class="menu-text">Tabs & Accordions</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_unlimited_tabs.html" class="menu-link">
+									<div class="menu-text">Unlimited Nav Tabs</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_modal_notification.html" class="menu-link">
+									<div class="menu-text">Modal & Notification <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_widget_boxes.html" class="menu-link">
+									<div class="menu-text">Widget Boxes</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_media_object.html" class="menu-link">
+									<div class="menu-text">Media Object</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_buttons.html" class="menu-link">
+									<div class="menu-text">Buttons <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_icon_fontawesome.html" class="menu-link">
+									<div class="menu-text">FontAwesome</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_icon_bootstrap.html" class="menu-link">
+									<div class="menu-text">Bootstrap Icons <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_icon_duotone.html" class="menu-link">
+									<div class="menu-text">Duotone Icons <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_icon_simple_line_icons.html" class="menu-link">
+									<div class="menu-text">Simple Line Icons</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_icon_ionicons.html" class="menu-link">
+									<div class="menu-text">Ionicons</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_tree.html" class="menu-link">
+									<div class="menu-text">Tree View</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_language_bar_icon.html" class="menu-link">
+									<div class="menu-text">Language Bar & Icon</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_social_buttons.html" class="menu-link">
+									<div class="menu-text">Social Buttons</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_tour.html" class="menu-link">
+									<div class="menu-text">Intro JS</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="ui_offcanvas_toasts.html" class="menu-link">
+									<div class="menu-text">Offcanvas & Toasts <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item ">
+						<a href="bootstrap_5.html" class="menu-link">
+							<div class="menu-icon-img">
+								<img src="../assets/img/logo/logo-bs5.png" alt="" />
+							</div>
+							<div class="menu-text">Bootstrap 5 <span class="menu-label">NEW</span></div> 
+						</a>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="briefcase-outline" class="bg-gradient-purple-indigo"></ion-icon>
+							</div>
+							<div class="menu-text">Form Stuff <span class="menu-label">NEW</span></div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="form_elements.html" class="menu-link">
+									<div class="menu-text">Form Elements <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_plugins.html" class="menu-link">
+									<div class="menu-text">Form Plugins <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_slider_switcher.html" class="menu-link">
+									<div class="menu-text">Form Slider + Switcher</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_validation.html" class="menu-link">
+									<div class="menu-text">Form Validation</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_wizards.html" class="menu-link">
+									<div class="menu-text">Wizards <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_wysiwyg.html" class="menu-link">
+									<div class="menu-text">WYSIWYG</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_editable.html" class="menu-link">
+									<div class="menu-text">X-Editable</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_multiple_upload.html" class="menu-link">
+									<div class="menu-text">Multiple File Upload</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_summernote.html" class="menu-link">
+									<div class="menu-text">Summernote</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="form_dropzone.html" class="menu-link">
+									<div class="menu-text">Dropzone</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="grid-outline" class="bg-green"></ion-icon>
+							</div>
+							<div class="menu-text">Tables</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="table_basic.html" class="menu-link">
+									<div class="menu-text">Basic Tables</div>
+								</a>
+							</div>
+							<div class="menu-item has-sub">
+								<a href="javascript:;" class="menu-link">
+									<div class="menu-text">Managed Tables</div>
+									<div class="menu-caret"></div>
+								</a>
+								<div class="menu-submenu">
+									<div class="menu-item">
+										<a href="table_manage.html" class="menu-link">
+											<div class="menu-text">Default</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_buttons.html" class="menu-link">
+											<div class="menu-text">Buttons</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_colreorder.html" class="menu-link">
+											<div class="menu-text">ColReorder</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_fixed_columns.html" class="menu-link">
+											<div class="menu-text">Fixed Column</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_fixed_header.html" class="menu-link">
+											<div class="menu-text">Fixed Header</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_keytable.html" class="menu-link">
+											<div class="menu-text">KeyTable</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_responsive.html" class="menu-link">
+											<div class="menu-text">Responsive</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_rowreorder.html" class="menu-link">
+											<div class="menu-text">RowReorder</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_scroller.html" class="menu-link">
+											<div class="menu-text">Scroller</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_select.html" class="menu-link">
+											<div class="menu-text">Select</div>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a href="table_manage_combine.html" class="menu-link">
+											<div class="menu-text">Extension Combination</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="logo-apple-appstore" class="bg-lime text-black"></ion-icon>
+							</div>
+							<div class="menu-text">POS System <span class="menu-label">NEW</span></div> 
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="pos_customer_order.html" target="_blank" class="menu-link">
+									<div class="menu-text">Customer Order</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="pos_kitchen_order.html" target="_blank" class="menu-link">
+									<div class="menu-text">Kitchen Order</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="pos_counter_checkout.html" target="_blank" class="menu-link">
+									<div class="menu-text">Counter Checkout</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="pos_table_booking.html" target="_blank" class="menu-link">
+									<div class="menu-text">Table Booking</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="pos_menu_stock.html" target="_blank" class="menu-link">
+									<div class="menu-text">Menu Stock</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="infinite-outline" class="bg-gradient-cyan-blue"></ion-icon>
+							</div>
+							<div class="menu-text">Front End <span class="menu-label">NEW</span></div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="../../../frontend/template/template_one_page_parallax/index.html" target="_blank" class="menu-link">
+									<div class="menu-text">One Page Parallax</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../../../frontend/template/template_blog/index.html" target="_blank" class="menu-link">
+									<div class="menu-text">Blog</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../../../frontend/template/template_forum/index.html" target="_blank" class="menu-link">
+									<div class="menu-text">Forum</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../../../frontend/template/template_e_commerce/index.html" target="_blank" class="menu-link">
+									<div class="menu-text">E-Commerce</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../../../frontend/template/template_corporate/index.html" target="_blank" class="menu-link">
+									<div class="menu-text">Corporate <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="archive-outline" class="bg-gradient-cyan-indigo"></ion-icon>
+							</div>
+							<div class="menu-text">Email Template</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="email_system.html" class="menu-link">
+									<div class="menu-text">System Template</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="email_newsletter.html" class="menu-link">
+									<div class="menu-text">Newsletter Template</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="podium-outline" class="bg-gradient-yellow-red"></ion-icon>
+							</div>
+							<div class="menu-text">Chart</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="chart-flot.html" class="menu-link">
+									<div class="menu-text">Flot Chart</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="chart-js.html" class="menu-link">
+									<div class="menu-text">Chart JS</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="chart-d3.html" class="menu-link">
+									<div class="menu-text">d3 Chart</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="chart-apex.html" class="menu-link">
+									<div class="menu-text">Apex Chart</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item">
+						<a href="calendar.html" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="calendar-outline" class="bg-pink"></ion-icon> 
+							</div>
+							<div class="menu-text">Calendar</div>
+						</a>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="map-outline" class="bg-pink"></ion-icon>
+							</div>
+							<div class="menu-text">Map</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="map_vector.html" class="menu-link">
+									<div class="menu-text">Vector Map</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="map_google.html" class="menu-link">
+									<div class="menu-text">Google Map</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="images-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Gallery</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="gallery.html" class="menu-link">
+									<div class="menu-text">Gallery v1</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="gallery_v2.html" class="menu-link">
+									<div class="menu-text">Gallery v2</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="cog-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Page Options <span class="menu-label">NEW</span></div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="page_blank.html" class="menu-link">
+									<div class="menu-text">Blank Page</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_footer.html" class="menu-link">
+									<div class="menu-text">Page with Footer</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_fixed_footer.html" class="menu-link">
+									<div class="menu-text">Page with Fixed Footer <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_without_sidebar.html" class="menu-link">
+									<div class="menu-text">Page without Sidebar</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_right_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Right Sidebar</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_minified_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Minified Sidebar</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_two_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Two Sidebar</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_line_icons.html" class="menu-link">
+									<div class="menu-text">Page with Line Icons</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_ionicons.html" class="menu-link">
+									<div class="menu-text">Page with Ionicons</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_full_height.html" class="menu-link">
+									<div class="menu-text">Full Height Content</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_wide_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Wide Sidebar</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_light_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Light Sidebar</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_mega_menu.html" class="menu-link">
+									<div class="menu-text">Page with Mega Menu</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_top_menu.html" class="menu-link">
+									<div class="menu-text">Page with Top Menu</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_boxed_layout.html" class="menu-link">
+									<div class="menu-text">Page with Boxed Layout</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_mixed_menu.html" class="menu-link">
+									<div class="menu-text">Page with Mixed Menu</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_boxed_layout_with_mixed_menu.html" class="menu-link">
+									<div class="menu-text">Boxed Layout with Mixed Menu</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_transparent_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Transparent Sidebar</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_search_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Search Sidebar <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="page_with_hover_sidebar.html" class="menu-link">
+									<div class="menu-text">Page with Hover Sidebar <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="heart-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Extra <span class="menu-label">NEW</span></div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="extra_timeline.html" class="menu-link">
+									<div class="menu-text">Timeline</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_coming_soon.html" class="menu-link">
+									<div class="menu-text">Coming Soon Page</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_search_results.html" class="menu-link">
+									<div class="menu-text">Search Results</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_invoice.html" class="menu-link">
+									<div class="menu-text">Invoice</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_404_error.html" class="menu-link">
+									<div class="menu-text">404 Error Page</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_profile.html" class="menu-link">
+									<div class="menu-text">Profile Page</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_scrum_board.html" class="menu-link">
+									<div class="menu-text">Scrum Board <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_cookie_acceptance_banner.html" class="menu-link">
+									<div class="menu-text">Cookie Acceptance Banner <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_orders.html" class="menu-link">
+									<div class="menu-text">Orders <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_order_details.html" class="menu-link">
+									<div class="menu-text">Order Details <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_products.html" class="menu-link">
+									<div class="menu-text">Products <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_product_details.html" class="menu-link">
+									<div class="menu-text">Product Details <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_file_manager.html" class="menu-link">
+									<div class="menu-text">File Manager <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_pricing_page.html" class="menu-link">
+									<div class="menu-text">Pricing Page <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_messenger_page.html" class="menu-link">
+									<div class="menu-text">Messenger Page <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_data_management.html" class="menu-link">
+									<div class="menu-text">Data Management <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="extra_settings_page.html" class="menu-link">
+									<div class="menu-text">Settings Page <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="lock-closed-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Login & Register</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="login.html" class="menu-link">
+									<div class="menu-text">Login</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="login_v2.html" class="menu-link">
+									<div class="menu-text">Login v2</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="login_v3.html" class="menu-link">
+									<div class="menu-text">Login v3</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="register_v3.html" class="menu-link">
+									<div class="menu-text">Register v3</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="flower-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Version <span class="menu-label">NEW</span></div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="../template_html/index_v3.html" class="menu-link">
+									<div class="menu-text">HTML</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_ajax/" class="menu-link">
+									<div class="menu-text">AJAX</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_angularjs/" class="menu-link">
+									<div class="menu-text">ANGULAR JS</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_angularjs17/" class="menu-link">
+									<div class="menu-text">ANGULAR JS 17</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="javascript:alert('Laravel 10 Version only available in downloaded version.');" class="menu-link">
+									<div class="menu-text">LARAVEL 10</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_vuejs/" class="menu-link">
+									<div class="menu-text">VUE 3 + Vite JS</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_react/" class="menu-link">
+									<div class="menu-text">REACT 18</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="javascript:alert('.NET Core 7.0 MVC Version only available in downloaded version.');" class="menu-link">
+									<div class="menu-text">ASP.NET <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_material/index_v3.html" class="menu-link">
+									<div class="menu-text">MATERIAL DESIGN</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_apple/index_v3.html" class="menu-link">
+									<div class="menu-text">APPLE DESIGN</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_transparent/index_v3.html" class="menu-link">
+									<div class="menu-text">TRANSPARENT DESIGN <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_facebook/index_v3.html" class="menu-link">
+									<div class="menu-text">FACEBOOK DESIGN <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="../template_google/index_v3.html" class="menu-link">
+									<div class="menu-text">GOOGLE DESIGN <i class="fa fa-paper-plane text-theme"></i></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="medkit-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Helper</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="helper_css.html" class="menu-link">
+									<div class="menu-text">Predefined CSS Classes</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<ion-icon name="list-outline"></ion-icon>
+							</div>
+							<div class="menu-text">Menu Level</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item has-sub">
+								<a href="javascript:;" class="menu-link">
+									<div class="menu-text">Menu 1.1</div>
+									<div class="menu-caret"></div>
+								</a>
+								<div class="menu-submenu">
+									<div class="menu-item has-sub">
+										<a href="javascript:;" class="menu-link">
+											<div class="menu-text">Menu 2.1</div>
+											<div class="menu-caret"></div>
+										</a>
+										<div class="menu-submenu">
+											<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 3.1</div></a></div>
+											<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 3.2</div></a></div>
+										</div>
+									</div>
+									<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 2.2</div></a></div>
+									<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 2.3</div></a></div>
+								</div>
+							</div>
+							<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 1.2</div></a></div>
+							<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 1.3</div></a></div>
+						</div>
+					</div>
+					
+					<!-- BEGIN minify-button -->
+					<div class="menu-item d-flex">
+						<a href="javascript:;" class="app-sidebar-minify-btn ms-auto d-flex align-items-center text-decoration-none" data-toggle="app-sidebar-minify"><ion-icon name="arrow-back" class="me-1"></ion-icon> <div class="menu-text">Collapse</div></a>
+					</div>
+					<!-- END minify-button -->
+				</div>
+				<!-- END menu -->
+			</div>
+			<!-- END scrollbar -->
+		</div>
+		<div class="app-sidebar-bg" data-bs-theme="dark"></div>
+		<div class="app-sidebar-mobile-backdrop"><a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a></div>
+		<!-- END #sidebar -->
+		
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content">
+			<!-- BEGIN breadcrumb -->
+			<ol class="breadcrumb float-xl-end">
+				<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+				<li class="breadcrumb-item active">Widgets</li>
+			</ol>
+			<!-- END breadcrumb -->
+			<!-- BEGIN page-header -->
+			<h1 class="page-header">
+				Widgets <small>header small text goes here...</small>
+			</h1>
+			<!-- END page-header -->
+			
+			<span class="btn-group float-end ms-20px  p-2px bg-black bg-opacity-20 rounded">
+			  <a href="#" class="btn btn-sm btn-white border-0" data-change="widget-theme" data-theme="light"><i class="fa fa-sun text-blue"></i> Light</a>
+			  <a href="#" class="btn btn-sm btn-white border-0" data-change="widget-theme" data-theme="dark"><i class="fa fa-moon"></i> Dark</a>
+			</span>
+			<p class="mb-20px">
+				All the widgets is reusable and responsive. You may use the predefined css to configure the padding, margin or background. Besides that, all the widgets have light and dark version. 
+				Kindly add the <code>[data-bs-theme="dark"]</code> to the widget will change it to the dark version.
+			</p>
+			
+			<!-- BEGIN row -->
+			<div class="row">
+				<!-- BEGIN col-4 -->
+				<div class="col-lg-12 col-xl-4">
+					<!-- BEGIN row -->
+					<div class="row">
+						<!-- BEGIN col-12 -->
+						<div class="col-xl-12 col-lg-6">
+							<!-- BEGIN widget-list -->
+							<div class="mb-10px mt-10px fs-10px">
+								<a href="#modal-widget-list" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+								<b class="text-body">WIDGET LIST</b>
+							</div>
+							<div class="widget-list rounded mb-4" data-id="widget">
+								<!-- BEGIN widget-list-item -->
+								<div class="widget-list-item">
+									<div class="widget-list-media">
+										<img src="../assets/img/user/user-12.jpg" width="50" alt="" class="rounded" />
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Christopher Struth</h4>
+										<p class="widget-list-desc">Bank Transfer</p>
+									</div>
+									<div class="widget-list-action">
+										<a href="#" data-bs-toggle="dropdown" class="text-body text-opacity-50"><i class="fa fa-ellipsis-h fs-14px"></i></a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<a href="#" class="dropdown-item">Option 1</a>
+											<a href="#" class="dropdown-item">Option 2</a>
+											<a href="#" class="dropdown-item">Option 3</a>
+											<div class="dropdown-divider"></div>
+											<a href="#" class="dropdown-item">Option 4</a>
+										</div>
+									</div>
+								</div>
+								<!-- END widget-list-item -->
+								<!-- BEGIN widget-list-item -->
+								<div class="widget-list-item">
+									<div class="widget-list-media">
+										<img src="../assets/img/user/user-13.jpg" width="50" alt="" class="rounded" />
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Janie Flowers</h4>
+										<p class="widget-list-desc">Bank Transfer</p>
+									</div>
+									<div class="widget-list-action">
+										<a href="#" data-bs-toggle="dropdown" class="text-body text-opacity-50"><i class="fa fa-ellipsis-h fs-14px"></i></a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<a href="#" class="dropdown-item">Option 1</a>
+											<a href="#" class="dropdown-item">Option 2</a>
+											<a href="#" class="dropdown-item">Option 3</a>
+											<div class="dropdown-divider"></div>
+											<a href="#" class="dropdown-item">Option 4</a>
+										</div>
+									</div>
+								</div>
+								<!-- END widget-list-item -->
+								<!-- BEGIN widget-list-item -->
+								<div class="widget-list-item">
+									<div class="widget-list-media">
+										<img src="../assets/img/user/user-14.jpg" width="50" alt="" class="rounded" />
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Janie Flowers</h4>
+										<p class="widget-list-desc">Bank Transfer</p>
+									</div>
+									<div class="widget-list-action">
+										<a href="#" data-bs-toggle="dropdown" class="text-body text-opacity-50"><i class="fa fa-ellipsis-h fs-14px"></i></a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<a href="#" class="dropdown-item">Option 1</a>
+											<a href="#" class="dropdown-item">Option 2</a>
+											<a href="#" class="dropdown-item">Option 3</a>
+											<div class="dropdown-divider"></div>
+											<a href="#" class="dropdown-item">Option 4</a>
+										</div>
+									</div>
+								</div>
+								<!-- END widget-list-item -->
+							</div>
+							<!-- END widget-list -->
+						</div>
+						<!-- END col-12 -->
+						<!-- BEGIN col-12 -->
+						<div class="col-xl-12 col-lg-6">
+							<!-- BEGIN widget-list -->
+							<div class="mb-10px mt-10px fs-10px">
+								<a href="#modal-widget-list-with-icon" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+								<b class="text-body">WIDGET LIST WITH ICON</b>
+							</div>
+							<div class="widget-list rounded mb-4" data-id="widget">
+								<a href="#" class="widget-list-item">
+									<div class="widget-list-media icon">
+										<i class="fa fa-plane bg-dark text-white"></i>
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Airplane Mode</h4>
+									</div>
+									<div class="widget-list-action text-end">
+										<i class="fa fa-angle-right fa-lg text-body text-opacity-30"></i>
+									</div>
+								</a>
+								<a href="#" class="widget-list-item">
+									<div class="widget-list-media icon">
+										<i class="fa fa-wifi bg-dark text-white"></i>
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Wi-Fi</h4>
+									</div>
+									<div class="widget-list-action text-nowrap text-body text-opacity-50 fw-bold text-decoration-none">
+										Connected
+										<i class="fa fa-angle-right fa-lg ms-3 text-body text-opacity-30"></i>
+									</div>
+								</a>
+								<a href="#" class="widget-list-item">
+									<div class="widget-list-media icon">
+										<i class="fab fa-bluetooth bg-indigo text-white"></i>
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Bluetooth</h4>
+									</div>
+									<div class="widget-list-action text-nowrap text-body text-opacity-50 fw-bold text-decoration-none">
+										On
+										<i class="fa fa-angle-right text-body text-opacity-30 fa-lg ms-3"></i>
+									</div>
+								</a>
+								<a href="#" class="widget-list-item">
+									<div class="widget-list-media icon">
+										<i class="fa fa-signal bg-pink text-white"></i>
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Cellular</h4>
+									</div>
+									<div class="widget-list-action text-decoration-none fw-bold">
+										<i class="fa fa-angle-right text-gray-500 fa-lg"></i>
+									</div>
+								</a>
+								<a href="#" class="widget-list-item">
+									<div class="widget-list-media icon">
+										<i class="fa fa-link bg-yellow text-gray-900"></i>
+									</div>
+									<div class="widget-list-content">
+										<h4 class="widget-list-title">Personal Hotspot</h4>
+									</div>
+									<div class="widget-list-action text-nowrap text-body text-opacity-50 fw-bold text-decoration-none">
+										Off
+										<i class="fa fa-angle-right text-body text-opacity-30 fa-lg ms-3"></i>
+									</div>
+								</a>
+							</div>
+							<!-- END widget-list -->
+						</div>
+						<!-- END col-12 -->
+						<!-- BEGIN col-12 -->
+						<div class="col-xl-12 col-lg-6">
+							<!-- BEGIN widget-chat -->
+							<div class="mb-10px mt-10px fs-10px">
+								<a href="#modal-widget-chat-input" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+								<b class="text-body">WIDGET CHAT</b>
+							</div>
+							<div class="widget-chat rounded mb-4" data-id="widget">
+								<!-- BEGIN widget-chat-header -->
+								<div class="widget-chat-header">
+									<div class="widget-chat-header-icon">
+										<i class="fab fa-earlybirds w-30px h-30px fs-20px bg-yellow text-gray-900 d-flex align-items-center justify-content-center rounded"></i>
+									</div>
+									<div class="widget-chat-header-content">
+										<h4 class="widget-chat-header-title">Company Discussion Group</h4>
+										<p class="widget-chat-header-desc">55 members, 4 online</p>
+									</div>
+								</div>
+								<!-- END widget-chat-header -->
+								<!-- BEGIN widget-chat-body -->
+								<div class="widget-chat-body" data-scrollbar="true" data-height="235px">
+									<!-- BEGIN widget-chat-item -->
+									<div class="widget-chat-item with-media start">
+										<div class="widget-chat-media">
+											<img alt="" src="../assets/img/user/user-1.jpg" />
+										</div>
+										<div class="widget-chat-info">
+											<div class="widget-chat-info-container">
+												<div class="widget-chat-name text-indigo">Hudson Mendes</div>
+												<div class="widget-chat-message">Should we plan for a company trip this year?</div>
+												<div class="widget-chat-time">6:00PM</div>
+											</div>
+										</div>
+									</div>
+									<!-- END widget-chat-item -->
+									<!-- BEGIN widget-chat-item -->
+									<div class="widget-chat-item with-media start">
+										<div class="widget-chat-media">
+											<img alt="" src="../assets/img/user/user-2.jpg" />
+										</div>
+										<div class="widget-chat-info">
+											<div class="widget-chat-info-container">
+												<div class="widget-chat-name text-primary">Sam Sugerman</div>
+												<div class="widget-chat-message">ok let's do it</div>
+												<div class="widget-chat-time">6:01PM</div>
+											</div>
+										</div>
+									</div>
+									<!-- END widget-chat-item -->
+									<!-- BEGIN widget-chat-item -->
+									<div class="widget-chat-item end">
+										<div class="widget-chat-info">
+											<div class="widget-chat-info-container">
+												<div class="widget-chat-message">i'm ok with it</div>
+												<div class="widget-chat-time">6:05PM</div>
+											</div>
+										</div>
+									</div>
+									<!-- END widget-chat-item -->
+									<div class="text-center text-gray-500 m-2 fw-bold">Today</div>
+									<!-- BEGIN widget-chat-item -->
+									<div class="widget-chat-item with-media start">
+										<div class="widget-chat-media">
+											<img alt="" src="../assets/img/user/user-3.jpg" />
+										</div>
+										<div class="widget-chat-info">
+											<div class="widget-chat-info-container">
+												<div class="widget-chat-name text-orange">Jaxon Allwood</div>
+												<div class="widget-chat-message">
+													Here is some images for New Zealand
+													<div class="row gx-1 mt-5px">
+														<div class="col-md-4">
+															<a href="#" class="widget-card widget-card-sm square mb-1">
+																<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-51-thumb.jpg)"></div>
+															</a>
+															<a href="#" class="widget-card widget-card-sm square mb-1">
+																<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-52-thumb.jpg)"></div>
+															</a>
+														</div>
+														<div class="col-md-4">
+															<a href="#" class="widget-card widget-card-sm square mb-1">
+																<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-53-thumb.jpg)"></div>
+															</a>
+															<a href="#" class="widget-card widget-card-sm square mb-1">
+																<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-54-thumb.jpg)"></div>
+															</a>
+														</div>
+														<div class="col-md-4">
+															<a href="#" class="widget-card widget-card-sm square mb-1">
+																<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-59-thumb.jpg)"></div>
+															</a>
+															<a href="#" class="widget-card widget-card-sm square mb-1">
+																<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-60-thumb.jpg)"></div>
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="widget-chat-time">6:20PM</div>
+											</div>
+										</div>
+									</div>
+									<!-- END widget-chat-item -->
+								</div>
+								<!-- END widget-chat-body -->
+								<!-- BEGIN widget-input -->
+								<div class="widget-input">
+									<form action="" method="POST" name="">
+										<div class="widget-input-container">
+											<div class="widget-input-icon"><a href="#" class="text-body text-opacity-50"><i class="fa fa-camera"></i></a></div>
+											<div class="widget-input-box">
+												<input type="text" class="form-control" placeholder="Write a message..." />
+											</div>
+											<div class="widget-input-icon"><a href="#" class="text-body text-opacity-50"><i class="fa fa-smile"></i></a></div>
+											<div class="widget-input-divider"></div>
+											<div class="widget-input-icon"><a href="#" class="text-body text-opacity-50"><i class="fa fa-microphone"></i></a></div>
+										</div>
+									</form>
+								</div>
+								<!-- END widget-input -->
+							</div>
+							<!-- END widget-chat -->
+						</div>
+						<!-- END col-12 -->
+						<!-- BEGIN col-12 -->
+						<div class="col-xl-12 col-lg-6">
+							<!-- BEGIN widget-todolist -->
+							<div class="mb-10px mt-10px fs-10px">
+								<a href="#modal-widget-todolist" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+								<b class="text-body">WIDGET TODOLIST</b>
+							</div>
+							<div class="widget-todolist rounded mb-4" data-id="widget">
+								<!-- BEGIN widget-todolist-header -->
+								<div class="widget-todolist-header">
+									<div class="widget-todolist-header-title">Todolist</div>
+									<div class="widget-todolist-header-total"><span>0</span><small>Done</small></div>
+								</div>
+								<!-- END widget-todolist-header -->
+								<!-- BEGIN widget-todolist-body -->
+								<div class="widget-todolist-body">
+									<!-- BEGIN widget-todolist-item -->
+									<div class="widget-todolist-item">
+										<div class="widget-todolist-input">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="widget_todolist_1" />
+											</div>
+										</div>
+										<div class="widget-todolist-content">
+											<h6 class="mb-2px">Borrow Tony's travel guide</h6>
+											<div class="text-body text-opacity-75 fw-bold fs-11px">Vacation in Rome</div>
+										</div>
+										<div class="widget-todolist-icon">
+											<a href="#"><i class="fa fa-question-circle"></i></a>
+										</div>
+									</div>
+									<!-- END widget-todolist-item -->
+									<!-- BEGIN widget-todolist-item -->
+									<div class="widget-todolist-item">
+										<div class="widget-todolist-input">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="widget_todolist_2" />
+											</div>
+										</div>
+										<div class="widget-todolist-content">
+											<h6 class="mb-2px">Finish expense report</h6>
+											<div class="text-body text-opacity-75 fw-bold fs-11px">Today, 4:00PM, Daily</div>
+										</div>
+										<div class="widget-todolist-icon">
+											<a href="#"><i class="fa fa-question-circle"></i></a>
+										</div>
+									</div>
+									<!-- END widget-todolist-item -->
+									<!-- BEGIN widget-todolist-item -->
+									<div class="widget-todolist-item">
+										<div class="widget-todolist-input">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="widget_todolist_3" />
+											</div>
+										</div>
+										<div class="widget-todolist-content">
+											<h6 class="mb-2px">Confirm conference call for Wednesday</h6>
+											<div class="text-body text-opacity-75 fw-bold fs-11px">Work</div>
+										</div>
+										<div class="widget-todolist-icon">
+											<a href="#"><i class="fa fa-question-circle"></i></a>
+										</div>
+									</div>
+									<!-- END widget-todolist-item -->
+									<!-- BEGIN widget-todolist-item -->
+									<div class="widget-todolist-item">
+										<div class="widget-todolist-input">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="widget_todolist_4" />
+											</div>
+										</div>
+										<div class="widget-todolist-content">
+											<h6 class="mb-2px"><b class="text-warning">!!</b> Mobile App WIP Presentation</h6>
+											<div class="text-body text-opacity-75 fw-bold fs-11px">Today, 12:00PM</div>
+										</div>
+										<div class="widget-todolist-icon">
+											<a href="#"><i class="fa fa-question-circle"></i></a>
+										</div>
+									</div>
+									<!-- END widget-todolist-item -->
+									<!-- BEGIN widget-todolist-item -->
+									<div class="widget-todolist-item">
+										<div class="widget-todolist-input">
+											<i class="fa fa-plus text-body text-opacity-30 fa-fw"></i>
+										</div>
+										<div class="widget-todolist-content">
+											<input type="text" class="form-control border-0 shadow-none rounded-0 p-0 h-20px bg-none" placeholder="Write your task here..." />
+										</div>
+									</div>
+									<!-- END widget-todolist-item -->
+								</div>
+								<!-- END widget-todolist-body -->
+							</div>
+							<!-- END widget-todolist -->
+						</div>
+						<!-- END col-12 -->
+						<!-- BEGIN col-12 -->
+						<div class="col-xl-12 col-lg-6">
+							<!-- BEGIN widget-map -->
+							<div class="mb-10px mt-10px fs-10px">
+								<a href="#modal-widget-map" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+								<b class="text-body">WIDGET MAP</b>
+							</div>
+							<div class="widget-map rounded mb-4" data-id="widget">
+								<!-- BEGIN widget-input-container -->
+								<div class="widget-input-container">
+									<div class="widget-input-icon"><a href="#" class="text-body text-opacity-50" data-id="widget-elm" data-light-class="text-body text-opacity-50" data-dark-class="text-white"><i class="fa fa-ellipsis-v"></i></a></div>
+									<div class="widget-input-box">
+										<input type="text" class="form-control" placeholder="Search here">
+									</div>
+									<div class="widget-input-icon"><a href="#" class="text-body text-opacity-50" data-id="widget-elm" data-light-class="text-body text-opacity-50" data-dark-class="text-white"><i class="fa fa-microphone"></i></a></div>
+									<div class="widget-input-divider"></div>
+									<div class="widget-input-icon"><a href="#" class="text-body text-opacity-50" data-id="widget-elm" data-light-class="text-body text-opacity-50" data-dark-class="text-white"><i class="fa fa-location-arrow"></i></a></div>
+								</div>
+								<!-- END widget-input-container -->
+								<!-- BEGIN widget-map-body -->
+								<div class="widget-map-body">
+									<iframe class="d-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5650178360584!2d-122.41879278478642!3d37.77679637975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter+HQ!5e0!3m2!1sen!2smy!4v1524046379645" width="100%" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+								<!-- END widget-map-body -->
+								<!-- BEGIN widget-map-list -->
+								<div class="widget-map-list" data-id="widget">
+									<div class="widget-list bg-none">
+										<!-- BEGIN widget-list-item -->
+										<div class="widget-list-item">
+											<div class="widget-list-media text-center">
+												<a href="#"><i class="fab fa-twitter fa-3x"></i></a>
+											</div>
+											<div class="widget-list-content">
+												<h4 class="widget-list-title">Twitter Headquater</h4>
+												<p class="widget-list-desc">Corporate Office</p>
+											</div>
+											<div class="widget-list-action">
+												<a href="#" data-bs-toggle="dropdown" class="text-body text-opacity-50"><i class="fa fa-angle-right fa-2x"></i></a>
+											</div>
+										</div>
+										<!-- END widget-list-item -->
+									</div>
+								</div>
+								<!-- END widget-map-list -->
+							</div>
+							<!-- END widget-map -->
+						</div>
+						<!-- END col-12 -->
+					</div>
+					<!-- END row -->
+				</div>
+				<!-- END col-4 -->
+				<!-- BEGIN col-8 -->
+				<div class="col-lg-12 col-xl-8">
+					<div class="mb-10px mt-10px fs-10px">
+						<a href="#modal-widget-img-icon" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+						<b class="text-body">WIDGET IMAGE / ICON</b>
+					</div>
+					<!-- BEGIN row -->
+					<div class="row mb-4">
+						<!-- BEGIN col-6 -->
+						<div class="col-sm-6">
+							<div class="d-flex flex-wrap">
+								<div class="widget-icon rounded bg-indigo me-5px mb-5px text-white">
+									<i class="fab fa-digital-ocean"></i>
+								</div>
+								<div class="widget-icon rounded bg-blue me-5px mb-5px text-white">
+									<i class="fab fa-twitter"></i>
+								</div>
+								<div class="widget-icon rounded bg-success me-5px mb-5px text-white">
+									<i class="fab fa-android"></i>
+								</div>
+								<div class="widget-icon rounded bg-warning me-5px mb-5px text-white">
+									<i class="fab fa-firefox"></i>
+								</div>
+								<div class="widget-icon rounded bg-danger me-5px mb-5px text-white">
+									<i class="fab fa-google-plus-g"></i>
+								</div>
+								<div class="widget-icon rounded bg-pink me-5px mb-5px text-white">
+									<i class="fab fa-pinterest"></i>
+								</div>
+							</div>
+							<div class="clearfix">
+								<div class="widget-icon widget-icon-xl user rounded bg-gray-500 float-start me-5px mb-5px text-white" data-id="widget-elm"
+									data-light-class="widget-icon widget-icon-xl user rounded bg-gray-500 float-start me-5px mb-5px text-white"
+									data-dark-class="widget-icon widget-icon-xl user rounded bg-dark float-start me-5px mb-5px text-white text-opacity-50">
+									<i class="fa fa-user"></i>
+								</div>
+								<div class="widget-icon widget-icon-lg user rounded bg-gray-500 float-start me-5px mb-5px text-white" data-id="widget-elm"
+									data-light-class="widget-icon widget-icon-lg user rounded bg-gray-500 float-start me-5px mb-5px text-white"
+									data-dark-class="widget-icon widget-icon-lg user rounded bg-dark float-start me-5px mb-5px text-white text-opacity-50">
+									<i class="fa fa-user"></i>
+								</div>
+								<div class="widget-icon user rounded bg-gray-500 float-start me-5px mb-5px text-white" data-id="widget-elm"
+									data-light-class="widget-icon user rounded bg-gray-500 float-start me-5px mb-5px text-white"
+									data-dark-class="widget-icon user rounded bg-dark float-start me-5px mb-5px text-white text-opacity-50">
+									<i class="fa fa-user"></i>
+								</div>
+								<div class="widget-icon widget-icon-sm user rounded bg-gray-500 float-start me-5px mb-5px text-white" data-id="widget-elm"
+									data-light-class="widget-icon widget-icon-sm user rounded bg-gray-500 float-start me-5px mb-5px text-white"
+									data-dark-class="widget-icon widget-icon-sm user rounded bg-dark float-start me-5px mb-5px text-white text-opacity-50">
+									<i class="fa fa-user"></i>
+								</div>
+								<div class="widget-icon widget-icon-xs user rounded bg-gray-500 float-start me-5px mb-5px text-white" data-id="widget-elm"
+									data-light-class="widget-icon widget-icon-xs user rounded bg-gray-500 float-start me-5px mb-5px text-white"
+									data-dark-class="widget-icon widget-icon-xs user rounded bg-dark float-start me-5px mb-5px text-white text-opacity-50">
+									<i class="fa fa-user"></i>
+								</div>
+							</div>
+						</div>
+						<!-- END col-6 -->
+						<!-- BEGIN col-6 -->
+						<div class="col-sm-6">
+							<div class="float-start">
+								<div class="widget-img rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-11-thumb.jpg)"
+								></div>
+								<div class="widget-img rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-12-thumb.jpg)"
+								></div>
+								<div class="widget-img rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-13-thumb.jpg)"
+								></div>
+								<div class="widget-img rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-14-thumb.jpg)"
+								></div>
+								<div class="widget-img rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-15-thumb.jpg)"
+								></div>
+								<div class="widget-img rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-16-thumb.jpg)"
+								></div>
+								<br />
+								<div class="widget-img widget-img-xl rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-21-thumb.jpg)"
+								></div>
+								<div class="widget-img widget-img-lg rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-22-thumb.jpg)"
+								></div>
+								<div class="widget-img widget-img rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-23-thumb.jpg)"
+								></div>
+								<div class="widget-img widget-img-sm rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-24-thumb.jpg)"
+								></div>
+								<div class="widget-img widget-img-xs rounded bg-dark float-start me-5px mb-5px"
+									style="background-image: url(../assets/img/gallery/gallery-25-thumb.jpg)"
+								></div>
+							</div>
+						</div>
+						<!-- END col-6 -->
+					</div>
+					<!-- END row -->
+					
+					<div class="mb-10px mt-10px fs-10px">
+						<a href="#modal-widget-card" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+						<b class="text-body">WIDGET CARD</b>
+					</div>
+					<!-- BEGIN row -->
+					<div class="row">
+						<!-- BEGIN col-6 -->
+						<div class="col-sm-6">
+							<!-- BEGIN widget-card -->
+							<a href="#" class="widget-card rounded mb-20px" data-id="widget">
+								<div class="widget-card-cover rounded" style="background-image: url(../assets/img/gallery/gallery-portrait-11-thumb.jpg)"></div>
+								<div class="widget-card-content">
+									<b class="text-white">Download and get free trial.</b>
+								</div>
+								<div class="widget-card-content bottom">
+									<i class="fab fa-pushed fa-5x text-indigo"></i>
+									<h4 class="text-white mt-10px"><b>Apple Draw<br /> Photo Booth</b></h4>
+									<h5 class="fs-12px text-white text-opacity-75 mb-0"><b>EASILY DRAW ON PHOTOS</b></h5>
+								</div>
+							</a>
+							<!-- END widget-card -->
+						</div>
+						<!-- END col-6 -->
+						<!-- BEGIN col-6 -->
+						<div class="col-sm-6">
+							<!-- BEGIN widget-card -->
+							<a href="#" class="widget-card rounded mb-20px" data-id="widget">
+								<div class="widget-card-cover rounded"></div>
+								<div class="widget-card-content">
+									<h5 class="fs-12px text-body"><b>MAKING A DIFFERENCE</b></h5>
+									<h4 class="mb-10px text-pink"><b>Apple Heart<br /> Study App</b></h4>
+									<i class="fa fa-heartbeat fa-5x text-pink text-opacity-50"></i>
+								</div>
+								<div class="widget-card-content bottom">
+									<b class="text-body">Opt in and help heart research.</b>
+								</div>
+							</a>
+							<!-- END widget-card -->
+						</div>
+						<!-- END col-6 -->
+					</div>
+					<!-- END row -->
+					
+					<div class="mb-10px mt-10px fs-10px">
+						<a href="#modal-widget-card-square" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+						<b class="text-body">WIDGET CARD SQUARE</b>
+					</div>
+					<!-- BEGIN row -->
+					<div class="row">
+						<!-- BEGIN col-3 -->
+						<div class="col-xs-6 col-sm-3">
+							<!-- BEGIN row -->
+							<div class="row gx-1 mb-1">
+								<!-- BEGIN col-6 -->
+								<div class="col-6">
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/login-bg/login-bg-1-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/login-bg/login-bg-2-thumb.jpg)"></div>
+									</a>
+								</div>
+								<!-- END col-6 -->
+								<!-- BEGIN col-6 -->
+								<div class="col-6">
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/login-bg/login-bg-3-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/login-bg/login-bg-4-thumb.jpg)"></div>
+									</a>
+								</div>
+								<!-- END col-6 -->
+							</div>
+							<!-- END row -->
+							<div class="fs-12px fw-bold text-body">Camera Roll</div>
+							<div class="fs-10px fw-bold text-body text-opacity-50 mb-3">2,711</div>
+						</div>
+						<!-- END col-3 -->
+						<!-- BEGIN col-3 -->
+						<div class="col-xs-6 col-sm-3">
+							<a href="#" class="widget-card rounded square mb-5px">
+								<div class="widget-card-cover" style="background-image: url(../assets/img/login-bg/login-bg-7-thumb.jpg)">
+									<span class="widget-card-cover-icon"><i class="fa fa-play fa-lg"></i></span>
+								</div>
+							</a>
+							<div class="fs-12px fw-bold text-body pt-2px">Videos</div>
+							<div class="fs-10px fw-bold text-body text-opacity-50 mb-3">31</div>
+						</div>
+						<!-- END col-3 -->
+						<!-- BEGIN col-3 -->
+						<div class="col-xs-6 col-sm-3">
+							<a href="#" class="widget-card rounded square mb-5px">
+								<div class="widget-card-cover" style="background-image: url(../assets/img/login-bg/login-bg-10-thumb.jpg)">
+									<div class="d-flex h-100 align-items-center justify-content-center">
+										<div class="text-center">
+											<div class="text-white fs-14px"><b>PORTRAITS OF</b></div>
+											<div class="text-white text-opacity-75 fw-bold">2023</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							<div class="fs-12px fw-bold text-body pt-2px">Memory 2023</div>
+							<div class="fs-10px fw-bold text-body text-opacity-50 mb-3">1,239</div>
+						</div>
+						<!-- END col-3 -->
+						<!-- BEGIN col-3 -->
+						<div class="col-xs-6 col-sm-3">
+							<!-- BEGIN row -->
+							<div class="row gx-1 mb-5px">
+								<!-- BEGIN col-3 -->
+								<div class="col-3">
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-1-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-2-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-3-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-4-thumb.jpg)"></div>
+									</a>
+								</div>
+								<!-- END col-3 -->
+								<!-- BEGIN col-3 -->
+								<div class="col-3">
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-5-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-6-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-7-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-8-thumb.jpg)"></div>
+									</a>
+								</div>
+								<!-- END col-3 -->
+								<!-- BEGIN col-3 -->
+								<div class="col-3">
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-9-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-10-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-11-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-12-thumb.jpg)"></div>
+									</a>
+								</div>
+								<!-- END col-3 -->
+								<!-- BEGIN col-3 -->
+								<div class="col-3">
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-13-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-14-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-15-thumb.jpg)"></div>
+									</a>
+									<a href="#" class="widget-card rounded square mb-1">
+										<div class="widget-card-cover" style="background-image: url(../assets/img/gallery/gallery-16-thumb.jpg)"></div>
+									</a>
+								</div>
+								<!-- END col-3 -->
+							</div>
+							<!-- END row -->
+							<div class="fs-12px fw-bold text-body">Albums</div>
+							<div class="fs-10px fw-bold text-body text-opacity-50 mb-15px">8</div>
+						</div>
+						<!-- END col-3 -->
+					</div>
+					<!-- END row -->
+					
+					<div class="mb-10px mt-10px fs-10px">
+						<a href="#modal-widget-stat" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+						<b class="text-body">WIDGET STAT</b>
+					</div>
+					<!-- BEGIN row -->
+					<div class="row gx-2 mb-20px">
+						<!-- BEGIN col-4 -->
+						<div class="col-lg-4 col-sm-6">
+							<div class="widget widget-stats bg-teal mb-7px">
+								<div class="stats-icon stats-icon-lg"><i class="fa fa-globe fa-fw"></i></div>
+								<div class="stats-content">
+									<div class="stats-title">TODAY'S VISITS</div>
+									<div class="stats-number">7,842,900</div>
+									<div class="stats-progress progress">
+										<div class="progress-bar" style="width: 70.1%;"></div>
+									</div>
+									<div class="stats-desc">Better than last week (70.1%)</div>
+								</div>
+							</div>
+						</div>
+						<!-- END col-4 -->
+						<!-- BEGIN col-4 -->
+						<div class="col-lg-4 col-sm-6">
+							<div class="widget widget-stats bg-blue mb-7px">
+								<div class="stats-icon stats-icon-lg"><i class="fa fa-dollar-sign fa-fw"></i></div>
+								<div class="stats-content">
+									<div class="stats-title">TODAY'S PROFIT</div>
+									<div class="stats-number">180,200</div>
+									<div class="stats-progress progress">
+										<div class="progress-bar" style="width: 40.5%;"></div>
+									</div>
+									<div class="stats-desc">Better than last week (40.5%)</div>
+								</div>
+							</div>
+						</div>
+						<!-- END col-4 -->
+						<!-- BEGIN col-4 -->
+						<div class="col-lg-4 col-sm-6">
+							<div class="widget widget-stats bg-purple mb-7px">
+								<div class="stats-icon stats-icon-lg"><i class="fa fa-archive fa-fw"></i></div>
+								<div class="stats-content">
+									<div class="stats-title">NEW ORDERS</div>
+									<div class="stats-number">38,900</div>
+									<div class="stats-progress progress">
+										<div class="progress-bar" style="width: 76.3%;"></div>
+									</div>
+									<div class="stats-desc">Better than last week (76.3%)</div>
+								</div>
+							</div>
+						</div>
+						<!-- END col-4 -->
+						<!-- BEGIN col-4 -->
+						<div class="col-lg-4 col-sm-6">
+							<div class="widget widget-stats bg-dark mb-7px">
+								<div class="stats-icon stats-icon-lg"><i class="fa fa-comment-alt fa-fw"></i></div>
+								<div class="stats-content">
+									<div class="stats-title">NEW COMMENTS</div>
+									<div class="stats-number">3,988</div>
+									<div class="stats-progress progress">
+										<div class="progress-bar" style="width: 54.9%;"></div>
+									</div>
+									<div class="stats-desc">Better than last week (54.9%)</div>
+								</div>
+							</div>
+						</div>
+						<!-- END col-4 -->
+						<!-- BEGIN col-4 -->
+						<div class="col-lg-4 col-sm-6">
+							<div class="widget widget-stats bg-orange mb-7px">
+								<div class="stats-icon stats-icon-lg"><i class="fa fa-file-alt fa-fw"></i></div>
+								<div class="stats-content">
+									<div class="stats-title">PENDING INVOICE</div>
+									<div class="stats-number">20</div>
+									<div class="stats-progress progress">
+										<div class="progress-bar" style="width: 23.5%;"></div>
+									</div>
+									<div class="stats-desc">More than last week (23.5%)</div>
+								</div>
+							</div>
+						</div>
+						<!-- END col-4 -->
+						<!-- BEGIN col-4 -->
+						<div class="col-lg-4 col-sm-6">
+							<div class="widget widget-stats bg-pink mb-7px">
+								<div class="stats-icon stats-icon-lg"><i class="fa fa-exclamation-triangle fa-fw"></i></div>
+								<div class="stats-content">
+									<div class="stats-title">ERROR LOG</div>
+									<div class="stats-number">5</div>
+									<div class="stats-progress progress">
+										<div class="progress-bar" style="width: 10.5%;"></div>
+									</div>
+									<div class="stats-desc">More than last week (10.5%)</div>
+								</div>
+							</div>
+						</div>
+						<!-- END col-4 -->
+					</div>
+					<!-- END row -->
+					
+					<div class="mb-10px mt-10px fs-10px">
+						<a href="#modal-widget-chart" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+						<b class="text-body">WIDGET CHART</b>
+					</div>
+					<!-- BEGIN widget-chart -->
+					<div class="widget rounded mb-4" data-id="widget">
+						<!-- BEGIN widget-header -->
+						<div class="widget-header">
+							<h4 class="widget-header-title">Audience Overview</h4>
+							<div class="widget-header-icon"><a href="#" class="text-body text-opacity-50"><i class="fa fa-fw fa-upload"></i></a></div>
+							<div class="widget-header-icon"><a href="#" class="text-body text-opacity-50"><i class="fa fa-fw fa-cog"></i></a></div>
+						</div>
+						<!-- END widget-header -->
+						<!-- BEGIN widget-content -->
+						<div class="row m-0">
+							<div class="col widget-chart-content">
+								<div id="nv-stacked-area-chart" style="height: 108%"></div>
+							</div>
+							<div class="col-lg-4 p-3">
+								<div class="widget-chart-info">
+									<h4 class="widget-chart-info-title">Total sales</h4>
+									<p class="widget-chart-info-desc">Lorem ipsum dolor sit consectetur adipiscing elit.</p>
+									<div class="widget-chart-info-progress">
+										<b>Monthly Plan</b>
+										<span class="float-end">70%</span>
+									</div>
+									<div class="progress h-10px">
+										<div class="progress-bar progress-bar-striped progress-bar-animated rounded-pill" style="width:70%;"></div>
+									</div>
+								</div>
+								<hr />
+								<div class="widget-chart-info">
+									<h4 class="widget-chart-info-title">Task progress</h4>
+									<p class="widget-chart-info-desc">Vestibulum sollicitudin in lectus a cursus.</p>
+									<div class="widget-chart-info-progress">
+										<b>Marketing Research</b>
+										<span class="float-end">74%</span>
+									</div>
+									<div class="progress h-10px mb-15px">
+										<div class="progress-bar progress-bar-striped progress-bar-animated rounded-pill bg-indigo" style="width: 74%"></div>
+									</div>
+									<div class="widget-chart-info-progress">
+										<b>Mobile App Development</b>
+										<span class="float-end">25%</span>
+									</div>
+									<div class="progress h-10px mb-15px">
+										<div class="progress-bar progress-bar-striped progress-bar-animated rounded-pill bg-green" style="width: 25%"></div>
+									</div>
+									<div class="widget-chart-info-progress">
+										<b>Website Redesign</b>
+										<span class="float-end">95%</span>
+									</div>
+									<div class="progress h-10px">
+										<div class="progress-bar progress-bar-striped progress-bar-animated rounded-pill bg-orange" style="width: 95%"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- END widget-content -->
+					</div>
+					<!-- END widget-chart -->
+					
+					<div class="mb-10px mt-10px fs-10px">
+						<a href="#modal-widget-table" class="float-end text-body text-opacity-50 text-decoration-none me-3px fw-bold" data-bs-toggle="modal">source code</a>
+						<b class="text-body">WIDGET TABLE</b>
+					</div>
+					<!-- BEGIN widget-table -->
+					<div class="table-responsive">
+						<!-- BEGIN widget-table -->
+						<table class="table table-bordered widget-table rounded" data-id="widget">
+							<thead>
+								<tr class="text-nowrap">
+									<th width="1%">Image</th>
+									<th>Product Info</th>
+									<th>Price</th>
+									<th>Qty</th>
+									<th>Total</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img src="../assets/img/product/product-6.png" width="100" />
+									</td>
+									<td>
+										<h5 class="mb-1">Mavic Pro Combo</h5>
+										<p class="fs-11px fw-bold text-body text-opacity-50 mb-3">Portable yet powerful, the Mavic Pro is your personal drone, ready to go with you everywhere.</p>
+										<div class="progress h-10px rounded-pill mb-5px">
+											<div class="progress-bar progress-bar-striped progress-bar-animated bg-orange fs-10px fw-bold" style="width: 30%;">30%</div>
+										</div>
+										<div class="clearfix fs-10px">
+											status: 
+											<b class="text-body">Shipped</b>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<b class="text-body">$999</b><br />
+										<small><del>$1,202</del></small>
+									</td>
+									<td>1</td>
+									<td>999.00</td>
+									<td>
+										<a href="#" class="btn btn-default btn-sm w-80px rounded-pill">Edit</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="../assets/img/product/product-7.png" width="100" />
+									</td>
+									<td>
+										<h5 class="mb-1">Inspire 2</h5>
+										<p class="fs-11px fw-bold text-body text-opacity-50 mb-3">Cinematic aerial performance for filmmakers.</p>
+										<div class="progress h-10px rounded-pill mb-5px">
+											<div class="progress-bar progress-bar-striped progress-bar-animated bg-success fs-10px fw-bold" style="width: 100%;">100%</div>
+										</div>
+										<div class="clearfix fs-10px">
+											status: 
+											<b class="text-body">received</b>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<b class="text-body">$999</b><br />
+										<small><del>$1,202</del></small>
+									</td>
+									<td>1</td>
+									<td>999.00</td>
+									<td>
+										<a href="#" class="btn btn-default btn-sm w-80px rounded-pill">Edit</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- END widget-table -->
+					</div>
+					<!-- END table-responsive -->
+				</div>
+				<!-- END col-8 -->
+			</div>
+			<!-- END row -->
+		</div>
+		<!-- END #content -->
+		
+		<!-- BEGIN #modal-widget-todolist -->
+		<div class="modal fade" id="modal-widget-map">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget Map</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-map">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-1.json" id="source-widget-map"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-map -->
+		
+		<!-- BEGIN #modal-widget-todolist -->
+		<div class="modal fade" id="modal-widget-todolist">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget Todolist</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-todolist">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-2.json" id="source-widget-todolist"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-todolist -->
+		
+		<!-- BEGIN #modal-widget-chat-input -->
+		<div class="modal fade" id="modal-widget-chat-input">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget Chat & Input</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-chat-input">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-3.json" id="source-widget-chat-input"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-chat-input -->
+		
+		<!-- BEGIN #modal-widget-list -->
+		<div class="modal fade" id="modal-widget-list">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget List</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-list">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-4.json" id="source-widget-list"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-list -->
+		
+		<!-- BEGIN #modal-widget-list-with-icon -->
+		<div class="modal fade" id="modal-widget-list-with-icon">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget List with Icon</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-list-with-icon">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-5.json" id="source-widget-list-with-icon"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-list -->
+		
+		<!-- BEGIN #modal-widget-img-icon -->
+		<div class="modal fade" id="modal-widget-img-icon">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget Image / Icon</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-img-icon">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-6.json" id="source-widget-img-icon"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-img-icon -->
+		
+		<!-- BEGIN #modal-widget-card -->
+		<div class="modal fade" id="modal-widget-card">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget List Card</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-card">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-7.json" id="source-widget-card"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-card -->
+		
+		<!-- BEGIN #modal-widget-card-square -->
+		<div class="modal fade" id="modal-widget-card-square">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget List Card Square</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-card-square">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-8.json" id="source-widget-card-square"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-card-square -->
+		
+		<!-- BEGIN #modal-widget-stat -->
+		<div class="modal fade" id="modal-widget-stat">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget Stat</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-stat">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-9.json" id="source-widget-stat"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-stat -->
+		
+		<!-- BEGIN #modal-widget-chart -->
+		<div class="modal fade" id="modal-widget-chart">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget Chart</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-chart">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-10.json" id="source-widget-chart"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-chart -->
+		
+		<!-- BEGIN #modal-widget-table -->
+		<div class="modal fade" id="modal-widget-table">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Widget Table</h4>
+						<a href="#" data-bs-dismiss="modal" class="btn-close"></a>
+					</div>
+					<!-- BEGIN hljs-wrapper -->
+					<div class="hljs-wrapper mb-0">
+						<button type="button" class="btn btn-gray-500 btn-sm btn-clipboard w-60px" data-clipboard-target="#source-widget-table">Copy</button>
+						<pre class="mb-0"><code class="html" data-url="../assets/data/widgets/code-11.json" id="source-widget-chart"></code></pre>
+					</div>
+					<!-- END hljs-wrapper -->
+					<div class="modal-footer">
+						<a href="#" data-bs-dismiss="modal" class="btn btn-default">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END #modal-widget-table -->
+		
+		<!-- BEGIN theme-panel -->
+		<div class="theme-panel">
+			<a href="javascript:;" data-toggle="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+			<div class="theme-panel-content" data-scrollbar="true" data-height="100%">
+				<h5>App Settings</h5>
+				
+				<!-- BEGIN theme-list -->
+				<div class="theme-list">
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-red" data-theme-class="theme-red" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Red">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-pink" data-theme-class="theme-pink" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Pink">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-orange" data-theme-class="theme-orange" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Orange">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-yellow" data-theme-class="theme-yellow" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Yellow">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-lime" data-theme-class="theme-lime" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Lime">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-green" data-theme-class="theme-green" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Green">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-teal" data-theme-class="theme-teal" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Teal">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-cyan" data-theme-class="theme-cyan" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cyan">&nbsp;</a></div>
+					<div class="theme-list-item active"><a href="javascript:;" class="theme-list-link bg-blue" data-theme-class="" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Default">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-purple" data-theme-class="theme-purple" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Purple">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-indigo" data-theme-class="theme-indigo" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Indigo">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-black" data-theme-class="theme-gray-600" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Black">&nbsp;</a></div>
+				</div>
+				<!-- END theme-list -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<div class="row mt-10px">
+					<div class="col-8 control-label text-body fw-bold">
+						<div>Dark Mode <span class="badge bg-primary ms-1 py-2px position-relative" style="top: -1px;">NEW</span></div>
+						<div class="lh-14">
+							<small class="text-body opacity-50">
+								Adjust the appearance to reduce glare and give your eyes a break.
+							</small>
+						</div>
+					</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-theme-dark-mode" id="appThemeDarkMode" value="1" />
+							<label class="form-check-label" for="appThemeDarkMode">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="theme-panel-divider"></div>
+				
+				<!-- BEGIN theme-switch -->
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body fw-bold">Header Fixed</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-header-fixed" id="appHeaderFixed" value="1" checked />
+							<label class="form-check-label" for="appHeaderFixed">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body fw-bold">Header Inverse</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-header-inverse" id="appHeaderInverse" value="1" />
+							<label class="form-check-label" for="appHeaderInverse">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body fw-bold">Sidebar Fixed</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-sidebar-fixed" id="appSidebarFixed" value="1" checked />
+							<label class="form-check-label" for="appSidebarFixed">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body fw-bold">Sidebar Grid</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-sidebar-grid" id="appSidebarGrid" value="1" />
+							<label class="form-check-label" for="appSidebarGrid">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body fw-bold">Gradient Enabled</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-gradient-enabled" id="appGradientEnabled" value="1" />
+							<label class="form-check-label" for="appGradientEnabled">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<!-- END theme-switch -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<h5>Admin Design (5)</h5>
+				<!-- BEGIN theme-version -->
+				<div class="theme-version">
+					<div class="theme-version-item">
+						<a href="../template_html/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/default.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_transparent/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/transparent.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_apple/index_v2.html" class="theme-version-link active">
+							<span style="background-image: url(../assets/img/theme/apple.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_material/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/material.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_facebook/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/facebook.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_google/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/google.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+				</div>
+				<!-- END theme-version -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<h5>Language Version (7)</h5>
+				<!-- BEGIN theme-version -->
+				<div class="theme-version">
+					<div class="theme-version-item">
+						<a href="../template_html/index.html" class="theme-version-link active">
+							<span style="background-image: url(../assets/img/version/html.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_ajax/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/ajax.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_angularjs/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/angular1x.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_angularjs17/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/angular10x.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="javascript:alert('Laravel 10 Version only available in downloaded version.');" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/laravel.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_vue3/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/vuejs.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_react/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/reactjs.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="javascript:alert('.NET Core 7.0 MVC Version only available in downloaded version.');" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/dotnet.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+				</div>
+				<!-- END theme-version -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<h5>Frontend Design (5)</h5>
+				<!-- BEGIN theme-version -->
+				<div class="theme-version">
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_one_page_parallax/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/one-page-parallax.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_e_commerce/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/e-commerce.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_blog/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/blog.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_forum/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/forum.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_corporate/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/corporate.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+				</div>
+				<!-- END theme-version -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<a href="https://seantheme.com/color-admin/documentation/" class="btn btn-dark d-block w-100 rounded-pill mb-10px" target="_blank"><b>Documentation</b></a>
+				<a href="javascript:;" class="btn btn-default d-block w-100 rounded-pill" data-toggle="reset-local-storage"><b>Reset Local Storage</b></a>
+			</div>
+		</div>
+		<!-- END theme-panel -->
+		<!-- BEGIN scroll-top-btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-theme btn-scroll-to-top" data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+		<!-- END scroll-top-btn -->
+	</div>
+	<!-- END #app -->
+	
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="../assets/js/vendor.min.js"></script>
+	<script src="../assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+	
+	<!-- ================== BEGIN page-js ================== -->
+	<script src="../assets/plugins/d3/d3.min.js"></script>
+	<script src="../assets/plugins/nvd3/build/nv.d3.min.js"></script>
+	<script src="../assets/plugins/clipboard/dist/clipboard.min.js"></script>
+	<script src="../assets/plugins/@highlightjs/cdn-assets/highlight.min.js"></script>
+	<script src="../assets/js/demo/widget.demo.js"></script>
+	<script src="../assets/js/demo/render.highlight.js"></script>
+	<!-- ================== END page-js ================== -->
+</body>
+</html>

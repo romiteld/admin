@@ -1,0 +1,14 @@
+.breadcrumb {
+	font-size: $font-size-sm;
+	padding: 0;
+	margin: 0 0 rem(15px);
+	background: none;
+	
+	& .breadcrumb-item {
+		line-height: rem(28px);
+		
+		& a {
+			color: var(--#{$prefix}component-color);
+		}
+	}
+}

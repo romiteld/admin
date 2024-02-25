@@ -1,0 +1,200 @@
+@@include('./partial/head.html', {
+	"title": "E-Commerce Front End Theme", 
+	"css": [
+	]}
+)
+	<!-- BEGIN #app -->
+	<div id="app" class="fade show">
+		@@include('./partial/top-nav.html')
+		@@include('./partial/header.html')
+		
+		<!-- BEGIN #checkout-cart -->
+		<div class="section-container" id="checkout-cart">
+			<!-- BEGIN container -->
+			<div class="container">
+				<!-- BEGIN checkout -->
+				<div class="checkout">
+					<form action="my_account.html" method="GET" name="form_checkout">
+						<!-- BEGIN checkout-header -->
+						<div class="checkout-header">
+							<!-- BEGIN row -->
+							<div class="row">
+								<!-- BEGIN col-3 -->
+								<div class="col-lg-3">
+									<div class="step">
+										<a href="checkout_cart.html">
+											<div class="number">1</div>
+											<div class="info">
+												<div class="title">Delivery Options</div>
+												<div class="desc">Lorem ipsum dolor sit amet.</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<!-- END col-3 -->
+								<!-- BEGIN col-3 -->
+								<div class="col-lg-3">
+									<div class="step">
+										<a href="checkout_info.html">
+											<div class="number">2</div>
+											<div class="info">
+												<div class="title">Shipping Address</div>
+												<div class="desc">Vivamus eleifend euismod.</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<!-- END col-3 -->
+								<!-- BEGIN col-3 -->
+								<div class="col-lg-3">
+									<div class="step">
+										<a href="checkout_payment.html">
+											<div class="number">3</div>
+											<div class="info">
+												<div class="title">Payment</div>
+												<div class="desc">Aenean ut pretium ipsum. </div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<!-- END col-3 -->
+								<!-- BEGIN col-3 -->
+								<div class="col-lg-3">
+									<div class="step active">
+										<a href="#">
+											<div class="number">4</div>
+											<div class="info">
+												<div class="title">Complete Payment</div>
+												<div class="desc">Curabitur interdum libero.</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<!-- END col-3 -->
+							</div>
+							<!-- END row -->
+						</div>
+						<!-- END checkout-header -->
+						<!-- BEGIN checkout-body -->
+						<div class="checkout-body">
+							<!-- BEGIN checkout-message -->
+							<div class="checkout-message">
+								<h1>Thank you! <small>Your Payment has been successfully processed with the following details.</small></h1>
+								<div class="table-responsive">
+									<table class="table table-payment-summary">
+										<tbody>
+											<tr>
+												<td class="field">Transaction Status</td>
+												<td class="value">Success</td>
+											</tr>
+											<tr>
+												<td class="field">Transaction Reference No.</td>
+												<td class="value">REF000001</td>
+											</tr>
+											<tr>
+												<td class="field">Bank Authorised Code</td>
+												<td class="value">AUTH000001</td>
+											</tr>
+											<tr>
+												<td class="field">Transaction Date and Time</td>
+												<td class="value">05 APR 2023 07:30PM</td>
+											</tr>
+											<tr>
+												<td class="field">Orders</td>
+												<td class="value product-summary">
+													<div class="product-summary-img h-150px w-100px d-flex align-items-center justify-content-center">
+														<img src="../assets/img/product/product-iphone-12.png" class="mw-100 mh-100" alt="" />
+													</div>
+													<div class="product-summary-info">
+														<div class="title">iPhone 12 Pro Max 128GB (Blue)</div>
+														<div class="desc">Delivers Tue 26/04/2023 - Free</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="field">Payment Amount (RM)</td>
+												<td class="value">$999.00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p class="text-silver-darker text-center mb-0">Should you require any assistance, you can get in touch with Support Team at (123) 456-7890</p>
+							</div>
+							<!-- END checkout-message -->
+						</div>
+						<!-- END checkout-body -->
+						<!-- BEGIN checkout-footer -->
+						<div class="checkout-footer text-center">
+							<button type="submit" class="btn btn-white btn-theme">MANAGE ORDERS</button>
+						</div>
+						<!-- END checkout-footer -->
+					</form>
+				</div>
+				<!-- END checkout -->
+			</div>
+			<!-- END container -->
+		</div>
+		<!-- END #checkout-cart -->
+		
+		<!-- BEGIN #policy -->
+		<div id="policy" class="section-container bg-component">
+			<!-- BEGIN container -->
+			<div class="container">
+				<!-- BEGIN row -->
+				<div class="row">
+					<!-- BEGIN col-4 -->
+					<div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+						<!-- BEGIN policy -->
+						<div class="policy">
+							<div class="policy-icon"><i class="fa fa-truck"></i></div>
+							<div class="policy-info">
+								<h4>Free Delivery Over $100</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
+						</div>
+						<!-- END policy -->
+					</div>
+					<!-- END col-4 -->
+					<!-- BEGIN col-4 -->
+					<div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+						<!-- BEGIN policy -->
+						<div class="policy">
+							<div class="policy-icon"><i class="fa fa-umbrella"></i></div>
+							<div class="policy-info">
+								<h4>1 Year Warranty For Phones</h4>
+								<p>Cras laoreet urna id dui malesuada gravida. <br />Duis a lobortis dui.</p>
+							</div>
+						</div>
+						<!-- END policy -->
+					</div>
+					<!-- END col-4 -->
+					<!-- BEGIN col-4 -->
+					<div class="col-lg-4 col-md-4">
+						<!-- BEGIN policy -->
+						<div class="policy">
+							<div class="policy-icon"><i class="fa fa-user-md"></i></div>
+							<div class="policy-info">
+								<h4>6 Month Warranty For Accessories</h4>
+								<p>Fusce ut euismod orci. Morbi auctor, sapien non eleifend iaculis.</p>
+							</div>
+						</div>
+						<!-- END policy -->
+					</div>
+					<!-- END col-4 -->
+				</div>
+				<!-- END row -->
+			</div>
+			<!-- END container -->
+		</div>
+		<!-- END #policy -->
+		
+		@@include('./partial/footer.html')
+	</div>
+	<!-- END #app -->
+
+	@@include('./partial/theme-panel.html')
+  
+@@include('./partial/script.html', {
+	"script": [
+	]}
+)

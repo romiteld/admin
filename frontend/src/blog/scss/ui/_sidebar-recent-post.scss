@@ -1,0 +1,27 @@
+.sidebar-recent-post {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	& > li {
+		padding: rem(10px) 0;
+		border-bottom: 1px solid var(--#{$prefix}component-border-color);
+		
+		@include clearfix();
+		
+		& .title {
+			margin: 0;
+			font-size: $font-size-base;
+			line-height: $line-height-base;
+			
+			& a {
+				color: var(--#{$prefix}component-color);
+			}
+		}
+		& .date {
+			font-size: $font-size-sm;
+			line-height: $line-height-base;
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		}
+	}
+}

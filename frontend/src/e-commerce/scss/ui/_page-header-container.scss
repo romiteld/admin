@@ -1,0 +1,41 @@
+.page-header-container {
+	position: relative;
+	
+	& .container {
+		position: relative;
+	}
+	& .page-header {
+		border: none;
+		color: $white;
+		margin: 0;
+		font-size: rem(28px);
+		padding: 0;
+		text-align: center;
+		
+		@include media-breakpoint-down(md) {
+			font-size: rem(18px);
+		}
+	}
+	& .page-header-cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba($dark, .75);
+		}
+		& img {
+			max-width: 100%;
+		}
+	}
+}

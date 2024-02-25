@@ -1,0 +1,38 @@
+.summary-container {
+	width: rem(360px);
+	text-align: right;
+	
+	@if ($enable-rtl) {
+		margin-right: auto;
+	} @else {
+		margin-left: auto;
+	}
+	
+	& .summary-row {
+		display: table;
+		width: 100%;
+		
+		& + .summary-row {
+			margin-top: rem(5px);
+		}
+		& .field {
+			display: table-cell;
+			width: 40%;
+    }
+    & .value {
+			display: table-cell;
+    	width: 60%;
+    }
+    &.total {
+    	border-top: 1px solid var(--#{$prefix}component-border-color);
+    	margin-top: rem(10px);
+    	font-size: rem(16px);
+    	font-weight: 600;
+    	
+    	& .field,
+    	& .value {
+    		padding-top: rem(10px);
+    	}
+    }
+  }
+}

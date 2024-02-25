@@ -1,0 +1,43 @@
+.btn {
+	font-weight: $font-weight-bold;
+	
+	&.btn-icon {
+		width: rem(28px);
+		height: rem(28px);
+		padding: 0;
+		border: none;
+		line-height: rem(28px);
+		text-align: center;
+		font-size: rem(14px);
+		border-radius: 28px;
+		
+		&.btn-xs {
+			width: rem(16px);
+			height: rem(16px);
+			font-size: rem(8px);
+			line-height: rem(16px);
+		}
+		&.btn-sm {
+			width: rem(22px);
+			height: rem(22px);
+			font-size: rem(11px);
+			line-height: rem(22px);
+		}
+		&.btn-lg {
+			width: rem(34px);
+			height: rem(34px);
+			font-size: rem(17px);
+			line-height: rem(34px);
+		}
+	}
+	&.btn-theme {
+		padding: rem(12px) rem(30px);
+		font-weight: $font-weight-bold;
+		border-radius: $border-radius-lg;
+	}
+	&.btn-xs {
+		font-size: rem(12px);
+		line-height: rem(18px);
+		padding: rem(1px) rem(5px);
+	}
+}

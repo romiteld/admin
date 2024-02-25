@@ -1,0 +1,10 @@
+.checkout-info-list {
+	font-size: rem(12px);
+	margin: 0;
+	
+	@if $enable-rtl {
+		padding-right: rem(20px);
+	} @else {
+		padding-left: rem(20px);
+	}
+}

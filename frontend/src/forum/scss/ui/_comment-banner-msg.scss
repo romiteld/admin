@@ -1,0 +1,7 @@
+.comment-banner-msg {
+	border: 2px solid var(--#{$prefix}component-border-color);
+	padding: rem(15px) rem(20px);
+	text-align: center;
+	margin-bottom: rem(20px);
+	border-radius: $border-radius;
+}

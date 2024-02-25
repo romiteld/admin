@@ -1,0 +1,4 @@
+@{
+  ViewData["AppClass"] = "app-with-two-sidebar app-sidebar-end-toggled";
+  ViewData["AppSidebarTwo"] = "true";
+}

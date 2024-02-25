@@ -1,0 +1,17 @@
+.review-form {
+	display: block;
+	background: var(--#{$prefix}light);
+	padding: rem(30px);
+	border: 1px solid var(--#{$prefix}component-border-color);
+	
+	@include media-breakpoint-down(lg) {
+		padding: rem(15px);
+	}
+	
+	& h2 {
+		font-size: rem(20px);
+		border-bottom: 1px solid var(--#{$prefix}component-border-color);
+		margin: 0 0 rem(15px);
+		padding-bottom: rem(10px);
+	}
+}

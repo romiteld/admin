@@ -1,0 +1,1061 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Frontend Theme</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">One-Page Parallax</a>
+						</li>
+						<li class="">
+							<a href="index_blog.html">Blog</a>
+						</li>
+						<li class="">
+							<a href="index_forum.html">Forum</a>
+						</li>
+						<li class="active">
+							<a href="index_e_commerce.html">E-Commerce</a>
+						</li>
+						<li class="">
+							<a href="index_corporate.html">Corporate</a>
+						</li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class="">
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;E-Commerce Template&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.3.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well">
+					<p>
+						<strong>
+							Last Updated: 15/November/2023<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#htmlStructure"><i class="icon-chevron-right"></i>HTML Structure</a></li>
+					<li><a href="#page-head"><i class="icon-chevron-right"></i>Page Head</a></li>
+					<li><a href="#page-top-nav"><i class="icon-chevron-right"></i>Page Top Nav</a></li>
+					<li><a href="#page-header"><i class="icon-chevron-right"></i>Page Header</a></li>
+					<li><a href="#page-content-header"><i class="icon-chevron-right"></i>Page Content Header</a></li>
+					<li><a href="#page-content"><i class="icon-chevron-right"></i>Page Content</a></li>
+					<li><a href="#page-footer"><i class="icon-chevron-right"></i>Page Footer</a></li>
+					<li><a href="#page-footer-copyright"><i class="icon-chevron-right"></i>Page Footer Copyright</a></li>
+					<li><a href="#panel-theme"><i class="icon-chevron-right"></i>Panel Theme</a></li>
+					<li><a href="#page-end"><i class="icon-chevron-right"></i>End of Page (Javascripts)</a></li>
+					<li><a href="#page-theme-options"><i class="icon-chevron-right"></i>Page Theme Options</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-options"><i class="icon-chevron-right"></i>Page Options</a></li>
+					<li><a href="#page-gulp-scss"><i class="icon-chevron-right"></i>Gulp & SCSS</a></li>
+					<li><a href="#plugins-resources"><i class="icon-chevron-right"></i>Plugins & Resources</a></li>
+					<li><a href="#references"><i class="icon-chevron-right"></i>References</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template can be used as an fluid layout with a max of 12 columns next to each other. The general template structure is the same throughout the template. Here is the general structure.</p>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #page-container --&gt;
+&lt;div id="page-container" class="fade"&gt;
+  &lt;!-- BEGIN #top-nav --&gt;
+  &lt;div id="top-nav" class="top-nav"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #top-nav --&gt;
+
+  &lt;!-- BEGIN #header --&gt;
+  &lt;div id="header" class="header"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #header --&gt;
+
+  &lt;!-- BEGIN #slider --&gt;
+  &lt;div id="slider" class="section-container p-0 bg-black"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #slider --&gt;
+
+  &lt;!-- BEGIN #promotions --&gt;
+  &lt;div id="promotions" class="section-container bg-white"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #promotions --&gt;
+
+  &lt;!-- BEGIN #trending-items --&gt;
+  &lt;div id="trending-items" class="section-container bg-light"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #trending-items --&gt;
+
+  &lt;!-- BEGIN #mobile-list --&gt;
+  &lt;div id="mobile-list" class="section-container bg-light pt-0"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #mobile-list --&gt;
+
+  &lt;!-- BEGIN #tablet-list --&gt;
+  &lt;div id="tablet-list" class="section-container bg-light pt-0"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #tablet-list --&gt;
+
+  &lt;!-- BEGIN #policy --&gt;
+  &lt;div id="policy" class="section-container pt-30px pb-30px"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #policy --&gt;
+
+  &lt;!-- BEGIN #subscribe --&gt;
+  &lt;div id="subscribe" class="section-container bg-light pt-30px pb-30px"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #subscribe --&gt;
+
+  &lt;!-- BEGIN #footer --&gt;
+  &lt;div id="footer" class="footer"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #footer --&gt;
+
+  &lt;!-- BEGIN #footer-copyright --&gt;
+  &lt;div id="footer-copyright" class="footer-copyright"&gt;
+  &lt;/div&gt;
+  &lt;!-- END #footer-copyright --&gt;
+&lt;/div&gt;
+&lt;!-- END #page-container --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-head"><strong>B) Page Head</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Page head contains metadata, javascript and css files:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;Color Admin | E-Commerce Front End Theme&lt;/title&gt;
+  &lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /&gt;
+  &lt;meta content="" name="description" /&gt;
+  &lt;meta content="" name="author" /&gt;
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt;
+  &lt;link href="../assets/css/e-commerce/vendor.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/css/e-commerce/app.min.css" rel="stylesheet" /&gt;
+  &lt;!-- ================== END core-css ================== --&gt;
+  
+  &lt;!-- OR without-vendor.min.css --&gt;
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt;
+  &lt;link href="../assets/plugins/animate.css/animate.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/pace-js/themes/black/pace-theme-flash.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/css/e-commerce/app.min.css" rel="stylesheet" /&gt;
+  &lt;!-- ================== END core-css ================== --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-top-nav"><strong>C) Top Nav</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #top-nav --&gt;
+&lt;div id="top-nav" class="top-nav"&gt;
+  &lt;!-- BEGIN container --&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="collapse navbar-collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="dropdown dropdown-hover"&gt;
+          &lt;a href="#" data-bs-toggle="dropdown"&gt;&lt;img src="../assets/img/flag/flag-english.png" class="flag-img" alt="" /&gt; English &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;&lt;img src="../assets/img/flag/flag-english.png" class="flag-img" alt="" /&gt; English&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;&lt;img src="../assets/img/flag/flag-german.png" class="flag-img" alt="" /&gt; German&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;&lt;img src="../assets/img/flag/flag-spanish.png" class="flag-img" alt="" /&gt; Spanish&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;&lt;img src="../assets/img/flag/flag-french.png" class="flag-img" alt="" /&gt; French&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;&lt;img src="../assets/img/flag/flag-chinese.png" class="flag-img" alt="" /&gt; Chinese&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Customer Care&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Order Tracker&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="nav navbar-nav navbar-end"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Career&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Our Forum&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Newsletter&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fab fa-facebook-f fs-14px"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fab fa-twitter fs-14px"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fab fa-instagram fs-14px"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fab fa-dribbble fs-14px"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fab fa-google fs-14px"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END #top-nav --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-header"><strong>D) Header </strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="header"&gt;
+  &lt;!-- BEGIN container --&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- BEGIN header-container --&gt;
+    &lt;div class="header-container"&gt;
+      &lt;!-- BEGIN navbar-toggle --&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;!-- END navbar-toggle --&gt;
+      &lt;!-- BEGIN header-logo --&gt;
+      &lt;div class="header-logo"&gt;
+        &lt;a href="index.html"&gt;
+          &lt;span class="brand-logo"&gt;&lt;/span&gt;
+          &lt;span class="brand-text"&gt;
+            &lt;span&gt;Color&lt;/span&gt;Admin
+            &lt;small&gt;e-commerce frontend theme&lt;/small&gt;
+          &lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;!-- END header-logo --&gt;
+      &lt;!-- BEGIN header-nav --&gt;
+      &lt;div class="header-nav"&gt;
+        &lt;div class="collapse navbar-collapse" id="navbar-collapse"&gt;
+          &lt;ul class="nav justify-content-center"&gt;
+            &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="dropdown dropdown-full-width dropdown-hover"&gt;
+              &lt;a href="#" data-bs-toggle="dropdown"&gt;
+                Our Store 
+                &lt;b class="caret"&gt;&lt;/b&gt;
+                &lt;span class="arrow top"&gt;&lt;/span&gt;
+              &lt;/a&gt;
+              &lt;!-- BEGIN dropdown-menu --&gt;
+              &lt;div class="dropdown-menu p-0"&gt;
+                &lt;!-- BEGIN dropdown-menu-container --&gt;
+                &lt;div class="dropdown-menu-container"&gt;
+                  &lt;!-- BEGIN dropdown-menu-sidebar --&gt;
+                  &lt;div class="dropdown-menu-sidebar"&gt;
+                    &lt;h4 class="title"&gt;Shop By Categories&lt;/h4&gt;
+                    &lt;ul class="dropdown-menu-list"&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;Mobile Phone&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;Tablet&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;Laptop&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;Desktop&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;TV&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;Speaker&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;Gadget&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                  &lt;!-- END dropdown-menu-sidebar --&gt;
+                  &lt;!-- BEGIN dropdown-menu-content --&gt;
+                  &lt;div class="dropdown-menu-content"&gt;
+                    &lt;h4 class="title"&gt;Shop By Popular Phone&lt;/h4&gt;
+                    &lt;div class="row"&gt;
+                      &lt;div class="col-lg-3"&gt;
+                        &lt;ul class="dropdown-menu-list"&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; iPhone 7&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; iPhone 6s&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; iPhone 6&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; iPhone 5s&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; iPhone 5&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col-lg-3"&gt;
+                        &lt;ul class="dropdown-menu-list"&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Galaxy S7&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Galaxy A9&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Galaxy J3&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Galaxy Note 5&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Galaxy S7&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col-lg-3"&gt;
+                        &lt;ul class="dropdown-menu-list"&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Lumia 730&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Lumia 735&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Lumia 830&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Lumia 820&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Lumia Icon&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col-lg-3"&gt;
+                        &lt;ul class="dropdown-menu-list"&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Xperia X&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Xperia Z5&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Xperia M5&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Xperia C5&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="product_detail.html"&gt;&lt;i class="fa fa-fw fa-angle-right text-muted"&gt;&lt;/i&gt; Xperia C4&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h4 class="title"&gt;Shop By Brand&lt;/h4&gt;
+                    &lt;ul class="dropdown-brand-list mb-0"&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;&lt;img src="../assets/img/brand/brand-apple.png" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;&lt;img src="../assets/img/brand/brand-samsung.png" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;&lt;img src="../assets/img/brand/brand-htc.png" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;&lt;img src="../assets/img/brand/brand-microsoft.png" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;&lt;img src="../assets/img/brand/brand-nokia.png" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;&lt;img src="../assets/img/brand/brand-blackberry.png" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="product.html"&gt;&lt;img src="../assets/img/brand/brand-sony.png" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                  &lt;!-- END dropdown-menu-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- END dropdown-menu-container --&gt;
+              &lt;/div&gt;
+              &lt;!-- END dropdown-menu --&gt;
+            &lt;/li&gt;
+            &lt;li class="dropdown dropdown-hover"&gt;
+              &lt;a href="#" data-bs-toggle="dropdown"&gt;
+                Accessories 
+                &lt;b class="caret"&gt;&lt;/b&gt;
+                &lt;span class="arrow top"&gt;&lt;/span&gt;
+              &lt;/a&gt;
+              &lt;div class="dropdown-menu"&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;Mobile Phone&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;Tablet&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;TV&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;Desktop&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;Laptop&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;Speaker&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;Gadget&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="product.html"&gt;New Arrival&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="dropdown dropdown-hover"&gt;
+              &lt;a href="#" data-bs-toggle="dropdown"&gt;
+                Pages
+                &lt;b class="caret"&gt;&lt;/b&gt;
+                &lt;span class="arrow top"&gt;&lt;/span&gt;
+              &lt;/a&gt;
+              &lt;div class="dropdown-menu"&gt;
+                &lt;a class="dropdown-item" href="index.html"&gt;Home (Default)&lt;/a&gt;
+                &lt;a class="dropdown-item" href="index_fixed_header.html"&gt;Home (Fixed Header)&lt;/a&gt;
+                &lt;a class="dropdown-item" href="index_inverse_header.html"&gt;Home (Inverse Header)&lt;/a&gt;
+                &lt;a class="dropdown-item" href="search_results.html"&gt;Search Results&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product.html"&gt;Product Page&lt;/a&gt;
+                &lt;a class="dropdown-item" href="product_detail.html"&gt;Product Details Page&lt;/a&gt;
+                &lt;a class="dropdown-item" href="checkout_cart.html"&gt;Checkout Cart&lt;/a&gt;
+                &lt;a class="dropdown-item" href="checkout_info.html"&gt;Checkout Shipping&lt;/a&gt;
+                &lt;a class="dropdown-item" href="checkout_payment.html"&gt;Checkout Payment&lt;/a&gt;
+                &lt;a class="dropdown-item" href="checkout_complete.html"&gt;Checkout Complete&lt;/a&gt;
+                &lt;a class="dropdown-item" href="my_account.html"&gt;My Account&lt;/a&gt;
+                &lt;a class="dropdown-item" href="contact_us.html"&gt;Contact Us&lt;/a&gt;
+                &lt;a class="dropdown-item" href="about_us.html"&gt;About Us&lt;/a&gt;
+                &lt;a class="dropdown-item" href="faq.html"&gt;FAQ&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="dropdown dropdown-hover"&gt;
+              &lt;a href="#" data-bs-toggle="dropdown"&gt;
+                &lt;i class="fa fa-search search-btn"&gt;&lt;/i&gt;
+                &lt;span class="arrow top"&gt;&lt;/span&gt;
+              &lt;/a&gt;
+              &lt;div class="dropdown-menu p-15px"&gt;
+                &lt;form action="search_results.html" method="POST" name="search_form"&gt;
+                  &lt;div class="input-group"&gt;
+                    &lt;input type="text" placeholder="Search" class="form-control bg-light" /&gt;
+                    &lt;button class="btn btn-dark" type="submit"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/form&gt;
+              &lt;/div&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- END header-nav --&gt;
+      &lt;!-- BEGIN header-nav --&gt;
+      &lt;div class="header-nav"&gt;
+        &lt;ul class="nav justify-content-end"&gt;
+          &lt;li class="dropdown dropdown-hover"&gt;
+            &lt;a href="#" class="header-cart" data-bs-toggle="dropdown"&gt;
+              &lt;i class="fa fa-shopping-bag"&gt;&lt;/i&gt;
+              &lt;span class="total"&gt;2&lt;/span&gt;
+              &lt;span class="arrow top"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;div class="dropdown-menu dropdown-menu-cart p-0"&gt;
+              &lt;div class="cart-header"&gt;
+                &lt;h4 class="cart-title"&gt;Shopping Bag (1) &lt;/h4&gt;
+              &lt;/div&gt;
+              &lt;div class="cart-body"&gt;
+                &lt;ul class="cart-item"&gt;
+                  &lt;li&gt;
+                    &lt;div class="cart-item-image"&gt;&lt;img src="../assets/img/product/product-ipad.jpg" alt="" /&gt;&lt;/div&gt;
+                    &lt;div class="cart-item-info"&gt;
+                      &lt;h4&gt;iPad Pro Wi-Fi 128GB - Silver&lt;/h4&gt;
+                      &lt;p class="price"&gt;$699.00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="cart-item-close"&gt;
+                      &lt;a href="#" data-bs-toggle="tooltip" data-bs-title="Remove"&gt;&times;&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;div class="cart-item-image"&gt;&lt;img src="../assets/img/product/product-imac.jpg" alt="" /&gt;&lt;/div&gt;
+                    &lt;div class="cart-item-info"&gt;
+                      &lt;h4&gt;21.5-inch iMac&lt;/h4&gt;
+                      &lt;p class="price"&gt;$1299.00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="cart-item-close"&gt;
+                      &lt;a href="#" data-bs-toggle="tooltip" data-bs-title="Remove"&gt;&times;&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;div class="cart-item-image"&gt;&lt;img src="../assets/img/product/product-iphone.png" alt="" /&gt;&lt;/div&gt;
+                    &lt;div class="cart-item-info"&gt;
+                      &lt;h4&gt;iPhone 6s 16GB - Silver&lt;/h4&gt;
+                      &lt;p class="price"&gt;$649.00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="cart-item-close"&gt;
+                      &lt;a href="#" data-bs-toggle="tooltip" data-bs-title="Remove"&gt;&times;&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+              &lt;div class="cart-footer"&gt;
+                &lt;div class="row gx-2"&gt;
+                  &lt;div class="col-6"&gt;
+                    &lt;a href="checkout_cart.html" class="btn btn-default btn-theme d-block"&gt;View Cart&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class="col-6"&gt;
+                    &lt;a href="checkout_cart.html" class="btn btn-inverse btn-theme d-block"&gt;Checkout&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="divider"&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href="my_account.html"&gt;
+              &lt;img src="../assets/img/user/user-1.jpg" class="user-img" alt="" /&gt; 
+              &lt;span class="d-none d-xl-inline"&gt;Login / Register&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;!-- END header-nav --&gt;
+    &lt;/div&gt;
+    &lt;!-- END header-container --&gt;
+  &lt;/div&gt;
+  &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END #header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content-header"><strong>E) Page Content Header</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #page-header --&gt;
+&lt;div id="page-header" class="section-container page-header-container bg-black hide"&gt;
+  &lt;!-- BEGIN page-header-cover --&gt;
+  &lt;div class="page-header-cover"&gt;
+    &lt;img src="../assets/img/cover/cover-1.jpg" alt="" /&gt;
+  &lt;/div&gt;
+  &lt;!-- END page-header-cover --&gt;
+  &lt;!-- BEGIN container --&gt;
+  &lt;div class="container"&gt;
+    &lt;h1 class="page-header"&gt;&lt;b&gt;Apple&lt;/b&gt; Product&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- BEGIN #page-header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content"><strong>F) Page Content</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							There have 2 options of page content. HTML code of Content container as shown below:
+						</p>
+						<h4>Page Content with Background</h4>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #content --&gt;
+&lt;div id="content" class="has-bg section-container"&gt;
+    &lt;!-- BEGIN cover-bg --&gt;
+    &lt;div class="cover-bg"&gt;
+        &lt;img src="-- content background cover link --" alt="" /&gt;
+    &lt;/div&gt;
+    &lt;!-- END cover-bg --&gt;
+    &lt;!-- BEGIN container --&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- content here --&gt;
+    &lt;/div&gt;
+    &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END #content --&gt;
+</pre>
+						<h4>Page Content without Background</h4>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #content --&gt;
+&lt;div id="content" class="section-container"&gt;
+    &lt;!-- BEGIN container --&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- content here --&gt;
+    &lt;/div&gt;
+    &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END #content --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-footer"><strong>G) Page Footer</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #footer --&gt;
+&lt;div id="footer" class="footer"&gt;
+  &lt;!-- BEGIN container --&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- BEGIN row --&gt;
+    &lt;div class="row"&gt;
+      &lt;!-- BEGIN col-3 --&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;h4 class="footer-header"&gt;ABOUT US&lt;/h4&gt;
+        &lt;p&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tristique dolor, ac efficitur velit. Nulla lobortis tempus convallis. Nulla aliquam lectus eu porta pulvinar. Mauris semper justo erat. 
+        &lt;/p&gt;
+        &lt;p&gt;
+          Vestibulum porttitor lorem et vestibulum pharetra. Phasellus sit amet mi congue, hendrerit mi ut, dignissim eros.
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;!-- END col-3 --&gt;
+      &lt;!-- BEGIN col-3 --&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;h4 class="footer-header"&gt;RELATED LINKS&lt;/h4&gt;
+        &lt;ul class="fa-ul"&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Shopping Help&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Terms of Use&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Careers&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Payment Method&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Sales & Refund&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;i class="fa fa-li fa-angle-right"&gt;&lt;/i&gt; &lt;a href="#"&gt;Privacy & Policy&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;!-- END col-3 --&gt;
+      &lt;!-- BEGIN col-3 --&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;h4 class="footer-header"&gt;LATEST PRODUCT&lt;/h4&gt;
+        &lt;ul class="list-unstyled list-product"&gt;
+          &lt;li&gt;
+            &lt;div class="image"&gt;
+              &lt;img src="../assets/img/product/product-iphone-6s.jpg" alt="" /&gt;
+            &lt;/div&gt;
+            &lt;div class="info"&gt;
+              &lt;h4 class="info-title"&gt;Iphone 6s&lt;/h4&gt;
+              &lt;div class="price"&gt;$1200.00&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;div class="image"&gt;
+              &lt;img src="../assets/img/product/product-galaxy-s6.jpg" alt="" /&gt;
+            &lt;/div&gt;
+            &lt;div class="info"&gt;
+              &lt;h4 class="info-title"&gt;Samsung Galaxy s7&lt;/h4&gt;
+              &lt;div class="price"&gt;$850.00&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            &lt;div class="image"&gt;
+              &lt;img src="../assets/img/product/product-ipad-pro.jpg" alt="" /&gt;
+            &lt;/div&gt;
+            &lt;div class="info"&gt;
+              &lt;h4 class="info-title"&gt;Ipad Pro&lt;/h4&gt;
+              &lt;div class="price"&gt;$800.00&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;div class="image"&gt;
+              &lt;img src="../assets/img/product/product-galaxy-note5.jpg" alt="" /&gt;
+            &lt;/div&gt;
+            &lt;div class="info"&gt;
+              &lt;h4 class="info-title"&gt;Samsung Galaxy Note 5&lt;/h4&gt;
+              &lt;div class="price"&gt;$1200.00&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;!-- END col-3 --&gt;
+      &lt;!-- BEGIN col-3 --&gt;
+      &lt;div class="col-md-3"&gt;
+        &lt;h4 class="footer-header"&gt;OUR CONTACT&lt;/h4&gt;
+        &lt;address&gt;
+          &lt;strong&gt;Twitter, Inc.&lt;/strong&gt;&lt;br /&gt;
+          1355 Market Street, Suite 900&lt;br /&gt;
+          San Francisco, CA 94103&lt;br /&gt;&lt;br /&gt;
+          &lt;abbr title="Phone"&gt;Phone:&lt;/abbr&gt; (123) 456-7890&lt;br /&gt;
+          &lt;abbr title="Fax"&gt;Fax:&lt;/abbr&gt; (123) 456-7891&lt;br /&gt;
+          &lt;abbr title="Email"&gt;Email:&lt;/abbr&gt; &lt;a href="mailto:sales@myshop.com"&gt;sales@myshop.com&lt;/a&gt;&lt;br /&gt;
+          &lt;abbr title="Skype"&gt;Skype:&lt;/abbr&gt; &lt;a href="skype:myshop"&gt;myshop&lt;/a&gt;
+        &lt;/address&gt;
+      &lt;/div&gt;
+      &lt;!-- END col-3 --&gt;
+    &lt;/div&gt;
+    &lt;!-- END row --&gt;
+  &lt;/div&gt;
+  &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END #footer --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-footer-copyright"><strong>H) Page Footer Copyright</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #footer-copyright --&gt;
+&lt;div id="footer-copyright" class="footer-copyright"&gt;
+  &lt;!-- BEGIN container --&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="payment-method"&gt;
+      &lt;img src="../assets/img/payment/payment-method.png" alt="" /&gt;
+    &lt;/div&gt;
+    &lt;div class="copyright"&gt;
+      Copyright &copy; 2023 SeanTheme. All rights reserved.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END #footer-copyright --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="panel-theme"><strong>I) Panel Theme</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Panel Theme used to customize the overall layout options.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin theme-panel --&gt;
+&lt;div class="theme-panel"&gt;
+  &lt;a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"&gt;&lt;i class="fa fa-cog"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;div class="theme-panel-content"&gt;
+    &lt;div class="theme-list clearfix"&gt;
+      &lt;div class="theme-list-item"&gt;
+        &lt;a href="javascript:;" class="bg-purple" 
+          data-theme-class="theme-purple" 
+          data-click="theme-selector" 
+          data-toggle="tooltip" 
+          data-trigger="hover" 
+          data-container="body" 
+          data-title="Purple"&gt;&nbsp;&lt;/a&gt;
+      &lt;/div&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end theme-panel --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-end"><strong>J) End of Page (Javascript)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Javascript files loaded in the end of page. This will reduce page load time.
+						</p>
+<pre class="prettyprint linenums">
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/js/e-commerce/vendor.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/e-commerce/app.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+  
+  &lt;!-- OR without vendor.min.js ================== --&gt;
+  
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/plugins/pace-js/pace.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery-ui-dist/jquery-ui.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/paroller.js/dist/jquery.paroller.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/js-cookie/dist/js.cookie.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/e-commerce/app.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-theme-options"><strong>K) Page Theme Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the theme to the <code>&lt;body&gt;</code> tag in order to change the theme color.</p>
+						<h4>Available Theme Options</h4>
+<pre class="prettyprint linenums">
+&lt;body class="theme-red"&gt;...&lt;/body&gt;
+&lt;body class="theme-pink"&gt;...&lt;/body&gt;
+&lt;body class="theme-orange"&gt;...&lt;/body&gt;
+&lt;body class="theme-yellow"&gt;...&lt;/body&gt;
+&lt;body class="theme-lime"&gt;...&lt;/body&gt;
+&lt;body class="theme-green"&gt;...&lt;/body&gt;
+&lt;body class="theme-teal"&gt;...&lt;/body&gt;
+&lt;body class="theme-cyan"&gt;...&lt;/body&gt;
+&lt;body class="theme-blue"&gt;...&lt;/body&gt;
+&lt;body class="theme-purple"&gt;...&lt;/body&gt;
+&lt;body class="theme-indigo"&gt;...&lt;/body&gt;
+&lt;body class="theme-gray-500"&gt;...&lt;/body&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>L) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>data-bs-theme="dark"</code> attribute to <code>&lt;html&gt;</code> in order to enable the dark mode.</p>
+<pre class="prettyprint linenums">
+&lt;html data-bs-theme="dark"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-options"><strong>M) Page Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Here is the general structure for the each case of page options.</p>
+						<h4>Page with fixed header</h4>
+<pre class="prettyprint linenums">
+&lt;div id="header" class="header" data-fixed-top="true"&gt;
+</pre>
+						<h4>Page with inverse header</h4>
+<pre class="prettyprint linenums">
+&lt;div id="header" class="header" data-bs-theme="dark"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-gulp-scss"><strong>N) Using Gulp SCSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4>Installation</h4>
+						<p>Below is the command that required to run / compile the scss with gulpjs. If you are new to the gulpjs, you may refer to their <a href="https://gulpjs.com/" target="_blank">official website</a> for installation guide.</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt;
+cd /your-path-url/frontend/e-commerce/src/
+npm install
+gulp
+
+&lt;!-- available command --&gt;
+gulp plugins                    // generate list of plugins
+</pre>
+						<p>Verify that you are running at least node 10.9.x or later and npm 6.x.x by running node -v and npm -v in a terminal/console window. Older versions produce errors, but newer versions are fine.</p>
+						<hr />
+						<h4>Enable RTL Support</h4>
+						<p>
+							To enable the RTL Support, you might need to change the following variable from <code>frontend/e-commerce/src/scss/_variables.scss</code>.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- LINE 292 --&gt;
+$enable-rtl: true;
+
+&lt;!-- run the command to regenerate the /css/one-page-parallax/app.min.css --&gt;
+gulp
+</pre>
+						<hr />
+						<h4>Gulp compilation</h4>
+						<p>
+							We are using gulp to compile & combine few plugins js & css into one single vendor file for js & css. This may help to improve the speed for page load if compare to multiple files loading in one page. 
+							If you wish to edit the included plugins files, you may refer to the <code>/admin/src/gulpfile.js</code>.
+						</p>
+						<p>Below is the list of plugins that compile into <code>vendor.min.css</code>.</p>
+<pre class="prettyprint linenums">
+return gulp.src([
+  'node_modules/animate.css/animate.min.css',
+  'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+  'node_modules/jquery-ui-dist/jquery-ui.min.css',
+  'node_modules/pace-js/themes/black/pace-theme-flash.css',
+  'node_modules/bootstrap-icons/font/bootstrap-icons.css'
+])
+.pipe(sass())
+.pipe(concat('vendor.min.css'))
+.pipe(minifyCSS())
+.pipe(gulp.dest(distPath + '/assets/css/e-commerce/'))
+.pipe(livereload());
+</pre>
+						<p>Below is the list of plugins that compile into <code>vendor.min.js</code>.</p>
+<pre class="prettyprint linenums">
+return gulp.src([
+  'node_modules/pace-js/pace.min.js',
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/jquery-ui-dist/jquery-ui.min.js',
+  'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+  'node_modules/paroller.js/dist/jquery.paroller.min.js',
+  'node_modules/js-cookie/dist/js.cookie.js'
+])
+.pipe(sourcemaps.init())
+.pipe(concat('vendor.min.js'))
+.pipe(sourcemaps.write())
+.pipe(gulp.dest(distPath + '/assets/js/e-commerce/'))
+.pipe(livereload());
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="plugins-resources"><strong>O) Plugins & Resources</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of all plugins and external resources used to power this template.
+						</p>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th style="width:100px;">Name</th>
+									<th>CSS Files</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Bootstrap</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>jQuery</div>
+									</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jquery.com/">http://jquery.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>jQuery UI</div>
+									</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/jquery-ui-dist/jquery-ui.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/jquery-ui-dist/jquery-ui.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://jqueryui.com/">https://jqueryui.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Icons</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Font Awesome</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/@fortawesome/fontawesome-free/css/all.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://fontawesome.com/">https://fontawesome.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Animate.css</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/animate/animate.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>scrollMonitor</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/scrollmonitor/scrollMonitor.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/stutrek/scrollMonitor">https://github.com/stutrek/scrollMonitor</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Pace</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/pace-js/themes/black/pace-theme-flash.css" /&gt;
+</pre>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/pace-js/pace.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://codebyzach.github.io/pace/">https://codebyzach.github.io/pace/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>JS Cookie</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/js-cookie/dist/js.cookie.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/js-cookie/js-cookie">https://github.com/js-cookie/js-cookie</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Paroller</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script="../assets/plugins/paroller.js/dist/jquery.paroller.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://tgomilar.github.io/paroller.js/">https://tgomilar.github.io/paroller.js/</a></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="references"><strong>P) References</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							I've used the following images, icons or other files as listed.
+						</p>
+						<p><b>jQuery Plugins</b></p>
+						<ol>
+							<li><b>Bootstrap</b>:<a href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+							<li><b>jQuery</b>:<a href="http://jquery.com/">http://jquery.com/</a></li>
+							<li><b>jQuery UI</b>:<a href="http://jqueryui.com/">http://jqueryui.com/</a></li>
+							<li><b>Bootstrap Icons</b>:<a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></li>
+							<li><b>Font Awesome</b>:<a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></li>
+							<li><b>Animate.css</b>:<a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></li>
+							<li><b>scrollMonitor</b>:<a href="https://github.com/stutrek/scrollMonitor">https://github.com/stutrek/scrollMonitor</a></li>
+							<li><b>Pace</b>:<a href="http://github.hubspot.com/pace/">http://github.hubspot.com/pace/</a></li>
+							<li><b>JS Cookie</b>:<a href="https://github.com/js-cookie/js-cookie">https://github.com/js-cookie/js-cookie</a></li>
+							<li><b>Paroller</b>:<a href="https://tgomilar.github.io/paroller.js/">https://tgomilar.github.io/paroller.js/</a>
+						</ol>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.carousel {
+	& .carousel-control-prev,
+	& .carousel-control-next {
+		& .fa {
+			font-size: $font-size-lg * 2;
+		}
+	}
+}

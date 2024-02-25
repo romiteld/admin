@@ -1,0 +1,161 @@
+.promotion {
+	position: relative;
+	padding-top: rem(165px);
+	overflow: hidden;
+	border-radius: $border-radius;
+	
+	@include media-breakpoint-down(lg) {
+		margin-bottom: rem(10px);
+	}
+	
+	& + .promotion {
+		margin-top: rem(10px);
+	}
+	& .promotion-image {
+		position: absolute;
+		left: rem(15px);
+		top: rem(15px);
+		right: rem(15px);
+		bottom: rem(15px);
+		
+		& img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		&.promotion-image-overflow-bottom {
+			top: auto;
+			bottom: rem(-30px);
+		}
+		&.promotion-image-overflow-top {
+			bottom: auto;
+			top: rem(-30px);
+			
+			&.promotion-image-overflow-bottom {
+				top: rem(-30px);
+				bottom: rem(-30px);
+			}
+		}
+		&.promotion-image-overflow-left {
+			@if $enable-rtl {
+				left: auto;
+				right: rem(-30px);
+			} @else {
+				right: auto;
+				left: rem(-30px);
+			}
+		}
+		&.promotion-image-overflow-right {
+			@if $enable-rtl {
+				right: auto;
+				left: rem(-30px);
+			} @else {
+				left: auto;
+				right: rem(-30px);
+			}
+		}
+	}
+	& .promotion-title {
+		color: $gray-900;
+		margin: 0 0 rem(5px);
+		font-size: rem(18px);
+	}
+	& .promotion-desc {
+		font-size: rem(12px);
+		color: $gray-600;
+		margin-bottom: rem(15px);
+	}
+	& .promotion-caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: rem(20px);
+	}
+	& .promotion-caption-inverse {
+		color: $white;
+		
+		& .promotion-title,
+		& .promotion-price,
+		& .promotion-desc {
+			color: $white;
+		}
+		& .promotion-btn {
+			border-color: rgba($white, .5);
+			color: rgba($white, .75);
+			
+			&:hover,
+			&:focus {
+				border-color: $white;
+				background: $white;
+				color: $dark;
+			}
+		}
+	}
+	& .promotion-btn {
+		padding: rem(5px) rem(10px);
+		border: 1px solid $gray-900;
+		color: $gray-900;
+		display: inline-block;
+		font-size: rem(12px);
+		font-weight: $font-weight-bold;
+		
+		border-radius: $border-radius;
+		
+		&:hover,
+		&:focus {
+			border-color: $gray-900;
+			background: $gray-900;
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	& .promotion-price {
+		font-size: rem(14px);
+		margin-bottom: rem(5px);
+		font-weight: $font-weight-bold;
+		
+		& small {
+			font-size: rem(11px);
+		}
+	}
+	&.promotion-lg {
+		padding-top: rem(340px);
+		
+		& .promotion-image {
+			top: rem(30px);
+			left: rem(30px);
+			bottom: rem(30px);
+			right: rem(30px);
+		}
+		& .promotion-title {
+			font-size: rem(36px);
+			margin: 0 0 rem(10px);
+		}
+		& .promotion-caption {
+			padding: rem(30px);
+		}
+		& .promotion-caption-inverse {
+			& .promotion-desc {
+				color: rgba($white, .75);
+			}
+		}
+		& .promotion-desc {
+			font-size: rem(14px);
+			margin-bottom: rem(30px);
+		}
+		& .promotion-btn {
+			padding: rem(10px) rem(20px);
+			font-size: rem(14px);
+			border-width: 2px;
+		}
+		& .promotion-price {
+			font-size: rem(24px);
+			margin-bottom: rem(10px);
+			
+			& small {
+				font-size: rem(14px);
+			}
+		}
+	}
+}

@@ -1,0 +1,227 @@
+.header {
+	position: relative;
+	z-index: $app-header-zindex;
+	
+	& .header-logo {
+		height: $app-header-height;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		@include media-breakpoint-down(lg) {
+			height: $app-header-height-sm;
+			
+			@if $enable-rtl {
+				margin-left: auto;
+			} @else {
+				margin-right: auto;
+			}
+		}
+		
+		& .logo-link {
+			text-decoration: none;
+			color: $white;
+			position: relative;
+			display: block;
+			display: flex;
+			align-items: center;
+			
+			& b {
+				font-size: $font-size-lg * 1.25;
+				
+				@include media-breakpoint-down(lg) {
+					font-size: $font-size-lg * 1.25;
+				}
+			}
+			& .logo {
+				border: 3px solid rgba($white, .5);
+				width: rem(30px);
+				height: rem(30px);
+				display: block;
+				position: relative;
+				border-radius: 30px;
+				
+				@if $enable-rtl {
+					margin-left: $spacer * 0.6;
+				} @else {
+					margin-right: $spacer * 0.6;
+				}
+				
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					width: rem(16px);
+					height: rem(16px);
+					margin: rem(4px);
+					background: rgba($white, .25);
+					border-radius: 30px;
+				}
+			}
+			& small {
+				font-weight: bold;
+				opacity: 0.5;
+				margin-top: rem(-40px);
+				font-size: $font-size-base * 0.5;
+				
+				@if $enable-rtl {
+					margin-right: rem(-20px);
+				} @else {
+					margin-left: rem(-20px);
+				}
+			}
+		}
+	}
+	& .header-nav {
+		height: $app-header-height;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		
+		@include media-breakpoint-down(lg) {
+			height: auto;
+			position: absolute;
+			top: $app-header-height-sm;
+			left: 0;
+			right: 0;
+			margin: 0;
+			display: none;
+			width: 100%;
+			background: rgba($gray-900, .95);
+			padding-top: $spacer * 0.5;
+			padding-bottom: $spacer * 0.5;
+		}
+		
+		& > .container {
+			padding: 0;
+			
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				align-items: center;
+			}
+		}
+		
+		& .header-nav-item {
+			& .header-nav-link {
+				font-size: $font-size-base;
+				font-weight: 600;
+				color: $white;
+				text-decoration: none;
+				padding: $nav-link-padding-y $nav-link-padding-x;
+				display: block;
+				
+				&:hover {
+					color: rgba($white, .5);
+				}
+			}
+			
+			& + .header-nav-item {
+				@include media-breakpoint-up(xl) {
+					@if $enable-rtl {
+						margin-right: $spacer * 0.75;
+					} @else {
+						margin-left: $spacer * 0.75;
+					}
+				}
+			}
+		}
+	}
+	& .header-btn {
+		display: flex;
+		align-items: center;
+		
+		@if $enable-rtl {
+			margin-right: auto;
+		} @else {
+			margin-left: auto;
+		}
+	}
+	& .header-mobile-nav-toggler {
+		border: none;
+		width: $app-header-height-sm * 0.75;
+		height: $app-header-height-sm;
+		background: none;
+		margin: 0;
+		display: none;
+		
+		@if $enable-rtl {
+			margin-right: $spacer;
+		} @else {
+			margin-left: $spacer;
+		}
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			align-items: center;
+		}
+		
+		& .header-mobile-nav-toggler-icon {
+			display: block;
+			position: relative;
+			width: 100%;
+			
+			&:before,
+			&:after {
+				content: '';
+				top: rem(10px);
+				height: rem(3px);
+				left: 0;
+				right: 0;
+				display: block;
+				background: rgba($white, .25);
+			}
+			&:after {
+				margin-top: rem(5px);
+			}
+		}
+	}
+	&.header-default {
+		background: var(--#{$prefix}component-bg);
+		box-shadow: 0 0 0 1px rgba($gray-900, .1);
+		
+		& .header-logo {
+			& .logo-link {
+				color: var(--#{$prefix}component-color);
+				
+				& .logo {
+					border-color: rgba(var(--#{$prefix}app-theme-rgb), 1);
+				
+					&:before {
+						background: rgba(var(--#{$prefix}app-theme-rgb), .75);
+					}
+				}
+			}
+		}
+		& .header-nav {
+			@include media-breakpoint-down(lg) {
+				background: rgba(var(--#{$prefix}component-bg-rgb), .95);
+			}
+		
+			& .header-nav-item {
+				& .header-nav-link {
+					color: var(--#{$prefix}component-color);
+				
+					&:hover {
+						color: rgba(var(--#{$prefix}component-color-rgb), .5);
+					}
+				}
+			}
+		}
+		& .header-mobile-nav-toggler {
+			& .header-mobile-nav-toggler-icon {
+				&:before,
+				&:after {
+					background: rgba(var(--#{$prefix}component-color-rgb), .25);
+				}
+			}
+		}
+	}
+	&.header-float {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+}

@@ -1,0 +1,32 @@
+.footer {
+	padding: rem(60px) 0;
+	background: darken($dark, 5%);
+	text-align: center;
+	color: rgba($white, .5);
+	font-size: $font-size-sm;
+	box-shadow: inset 0 100px 80px -80px rgba($black, .7);
+	
+	& .footer-brand-logo {
+		display: block;
+		margin: 0 auto rem(10px);
+		width: rem(30px);
+		border: 20px solid;
+		border-color: transparent rgba($black, .35) rgba($black, .7);
+		background: var(--#{$prefix}app-theme);
+		border-radius: $border-radius-lg;
+	}
+	& .footer-brand {
+		font-size: $font-size-base * 1.75;
+		color: $white;
+		font-weight: 300;
+		margin-bottom: rem(30px);
+	}
+	& .social-list {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-base * 1.25;
+  }
+  & p {
+  	margin-bottom: rem(30px);
+  }
+}

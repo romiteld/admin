@@ -1,0 +1,8 @@
+<panel>
+  <panel-header>
+    <panel-title>Panel Header with Progress Bar</panel-title>
+    <div class="progress h-10px bg-gray-700 w-150px">
+      <div class="progress-bar progress-bar-striped bg-success progress-bar-animated fw-bold" style="width: 40%">40%</div>
+    </div>
+  </panel-header>
+</panel>

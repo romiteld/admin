@@ -1,0 +1,93 @@
+.item {
+	background: var(--#{$prefix}component-bg);
+	
+	&.item-thumbnail {
+		border: 1px solid var(--#{$prefix}component-border-color);
+		border-radius: $border-radius;
+		
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(10px);
+		}
+		@include media-breakpoint-down(md) {
+			margin: 0 0 rem(15px);
+			border-radius: $border-radius-lg;
+		}
+		
+		& a {
+			text-decoration: none;
+		}
+		& .item-image {
+			height: rem(130px);
+			padding: rem(15px);
+			line-height: rem(100px);
+			text-align: center;
+			position: relative;
+			display: block;
+			
+			& img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			& .discount {
+				position: absolute;
+				bottom: 0;
+				line-height: rem(20px);
+				padding: rem(2px) rem(6px);
+				color: $white;
+				background: $gray-900;
+				font-weight: $font-weight-bold;
+				font-size: rem(12px);
+				border-radius: $border-radius;
+				
+				@if $enable-rtl {
+					left: rem(15px);
+				} @else {
+					right: rem(15px);
+				}
+			}
+		}
+		& .item-info {
+			padding: rem(15px);
+			text-align: center;
+			
+			& .item-title {
+				margin: 0 0 rem(2px);
+				max-height: rem(36px);
+				overflow: hidden;
+				line-height: rem(17px);
+				font-size: rem(13px);
+				color: var(--#{$prefix}component-color);
+				font-weight: $font-weight-bold;
+				
+				& a {
+					color: var(--#{$prefix}component-color);
+					
+					&:hover,
+					&:focus {
+						color: var(--#{$prefix}component-color);
+						text-decoration: underline;
+					}
+				}
+			}
+			& .item-desc {
+				margin: 0;
+				font-size: rem(11px);
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			& .item-price {
+				margin: 0;
+				font-size: rem(16px);
+				color: var(--#{$prefix}app-theme);
+				font-weight: $font-weight-bold;
+			}
+			& .item-discount-price {
+				font-size: rem(12px);
+				text-decoration: line-through;
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+			}
+		}
+	}
+}

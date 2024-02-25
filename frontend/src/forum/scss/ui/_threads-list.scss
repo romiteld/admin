@@ -1,0 +1,29 @@
+.threads-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	@include clearfix();
+	
+	& > li {
+		margin: 0 rem(15px);
+		padding: rem(15px) 0;
+		font-size: $font-size-sm * 0.95;
+		line-height: $line-height-base;
+		color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		
+		& .title {
+			font-size: $font-size-base;
+			margin: 0 0 rem(5px);
+			line-height: $line-height-sm;
+			color: var(--#{$prefix}component-color);
+			
+			& a {
+				color: var(--#{$prefix}component-color);
+			}
+		}
+		& + li {
+			border-top: 2px solid var(--#{$prefix}component-border-color);
+		}
+	}
+}

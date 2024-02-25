@@ -1,0 +1,83 @@
+.content {
+	padding: rem(60px) rem(15px) rem(75px);
+	
+	& .content-title {
+		text-align: center;
+		position: relative;
+		margin-bottom: rem(30px);
+		padding-bottom: rem(15px);
+		margin-top: 0;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: rem(40px);
+			background: var(--#{$prefix}component-color);
+			height: rem(2px);
+			bottom: 0;
+			
+			@if $enable-rtl {
+				right: 50%;
+				margin-right: rem(-20px);
+			} @else {
+				left: 50%;
+				margin-left: rem(-20px);
+			}
+		}
+	}
+	& .content-desc {
+		text-align: center;
+		margin-bottom: rem(60px);
+		color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(30px);
+		}
+	}
+	&.has-bg {
+		padding-bottom: rem(60px);
+		overflow: hidden;
+		position: relative;
+
+		& .content-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			& img {
+				max-width: 100%;
+			}
+			&:before {
+				content: '';
+				background: url(images/bg-content-cover.png);
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+			}
+		}
+		& .content-title {
+			color: $white;
+			
+			&:after {
+				background: $white;
+			}
+		}
+		& .content-desc {
+			color: rgba($white, .6);
+		}
+		& h1, h2, h3, h4, h5, h6 {
+			color: $white;
+		}
+		& .container {
+			position: relative;
+		}
+	}
+}

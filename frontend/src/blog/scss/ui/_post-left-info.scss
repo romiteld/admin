@@ -1,0 +1,21 @@
+.post-left-info {
+	width: rem(50px);
+	float: left;
+	margin-right: rem(20px);
+	
+	& + .post-content {
+		margin-left: rem(70px);
+	}
+	
+	@include media-breakpoint-down(md) {
+		float: none;
+		width: auto;
+		margin: 0 0 10px;
+		
+		@include clearfix();
+		
+		& + .post-content {
+			margin: 0;
+		}
+	}
+}

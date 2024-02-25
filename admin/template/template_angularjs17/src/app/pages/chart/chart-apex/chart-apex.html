@@ -1,0 +1,301 @@
+<ul class="breadcrumb">
+	<li class="breadcrumb-item"><a href="#">Chart</a></li>
+	<li class="breadcrumb-item active">Chart Apex</li>
+</ul>
+
+<h1 class="page-header">
+	Apexcharts.js <small>page header description goes here...</small>
+</h1>
+
+<div class="row">
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartLineChart -->
+		<div id="apexChartLineChart" class="mb-5">
+			<panel title="Line Chart">
+				<apx-chart
+					[series]="chart1Options.series"
+					[chart]="chart1Options.chart"
+					[colors]="chart1Options.colors"
+					[legend]="chart1Options.legend"
+					[xaxis]="chart1Options.xaxis"
+					[yaxis]="chart1Options.yaxis"
+					[dataLabels]="chart1Options.dataLabels"
+					[grid]="chart1Options.grid"
+					[stroke]="chart1Options.stroke"
+					[title]="chart1Options.title"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code1"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #chartJsLineChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartColumnChart -->
+		<div id="apexChartColumnChart" class="mb-5">
+			<panel title="Column Chart">
+				<apx-chart
+					[series]="chart2Options.series"
+					[chart]="chart2Options.chart"
+					[colors]="chart2Options.colors"
+					[legend]="chart2Options.legend"
+					[xaxis]="chart2Options.xaxis"
+					[yaxis]="chart2Options.yaxis"
+					[dataLabels]="chart2Options.dataLabels"
+					[grid]="chart2Options.grid"
+					[stroke]="chart2Options.stroke"
+					[title]="chart2Options.title"
+					[plotOptions]="chart2Options.plotOptions"
+					[fill]="chart2Options.fill"
+					[tooltip]="chart2Options.tooltip"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code2"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartColumnChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartAreaChart -->
+		<div id="apexChartAreaChart" class="mb-5">
+			<panel title="Area Chart">
+				<apx-chart
+					[series]="chart3Options.series"
+					[chart]="chart3Options.chart"
+					[colors]="chart3Options.colors"
+					[legend]="chart3Options.legend"
+					[xaxis]="chart3Options.xaxis"
+					[yaxis]="chart3Options.yaxis"
+					[dataLabels]="chart3Options.dataLabels"
+					[grid]="chart3Options.grid"
+					[stroke]="chart3Options.stroke"
+					[tooltip]="chart3Options.tooltip"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code3"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartAreaChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartBarChart -->
+		<div id="apexChartBarChart" class="mb-5">
+			<panel title="Bar Chart">
+				<apx-chart
+					[series]="chart4Options.series"
+					[chart]="chart4Options.chart"
+					[colors]="chart4Options.colors"
+					[legend]="chart4Options.legend"
+					[xaxis]="chart4Options.xaxis"
+					[yaxis]="chart4Options.yaxis"
+					[dataLabels]="chart4Options.dataLabels"
+					[grid]="chart4Options.grid"
+					[stroke]="chart4Options.stroke"
+					[plotOptions]="chart4Options.plotOptions"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code4"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartBarChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartMixedChart -->
+		<div id="apexChartMixedChart" class="mb-5">
+			<panel title="Mixed Chart">
+				<apx-chart
+					[chart]="chart5Options.chart"
+					[series]="chart5Options.series"
+					[dataLabels]="chart5Options.dataLabels"
+					[stroke]="chart5Options.stroke"
+					[colors]="chart5Options.colors"
+					[title]="chart5Options.title"
+					[xaxis]="chart5Options.xaxis"
+					[yaxis]="chart5Options.yaxis"
+					[grid]="chart5Options.grid"
+					[legend]="chart5Options.legend"
+					[tooltip]="chart5Options.tooltip"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code5"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartMixedChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartCandlestickChart -->
+		<div id="apexChartCandlestickChart" class="mb-5">
+			<panel title="Candlestick Chart">
+				<apx-chart
+					[chart]="chart6Options.chart"
+					[series]="chart6Options.series"
+					[title]="chart6Options.title"
+					[xaxis]="chart6Options.xaxis"
+					[yaxis]="chart6Options.yaxis"
+					[plotOptions]="chart6Options.plotOptions"
+					[grid]="chart6Options.grid"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code6"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartCandlestickChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartBubbleChart -->
+		<div id="apexChartBubbleChart" class="mb-5">
+			<panel title="Bubble Chart">
+				<apx-chart
+					[series]="chart7Options.series"
+					[chart]="chart7Options.chart"
+					[title]="chart7Options.title"
+					[xaxis]="chart7Options.xaxis"
+					[yaxis]="chart7Options.yaxis"
+					[grid]="chart7Options.grid"
+					[dataLabels]="chart7Options.dataLabels"
+					[colors]="chart7Options.colors"
+					[fill]="chart7Options.fill"
+					[legend]="chart7Options.legend"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code7"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartBubbleChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartScatterChart -->
+		<div id="apexChartScatterChart" class="mb-5">
+			<panel title="Scatter Chart">
+				<apx-chart
+					[chart]="chart8Options.chart"
+					[colors]="chart8Options.colors"
+					[series]="chart8Options.series"
+					[xaxis]="chart8Options.xaxis"
+					[yaxis]="chart8Options.yaxis"
+					[grid]="chart8Options.grid"
+					[legend]="chart8Options.legend"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code8"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartScatterChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartHeatmapChart -->
+		<div id="apexChartHeatmapChart" class="mb-5">
+			<panel title="Heatmap Chart">
+				<apx-chart
+					[chart]="chart9Options.chart"
+					[dataLabels]="chart9Options.dataLabels"
+					[colors]="chart9Options.colors"
+					[series]="chart9Options.series"
+					[title]="chart9Options.title"
+					[xaxis]="chart9Options.xaxis"
+					[yaxis]="chart9Options.yaxis"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code9"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartHeatmapChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartPieChart -->
+		<div id="apexChartPieChart" class="mb-5">
+			<panel title="Pie Chart">
+				<apx-chart
+					[chart]="chart10Options.chart"
+					[dataLabels]="chart10Options.dataLabels"
+					[stroke]="chart10Options.stroke"
+					[colors]="chart10Options.colors"
+					[labels]="chart10Options.labels"
+					[series]="chart10Options.series"
+					[title]="chart10Options.title"
+					[xaxis]="chart10Options.xaxis"
+					[yaxis]="chart10Options.yaxis"
+					[legend]="chart10Options.legend"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code10"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartPieChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartRadialBarChart -->
+		<div id="apexChartRadialBarChart" class="mb-5">
+			<panel title="Radial Bar Chart">
+				<apx-chart
+					[chart]="chart11Options.chart"
+					[plotOptions]="chart11Options.plotOptions"
+					[colors]="chart11Options.colors"
+					[series]="chart11Options.series"
+					[labels]="chart11Options.labels"
+					[legend]="chart11Options.legend"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code11"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartRadialBarChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #apexChartRadarChart -->
+		<div id="apexChartRadarChart" class="mb-5">
+			<panel title="Radar Chart">
+				<apx-chart
+					[chart]="chart12Options.chart"
+					[series]="chart12Options.series"
+					[labels]="chart12Options.labels"
+					[plotOptions]="chart12Options.plotOptions"
+					[title]="chart12Options.title"
+					[colors]="chart12Options.colors"
+					[markers]="chart12Options.markers"
+					[yaxis]="chart12Options.yaxis"
+					[grid]="chart12Options.grid"
+				></apx-chart>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code12"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #apexChartRadarChart -->
+	</div>
+</div>

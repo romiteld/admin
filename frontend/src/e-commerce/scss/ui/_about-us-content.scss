@@ -1,0 +1,43 @@
+.about-us-content {
+	@include media-breakpoint-down(md) {
+		margin-top: rem(15px);
+	}
+	
+	& > .title {
+		font-size: rem(42px);
+		margin: rem(15px) 0 rem(15px);
+		
+		@include media-breakpoint-down(md) {
+			font-size: rem(28px);
+		}
+	}
+	& > .desc {
+		font-size: rem(14px);
+		margin: 0 0 rem(30px);
+	}
+	& .service {
+		text-align: center;
+		padding: rem(20px);
+		
+		@include media-breakpoint-down(md) {
+			padding: rem(10px);
+		}
+		
+		& .icon {
+			font-size: rem(72px);
+			line-height: $line-height-sm;
+			
+			@include media-breakpoint-down(md) {
+				font-size: rem(64px);
+			}
+		}
+		& .title {
+			margin: rem(10px) 0;
+			font-size: rem(24px);
+		}
+		& .desc {
+			color: rgba(var(--#{$prefix}component-color-rgb), .75);
+			line-height: $line-height-lg;
+		}
+	}
+}

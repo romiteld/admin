@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Color Admin | Page without Sidebar</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/google/app.min.css" rel="stylesheet" />
+	<!-- ================== END core-css ================== -->
+</head>
+<body>
+	<!-- BEGIN #loader -->
+	<div id="loader" class="app-loader">
+		<span class="spinner"></span>
+	</div>
+	<!-- END #loader -->
+
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-header-fixed app-sidebar-fixed app-without-sidebar">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN navbar-header -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">
+					<b class="me-1">Color</b> Admin
+					<span class="navbar-logo">
+						<span class="text-blue">G</span>
+						<span class="text-red">o</span>
+						<span class="text-orange">o</span>
+						<span class="text-blue">g</span>
+						<span class="text-green">l</span>
+						<span class="text-red">e</span>
+					</span>
+				</a>
+				<button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- END navbar-header -->
+			<!-- BEGIN header-nav -->
+			<div class="navbar-nav">
+				<div class="navbar-item navbar-form">
+					<form action="" method="POST" name="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder='Try searching "Users Today"' />
+							<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+						</div>
+					</form>
+				</div>
+				<div class="navbar-item dropdown">
+					<a href="#" data-bs-toggle="dropdown" class="navbar-link dropdown-toggle icon">
+						<i class="fa fa-bell"></i>
+						<span class="badge">5</span>
+					</a>
+					<div class="dropdown-menu media-list dropdown-menu-end">
+						<div class="dropdown-header">Notifications (5)</div>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-bug media-object bg-gray-400"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+								<div class="text-muted fs-12px">3 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<img src="../assets/img/user/user-1.jpg" class="media-object" alt="" />
+								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">John Smith</h6>
+								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+								<div class="text-muted fs-12px">25 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<img src="../assets/img/user/user-2.jpg" class="media-object" alt="" />
+								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">Olivia</h6>
+								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+								<div class="text-muted fs-12px">35 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-plus media-object bg-gray-400"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading"> New User Registered</h6>
+								<div class="text-muted fs-12px">1 hour ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-envelope media-object bg-gray-400"></i>
+								<i class="fab fa-google text-warning media-object-icon fs-14px"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading"> New Email From John</h6>
+								<div class="text-muted fs-12px">2 hour ago</div>
+							</div>
+						</a>
+						<div class="dropdown-footer text-center">
+							<a href="javascript:;" class="text-decoration-none">View more</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-item navbar-user dropdown">
+					<a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+						<img src="../assets/img/user/user-13.jpg" alt="" /> 
+						<span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret ms-lg-2"></b>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end me-1">
+						<a href="extra_profile.html" class="dropdown-item">Edit Profile</a>
+						<a href="email_inbox.html" class="dropdown-item d-flex align-items-center">
+							Inbox
+							<span class="badge bg-danger rounded-pill ms-auto pt-5px">2</span> 
+						</a>
+						<a href="calendar.html" class="dropdown-item">Calendar</a>
+						<a href="extra_settings_page.html" class="dropdown-item">Settings</a>
+						<div class="dropdown-divider"></div>
+						<a href="login.html" class="dropdown-item">Log Out</a>
+					</div>
+				</div>
+			</div>
+			<!-- END header-nav -->
+		</div>
+		<!-- END #header -->
+	
+		
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content">
+			<!-- BEGIN breadcrumb -->
+			<ol class="breadcrumb float-xl-end">
+				<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+				<li class="breadcrumb-item"><a href="javascript:;">Page Options</a></li>
+				<li class="breadcrumb-item active">Page without Sidebar</li>
+			</ol>
+			<!-- END breadcrumb -->
+			<!-- BEGIN page-header -->
+			<h1 class="page-header">Page without Sidebar <small>header small text goes here...</small></h1>
+			<!-- END page-header -->
+			
+			<!-- BEGIN panel -->
+			<div class="panel panel-inverse">
+				<div class="panel-heading">
+					<h4 class="panel-title">Installation Settings</h4>
+					<div class="panel-heading-btn">
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-default" data-toggle="panel-expand"><i class="fa fa-expand"></i></a>
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-success" data-toggle="panel-reload"><i class="fa fa-redo"></i></a>
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-warning" data-toggle="panel-collapse"><i class="fa fa-minus"></i></a>
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-danger" data-toggle="panel-remove"><i class="fa fa-times"></i></a>
+					</div>
+				</div>
+				<div class="panel-body">
+					<p>
+						Add the <code>.app-without-sidebar</code> element to <code>.app</code> container for without sidebar setting.
+					</p>
+				</div>
+				<div class="hljs-wrapper">
+					<pre><code class="html" data-url="../assets/data/page-without-sidebar/code-1.json"></code></pre>
+				</div>
+			</div>
+			<!-- END panel -->
+
+			<p>
+				<a href="javascript:history.back(-1);" class="btn btn-success">
+					<i class="fa fa-arrow-circle-left"></i> Back to previous page
+				</a>
+			</p>
+		</div>
+		<!-- END #content -->
+		
+		<!-- BEGIN theme-panel -->
+		<div class="theme-panel">
+			<a href="javascript:;" data-toggle="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+			<div class="theme-panel-content" data-scrollbar="true" data-height="100%">
+				<h5>App Settings</h5>
+				
+				<!-- BEGIN theme-list -->
+				<div class="theme-list">
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-red" data-theme-class="theme-red" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Red">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-pink" data-theme-class="theme-pink" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Pink">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-orange" data-theme-class="theme-orange" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Orange">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-yellow" data-theme-class="theme-yellow" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Yellow">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-lime" data-theme-class="theme-lime" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Lime">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-green" data-theme-class="theme-green" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Green">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-teal" data-theme-class="theme-teal" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Teal">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-cyan" data-theme-class="theme-cyan" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cyan">&nbsp;</a></div>
+					<div class="theme-list-item active"><a href="javascript:;" class="theme-list-link bg-blue" data-theme-class="" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Default">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-purple" data-theme-class="theme-purple" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Purple">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-indigo" data-theme-class="theme-indigo" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Indigo">&nbsp;</a></div>
+					<div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-black" data-theme-class="theme-gray-600" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Black">&nbsp;</a></div>
+				</div>
+				<!-- END theme-list -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<div class="row mt-10px">
+					<div class="col-8 control-label text-body">
+						<div>Dark Mode <span class="badge bg-primary ms-1 py-2px position-relative" style="top: -1px;">NEW</span></div>
+						<div class="lh-14">
+							<small class="text-body opacity-50">
+								Adjust the appearance to reduce glare and give your eyes a break.
+							</small>
+						</div>
+					</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-theme-dark-mode" id="appThemeDarkMode" value="1" />
+							<label class="form-check-label" for="appThemeDarkMode">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="theme-panel-divider"></div>
+				
+				<!-- BEGIN theme-switch -->
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body">Header Fixed</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-header-fixed" id="appHeaderFixed" value="1" checked />
+							<label class="form-check-label" for="appHeaderFixed">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body">Header Inverse</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-header-inverse" id="appHeaderInverse" value="1" />
+							<label class="form-check-label" for="appHeaderInverse">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-10px align-items-center">
+					<div class="col-8 control-label text-body">Sidebar Fixed</div>
+					<div class="col-4 d-flex">
+						<div class="form-check form-switch ms-auto mb-0">
+							<input type="checkbox" class="form-check-input" name="app-sidebar-fixed" id="appSidebarFixed" value="1" checked />
+							<label class="form-check-label" for="appSidebarFixed">&nbsp;</label>
+						</div>
+					</div>
+				</div>
+				<!-- END theme-switch -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<h5>Admin Design (5)</h5>
+				<!-- BEGIN theme-version -->
+				<div class="theme-version">
+					<div class="theme-version-item">
+						<a href="../template_html/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/default.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_transparent/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/transparent.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_apple/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/apple.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_material/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/material.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_facebook/index_v2.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/facebook.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_google/index_v2.html" class="theme-version-link active">
+							<span style="background-image: url(../assets/img/theme/google.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+				</div>
+				<!-- END theme-version -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<h5>Language Version (7)</h5>
+				<!-- BEGIN theme-version -->
+				<div class="theme-version">
+					<div class="theme-version-item">
+						<a href="../template_html/index.html" class="theme-version-link active">
+							<span style="background-image: url(../assets/img/version/html.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_ajax/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/ajax.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_angularjs/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/angular1x.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_angularjs17/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/angular10x.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="javascript:alert('Laravel 10 Version only available in downloaded version.');" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/laravel.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_vue3/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/vuejs.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../template_react/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/reactjs.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="javascript:alert('.NET Core 7.0 MVC Version only available in downloaded version.');" class="theme-version-link">
+							<span style="background-image: url(../assets/img/version/dotnet.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+				</div>
+				<!-- END theme-version -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<h5>Frontend Design (5)</h5>
+				<!-- BEGIN theme-version -->
+				<div class="theme-version">
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_one_page_parallax/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/one-page-parallax.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_e_commerce/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/e-commerce.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_blog/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/blog.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_forum/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/forum.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+					<div class="theme-version-item">
+						<a href="../../../frontend/template/template_corporate/index.html" class="theme-version-link">
+							<span style="background-image: url(../assets/img/theme/corporate.jpg);" class="theme-version-cover"></span>
+						</a>
+					</div>
+				</div>
+				<!-- END theme-version -->
+				
+				<div class="theme-panel-divider"></div>
+				
+				<a href="https://seantheme.com/color-admin/documentation/" class="btn btn-dark d-block w-100 rounded-pill mb-10px" target="_blank"><b>Documentation</b></a>
+				<a href="javascript:;" class="btn btn-default d-block w-100 rounded-pill" data-toggle="reset-local-storage"><b>Reset Local Storage</b></a>
+			</div>
+		</div>
+		<!-- END theme-panel -->
+		<!-- BEGIN scroll-top-btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-theme btn-scroll-to-top" data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+		<!-- END scroll-top-btn -->
+	</div>
+	<!-- END #app -->
+	
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="../assets/js/vendor.min.js"></script>
+	<script src="../assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+	
+	<!-- ================== BEGIN page-js ================== -->
+	<script src="../assets/plugins/@highlightjs/cdn-assets/highlight.min.js"></script>
+	<script src="../assets/js/demo/render.highlight.js"></script>
+	<!-- ================== END page-js ================== -->
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Admin Template</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">Design Template</a>
+						</li>
+						<li class="active">
+							<a href="index_ajax.html">Ajax Version</a>
+						</li>
+						<li class="">
+							<a href="index_angular_1x.html">Angular 1.x</a>
+						</li>
+						<li class="">
+							<a href="index_angular_17.html">Angular 17.0</a>
+						</li>
+						<li class="">
+							<a href="index_laravel.html">Laravel Version</a>
+						</li>
+						<li class="">
+							<a href="index_vue.html">Vue Version</a>
+						</li>
+						<li class="">
+							<a href="index_react.html">React Version</a>
+						</li>
+						<li class="">
+							<a href="index_asp.html">ASP.NET</a>
+						</li>
+						<li>
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Ajax Version&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.3.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well with-cover">
+					<div class="well-cover" style="background-image: url(assets/images/jquery.jpg); background-size: auto 100%; background-repeat: no-repeat; background-color: #fff;"></div>
+					<p>
+						<strong>
+							Last Updated: 15/November/2023<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#fileStructure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#pageStructure"><i class="icon-chevron-right"></i>Page Structure</a></li>
+					<li><a href="#page-head"><i class="icon-chevron-right"></i>Page Head</a></li>
+					<li><a href="#page-top-menu"><i class="icon-chevron-right"></i>Page Top Menu</a></li>
+					<li><a href="#page-sidebar"><i class="icon-chevron-right"></i>Page Sidebar</a></li>
+					<li><a href="#page-content"><i class="icon-chevron-right"></i>Page Content</a></li>
+					<li><a href="#page-end"><i class="icon-chevron-right"></i>End of Page (Javascripts)</a></li>
+					<li><a href="#page-options"><i class="icon-chevron-right"></i>Page Options</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-switch-design"><i class="icon-chevron-right"></i>Switch Design <span class="label">NEW</span></a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="fileStructure"><strong>A) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for Ajax Version</p>
+<pre class="prettyprint linenums">
+template_ajax/
+├── index.html
+└── pages/
+    └── /* list of page html file here */
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="pageStructure"><strong>B) Page Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below is the code from <code>template_ajax/index.html</code> which include the page loader, header, sidebar, page content and theme panel. You may remove the component if you are not using it.</p>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #loader --&gt;
+&lt;div id="loader" class="app-loader"&gt;
+  &lt;span class="spinner"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- END #loader --&gt;
+
+&lt;!-- BEGIN #app --&gt;
+&lt;div id="app" class="app app-header-fixed app-sidebar-fixed"&gt;
+  &lt;!-- BEGIN #header --&gt;
+  &lt;div id="header" class="app-header"&gt;&lt;/div&gt;
+  &lt;!-- BEGIN #header --&gt;
+  
+  &lt;!-- BEGIN #sidebar --&gt;
+  &lt;div id="sidebar" class="app-sidebar" data-bs-theme="dark"&gt;
+    &lt;!-- BEGIN scrollbar --&gt;
+    &lt;div class="app-sidebar-content" data-scrollbar="true" data-height="100%"&gt;
+      ...
+    &lt;/div&gt;
+    &lt;!-- END scrollbar --&gt;
+  &lt;/div&gt;
+  &lt;div class="app-sidebar-bg" data-bs-theme="dark"&gt;&lt;/div&gt;
+  &lt;div class="app-sidebar-mobile-backdrop"&gt;
+    &lt;a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END #sidebar --&gt;
+  
+  &lt;!-- BEGIN #content --&gt;
+  &lt;div id="content" class="app-content"&gt;&lt;/div&gt;
+  &lt;!-- END #content --&gt;
+  
+  &lt;!-- BEGIN theme-panel --&gt;
+  &lt;div class="theme-panel"&gt;&lt;/div&gt;
+  &lt;!-- END theme-panel --&gt;
+    
+  &lt;!-- BEGIN scroll-top-btn --&gt;
+  &lt;a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top" 
+    data-toggle="scroll-to-top"&gt;
+    &lt;i class="fa fa-angle-up"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;!-- END scroll-top-btn --&gt;
+&lt;/div&gt;
+&lt;!-- END #app --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-head"><strong>C) Page Head</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Page head contains metadata, javascript and css files:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;Color Admin | Default Design&lt;/title&gt;
+  &lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /&gt;
+  &lt;meta content="" name="description" /&gt;
+  &lt;meta content="" name="author" /&gt;
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt;
+  &lt;link href="../assets/css/vendor.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/css/default/app.min.css" rel="stylesheet" /&gt;
+  &lt;!-- ================== END core-css ================== --&gt;
+  
+  &lt;!-- OR without vendor.min.css --&gt;
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt;
+  &lt;link href="../assets/plugins/animate.css/animate.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/pace-js/themes/black/pace-theme-flash.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/css/default/app.min.css" rel="stylesheet" /&gt;
+  &lt;!-- ================== END core-css ================== --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-top-menu"><strong>D) Top Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;&lt;span class="navbar-logo"&gt;&lt;/span&gt; &lt;b&gt;Color&lt;/b&gt; Admin&lt;/a&gt;
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;div class="navbar-item navbar-form"&gt;
+      &lt;form action="" method="POST" name="search"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;input type="text" class="form-control" placeholder="Enter keyword" /&gt;
+          &lt;button type="submit" class="btn btn-search"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    ...
+    &lt;div class="navbar-item navbar-user dropdown"&gt;
+      &lt;a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" 
+        data-bs-toggle="dropdown"&gt;
+        &lt;img src="../assets/img/user/user-13.jpg" alt="" /&gt; 
+        &lt;span&gt;
+          &lt;span class="d-none d-md-inline"&gt;Adam Schwartz&lt;/span&gt;
+          &lt;b class="caret"&gt;&lt;/b&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+      &lt;div class="dropdown-menu dropdown-menu-end me-1"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+&lt;/div&gt;
+&lt;!-- END #header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-sidebar"><strong>E) Sidebar</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #sidebar --&gt;
+&lt;div id="sidebar" class="app-sidebar" data-bs-theme="dark"&gt;
+  &lt;!-- BEGIN scrollbar --&gt;
+  &lt;div class="app-sidebar-content" data-scrollbar="true" data-height="100%"&gt;
+    &lt;!-- BEGIN menu --&gt;
+    &lt;div class="menu"&gt;
+      &lt;div class="menu-header"&gt;Navigation&lt;/div&gt;
+      &lt;div class="menu-item has-sub"&gt;
+        &lt;a href="javascript:;" class="menu-link"&gt;
+          &lt;div class="menu-icon"&gt;&lt;i class="fa fa-th-large"&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;div class="menu-text"&gt;Dashboard&lt;/div&gt;
+          &lt;div class="menu-caret"&gt;&lt;/div&gt;
+        &lt;/a&gt;
+        &lt;div class="menu-submenu"&gt;
+          &lt;div class="menu-item"&gt;
+            &lt;a href="#pages/index.html" data-toggle="ajax" class="menu-link"&gt;
+              &lt;div class="menu-text"&gt;Dashboard v1&lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class="menu-item"&gt;
+            &lt;a href="#pages/index_v2.html" data-toggle="ajax" class="menu-link"&gt;
+              &lt;div class="menu-text"&gt;Dashboard v2&lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;!-- BEGIN minify-button --&gt;
+      &lt;div class="menu-item d-flex"&gt;
+        &lt;a href="javascript:;" class="app-sidebar-minify-btn ms-auto" data-toggle="app-sidebar-minify"&gt;
+          &lt;i class="fa fa-angle-double-left"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;!-- END minify-button --&gt;
+    &lt;/div&gt;
+    &lt;!-- END menu --&gt;
+  &lt;/div&gt;
+  &lt;!-- END scrollbar --&gt;
+&lt;/div&gt;
+&lt;div class="app-sidebar-bg" data-bs-theme="dark"&gt;&lt;/div&gt;
+&lt;div class="app-sidebar-mobile-backdrop"&gt;
+  &lt;a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- END #sidebar --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content"><strong>F) Page Content</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Page content consists of page title, breadcrumbs and page's main body. HTML code of Content container as shown below:
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #content --&gt;
+&lt;div id="content" class="app-content"&gt; 
+&lt;/div&gt;
+&lt;!-- END #content --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-end"><strong>G) End of Page (Javascript)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Javascript files loaded in the end of page. This will reduce page load time.
+						</p>
+<pre class="prettyprint linenums">
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/js/vendor.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/app.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    App.settings({
+      ajaxMode: true,
+      ajaxDefaultUrl: '#pages/index.html',
+      ajaxType: 'GET',
+      ajaxDataType: 'html'
+    });
+  &lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+  
+  &lt;!-- OR without vendor.min.js --&gt;
+  
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/plugins/pace-js/pace.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery-ui-dist/jquery-ui.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/js-cookie/dist/js.cookie.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/app.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    App.settings({
+      ajaxMode: true,
+      ajaxDefaultUrl: '#pages/index.html',
+      ajaxType: 'GET',
+      ajaxDataType: 'html'
+    });
+  &lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-options"><strong>H) Page Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Here is the general javascript option for the each case of page options.</p>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+  App.setPageOption({
+    appClass: '',
+    appContentClass: '',
+    appContentFullHeight: false,
+    appSidebarLight: false,
+    appSidebarEnd: false,
+    appSidebarWide: false,
+    appSidebarMinified: false,
+    appSidebarTwo: false,
+    appSidebarTransparent: false,
+    appSidebarSearch: false,
+    appTopMenu: false,
+    appWithoutHeader: false,
+    appWithoutSidebar: false,
+    appHeaderInverse: false,
+    appBoxedLayout: false,
+    clearOptionOnLeave: false
+  });
+&lt;/script&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>I) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>data-bs-theme="dark"</code> attribute to <code>&lt;html&gt;</code> in <code>template_ajax/index.html</code> order to enable the dark mode.</p>
+						<div class="alert alert-info">
+							If you have <b>pre-select</b> the dark-mode option in theme panel, do not forget to <b>clear</b> the browser cookie or <b>remove</b> the theme panel so that it won't affect the dark-mode class while page load.
+						</div>
+<pre class="prettyprint linenums">
+&lt;html lang="en" data-bs-theme="dark"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-switch-design"><strong>J) Switch Design</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4 style="margin-bottom: 15px">Apple Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the base css file from default to apple in <code>template_ajax/index.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="../assets/css/apple/app.min.css" rel="stylesheet" /&gt;
+&lt;link href="../assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Ionicons and background color class is needed as well.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="ion-ios-pulse bg-gradient-blue"&gt;&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Facebook Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the base css file from default to facebook in <code>template_ajax/index.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="../assets/css/facebook/app.min.css" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>data-bs-theme="dark"</code> attribute to the <code>.app-header</code> container in <code>template_ajax/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="header" class="app-header" data-bs-theme="dark"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Transparent Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the base css file from default to facebook in <code>template_ajax/index.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="../assets/css/transparent/app.min.css" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the <code>.app-cover</code> next to the <code>&lt;body&gt;</code> tag in <code>template_ajax/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;!-- BEGIN page-cover --&gt;
+  &lt;div class="app-cover"&gt;&lt;/div&gt;
+  &lt;!-- END page-cover --&gt;
+  
+  ...
+&lt;/body&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Google Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the base css file from default to facebook in <code>template_ajax/index.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="../assets/css/google/app.min.css" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>.app-with-wide-sidebar</code> to the <code>.app</code> container in <code>template_ajax/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="app" class="app app-header-fixed app-sidebar-fixed app-with-wide-sidebar"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_ajax/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;
+      Color Admin
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Material Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the base css file from default to material in <code>template_ajax/index.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="../assets/css/material/app.min.css" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>.app-with-wide-sidebar</code> to the <code>.app</code> container in <code>template_ajax/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="app" class="app app-header-fixed app-sidebar-fixed app-with-wide-sidebar"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_ajax/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;
+      Color Admin Material
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							
+							<li>
+								<div style="padding-bottom: 5px">Add the floating navbar form to the <code>.app-header</code>  in <code>template_ajax/index.html</code> AND <b>REMOVE</b> the default <code>.navbar-form</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;div class="navbar-item"&gt;
+      &lt;a href="#" data-toggle="app-header-floating-form" class="navbar-link icon"&gt;
+        &lt;i class="material-icons"&gt;search&lt;/i&gt;
+      &lt;/a&gt;
+      
+      &lt;!-- REMOVE IT --&gt;
+      &lt;div class="navbar-item navbar-form"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+  
+  &lt;div class="navbar-floating-form"&gt;
+    &lt;button class="search-btn" type="submit"&gt;&lt;i class="material-icons"&gt;search&lt;/i&gt;&lt;/button&gt;
+    &lt;input type="text" class="form-control" placeholder="Search Something..." /&gt;
+    &lt;a href="#" class="close" data-dismiss="app-header-floating-form"&gt;
+      &lt;i class="material-icons"&gt;close&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the <code>.app-loader</code>  in <code>template_ajax/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #loader --&gt;
+&lt;div id="loader" class="app-loader"&gt;
+  &lt;div class="material-loader"&gt;
+    &lt;svg class="circular" viewBox="25 25 50 50"&gt;
+      &lt;circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+    &lt;div class="message"&gt;Loading...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END #loader --&gt;
+</pre>
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

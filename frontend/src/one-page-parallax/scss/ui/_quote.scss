@@ -1,0 +1,28 @@
+.quote {
+	text-align: center;
+	font-size: rem(28px);
+	font-weight: 300;
+	color: $white;
+	
+	@include media-breakpoint-down(lg) {
+		font-size: rem(24px);
+	}
+	
+	& .fa-quote-left,
+	& .fa-quote-right {
+		position: relative;
+		top: rem(-14px);
+		font-size: rem(20px);
+		margin: 0 rem(10px);
+		
+		@include media-breakpoint-down(lg) {
+			font-size: rem(16px);
+		}
+	}
+	& small {
+		display: block;
+		font-size: $font-size-base;
+		color: rgba($white, .75);
+		margin-top: rem(20px);
+	}
+}

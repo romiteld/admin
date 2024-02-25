@@ -1,0 +1,731 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Frontend Theme</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">One-Page Parallax</a>
+						</li>
+						<li class="active">
+							<a href="index_blog.html">Blog</a>
+						</li>
+						<li class="">
+							<a href="index_forum.html">Forum</a>
+						</li>
+						<li class="">
+							<a href="index_e_commerce.html">E-Commerce</a>
+						</li>
+						<li class="">
+							<a href="index_corporate.html">Corporate</a>
+						</li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class="">
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Blog Template&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.3.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well">
+					<p>
+						<strong>
+							Last Updated: 15/November/2023<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#htmlStructure"><i class="icon-chevron-right"></i>HTML Structure</a></li>
+					<li><a href="#page-head"><i class="icon-chevron-right"></i>Page Head</a></li>
+					<li><a href="#page-top-menu"><i class="icon-chevron-right"></i>Page Top Menu</a></li>
+					<li><a href="#page-content"><i class="icon-chevron-right"></i>Page Content</a></li>
+					<li><a href="#page-footer"><i class="icon-chevron-right"></i>Page Footer</a></li>
+					<li><a href="#panel-theme"><i class="icon-chevron-right"></i>Panel Theme</a></li>
+					<li><a href="#page-end"><i class="icon-chevron-right"></i>End of Page (Javascripts)</a></li>
+					<li><a href="#page-theme-options"><i class="icon-chevron-right"></i>Page Theme Options</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-gulp-scss"><i class="icon-chevron-right"></i>Gulp & SCSS</a></li>
+					<li><a href="#plugins-resources"><i class="icon-chevron-right"></i>Plugins & Resources</a></li>
+					<li><a href="#references"><i class="icon-chevron-right"></i>References</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template can be used as an fluid layout with a max of 12 columns next to each other. The general template structure is the same throughout the template. Here is the general structure.</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin #header --&gt;
+&lt;div id="header" class="header navbar navbar-default navbar-fixed-top"&gt;
+  &lt;!-- header here --&gt;
+&lt;/div&gt;
+&lt;!-- end #header --&gt;
+
+&lt;!-- begin #page-title --&gt;
+&lt;div id="page-title" class="page-title has-bg"&gt;
+  &lt;!-- page-title here --&gt;
+&lt;/pre&gt;
+&lt;!-- end #page-title --&gt;
+
+&lt;!-- begin #content --&gt;
+&lt;div id="content" class="content"&gt;
+  &lt;!-- content here --&gt;
+&lt;/div&gt;
+&lt;!-- end #content --&gt;
+
+&lt;!-- begin #footer --&gt;
+&lt;div id="footer" class="footer"&gt;
+  &lt;!-- footer here --&gt;
+&lt;/div&gt;
+&lt;!-- end #footer --&gt;
+
+&lt;!-- begin #footer-copyright --&gt;
+&lt;div id="footer-copyright" class="footer-copyright"&gt;
+  &lt;!-- footer-copyright here --&gt;
+&lt;/div&gt;
+&lt;!-- end #footer-copyright --&gt;</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-head"><strong>B) Page Head</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Page head contains metadata, javascript and css files:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;Color Admin | Blog Concept Front End Theme&lt;/title&gt;
+  &lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /&gt;
+  &lt;meta content="" name="description" /&gt;
+  &lt;meta content="" name="author" /&gt;
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt;
+  &lt;link href="../assets/css/blog/vendor.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/css/blog/app.min.css" rel="stylesheet" /&gt;
+  &lt;!-- ================== END core-css ================== --&gt;
+  
+  &lt;!-- OR without vendor.min.css --&gt;
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt;
+  &lt;link href="../assets/plugins/animate.css/animate.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/pluginspace-js/themes/black/pace-theme-flash.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" /&gt;
+  &lt;link href="../assets/css/blog/app.min.css" rel="stylesheet" /&gt;
+  &lt;!-- ================== END core-css ================== --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-top-menu"><strong>C) Top Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- begin #header --&gt;
+&lt;div id="header" class="header navbar navbar-default navbar-expand-lg navbar-fixed-top"&gt;
+  &lt;!-- begin container --&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- begin navbar-brand --&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;
+      &lt;span class="brand-logo"&gt;&lt;/span&gt;
+      &lt;span class="brand-text"&gt;
+        COLOR ADMIN
+      &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;!-- end navbar-brand --&gt;
+    &lt;!-- begin navbar-toggle --&gt;
+    &lt;button type="button" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#header-navbar"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;!-- end navbar-toggle --&gt;
+    &lt;!-- begin navbar-collapse --&gt;
+    &lt;div class="collapse navbar-collapse" id="header-navbar"&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" data-bs-toggle="dropdown"&gt;HOME &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+          &lt;div class="dropdown-menu"&gt;
+            &lt;a class="dropdown-item" href="index_transparent_header.html"&gt;Page with Transparent Header&lt;/a&gt;
+            &lt;a class="dropdown-item" href="index_inverse_header.html"&gt;Page with Inverse Header&lt;/a&gt;
+            &lt;a class="dropdown-item" href="index.html"&gt;Default Header&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" data-bs-toggle="dropdown"&gt;POSTS &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+          &lt;div class="dropdown-menu"&gt;
+            &lt;a class="dropdown-item" href="post_grid.html"&gt;Page with Grid View Blog Post&lt;/a&gt;
+            &lt;a class="dropdown-item" href="post_without_sidebar.html"&gt;Page without Sidebar&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="about_me.html"&gt;ABOUT ME&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contact_us.html"&gt;CONTACT US&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://wrapbootstrap.com/theme/color-admin-admin-template-front-end-WB0N89JMK"&gt;PURCHASE&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- end navbar-collapse --&gt;
+  &lt;/div&gt;
+  &lt;!-- end container --&gt;
+&lt;/div&gt;
+&lt;!-- end #header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content"><strong>D) Page Content</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							There have 2 options of page content. HTML code of Content container as shown below:
+						</p>
+						<h4>Page Content with Background</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-title --&gt;
+&lt;div id="page-title" class="page-title has-bg"&gt;
+  &lt;div class="bg-cover"&gt;&lt;img src="../assets/img/cover/cover-1.jpg" alt="" /&gt;&lt;/div&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- page-title here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end #page-title --&gt;
+</pre>
+						<h4>Page Content without Background</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin content --&gt;
+&lt;div class="content"&gt;
+  &lt;!-- begin container --&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- your content here --&gt;
+  &lt;/div&gt;
+  &lt;!-- end container --&gt;
+&lt;/div&gt;
+&lt;!-- end content --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-footer"><strong>E) Page Footer</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- begin #footer --&gt;
+&lt;div id="footer" class="footer"&gt;
+  &lt;!-- begin container --&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- begin row --&gt;
+    &lt;div class="row"&gt;
+      &lt;!-- begin col-3 --&gt;
+      &lt;div class="col-md-3 col-sm-3"&gt;
+        &lt;!-- begin section-container --&gt;
+        &lt;div class="section-container"&gt;
+          &lt;h4 class="footer-title"&gt;Categories&lt;/h4&gt;
+          &lt;ul class="categories"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Sports&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Outdoor Sports&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Indoor Sports&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Video Shooting&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Drone&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Uncategorized&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- end section-container --&gt;
+      &lt;/div&gt;
+      &lt;!-- end col-3 --&gt;
+      &lt;!-- begin col-3 --&gt;
+      &lt;div class="col-md-3 col-sm-3"&gt;
+        &lt;!-- begin section-container --&gt;
+        &lt;div class="section-container"&gt;
+          &lt;h4 class="footer-title"&gt;Archives&lt;/h4&gt;
+          &lt;ul class="archives"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;June 2023&lt;/a&gt; &lt;span class="total"&gt;(102)&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;May 2023&lt;/a&gt; &lt;span class="total"&gt;(46)&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;April 2023&lt;/a&gt; &lt;span class="total"&gt;(84)&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;March 2023&lt;/a&gt; &lt;span class="total"&gt;(67)&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;February 2023&lt;/a&gt; &lt;span class="total"&gt;(99)&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;January 2023&lt;/a&gt; &lt;span class="total"&gt;(113)&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;December 2022&lt;/a&gt; &lt;span class="total"&gt;(25)&lt;/span&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- end section-container --&gt;
+      &lt;/div&gt;
+      &lt;!-- end col-3 --&gt;
+      &lt;!-- begin col-3 --&gt;
+      &lt;div class="col-md-3 col-sm-3"&gt;
+        &lt;!-- begin section-container --&gt;
+        &lt;div class="section-container"&gt;
+          &lt;h4 class="footer-title"&gt;Recent Posts&lt;/h4&gt;
+          &lt;ul class="recent-post"&gt;
+            &lt;li&gt;
+              &lt;h4&gt;
+                &lt;a href="#"&gt;Nam ut urna hendrerit&lt;/a&gt;
+                &lt;span class="time"&gt;February 22, 2023&lt;/span&gt;
+              &lt;/h4&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;h4&gt;
+                &lt;a href="#"&gt;Class aptent taciti sociosqu&lt;/a&gt;
+                &lt;span class="time"&gt;July 15, 2023&lt;/span&gt;
+              &lt;/h4&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;h4&gt;
+                &lt;a href="#"&gt;Donec rhoncus arcu&lt;/a&gt;
+                &lt;span class="time"&gt;March 21, 2023&lt;/span&gt;
+              &lt;/h4&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- end section-container --&gt;
+      &lt;/div&gt;
+      &lt;!-- end col-3 --&gt;
+      &lt;!-- begin col-3 --&gt;
+      &lt;div class="col-md-3 col-sm-3"&gt;
+        &lt;div class="section-container"&gt;
+          &lt;h4 class="footer-title"&gt;About Color Admin&lt;/h4&gt;
+          &lt;address&gt;
+            &lt;strong&gt;Twitter, Inc.&lt;/strong&gt;&lt;br /&gt;
+            795 Folsom Ave, Suite 600&lt;br /&gt;
+            San Francisco, CA 94107&lt;br /&gt;
+            P: (123) 456-7890&lt;br /&gt;
+            &lt;br /&gt;
+            &lt;strong&gt;Full Name&lt;/strong&gt;&lt;br /&gt;
+            &lt;a href="#"&gt;first.last@example.com&lt;/a&gt;
+          &lt;/address&gt;
+        &lt;/div&gt;
+        &lt;!-- end section-container --&gt;
+      &lt;/div&gt;
+      &lt;!-- end col-3 --&gt;
+    &lt;/div&gt;
+    &lt;!-- end row --&gt;
+  &lt;/div&gt;
+  &lt;!-- end container --&gt;
+&lt;/div&gt;
+&lt;!-- end #footer --&gt;
+
+&lt;!-- begin #footer-copyright --&gt;
+&lt;div id="footer-copyright" class="footer-copyright"&gt;
+  &lt;!-- begin container --&gt;
+  &lt;div class="container"&gt;
+    &lt;span class="copyright"&gt;&copy; 2023 SeanTheme All Right Reserved&lt;/span&gt;
+    &lt;ul class="social-media-list"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-google-plus"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-rss"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;!-- end container --&gt;
+&lt;/div&gt;
+&lt;!-- end #footer-copyright --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="panel-theme"><strong>F) Panel Theme</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Panel Theme used to customize the overall layout options.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin theme-panel --&gt;
+&lt;div class="theme-panel"&gt;
+  &lt;a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"&gt;&lt;i class="fa fa-cog"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;div class="theme-panel-content"&gt;
+    &lt;div class="theme-list clearfix"&gt;
+      &lt;div class="theme-list-item"&gt;
+        &lt;a href="javascript:;" class="bg-purple" 
+          data-theme-class="theme-purple"
+          data-click="theme-selector" 
+          data-toggle="tooltip" 
+          data-trigger="hover" 
+          data-container="body" 
+          data-title="Purple"&gt;&nbsp;&lt;/a&gt;
+      &lt;/div&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end theme-panel --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-end"><strong>G) End of Page (Javascript)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Javascript files loaded in the end of page. This will reduce page load time.
+						</p>
+<pre class="prettyprint linenums">
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/js/blog/vendor.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/blog/app.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+  
+  &lt;!-- OR without vendor.min.js --&gt;
+  
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/plugins/pace-js/pace.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery-ui-dist/jquery-ui.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/js-cookie/dist/js.cookie.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/blog/app.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-theme-options"><strong>H) Page Theme Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the theme to the <code>&lt;body&gt;</code> tag in order to change the theme color.</p>
+						<h4>Available Theme Options</h4>
+<pre class="prettyprint linenums">
+&lt;body class="theme-red"&gt;...&lt;/body&gt;
+&lt;body class="theme-pink"&gt;...&lt;/body&gt;
+&lt;body class="theme-orange"&gt;...&lt;/body&gt;
+&lt;body class="theme-yellow"&gt;...&lt;/body&gt;
+&lt;body class="theme-lime"&gt;...&lt;/body&gt;
+&lt;body class="theme-green"&gt;...&lt;/body&gt;
+&lt;body class="theme-teal"&gt;...&lt;/body&gt;
+&lt;body class="theme-cyan"&gt;...&lt;/body&gt;
+&lt;body class="theme-blue"&gt;...&lt;/body&gt;
+&lt;body class="theme-purple"&gt;...&lt;/body&gt;
+&lt;body class="theme-indigo"&gt;...&lt;/body&gt;
+&lt;body class="theme-gray-500"&gt;...&lt;/body&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>I) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>data-bs-theme="dark"</code> attribute to <code>&lt;html&gt;</code> in order to enable the dark mode.</p>
+<pre class="prettyprint linenums">
+&lt;html data-bs-theme="dark"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-gulp-scss"><strong>J) Using Gulp SCSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4>Installation</h4>
+						<p>Below is the command that required to run / compile the scss with gulpjs. If you are new to the gulpjs, you may refer to their <a href="https://gulpjs.com/" target="_blank">official website</a> for installation guide.</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt;
+cd /your-path-url/frontend/blog/src/
+npm install
+gulp
+
+&lt;!-- available command --&gt;
+gulp plugins                    // generate list of plugins
+</pre>
+						<p>Verify that you are running at least node 10.9.x or later and npm 6.x.x by running node -v and npm -v in a terminal/console window. Older versions produce errors, but newer versions are fine.</p>
+						<hr />
+						<h4>Enable RTL Support</h4>
+						<p>
+							To enable the RTL Support, you might need to change the following variable from <code>frontend/blog/src/scss/_variables.scss</code>.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- LINE 292 --&gt;
+$enable-rtl: true;
+
+&lt;!-- run the command to regenerate the /css/blog/app.min.css --&gt;
+gulp
+</pre>
+						<hr />
+						<h4>Gulp compilation</h4>
+						<p>
+							We are using gulp to compile & combine few plugins js & css into one single vendor file for js & css. This may help to improve the speed for page load if compare to multiple files loading in one page. 
+							If you wish to edit the included plugins files, you may refer to the <code>/admin/src/gulpfile.js</code>.
+						</p>
+						<p>Below is the list of plugins that compile into <code>vendor.min.css</code>.</p>
+<pre class="prettyprint linenums">
+return gulp.src([
+  'node_modules/animate.css/animate.min.css',
+  'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+  'node_modules/jquery-ui-dist/jquery-ui.min.css',
+  'node_modules/pace-js/themes/black/pace-theme-flash.css',
+  'node_modules/bootstrap-icons/font/bootstrap-icons.css'
+])
+.pipe(sass())
+.pipe(concat('vendor.min.css'))
+.pipe(minifyCSS())
+.pipe(gulp.dest(distPath + '/assets/css/blog/'))
+.pipe(livereload());
+</pre>
+						<p>Below is the list of plugins that compile into <code>vendor.min.js</code>.</p>
+<pre class="prettyprint linenums">
+return gulp.src([
+  'node_modules/pace-js/pace.min.js',
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/jquery-ui-dist/jquery-ui.min.js',
+  'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+  'node_modules/js-cookie/src/js.cookie.js'
+])
+.pipe(sourcemaps.init())
+.pipe(concat('vendor.min.js'))
+.pipe(sourcemaps.write())
+.pipe(gulp.dest(distPath + '/assets/js/blog/'))
+.pipe(livereload());
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="plugins-resources"><strong>K) Plugins & Resources</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of all plugins and external resources used to power this template.
+						</p>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th style="width:100px;">Name</th>
+									<th>CSS Files</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Bootstrap</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>jQuery</div>
+									</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jquery.com/">http://jquery.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>jQuery UI</div>
+									</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/jquery-ui-dist/jquery-ui.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/jquery-ui-dist/jquery-ui.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://jqueryui.com/">https://jqueryui.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Icons</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Font Awesome</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/@fortawesome/fontawesome-free/css/all.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://fontawesome.com/">https://fontawesome.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Animate.css</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/animate/animate.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>scrollMonitor</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/scrollmonitor/scrollMonitor.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/stutrek/scrollMonitor">https://github.com/stutrek/scrollMonitor</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Pace</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/pace-js/themes/black/pace-theme-flash.css" /&gt;
+</pre>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/pace-js/pace.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://codebyzach.github.io/pace/">https://codebyzach.github.io/pace/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>JS Cookie</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/js-cookie/dist/js.cookie.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/js-cookie/js-cookie">https://github.com/js-cookie/js-cookie</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Paroller</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script="../assets/plugins/paroller.js/dist/jquery.paroller.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://tgomilar.github.io/paroller.js/">https://tgomilar.github.io/paroller.js/</a></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="references"><strong>L) References</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							I've used the following images, icons or other files as listed.
+						</p>
+						<p><b>jQuery Plugins</b></p>
+						<ol>
+							<li><b>Bootstrap</b>:<a href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+							<li><b>jQuery</b>:<a href="http://jquery.com/">http://jquery.com/</a></li>
+							<li><b>jQuery UI</b>:<a href="http://jqueryui.com/">http://jqueryui.com/</a></li>
+							<li><b>Bootstrap Icons</b>:<a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></li>
+							<li><b>Font Awesome</b>:<a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></li>
+							<li><b>Animate.css</b>:<a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></li>
+							<li><b>scrollMonitor</b>:<a href="https://github.com/stutrek/scrollMonitor">https://github.com/stutrek/scrollMonitor</a></li>
+							<li><b>Pace</b>:<a href="http://github.hubspot.com/pace/">http://github.hubspot.com/pace/</a></li>
+							<li><b>JS Cookie</b>:<a href="https://github.com/js-cookie/js-cookie">https://github.com/js-cookie/js-cookie</a></li>
+							<li><b>Paroller</b>:<a href="https://tgomilar.github.io/paroller.js/">https://tgomilar.github.io/paroller.js/</a></li>
+						</ol>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

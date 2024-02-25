@@ -1,0 +1,73 @@
+.home {
+	padding: 0 !important;
+	color: $white;
+	
+	& .home-content {
+		z-index: 1020;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		color: rgba($white, .5);
+		margin-top: rem(-120px);
+		padding: 0 rem(15px);
+		text-align: center;
+		
+		& h1,
+		& h2,
+		& h3,
+		& h4 {
+			color: $white;
+			margin: 0 0 rem(30px);
+			font-weight: 300;
+			
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(15px);
+			}
+		}
+		& h1 {
+			font-size: rem(64px);
+			font-weight: 600;
+			
+			@include media-breakpoint-down(lg) {
+				font-size: rem(48px);
+			}
+			@include media-breakpoint-down(md) {
+				font-size: rem(36px);
+			}
+		}
+		& h3 {
+			font-size: rem(32px);
+			
+			@include media-breakpoint-down(lg) {
+				font-size: rem(24px);
+			}
+			@include media-breakpoint-down(md) {
+				font-size: rem(18px);
+			}
+		}
+		& p {
+			margin-bottom: rem(60px);
+			
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(30px);
+			}
+		}
+		& .btn {
+			&.btn-outline-white {
+				border-color: rgba($white, .5);
+				
+				&:hover {
+					color: $dark;
+				}
+			}
+			& + .btn {
+				@if $enable-rtl {
+					margin-right: rem(15px);
+				} @else {
+					margin-left: rem(15px);
+				}
+			}
+		}
+	}
+}

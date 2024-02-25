@@ -1,0 +1,43 @@
+.progress {
+	overflow: initial;
+	border-radius: $border-radius-lg * 2;
+	
+	& .progress-bar {
+		position: relative;
+		border-radius: $border-radius-lg * 2;
+		
+		
+		& .progress-number {
+			position: absolute;
+			bottom: 100%;
+			background: $dark;
+			padding: rem(2px) rem(6px) rem(1px);
+			display: block;
+			line-height: rem(16px);
+			margin-bottom: rem(5px);
+			border-radius: $border-radius;
+			
+			@if $enable-rtl {
+				left: 0;
+			} @else {
+				right: 0;
+			}
+	
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: rem(-10px);
+				border: 5px solid transparent;
+				border-top-color: #333;
+				
+				@if $enable-rtl {
+					right: 50%;
+					margin-right: rem(-5px);
+				} @else {
+					left: 50%;
+					margin-left: rem(-5px);
+				}
+			}
+		}
+	}
+}

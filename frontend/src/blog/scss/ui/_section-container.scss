@@ -1,0 +1,7 @@
+.section-container {
+	margin-bottom: rem(60px);
+		
+	@include media-breakpoint-down(md) {
+		margin-bottom: rem(45px);
+	}
+}

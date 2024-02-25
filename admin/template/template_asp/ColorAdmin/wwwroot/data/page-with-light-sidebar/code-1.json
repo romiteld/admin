@@ -1,0 +1,5 @@
+@{
+  ViewData["AppClass"] = "app-with-light-sidebar";
+  ViewData["AppHeaderInverse"] = "true";
+  ViewData["AppSidebarLight"] = "true";
+}

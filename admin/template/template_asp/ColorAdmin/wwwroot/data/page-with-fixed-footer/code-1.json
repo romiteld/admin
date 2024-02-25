@@ -1,0 +1,16 @@
+@{
+  ViewData["AppClass"] = "app-content-full-height";
+  ViewData["AppContentClass"] = "d-flex flex-column p-0";
+}
+
+&lt;!-- BEGIN content-container --&gt;
+&lt;div class="app-content-padding flex-grow-1 overflow-hidden" data-scrollbar="true" data-height="100%"&gt;
+  ...
+&lt;/div&gt;
+&lt;!-- END content-container --&gt;
+
+&lt;!-- BEGIN #footer --&gt;
+&lt;div id="footer" class="app-footer m-0"&gt;
+  &copy; 2023 Color Admin Responsive Admin Template - Sean Ngu All Rights Reserved
+&lt;/div&gt;
+&lt;!-- END #footer --&gt;

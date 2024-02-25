@@ -1,0 +1,27 @@
+<script>
+import { Toast } from 'bootstrap';
+
+export default {
+  methods: {
+    showToast(event, target) {
+      event.preventDefault();
+      
+      var toast = new Toast(document.getElementById(target));
+      toast.show();
+    }
+  }
+}
+</script>
+
+<!-- toggler -->
+<a href="#" class="btn btn-primary" @click="(event) => showToast(event, 'toast-1')">Show toast 1</a>
+
+<!-- toasts-container -->
+<div class="position-fixed top-0 end-0 me-5 mt-5 pt-5">
+  <div class="toast fade hide" data-autohide="false" id="toast-1">
+    ...
+  </div>
+  <div class="toast fade hide" data-autohide="false" id="toast-1">
+    ...
+  </div>
+</div>

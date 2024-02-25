@@ -1,0 +1,28 @@
+.milestone {
+	text-align: center;
+	
+	& .number {
+		font-size: $font-size-base * 3;
+		color: $white;
+		font-weight: 300;
+	}
+	& .title {
+		color: rgba($white, .5);
+	}
+}
+.milestone-col {
+	& + .milestone-col {
+		@include media-breakpoint-up(lg) {
+			@if $enable-rtl {
+				border-right: 1px solid rgba($white, .2);
+			} @else {
+				border-left: 1px solid rgba($white, .2);
+			}
+		}
+		@include media-breakpoint-down(md) {
+			border-top: 1px solid rgba($white, .2);
+			margin-top: rem(15px);
+			padding-top: rem(15px);
+		}
+	}
+}

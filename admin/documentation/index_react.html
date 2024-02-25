@@ -1,0 +1,710 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Admin Template</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">Design Template</a>
+						</li>
+						<li class="">
+							<a href="index_ajax.html">Ajax Version</a>
+						</li>
+						<li class="">
+							<a href="index_angular_1x.html">Angular 1.x</a>
+						</li>
+						<li class="">
+							<a href="index_angular_17.html">Angular 17.0</a>
+						</li>
+						<li class="">
+							<a href="index_laravel.html">Laravel Version</a>
+						</li>
+						<li class="">
+							<a href="index_vue.html">Vue Version</a>
+						</li>
+						<li class="active">
+							<a href="index_react.html">React Version</a>
+						</li>
+						<li class="">
+							<a href="index_asp.html">ASP.NET</a>
+						</li>
+						<li>
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;React 18 Version&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.3.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well with-cover">
+					<div class="well-cover" style="background-image: url(assets/images/react.jpg); background-size: auto 80%; background-position: center; background-repeat: no-repeat; background-color: #fff;"></div>
+					<p>
+						<strong>
+							Last Updated: 15/November/2023<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+					<li><a href="#fileStructure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#page-structure"><i class="icon-chevron-right"></i>Page Structure</a></li>
+					<li><a href="#page-components"><i class="icon-chevron-right"></i>Components</a></li>
+					<li><a href="#page-config"><i class="icon-chevron-right"></i>Page Config</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-switch-design"><i class="icon-chevron-right"></i>Switch Design <span class="label">NEW</span></a></li>
+					<li><a href="#page-scss"><i class="icon-chevron-right"></i>SCSS</a></li>
+					<li><a href="#npm-package"><i class="icon-chevron-right"></i>NPM Package</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="installation"><strong>A) Installation</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Follow the following step to install the reactjs in your localhost<br />
+							You may refer to their official documentation for how to setup the node js & npm. <br />
+							<a href="https://www.npmjs.com/get-npm" target="_blank">Setup Guide</a>
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt;
+cd /your-path-url/template_react
+npm install --force
+npm start
+
+&lt;!-- browse the url --&gt;
+http://localhost:3000/
+</pre>
+						<p>
+							Verify that you are running at least node <code>18.x.x</code> or later and <code>npm 9.x.x</code> by running <code>node -v</code> and <code>npm -v</code> in a terminal/console window. Older versions produce errors, but newer versions are fine.
+						</p>
+						<hr />
+						<p>Copy over the required image from global <code>assets</code> folder</p>
+<pre class="prettyprint linenums">
+&lt;!-- copy the following folder--&gt;
+/admin/template/assets/img
+ 
+&lt;!-- paste it into react folder --&gt;
+/admin/template/template_react/public/assets/img
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="fileStructure"><strong>B) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for React JS Version</p>
+						
+<pre class="prettyprint linenums">
+template_react/
+├── package.json
+├── README.md
+├── public/
+└── src/
+    ├── app.jsx
+    ├── index.js
+    ├── index.css
+    ├── assets/ 
+    ├── components/
+    ├── config/
+    ├── pages/
+    └── scss/
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-structure"><strong>C) Page Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below is the code from <code>app.js</code> which include the header, sidebar, right sidebar, top menu, page content and footer. You may remove the component if you are not using it.</p>
+<pre class="prettyprint linenums">
+import React, { useEffect, useState } from 'react';
+import { AppSettings } from './config/app-settings.js';
+import { slideToggle } from './composables/slideToggle.js';
+
+import Header from './components/header/header.jsx';
+import Sidebar from './components/sidebar/sidebar.jsx';
+import SidebarRight from './components/sidebar-right/sidebar-right.jsx';
+import TopMenu from './components/top-menu/top-menu.jsx';
+import Content from './components/content/content.jsx';
+import ThemePanel from './components/theme-panel/theme-panel.jsx';
+
+function App() {  
+  const [appTheme] = useState('');
+  const [appDarkMode, setAppDarkMode] = useState(false);
+  const [appGradientEnabled, setAppGradientEnabled] = useState(false);
+  const [appHeaderNone, setAppHeaderNone] = useState(false);
+  const [appHeaderFixed, setAppHeaderFixed] = useState(true);
+  const [appHeaderInverse, setAppHeaderInverse] = useState(false);
+  const [appHeaderMegaMenu, setAppHeaderMegaMenu] = useState(false);
+  const [appHeaderLanguageBar, setAppHeaderLanguageBar] = useState(false);
+  const [hasScroll, setHasScroll] = useState(false);
+  const [appSidebarNone, setAppSidebarNone] = useState(false);
+  const [appSidebarWide, setAppSidebarWide] = useState(false);
+  const [appSidebarLight, setAppSidebarLight] = useState(false);
+  const [appSidebarMinify, setAppSidebarMinify] = useState(false);
+  const [appSidebarMobileToggled, setAppSidebarMobileToggled] = useState(false);
+  const [appSidebarTransparent, setAppSidebarTransparent] = useState(false);
+  const [appSidebarSearch, setAppSidebarSearch] = useState(false);
+  const [appSidebarFixed, setAppSidebarFixed] = useState(true);
+  const [appSidebarGrid, setAppSidebarGrid] = useState(false);
+  const [appContentNone, setAppContentNone] = useState(false);
+  const [appContentClass, setAppContentClass] = useState('');
+  const [appContentFullHeight, setAppContentFullHeight] = useState(false);
+  const [appTopMenu, setAppTopMenu] = useState(false);
+  const [appTopMenuMobileToggled] = useState(false);
+  const [appSidebarTwo, setAppSidebarTwo] = useState(false);
+  const [appSidebarEnd, setAppSidebarEnd] = useState(false);
+  const [appSidebarEndToggled, setAppSidebarEndToggled] = useState(false);
+  const [appSidebarEndMobileToggled, setAppSidebarEndMobileToggled] = useState(false);
+  
+  ...
+  
+  return (
+    &lt;AppSettings.Provider
+      value={{
+        appTheme,
+        appDarkMode,
+        appGradientEnabled,
+        appHeaderNone,
+        appHeaderFixed,
+        ...
+      }}
+    &gt;
+      &lt;div
+        className={
+          'app ' +
+          (appGradientEnabled ? 'app-gradient-enabled ' : '') +
+          (appHeaderNone ? 'app-without-header ' : '') +
+          (appHeaderFixed && !appHeaderNone ? 'app-header-fixed ' : '') +
+          (appSidebarFixed ? 'app-sidebar-fixed ' : '') +
+          (appSidebarNone ? 'app-without-sidebar ' : '') +
+          (appSidebarEnd ? 'app-with-end-sidebar ' : '') +
+          (appSidebarWide ? 'app-with-wide-sidebar ' : '') +
+          (appSidebarMinify ? 'app-sidebar-minified ' : '') +
+          (appSidebarMobileToggled ? 'app-sidebar-mobile-toggled ' : '') +
+          (appTopMenu ? 'app-with-top-menu ' : '') +
+          (appContentFullHeight ? 'app-content-full-height ' : '') +
+          (appSidebarTwo ? 'app-with-two-sidebar ' : '') +
+          (appSidebarEndToggled ? 'app-sidebar-end-toggled ' : '') +
+          (appSidebarEndMobileToggled ? 'app-sidebar-end-mobile-toggled ' : '') +
+          (hasScroll ? 'has-scroll ' : '')
+        }
+      &gt;
+        {!appHeaderNone && &lt;Header /&gt;}
+        {!appSidebarNone && &lt;Sidebar /&gt;}
+        {appSidebarTwo && &lt;SidebarRight /&gt;}
+        {appTopMenu && &lt;TopMenu /&gt;}
+        {!appContentNone && &lt;Content /&gt;}
+        &lt;ThemePanel /&gt;
+      &lt;/div&gt;
+    &lt;/AppSettings.Provider&gt;
+  );
+}
+
+export default App;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-components"><strong>D) Components</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>List of components inside the components folder</p>
+<pre class="prettyprint linenums">
+components/
+├── content/
+├── float-sub-menu/
+├── header/
+├── panel/
+├── sidebar/
+├── sidebar-right/
+├── theme-panel/
+└── top-menu/
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-config"><strong>E) Config</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File to configure the default page options & page routes</p>
+<pre class="prettyprint linenums">
+config/
+├── app-route.jsx
+└── app-settings.js
+</pre>
+						<p>Example of how to change page options in single page</p>
+<pre class="prettyprint linenums">
+import React, { useEffect, useContext } from 'react';
+import { AppSettings } from './../../config/app-settings.js';
+
+function PageWithoutSidebar() {
+  const context = useContext(AppSettings);
+
+  useEffect(() => {
+    context.handleSetAppSidebarNone(true);
+    
+    return () => {
+      context.handleSetAppSidebarNone(false);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+  return (
+  );
+}
+
+export default PageWithoutSidebar;
+</pre>
+						<p>List of options:</p>
+<pre class="prettyprint linenums">
+context.handleSetAppHeaderNone (true);
+context.handleSetAppHeaderInverse (true);
+context.handleSetAppHeaderLanguageBar(true);
+context.handleSetAppHeaderMegaMenu(true);
+context.handleSetAppHeaderFixed(true);
+
+context.handleSetAppSidebarNone(true);
+context.handleSetAppSidebarWide (true);
+context.handleSetAppSidebarLight(true);
+context.handleSetAppSidebarMinified(true);
+context.handleSetAppSidebarTransparent(true);
+context.handleSetAppSidebarSearch(true);
+context.handleSetAppSidebarFixed(true);
+context.handleSetAppSidebarGrid(true);
+context.handleSetAppSidebarEnd(true);
+context.handleSetAppSidebarTwo(true);
+
+context.handleSetAppContentNone(true);
+context.handleSetAppContentClass('p-0');
+context.handleSetAppContentFullHeight(true);
+
+context.handleSetAppTopMenu(true);
+context.handleSetAppBoxedLayout(true);
+context.handleSetAppDarkMode('dark');
+context.handleSetAppGradientEnabled(true);
+context.handleSetAppTheme('blue');
+
+context.toggleAppSidebarMinify();
+context.toggleAppSidebarMobile();
+context.toggleAppTopMenuMobile();
+context.toggleAppSidebarEnd();
+context.toggleAppSidebarEndMobile();
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>F) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Enable dark mode from <code>template_react/src/app.jsx</code>.</p>
+<pre class="prettyprint linenums">
+...
+const [appDarkMode, setAppDarkMode] = useState(true);   // LINE 14
+...
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-switch-design"><strong>G) Switch Design</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4 style="margin-bottom: 15px">Apple Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_react/src/scss/react.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'apple/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px;">Add the following css link to <code>template_react/public/index.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Ionicons and background color class is needed as well.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="ion-ios-pulse bg-gradient-blue"&gt;&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Facebook Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_react/src/scss/react.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'facebook/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the following variable from <code>template_react/src/app.jsx</code>.</div>
+<pre class="prettyprint linenums">
+...
+const [appHeaderInverse, setAppHeaderInverse] = useState(true);   // LINE 18
+...
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Transparent Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_react/src/scss/react.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'transparent/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the <code>.app-cover</code> next to the <code>&lt;body&gt;</code> tag in <code>template_react/public/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;!-- BEGIN page-cover --&gt;
+  &lt;div class="app-cover"&gt;&lt;/div&gt;
+  &lt;!-- END page-cover --&gt;
+  
+  ...
+&lt;/body&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Google Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_react/src/scss/react.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'google/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the following variable from <code>template_react/src/app.jsx</code>.</div>
+<pre class="prettyprint linenums">
+...
+const [appSidebarWide, setAppSidebarWide] = useState(true);    // LINE 23
+const [appSidebarLight, setAppSidebarLight] = useState(true);  // LINE 24
+...
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_react/src/components/header.jsx</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a class="navbar-brand"&gt;
+      Color Admin
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Material Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_react/src/scss/react.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'material/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the following variable from <code>template_react/src/app.jsx</code>.</div>
+<pre class="prettyprint linenums">
+...
+const [appSidebarWide, setAppSidebarWide] = useState(true);    // LINE 23
+...
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_react/src/components/header.jsx</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a class="navbar-brand"&gt;
+      Color Admin Material
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							
+							<li>
+								<div style="padding-bottom: 5px">Add the floating navbar form to the <code>.app-header</code>  in <code>template_react/src/components/header.jsx</code> AND <b>REMOVE</b> the default <code>.navbar-form</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;div class="navbar-item"&gt;
+      &lt;a href="#" class="navbar-link icon"&gt;
+        &lt;i class="material-icons"&gt;search&lt;/i&gt;
+      &lt;/a&gt;
+      
+      &lt;!-- REMOVE IT --&gt;
+      &lt;div class="navbar-item navbar-form"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+  
+  &lt;div class="navbar-floating-form"&gt;
+    &lt;button class="search-btn" type="submit"&gt;&lt;i class="material-icons"&gt;search&lt;/i&gt;&lt;/button&gt;
+    &lt;input type="text" class="form-control" placeholder="Search Something..." /&gt;
+    &lt;a href="#" class="close"&gt;
+      &lt;i class="material-icons"&gt;close&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the <code>.app-loader</code>  in <code>template_react/public/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #loader --&gt;
+&lt;div id="loader" class="app-loader"&gt;
+  &lt;div class="material-loader"&gt;
+    &lt;svg class="circular" viewBox="25 25 50 50"&gt;
+      &lt;circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+    &lt;div class="message"&gt;Loading...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END #loader --&gt;
+</pre>
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-scss"><strong>H) Using SCSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Now Vue.js version is fully scss configured. You may switch the Color Admin theme by changing the file <code>/template_react/src/scss/react.scss</code>.</p>
+<pre class="prettyprint linenums">
+@import 'default/styles';
+ 
+&lt;!-- other themes --&gt;
+@import 'apple/styles';
+@import 'facebook/styles';
+@import 'google/styles';
+@import 'material/styles';
+@import 'transparent/styles';
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="npm-package"><strong>I) NPM Package</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of package that has been installed in this project. You may use the following example to find the package from their official website.
+							<code>https://www.npmjs.com/package/</code><code>reactstrap</code>
+						</p>
+<pre class="prettyprint linenums">
+{
+  "name": "color-admin",
+  "version": "5.3.2",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.23.3",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fullcalendar/bootstrap": "^6.1.9",
+    "@fullcalendar/daygrid": "^6.1.9",
+    "@fullcalendar/interaction": "^6.1.9",
+    "@fullcalendar/list": "^6.1.9",
+    "@fullcalendar/react": "^6.1.9",
+    "@fullcalendar/timegrid": "^6.1.9",
+    "apexcharts": "^3.44.0",
+    "bootstrap": "^5.3.2",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "bootstrap-icons": "^1.11.1",
+    "bootstrap-social": "^5.1.1",
+    "chart.js": "^4.4.0",
+    "codemirror": "^6.0.1",
+    "flag-icons": "^6.15.0",
+    "google-map-react": "^2.2.1",
+    "lity": "^2.4.1",
+    "masonry-layout": "^4.2.2",
+    "node-sass": "^9.0.0",
+    "photoswipe": "^5.4.2",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-bootstrap-daterangepicker": "^8.0.0",
+    "react-calendar": "^4.6.1",
+    "react-color": "^2.19.3",
+    "react-countdown": "^2.3.5",
+    "react-data-table-component": "^7.5.4",
+    "react-datepicker": "^4.21.0",
+    "react-datetime": "^3.2.0",
+    "react-dom": "^18.2.0",
+    "react-highlight": "^0.15.0",
+    "react-input-mask": "^2.0.4",
+    "react-notifications-component": "^4.0.1",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.8.0",
+    "react-tag-autocomplete": "^7.1.0",
+    "simple-line-icons": "^2.5.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts --max_old_space_size=4096 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@iconify/react": "^4.1.1"
+  }
+}
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

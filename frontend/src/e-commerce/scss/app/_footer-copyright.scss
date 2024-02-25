@@ -1,0 +1,32 @@
+.footer-copyright {
+	color: rgba($white, .75);
+	background: darken($dark, 7.5%);
+	padding: rem(20px) 0;
+	font-size: rem(13px);
+	
+	@include clearfix();
+	
+	& .copyright {
+		float: left;
+		line-height: rem(30px);
+		
+		@include media-breakpoint-down(md) {
+			float: none;
+			text-align: center;
+		}
+	}
+	& .payment-method {
+		float: right;
+		text-align: right;
+		
+		@include media-breakpoint-down(md) {
+			float: none;
+			text-align: center;
+			padding: rem(10px) 0;
+		}
+		
+		& img {
+			max-height: rem(30px);
+		}
+	}
+}

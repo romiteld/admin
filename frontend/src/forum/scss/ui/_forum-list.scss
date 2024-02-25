@@ -1,0 +1,304 @@
+.forum-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	& > li {
+		padding: rem(15px);
+		display: flex;
+		
+		& + li {
+			border-top: 2px solid var(--#{$prefix}component-border-color);
+		}
+		& .media {
+			font-size: $font-size-lg * 2;
+			width: rem(64px);
+			text-align: center;
+			line-height: rem(64px);
+			
+			@include media-breakpoint-down(lg) {
+				width: rem(48px);
+				line-height: rem(48px);
+				font-size: $font-size-lg * 1.5;
+			}
+			
+			& img {
+				max-width: 100%;
+				display: block;
+			}
+			& .fa {
+				display: block;
+				background: var(--#{$prefix}app-theme);
+				line-height: rem(64px);
+				
+				@include media-breakpoint-down(lg) {
+					line-height: rem(48px);
+				}
+			}
+		}
+		& .info-container {
+			font-size: $font-size-sm;
+			line-height: $line-height-lg;
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+			display: flex;
+			flex: 1;
+			
+			@if $enable-rtl {
+				margin-right: rem(15px);
+			} @else {
+				margin-left: rem(15px);
+			}
+			@include media-breakpoint-down(lg) {
+				display: block;
+			}
+			
+			& .info {
+				width: 50%;
+				flex: 1;
+				
+				@include media-breakpoint-down(lg) {
+					width: auto;
+				}
+				
+				& .title {
+					font-size: $font-size-lg;
+					font-weight: $font-weight-bold;
+					line-height: inherit;
+					margin: 0;
+					
+					& a {
+						color: var(--#{$prefix}component-color);
+						
+						&:hover,
+						&:focus {
+							color: rgba(var(--#{$prefix}component-color-rgb), .5);
+						}
+					}
+				}
+				& .desc {
+					margin-bottom: rem(10px);
+					
+					@include media-breakpoint-down(lg) {
+						margin-bottom: 0;
+					}
+				}
+			}
+			& .total-count {
+				width: 20%;
+				text-align: center;
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+				font-size: $font-size-base;
+				font-weight: 400;
+				
+				@include media-breakpoint-down(lg) {
+					width: auto;
+					text-align: left;
+					margin: rem(5px) 0;
+				}
+				
+				& .total-post {
+					font-weight: $font-weight-bold;
+					color: var(--#{$prefix}component-color);
+				}
+				& .divider {
+					margin: 0 rem(5px);
+				}
+			}
+			& .latest-post {
+				width: 30%;
+				
+				@include media-breakpoint-down(lg) {
+					width: auto;
+				}
+				& .title {
+					font-size: $font-size-sm;
+					line-height: inherit;
+					margin: 0;
+					
+					& a {
+						color: var(--#{$prefix}component-color);
+					}
+				}
+				& .time {
+					font-size: $font-size-sm;
+					margin: 0;
+				}
+			}
+		}
+	}
+	&.forum-topic-list {
+		& .info-container {
+			position: relative;
+		}
+		& .info-start-end {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			font-size: $font-size-sm * 0.9;
+		}
+		& .date-replies {
+			text-align: center;
+			width: rem(80px);
+			
+			@include media-breakpoint-down(lg) {
+				width: auto;
+				line-height: $line-height-sm;
+				margin: rem(10px) 0 0;
+				
+				@if $enable-rtl {
+					text-align: right;
+				} @else {
+					text-align: left;
+				}
+			}
+			
+			& .time {
+				font-size: $font-size-sm * 0.9;
+				margin-bottom: rem(10px);
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+				
+				@include media-breakpoint-down(lg) {
+					display: inline-block;
+					margin-bottom: 0;
+					
+					& + .replies {
+						@if $enable-rtl {
+							padding-right: rem(13px);
+							margin-right: rem(10px);
+							border-right: 1px solid $gray-300;
+						} @else {
+							padding-left: rem(13px);
+							margin-left: rem(10px);
+							border-left: 1px solid $gray-300;
+						}
+					}
+				}
+			}
+			& .replies {
+				background: var(--#{$prefix}light);
+				padding: rem(5px) rem(10px);
+				border-radius: $border-radius;
+				
+				@include media-breakpoint-down(lg) {
+					background: none;
+					padding: 0;
+					display: inline-block;
+					border-radius: 0;
+				}
+				
+				& .total {
+					font-size: $font-size-lg;
+					font-weight: $font-weight-bold;
+					color: var(--#{$prefix}component-color);
+					margin: 0;
+					
+					@include media-breakpoint-down(lg) {
+						display: inline;
+						font-size: $font-size-sm * 0.9;
+					}
+				}
+				& .text {
+					font-size: $font-size-sm * 0.9;
+					font-weight: $font-weight-bold;
+					color: rgba(var(--#{$prefix}component-color-rgb), .5);
+					
+					@include media-breakpoint-down(lg) {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+	&.forum-detail-list {
+		border: none;
+		margin-bottom: rem(20px);
+		
+		& > li {
+			padding: 0;
+			
+			& + li {
+				border: none;
+				margin-top: rem(20px);
+			}
+		}
+		& .media {
+			display: block;
+			
+			& img {
+				margin-bottom: rem(10px);
+			}
+			& .badge {
+				font-size: $font-size-sm * 0.9;
+				display: block;
+				padding: rem(4px) rem(6px);
+				font-weight: 500;
+				border-radius: $border-radius-sm;
+			}
+		}
+		& .info-container {
+			border: 2px solid var(--#{$prefix}component-border-color);
+			padding: rem(15px) rem(20px);
+			background: var(--#{$prefix}light);
+			position: relative;
+			display: block;
+			border-radius: $border-radius-lg;
+			
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: rem(20px);
+				border: 10px solid transparent;
+				
+				@if $enable-rtl {
+					border-left-color: var(--#{$prefix}component-border-color);
+					right: rem(-20px);
+				} @else {
+					border-right-color: var(--#{$prefix}component-border-color);
+					left: rem(-20px);
+				}
+			}
+			&:after {
+				@if $enable-rtl {
+					right: rem(-17px);
+					border-left-color: var(--#{$prefix}light);
+				} @else {
+					left: rem(-17px);
+					border-right-color: var(--#{$prefix}light);
+				}
+			}
+			& > div {
+				float: none;
+			}
+			& .post-user {
+				font-size: $font-size-base;
+				margin-bottom: rem(15px);
+				
+				& small {
+					font-weight: bold;
+					color: rgba(var(--#{$prefix}component-color-rgb), .5);
+					font-size: $font-size-base * 0.8;
+					margin-left: rem(5px);
+				}
+			}
+			& .post-content {
+				font-size: $font-size-base;
+				line-height: $line-height-base;
+				color: var(--#{$prefix}component-color);
+				margin-bottom: 15px;
+				
+				& pre {
+					background: var(--#{$prefix}component-bg);
+					border: none;
+					margin-bottom: rem(20px);
+					padding: rem(15px);
+					white-space: initial;
+					border-radius: $border-radius;
+				}
+			}
+			& .post-time {
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+			}
+		}
+	}
+}

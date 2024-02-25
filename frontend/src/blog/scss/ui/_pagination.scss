@@ -1,0 +1,25 @@
+.pagination {
+	& .page-item {
+		& + .page-item {
+			margin-left: rem(10px);
+		}
+		& .page-link {
+			border-radius: 40px;
+		}
+		& .text {
+			padding: rem(10px) 0;
+			line-height: $line-height-base * 0.85;
+			display: block;
+		}
+	}
+}
+.pagination-container {
+	margin-top: rem(60px);
+	padding-top: rem(30px);
+	border-top: 2px solid $gray-300;
+	
+	@include media-breakpoint-down(md) {
+		margin-top: rem(45px);
+		padding-top: rem(25px);
+	}
+}

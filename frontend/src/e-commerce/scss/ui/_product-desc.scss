@@ -1,0 +1,118 @@
+.product-desc {
+	padding: rem(20px);
+	
+	@include clearfix();
+	@include media-breakpoint-down(lg) {
+		padding: rem(15px);
+	}
+	
+	& + .product-desc {
+		margin-top: rem(20px);
+		padding-top: rem(40px);
+		border-top: 1px solid var(--#{$prefix}component-border-color);
+		
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(40px);
+			margin-top: 0;
+		}
+	}
+	& .image {
+		width: 50%;
+		
+		@if $enable-rtl {
+			float: right;
+			padding-left: rem(40px);
+		} @else {
+			float: left;
+			padding-right: rem(40px);
+		}
+		
+		@include media-breakpoint-down(lg) {
+			float: none;
+			width: auto;
+			padding: 0;
+			text-align: center;
+		}
+		
+		& img {
+			max-width: 100%;
+		}
+	}
+	& .desc {
+		width: 50%;
+		
+		@if $enable-rtl {
+			float: right;
+			padding-right: rem(40px);
+		} @else {
+			float: left;
+			padding-left: rem(40px);
+		}
+		
+		@include media-breakpoint-down(lg) {
+			float: none;
+			width: auto;
+			padding: 0;
+			text-align: center;
+		}
+		
+		
+		& h4 {
+			margin: 0 0 rem(15px);
+			font-size: rem(36px);
+			
+			@include media-breakpoint-down(lg) {
+				margin: rem(15px) 0;
+				font-size: rem(24px);
+			}
+		}
+		& p {
+			font-size: rem(16px);
+			font-weight: normal;
+			color: rgba(var(--#{$prefix}component-color), .5);
+			line-height: $line-height-lg;
+			
+			@include media-breakpoint-down(lg) {
+				font-size: rem(14px);
+				line-height: $line-height-base;
+			}
+		}
+	}
+	&.right {
+		& .image {
+			@if $enable-rtl {
+				float: left;
+				padding-right: rem(40px);
+				padding-left: 0;
+			} @else {
+				float: right;
+				padding-left: rem(40px);
+				padding-right: 0;
+			}
+			
+			@include media-breakpoint-down(lg) {
+				float: none;
+				padding: 0;
+			}
+		}
+		& .desc {
+			@if $enable-rtl {
+				float: right;
+				padding-left: rem(40px);
+				padding-right: 0;
+				text-align: left;
+			} @else {
+				float: left;
+				padding-right: rem(40px);
+				padding-left: 0;
+				text-align: right;
+			}
+			
+			@include media-breakpoint-down(lg) {
+				float: none;
+				padding: 0;
+				text-align: center;
+			}
+		}
+	}
+}

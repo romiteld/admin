@@ -1,0 +1,710 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Frontend Theme</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">One-Page Parallax</a>
+						</li>
+						<li class="">
+							<a href="index_blog.html">Blog</a>
+						</li>
+						<li class="">
+							<a href="index_forum.html">Forum</a>
+						</li>
+						<li class="">
+							<a href="index_e_commerce.html">E-Commerce</a>
+						</li>
+						<li class="active">
+							<a href="index_corporate.html">Corporate</a>
+						</li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class="">
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Corporate Template&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.3.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well">
+					<p>
+						<strong>
+							Last Updated: 15/November/2023<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#htmlStructure"><i class="icon-chevron-right"></i>HTML Structure</a></li>
+					<li><a href="#page-head"><i class="icon-chevron-right"></i>Page Head</a></li>
+					<li><a href="#page-top-menu"><i class="icon-chevron-right"></i>Page Top Menu</a></li>
+					<li><a href="#page-content"><i class="icon-chevron-right"></i>Page Content</a></li>
+					<li><a href="#page-footer"><i class="icon-chevron-right"></i>Page Footer</a></li>
+					<li><a href="#panel-theme"><i class="icon-chevron-right"></i>Panel Theme</a></li>
+					<li><a href="#page-end"><i class="icon-chevron-right"></i>End of Page (Javascripts)</a></li>
+					<li><a href="#page-theme-options"><i class="icon-chevron-right"></i>Page Theme Options</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-gulp-scss"><i class="icon-chevron-right"></i>Gulp & SCSS</a></li>
+					<li><a href="#plugins-resources"><i class="icon-chevron-right"></i>Plugins & Resources</a></li>
+					<li><a href="#references"><i class="icon-chevron-right"></i>References</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template can be used as an fluid layout with a max of 12 columns next to each other. The general template structure is the same throughout the template. Here is the general structure.</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin #header --&gt;
+&lt;div class="header header-float"&gt;
+  &lt;!-- header here --&gt;
+&lt;/div&gt;
+&lt;!-- end #header --&gt;
+
+&lt;!-- begin section --&gt;
+&lt;div class="section"&gt;
+  &lt;!-- section here --&gt;
+&lt;/div&gt;
+&lt;!-- end section --&gt;
+
+...
+
+&lt;!-- begin #footer --&gt;
+&lt;div id="footer" class="footer"&gt;
+  &lt;!-- footer here --&gt;
+&lt;/div&gt;
+&lt;!-- end #footer --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-head"><strong>B) Page Head</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Page head contains metadata, javascript and css files:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt; 
+&lt;head&gt; 
+  &lt;meta charset="utf-8" /&gt; 
+  &lt;title&gt; Color Admin | Corporate Template&lt;/title&gt; 
+  &lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /&gt; 
+  &lt;meta content="" name="description" /&gt; 
+  &lt;meta content="" name="author" /&gt; 
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt; 
+  &lt;link href="../assets/css/corporate/vendor.min.css" rel="stylesheet" /&gt; 
+  &lt;link href="../assets/css/corporate/app.min.css" rel="stylesheet" /&gt; 
+  &lt;!-- ================== END core-css ================== --&gt; 
+  
+  &lt;!-- OR without vendor.min.css --&gt; 
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt; 
+  &lt;link href="../assets/plugins/animate.css/animate.min.css" rel="stylesheet" /&gt; 
+  &lt;link href="../assets/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" /&gt; 
+  &lt;link href="../assets/plugins/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" /&gt; 
+  &lt;link href="../assets/plugins/pace-js/themes/black/pace-theme-flash.css" rel="stylesheet" /&gt; 
+  &lt;link href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" /&gt; 
+  &lt;link href="../assets/css/corporate/app.min.css" rel="stylesheet" /&gt; 
+  &lt;!-- ================== END core-css ================== --&gt; 
+&lt;/head&gt; 
+&lt;body&gt; 
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-top-menu"><strong>C) Top Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN header --&gt;
+&lt;div class="header header-float"&gt;
+  &lt;div class="container d-flex"&gt;
+    &lt;div class="header-logo"&gt;
+      &lt;a href="index.html" class="logo-link"&gt;
+        &lt;span class="logo"&gt;&lt;/span&gt;&lt;b&gt;ColorAdmin&lt;/b&gt; &lt;small&gt;CORPORATE&lt;/small&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="header-nav"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="header-nav-item"&gt;
+          &lt;a href="about.html" class="header-nav-link"&gt;Who We Are&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="header-nav-item"&gt;
+          &lt;a href="products.html" class="header-nav-link"&gt;Our Products&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="header-nav-item"&gt;
+          &lt;a href="newsroom.html" class="header-nav-link"&gt;Newsroom&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="header-nav-item"&gt;
+          &lt;a href="careers.html" class="header-nav-link"&gt;Our Careers&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="header-nav-item"&gt;
+          &lt;a href="contact_us.html" class="header-nav-link"&gt;Contact Us&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="header-btn"&gt;
+      &lt;a href="#" class="btn btn-primary fw-bold rounded-pill"&gt;Get started &lt;i class="fa fa-arrow-right ms-1 opacity-5"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button class="header-mobile-nav-toggler" type="button" data-toggle="header-mobile-nav"&gt;
+      &lt;span class="header-mobile-nav-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content"><strong>D) Page Content</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							There have 2 options of page content. HTML code of Content container as shown below:
+						</p>
+						<h4>Section Hero</h4>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN section --&gt;
+&lt;div class="section section-hero"&gt;
+  &lt;!-- BEGIN section-bg --&gt;
+  &lt;div class="section-bg with-cover" style="background-image: url(../assets/img/corporate/img-1.jpg);"&gt;&lt;/div&gt;
+  &lt;div class="section-bg bg-gray-800 bg-opacity-50"&gt;&lt;/div&gt;
+  &lt;!-- END section-bg --&gt;
+  
+  &lt;!-- BEGIN container --&gt;
+  &lt;div class="container position-relative"&gt;
+    &lt;!-- BEGIN section-hero-content --&gt;
+    &lt;div class="section-hero-content"&gt;
+      &lt;!-- content here --&gt;
+    &lt;/div&gt;
+    &lt;!-- END section-hero-content --&gt;
+  &lt;/div&gt;
+  &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END section --&gt;
+</pre>
+						<h4>Normal Section</h4>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN section --&gt;
+&lt;div class="section"&gt;
+  &lt;!-- BEGIN container --&gt;
+  &lt;div class="container"&gt;
+    &lt;!-- content here --&gt;
+  &lt;/div&gt;
+  &lt;!-- END container --&gt;
+&lt;/div&gt;
+&lt;!-- END section --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-footer"><strong>E) Page Footer</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN footer --&gt;
+&lt;div class="footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row gx-5"&gt;
+      &lt;div class="col-lg-3 mb-4 mb-lg-0"&gt;
+        &lt;div class="footer-logo"&gt;
+          &lt;span class="footer-logo-text"&gt;ColorAdmin &lt;small&gt;CORPORATE&lt;/small&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class="footer-desc"&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci felis. Phasellus id urna nunc. Nulla sed nibh at libero tincidunt scelerisque sed porttitor lectus.
+        &lt;/p&gt;
+        &lt;h4 class="footer-title"&gt;Follow Us&lt;/h4&gt;
+        &lt;div class="footer-media-list"&gt;
+          &lt;a href="#" class="me-1"&gt;&lt;i class="fab fa-lg fa-facebook fa-fw"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="#" class="me-2"&gt;&lt;i class="fab fa-lg fa-instagram fa-fw"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="#" class="me-2"&gt;&lt;i class="fab fa-lg fa-twitter fa-fw"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="#" class="me-2"&gt;&lt;i class="fab fa-lg fa-youtube fa-fw"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href="#" class="me-2"&gt;&lt;i class="fab fa-lg fa-linkedin fa-fw"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="col-lg-3 mb-4 mb-lg-0"&gt;
+        &lt;h4 class="footer-title"&gt;Company&lt;/h4&gt;
+        &lt;ul class="footer-link-list"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Newsroom&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Company Info&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Careers&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;For Investors&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Brand Resources&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;hr class="my-4 text-gray-600" /&gt;
+        &lt;h4 class="footer-title"&gt;Policies&lt;/h4&gt;
+        &lt;ul class="footer-link-list"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Community Standards&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Data Policy&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="col-lg-3 mb-4 mb-lg-0"&gt;
+        &lt;h4 class="footer-title"&gt;Our Store&lt;/h4&gt;
+        &lt;ul class="footer-link-list"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Shop Online&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Store App&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Recycling Programme&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Order Status&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Shopping Help&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="col-lg-3 mb-4 mb-lg-0"&gt;
+        &lt;h4 class="footer-title"&gt;Help Center&lt;/h4&gt;
+        &lt;ul class="footer-link-list"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Contact Form&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Live Chat Support&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portal Help Center&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer-copyright"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0"&gt;
+          &lt;div class="footer-copyright-text"&gt;&copy; 2016 - 2023 Color Admin All Rights Reserved&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-lg-6 text-center text-lg-end"&gt;
+          &lt;span class="dropdown me-4"&gt;
+            &lt;a href="#" class="footer-copyright-link dropdown-toggle" data-bs-toggle="dropdown"&gt;United States (English)&lt;/a&gt;
+            &lt;ul class="dropdown-menu"&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;United States (English)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;China (简体中文)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Brazil (Português)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Germany (Deutsch)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;France (Français)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Japan (日本語)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Korea (한국어)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Latin America (Español)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Spain (Español)&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/span&gt;
+          &lt;a href="#" class="footer-copyright-link"&gt;Sitemap&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END footer --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="panel-theme"><strong>F) Panel Theme</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Panel Theme used to customize the overall layout options.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin theme-panel --&gt;
+&lt;div class="theme-panel"&gt;
+  &lt;a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"&gt;&lt;i class="fa fa-cog"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;div class="theme-panel-content"&gt;
+    &lt;div class="theme-list clearfix"&gt;
+      &lt;div class="theme-list-item"&gt;
+        &lt;a href="javascript:;" class="bg-purple" 
+          data-theme-class="theme-purple" 
+          data-click="theme-selector" 
+          data-toggle="tooltip" 
+          data-trigger="hover" 
+          data-container="body" 
+          data-title="Purple"&gt;&nbsp;&lt;/a&gt;
+      &lt;/div&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end theme-panel --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-end"><strong>G) End of Page (Javascript)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Javascript files loaded in the end of page. This will reduce page load time.
+						</p>
+<pre class="prettyprint linenums">
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/js/corporate/vendor.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/corporate/app.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+  
+  &lt;!-- OR without vendor.min.js --&gt;
+  
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="../assets/plugins/pace-js/pace.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/jquery-ui-dist/jquery-ui.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/plugins/js-cookie/dist/js.cookie.js"&gt;&lt;/script&gt;
+  &lt;script src="../assets/js/corporate/app.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-theme-options"><strong>H) Page Theme Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the theme to the <code>&lt;body&gt;</code> tag in order to change the theme color.</p>
+						<h4>Available Theme Options</h4>
+<pre class="prettyprint linenums">
+&lt;body class="theme-red"&gt;...&lt;/body&gt;
+&lt;body class="theme-pink"&gt;...&lt;/body&gt;
+&lt;body class="theme-orange"&gt;...&lt;/body&gt;
+&lt;body class="theme-yellow"&gt;...&lt;/body&gt;
+&lt;body class="theme-lime"&gt;...&lt;/body&gt;
+&lt;body class="theme-green"&gt;...&lt;/body&gt;
+&lt;body class="theme-teal"&gt;...&lt;/body&gt;
+&lt;body class="theme-cyan"&gt;...&lt;/body&gt;
+&lt;body class="theme-blue"&gt;...&lt;/body&gt;
+&lt;body class="theme-purple"&gt;...&lt;/body&gt;
+&lt;body class="theme-indigo"&gt;...&lt;/body&gt;
+&lt;body class="theme-gray-500"&gt;...&lt;/body&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>I) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>data-bs-theme="dark"</code> attribute to <code>&lt;html&gt;</code> in order to enable the dark mode.</p>
+<pre class="prettyprint linenums">
+&lt;html data-bs-theme="dark"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-gulp-scss"><strong>J) Using Gulp SCSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4>Installation</h4>
+						<p>Below is the command that required to run / compile the scss with gulpjs. If you are new to the gulpjs, you may refer to their <a href="https://gulpjs.com/" target="_blank">official website</a> for installation guide.</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt;
+cd /your-path-url/frontend/corporate/src/
+npm install
+gulp
+
+&lt;!-- available command --&gt;
+gulp plugins                    // generate list of plugins
+</pre>
+						<p>Verify that you are running at least node 10.9.x or later and npm 6.x.x by running node -v and npm -v in a terminal/console window. Older versions produce errors, but newer versions are fine.</p>
+						<hr />
+						<h4>Enable RTL Support</h4>
+						<p>
+							To enable the RTL Support, you might need to change the following variable from <code>frontend/corporate/src/scss/_variables.scss</code>.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- LINE 292 --&gt;
+$enable-rtl: true;
+
+&lt;!-- run the command to regenerate the /css/corporate/app.min.css --&gt;
+gulp
+</pre>
+						<hr />
+						<h4>Gulp compilation</h4>
+						<p>
+							We are using gulp to compile & combine few plugins js & css into one single vendor file for js & css. This may help to improve the speed for page load if compare to multiple files loading in one page. 
+							If you wish to edit the included plugins files, you may refer to the <code>/admin/src/gulpfile.js</code>.
+						</p>
+						<p>Below is the list of plugins that compile into <code>vendor.min.css</code>.</p>
+<pre class="prettyprint linenums">
+return gulp.src([
+  'node_modules/animate.css/animate.min.css',
+  'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+  'node_modules/jquery-ui-dist/jquery-ui.min.css',
+  'node_modules/pace-js/themes/black/pace-theme-flash.css',
+  'node_modules/bootstrap-icons/font/bootstrap-icons.css'
+])
+.pipe(sass())
+.pipe(concat('vendor.min.css'))
+.pipe(minifyCSS())
+.pipe(gulp.dest(distPath + '/assets/css/corporate/'))
+.pipe(livereload());
+</pre>
+						<p>Below is the list of plugins that compile into <code>vendor.min.js</code>.</p>
+<pre class="prettyprint linenums">
+return gulp.src([
+  'node_modules/pace-js/pace.min.js',
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/jquery-ui-dist/jquery-ui.min.js',
+  'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+  'node_modules/js-cookie/src/js.cookie.js'
+])
+.pipe(sourcemaps.init())
+.pipe(concat('vendor.min.js'))
+.pipe(sourcemaps.write())
+.pipe(gulp.dest(distPath + '/assets/js/corporate/'))
+.pipe(livereload());
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="plugins-resources"><strong>K) Plugins & Resources</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of all plugins and external resources used to power this template.
+						</p>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th style="width:100px;">Name</th>
+									<th>CSS Files</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Bootstrap</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/bootstrap/dist/css/bootstrap.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>jQuery</div>
+									</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jquery.com/">http://jquery.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>jQuery UI</div>
+									</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/jquery-ui-dist/jquery-ui.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/jquery-ui-dist/jquery-ui.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://jqueryui.com/">https://jqueryui.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Icons</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Font Awesome</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/@fortawesome/fontawesome-free/css/all.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://fontawesome.com/">https://fontawesome.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Animate.css</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/animate/animate.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>scrollMonitor</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/scrollmonitor/scrollMonitor.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/stutrek/scrollMonitor">https://github.com/stutrek/scrollMonitor</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Pace</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="../assets/plugins/pace-js/themes/black/pace-theme-flash.css" /&gt;
+</pre>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/pace-js/pace.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://codebyzach.github.io/pace/">https://codebyzach.github.io/pace/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>JS Cookie</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="../assets/plugins/js-cookie/dist/js.cookie.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/js-cookie/js-cookie">https://github.com/js-cookie/js-cookie</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Paroller</td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script="../assets/plugins/paroller.js/dist/jquery.paroller.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://tgomilar.github.io/paroller.js/">https://tgomilar.github.io/paroller.js/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Summernote</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link href="../assets/plugins/summernote/dist/summernote-lite.min.css" rel="stylesheet" /&gt;
+</pre>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script="../assets/plugins/summernote/dist/summernote-lite.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://summernote.org/">https://summernote.org/</a></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="references"><strong>L) References</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							I've used the following images, icons or other files as listed.
+						</p>
+						<p><b>jQuery Plugins</b></p>
+						<ol>
+							<li><b>Bootstrap</b>:<a href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+							<li><b>jQuery</b>:<a href="http://jquery.com/">http://jquery.com/</a></li>
+							<li><b>jQuery UI</b>:<a href="http://jqueryui.com/">http://jqueryui.com/</a></li>
+							<li><b>Bootstrap Icons</b>:<a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></li>
+							<li><b>Font Awesome</b>:<a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></li>
+							<li><b>Animate.css</b>:<a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></li>
+							<li><b>scrollMonitor</b>:<a href="https://github.com/stutrek/scrollMonitor">https://github.com/stutrek/scrollMonitor</a></li>
+							<li><b>Pace</b>:<a href="http://github.hubspot.com/pace/">http://github.hubspot.com/pace/</a></li>
+							<li><b>JS Cookie</b>:<a href="https://github.com/js-cookie/js-cookie">https://github.com/js-cookie/js-cookie</a></li>
+							<li><b>Paroller</b>:<a href="https://tgomilar.github.io/paroller.js/">https://tgomilar.github.io/paroller.js/</a></li>
+							<li><b>Summernote</b>: <a href="https://summernote.org/">https://summernote.org/</a></li>
+						</ol>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

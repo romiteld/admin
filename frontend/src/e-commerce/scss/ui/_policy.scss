@@ -1,0 +1,32 @@
+.policy {
+	display: flex;
+	
+	& .policy-icon {
+		width: rem(50px);
+		font-size: rem(38px);
+		line-height: rem(50px);
+		color: $gray-500;
+		text-align: center;
+		
+		& + .policy-info {
+			flex: 1;
+			
+			@if $enable-rtl {
+				margin-right: rem(15px);
+			} @else {
+				margin-left: rem(15px);
+			}
+		}
+	}
+	& h4 {
+		margin: 0;
+		font-size: rem(16px);
+		line-height: rem(24px);
+		font-weight: $font-weight-bold;
+	}
+	& p {
+		font-size: rem(12px);
+		color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		margin: 0;
+	}
+}

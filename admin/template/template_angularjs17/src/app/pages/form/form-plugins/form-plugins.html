@@ -1,0 +1,173 @@
+<!-- BEGIN breadcrumb -->
+<ol class="breadcrumb float-xl-end">
+	<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+	<li class="breadcrumb-item"><a href="javascript:;">Form Stuff</a></li>
+	<li class="breadcrumb-item active">Form Plugins</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Form Plugins <small>header small text goes here...</small></h1>
+<!-- END page-header -->
+
+<!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Ng Bootstrap Datepicker">
+      <p>
+        These datepickers use custom Date adapter that lets you use your own model implementation. In this example we are converting from and to a JS native Date object
+      </p>
+      <div class="row">
+        <div class="col-6">
+          <ngb-datepicker #d1 [(ngModel)]="model1" #c1="ngModel"></ngb-datepicker>
+          <hr/>
+          <button class="btn btn-sm btn-outline-primary" (click)="model1 = today">Select Today</button>
+          <hr/>
+          <pre>Model: {{ model1 | json }}</pre>
+          <pre>State: {{ c1.status }}</pre>
+        </div>
+        <div class="col-6">
+          <form class="form-inline">
+            <div class="form-group">
+              <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd" name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
+								<button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button">
+									<i class="fa fa-calendar"></i>
+								</button>
+              </div>
+            </div>
+          </form>
+          <hr/>
+          <button class="btn btn-sm btn-outline-primary" (click)="model2 = today">Select Today</button>
+          <hr/>
+          <pre>Model: {{ model2 | json }}</pre>
+          <pre>State: {{ c2.status }}</pre>
+        </div>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code1"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Ng Bootstrap Timepicker">
+      <div class="row">
+        <div class="col-md-6">
+          <p>With Meridian selectors<br />&nbsp;</p>
+          <ngb-timepicker [(ngModel)]="time" [meridian]="meridian"></ngb-timepicker>
+          <button class="btn btn-sm btn-outline-{{meridian ? 'success' : 'danger'}}" (click)="toggleMeridian()">
+              Meridian - {{meridian ? "ON" : "OFF"}}
+          </button>
+          <hr>
+          <pre>Selected time: {{time | json}}</pre>
+        </div>
+        <div class="col-md-6">
+          <p>Illustrates custom validation, you have to select time between 12:00 and 13:59</p>
+          <div class="form-group">
+            <ngb-timepicker [formControl]="ctrl" [(ngModel)]="time2" required></ngb-timepicker>
+            <div *ngIf="ctrl.valid" class="form-text text-success f-w-600">Great choice</div>
+            <div class="form-text text-danger f-w-600" *ngIf="!ctrl.valid">
+              <div *ngIf="ctrl.errors['required']">Select some time during lunchtime</div>
+              <div *ngIf="ctrl.errors['tooLate']">Oh no, it's way too late</div>
+              <div *ngIf="ctrl.errors['tooEarly']">It's a bit too early</div>
+            </div>
+          </div>
+
+          <hr>
+          <pre>Selected time: {{time2 | json}}</pre>
+        </div>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code2"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Tagify">
+			<p>Transforms an input field or a textarea into a Tags component, in an easy, customizable way, with great performance and small code footprint, exploded with features.</p>
+			<input data-render="tags" value='[{"value":"tag1"}, {"value":"tag2"}]' />
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code4"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->
+
+<!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="ngx-editor" noBody="true">
+			<ng-container outsideBody>
+				<div class="NgxEditor__Wrapper border-0">
+					<ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+					<ngx-editor
+						[editor]="editor"
+						[ngModel]="html"
+						[disabled]="false"
+						[placeholder]="'Type here...'"
+					></ngx-editor>
+				</div>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code3"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="ngx-color">
+			<p>A Collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter, Material Design & more</p>
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="input-group" ngbDropdown placement="bottom-right">
+						<div class="input-group-text px-2">
+							<div class="w-20px h-20px rounded" [ngStyle]="{'background-color': this.color}"></div>
+						</div>
+						<input type="text" class="form-control" [(ngModel)]="this.color" />
+						<button class="btn btn-outline-inverse" ngbDropdownToggle><i class="fa fa-tint"></i></button>
+						<div class="dropdown-menu dropdown-toggle w-250px p-0" ngbDropdownMenu>
+							<color-sketch color="#00acac" (onChange)="handleChange($event)"></color-sketch>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code5"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->

@@ -1,0 +1,122 @@
+.review {
+	@include clearfix();
+	
+	& + .review {
+		margin-top: rem(25px);
+		padding-top: rem(25px);
+		border-top: 1px solid var(--#{$prefix}component-border-color);
+	}
+	& .review-info {
+		margin-bottom: rem(15px);
+		
+		@include clearfix();
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(5px);
+		}
+		
+		& .review-rate {
+			text-align: center;
+			font-weight: $font-weight-bold;
+			font-size: rem(13px);
+			
+			@if $enable-rtl {
+				float: left;
+			} @else {
+				float: right;
+			}
+			
+			& .review-star {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				font-size: rem(14px);
+				
+				@include media-breakpoint-down(lg) {
+					font-size: rem(12px);
+				}
+				
+				& > li {
+					color: rgba(var(--#{$prefix}component-color-rgb), .5);
+					
+					@if $enable-rtl {
+						float: right;
+					} @else {
+						float: left;
+					}
+					
+					& + li {
+						@if $enable-rtl {
+							margin-right: rem(2px);
+						} @else {
+							margin-left: rem(2px);
+						}
+					}
+					&.active {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+	& .review-icon {
+		height: rem(48px);
+		width: rem(48px);
+		background: var(--#{$prefix}light);
+		color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		text-align: center;
+		overflow: hidden;
+		float: left;
+		margin-right: rem(15px);
+		border-radius: $border-radius-lg * 20;
+		
+		@include media-breakpoint-down(lg) {
+			width: rem(36px);
+			height: rem(36px);
+			margin-right: rem(10px);
+		}
+		
+		& img {
+			max-width: 100%;
+		}
+		& i {
+			line-height: rem(50px);
+			font-size: rem(36px);
+			
+			@include media-breakpoint-down(lg) {
+				font-size: rem(28px);
+				line-height: rem(40px);
+			}
+		}
+	}
+	& .review-name {
+		font-weight: $font-weight-bold;
+		font-size: rem(16px);
+		padding: 0;
+		
+		@include media-breakpoint-down(lg) {
+			font-size: rem(14px);
+		}
+	}
+	& .review-date {
+		font-size: rem(12px);
+		font-weight: $font-weight-bold;
+		color: rgba(var(--#{$prefix}component-color-rgb), .5);
+	}
+	& .review-title {
+		margin: rem(10px) 0;
+		font-weight: 600;
+		font-size: rem(16px);
+		
+		@include media-breakpoint-down(lg) {
+			font-size: rem(14px);
+			margin: rem(5px) 0;
+		}
+	}
+	& .review-message {
+		color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		
+		@include media-breakpoint-down(lg) {
+			font-size: rem(12px);
+		}
+	}
+}

@@ -1,0 +1,7 @@
+<!-- include -->
+<script>
+import 'flag-icons/css/flag-icons.min.css';
+</script>
+
+<!-- html -->
+<div class="fi fi-ad" title="ad"></div>

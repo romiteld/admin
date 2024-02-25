@@ -1,0 +1,113 @@
+<!-- BEGIN #sidebar -->
+		<div id="sidebar" class="app-sidebar@@if(context.transparent) { app-sidebar-transparent}"@@if(context.theme == 'material') { data-disable-slide-animation="true"}@@if(!context.lightMode && context.theme != 'facebook' && context.theme != 'google' && context.theme != 'transparent') { data-bs-theme="dark"}>
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+				<!-- BEGIN menu -->
+				<div class="menu">
+					<div class="menu-profile">
+						<a href="javascript:;" class="menu-profile-link" data-toggle="app-sidebar-profile" data-target="#appSidebarProfileMenu">
+							<div class="menu-profile-cover with-shadow"></div>
+							<div class="menu-profile-image menu-profile-image-icon bg-gray-900 text-gray-600">
+								<i class="fa fa-user@@if(context.theme == 'google') { fs-48px mb-n4}"></i>
+							</div>
+							<div class="menu-profile-info">
+								<div class="d-flex align-items-center">
+									<div class="flex-grow-1">
+										@@if (context.theme != 'material') 
+										{Sean Ngu}@@if (context.theme == 'material')
+										{John Smith}
+									</div>
+									<div class="menu-caret ms-auto"></div>
+								</div>
+								<small>Front end developer</small>
+							</div>
+						</a>
+					</div>
+					<div id="appSidebarProfileMenu" class="collapse">
+						<div class="menu-item pt-5px">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-icon">@@if (!context.icon) {<i class="fa fa-cog"></i>}@@if (context.icon == 'ionicons') {<i class="ion-ios-cog"></i>}@@if (context.icon == 'lineicons') {<i class="icon-settings"></i>}</div>
+								<div class="menu-text">Settings</div>
+							</a>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-icon">@@if (!context.icon) {<i class="fa fa-pencil-alt"></i>}@@if (context.icon == 'ionicons') {<i class="ion-ios-share-alt"></i>}@@if (context.icon == 'lineicons') {<i class="icon-pencil"></i>}</div>
+								<div class="menu-text"> Send Feedback</div>
+							</a>
+						</div>
+						<div class="menu-item pb-5px">
+							<a href="javascript:;" class="menu-link">
+								<div class="menu-icon">@@if (!context.icon) {<i class="fa fa-question-circle"></i>}@@if (context.icon == 'ionicons') {<i class="ion-ios-help"></i>}@@if (context.icon == 'lineicons') {<i class="icon-question"></i>}</div>
+								<div class="menu-text"> Helps</div>
+							</a>
+						</div>
+						<div class="menu-divider m-0"></div>
+					</div>
+					<div class="menu-header">Navigation</div>
+					<div class="menu-item@@if (context.homeClass) { @@homeClass}">
+						<a href="index.html" class="menu-link">
+							<div class="menu-icon">
+								@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+								{<i class="fa fa-sitemap"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+								{<i class="material-icons">home</i>}@@if (!context.icon && context.theme == 'apple')
+								{<ion-icon name="pulse-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+								{<ion-icon name="tv-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+								{<i class="icon-screen-desktop"></i>}
+							</div>
+							<div class="menu-text">Home</div>
+						</a>
+					</div>
+					
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								@@if (!context.icon && (context.theme == 'default' || context.theme == 'transparent' || context.theme == 'facebook')) 
+								{<i class="fa fa-align-left"></i>}@@if (!context.icon && (context.theme == 'material' || context.theme == 'google'))
+								{<i class="material-icons">list</i>}@@if (!context.icon && context.theme == 'apple')
+								{<ion-icon name="list-outline"></ion-icon>}@@if (context.icon == 'ionicons') 
+								{<ion-icon name="git-branch-outline"></ion-icon>}@@if (context.icon == 'lineicons') 
+								{<i class="icon-list"></i>}
+							</div>
+							<div class="menu-text">Menu Level</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item has-sub">
+								<a href="javascript:;" class="menu-link">
+									<div class="menu-text">Menu 1.1</div>
+									<div class="menu-caret"></div>
+								</a>
+								<div class="menu-submenu">
+									<div class="menu-item has-sub">
+										<a href="javascript:;" class="menu-link">
+											<div class="menu-text">Menu 2.1</div>
+											<div class="menu-caret"></div>
+										</a>
+										<div class="menu-submenu">
+											<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 3.1</div></a></div>
+											<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 3.2</div></a></div>
+										</div>
+									</div>
+									<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 2.2</div></a></div>
+									<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 2.3</div></a></div>
+								</div>
+							</div>
+							<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 1.2</div></a></div>
+							<div class="menu-item"><a href="javascript:;" class="menu-link"><div class="menu-text">Menu 1.3</div></a></div>
+						</div>
+					</div>@@if(context.theme != 'google') {
+					
+					<!-- BEGIN minify-button -->
+					<div class="menu-item d-flex">
+						<a href="javascript:;" class="app-sidebar-minify-btn ms-auto d-flex align-items-center text-decoration-none" data-toggle="app-sidebar-minify">@@if(context.theme != 'apple') {<i class="fa fa-angle-double-left"></i>}@@if(context.theme == 'apple') {<ion-icon name="arrow-back" class="me-1"></ion-icon> <div class="menu-text">Collapse</div>}</a>
+					</div>
+					<!-- END minify-button -->}
+				</div>
+				<!-- END menu -->
+			</div>
+			<!-- END scrollbar -->
+		</div>
+		<div class="app-sidebar-bg"@@if(!context.lightMode && context.theme != 'facebook' && context.theme != 'google' && context.theme != 'transparent') { data-bs-theme="dark"}></div>
+		<div class="app-sidebar-mobile-backdrop"><a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a></div>
+		<!-- END #sidebar -->

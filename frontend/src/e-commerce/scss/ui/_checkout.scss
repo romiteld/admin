@@ -1,0 +1,336 @@
+.checkout {
+	background: var(--#{$prefix}component-bg);
+	border-radius: 6px;
+	
+	& .checkout-header {
+		padding: rem(25px) rem(30px);
+		background: $gray-800;
+		border-radius: 6px 6px 0 0;
+		
+		@include media-breakpoint-down(lg) {
+			white-space: nowrap;
+			overflow: scroll;
+			padding: rem(15px);
+		}
+		
+		& .row {
+			@include media-breakpoint-down(lg) {
+				display: block;
+			}
+			
+			& > div {
+				@include media-breakpoint-down(lg) {
+					display: inline-block;
+					width: auto;
+				}
+				
+				& + div {
+					@if $enable-rtl {
+						border-right: 1px solid $gray-700;
+					} @else {
+						border-left: 1px solid $gray-700;
+					}
+					
+					@include media-breakpoint-down(lg) {
+						
+					}
+				}
+			}
+		}
+	}
+	& .checkout-body {
+		padding: rem(25px) rem(30px);
+		
+		@include media-breakpoint-down(md) {
+			padding: rem(15px);
+			font-size: rem(12px);
+		}
+	}
+	& .checkout-footer {
+		padding: rem(25px) rem(30px);
+		text-align: right;
+		background: var(--#{$prefix}light);
+		border-radius: 0 0 6px 6px;
+		
+		@include media-breakpoint-down(md) {
+			padding: rem(15px);
+		}
+		@include media-breakpoint-down(xs) {
+			text-align: center;
+		}
+		
+		& .btn {
+			@include media-breakpoint-down(md) {
+				padding: rem(8px) rem(15px) !important;
+				font-size: rem(12px) !important;
+				width: auto !important;
+			}
+			@include media-breakpoint-down(xs) {
+				float: none !important;
+				margin: rem(5px);
+			}
+		}
+		& .btn-white {
+			border-color: transparent;
+		}
+	}
+	& .checkout-title {
+		font-weight: $font-weight-bold;
+		margin: 0 0 rem(30px);
+		
+		@include media-breakpoint-down(md) {
+			font-size: rem(16px);
+			margin-bottom: rem(15px);
+		}
+		
+		& small {
+			display: block;
+			font-size: rem(14px);
+		}
+	}
+	& .checkout-message {
+		padding: rem(20px) rem(40px);
+		
+		@include media-breakpoint-down(md) {
+			padding: 0;		
+		}
+	
+		& h1 {
+			margin: 0 0 rem(30px);
+			font-size: rem(36px);
+			text-align: center;
+			
+			@include media-breakpoint-down(md) {
+				font-size: rem(28px);
+				margin-bottom: rem(15px);
+			}
+		
+			& small {
+				display: block;
+				font-size: rem(16px);
+				margin-top: rem(15px);
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+				
+				@include media-breakpoint-down(md) {
+					font-size: rem(14px);
+					margin-top: rem(5px);
+				}
+			}
+		}
+	}
+	& .table.table-cart {
+		& th {
+			border: none;
+			padding: rem(10px) rem(20px) rem(5px);
+			
+			@include media-breakpoint-down(md) {
+				padding: rem(10px) rem(15px) rem(5px);
+			}
+		}
+		& td {
+			padding: rem(15px) rem(20px);
+			
+			@include media-breakpoint-down(md) {
+				padding: rem(15px);
+			}
+		}
+		& .cart-product {
+			& .product-img {
+				width: rem(120px);
+				@if $enable-rtl {
+					float: right;
+				} @else {
+					float: left;
+				}
+				
+				@include media-breakpoint-down(md) {
+					width: rem(80px);
+				}
+				
+				& + .product-info {
+					@if $enable-rtl {
+						margin-right: rem(135px);
+					} @else {
+						margin-left: rem(135px);
+					}
+					
+					@include media-breakpoint-down(md) {
+						white-space: nowrap;
+						
+						@if $enable-rtl {
+							margin-right: rem(95px);
+						} @else {
+							margin-left: rem(95px);
+						}
+					}
+				}
+				& img {
+					max-width: 100%;
+				}
+			}
+			& .product-info {
+				& .title {
+					font-size: rem(16px);
+					font-weight: $font-weight-bold;
+					
+					@include media-breakpoint-down(md) {
+						font-size: rem(14px);
+					}
+				}
+				& .desc {
+					font-weight: $font-weight-bold;
+					font-size: rem(12px);
+					color: rgba(var(--#{$prefix}component-color-rgb), .5);
+				}
+			}
+		}
+	}
+	& .cart-qty {
+		width: rem(160px);
+
+		& .qty-desc {
+			font-size: rem(12px);
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+			margin-top: rem(5px);
+		}
+		& .cart-qty-input {
+			display: flex;
+			align-items: center;
+	
+			& .qty-control,
+			& .form-control  {
+				float: none;
+				width: auto;
+			}
+			& .form-control {
+				width: rem(36px);
+				margin: 0 rem(10px);
+				padding-left: rem(5px);
+				padding-right: rem(5px);
+				text-align: center;
+			}
+			& .qty-control {
+				color: $gray-500;
+				width: rem(26px);
+				height: rem(26px);
+				background: var(--#{$prefix}light);
+				font-size: rem(12px);
+				border-radius: 36px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+		
+				&:hover,
+				&:focus {
+					background: $gray-200;
+					color: $gray-900;
+				}
+			}
+		}
+	}
+	& .cart-total,
+	& .cart-control {
+		width: rem(100px);
+	}
+	& .table.table-payment-summary {
+			border-bottom: 1px solid var(--#{$prefix}component-border-color);
+			margin-bottom: rem(30px);
+			
+			& tr {
+				&:last-child {
+					& td {
+						@include media-breakpoint-down(md) {
+							border-bottom: none;
+						}
+					}
+				}
+			}
+	
+			& th,
+			& td {
+				padding: rem(10px) rem(15px);
+				
+				@include media-breakpoint-down(md) {
+					display: block;
+					
+					@include clearfix();
+				}
+			}
+			& .field {
+				font-weight: $font-weight-bold;
+				width: 50%;
+				
+				@if $enable-rtl {
+					text-align: left;
+				} @else {
+					text-align: right;
+				}
+				
+				@include media-breakpoint-down(md) {
+					width: auto;
+					border-bottom: none;
+					padding-bottom: 0;
+					
+					@if $enable-rtl {
+						text-align: right;
+					} @else {
+						text-align: left;
+					}
+				}
+				
+				& + .value {
+					@include media-breakpoint-down(md) {
+						border-top: none;
+						padding-top: 0;	
+					}
+				}
+			}
+			& .product-summary {
+				& .product-summary-img {
+					width: rem(120px);
+					
+					@if $enable-rtl {
+						float: right;
+						margin-left: rem(10px);
+					} @else {
+						float: left;
+						margin-right: rem(10px);
+					}
+					
+					@include media-breakpoint-down(md) {
+						width: rem(80px);
+					}
+			
+					& img {
+						max-width: 100%;
+					}
+				}
+				& .product-summary-info {
+					& .title {
+						font-weight: $font-weight-bold;
+						font-size: rem(16px);
+						
+						@include media-breakpoint-down(md) {
+							font-size: rem(14px);
+							line-height: rem(18px);
+							margin-bottom: rem(5px);
+						}
+					}
+					& .desc {
+						font-size: rem(12px);
+						font-weight: $font-weight-bold;
+						color: rgba(var(--#{$prefix}component-color-rgb), .5);
+					}
+				}
+			}
+		}
+}
+
+
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+		.checkout .checkout-header {
+			background: $gray-900;
+		}
+	}
+}

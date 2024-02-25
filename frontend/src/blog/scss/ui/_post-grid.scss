@@ -1,0 +1,48 @@
+.post-grid {
+	orphans: 1;
+	widows: 1;
+	column-gap: rem(20px);
+	column-count: 3;
+	
+	& .post-li {
+		display: inline-block;
+		margin-bottom: rem(20px);
+		
+		& .post-image,
+		& .post-video {
+			margin: -1px -1px 0;
+		}
+		& .post-content {
+			border: 1px solid var(--#{$prefix}component-border-color);
+		}
+		& .post-info {
+			padding: rem(30px);
+		}
+		& blockquote {
+			margin-bottom: 0;
+		}
+	}
+	&.post-grid-2 {
+		column-count: 2;
+	}
+	&.post-grid-3 {
+		column-count: 3;
+	}
+	&.post-grid-4 {
+		column-count: 4;
+	}
+	@include media-breakpoint-down(md) {
+		column-count: 1;
+		
+		& .post-li {
+			& .post-info {
+				padding: rem(20px);
+			}
+		}
+		&.post-grid-2,
+		&.post-grid-3,
+		&.post-grid-4 {
+			column-count: 1;
+		}
+	}
+}

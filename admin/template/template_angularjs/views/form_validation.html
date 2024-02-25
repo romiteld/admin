@@ -1,0 +1,112 @@
+<div ng-controller="formValidationController">
+	<!-- begin breadcrumb -->
+	<ol class="breadcrumb float-xl-end">
+		<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+		<li class="breadcrumb-item"><a href="javascript:;">Form Stuff</a></li>
+		<li class="breadcrumb-item active">Form Validation</li>
+	</ol>
+	<!-- end breadcrumb -->
+	<!-- begin page-header -->
+	<h1 class="page-header">Form Validation <small>header small text goes here...</small></h1>
+	<!-- end page-header -->
+	
+	<form class="form-horizontal" name="validationForm" ng-submit="submitForm(validationForm)" novalidate>
+		<!-- BEGIN panel -->
+		<div class="panel panel-inverse" data-sortable-id="form-validation-1">
+			<!-- BEGIN panel-heading -->
+			<div class="panel-heading">
+				<h4 class="panel-title">Basic Form Validation</h4>
+				<div class="panel-heading-btn">
+					<a href="javascript:;" class="btn btn-xs btn-icon btn-default" data-toggle="panel-expand"><i class="fa fa-expand"></i></a>
+					<a href="javascript:;" class="btn btn-xs btn-icon btn-success" data-toggle="panel-reload"><i class="fa fa-redo"></i></a>
+					<a href="javascript:;" class="btn btn-xs btn-icon btn-warning" data-toggle="panel-collapse"><i class="fa fa-minus"></i></a>
+					<a href="javascript:;" class="btn btn-xs btn-icon btn-danger" data-toggle="panel-remove"><i class="fa fa-times"></i></a>
+				</div>
+			</div>
+			<!-- END panel-heading -->
+			<!-- BEGIN panel-body -->
+			<div class="panel-body">
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3" for="fullname">Full Name <span class="text-danger">*</span></label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" ng-model="form.fullname" name="fullname" placeholder="Required" required />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3">Required Select Box <span class="text-danger">*</span></label>
+					<div class="col-sm-3">
+						<select class="form-select" name="selectBox" ng-model="form.selectBox" required>
+							<option value="">Please choose</option>
+							<option value="foo">Foo</option>
+							<option value="bar">Bar</option>
+						</select>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3">Required Radio Button <span class="text-danger">*</span></label>
+					<div class="col-sm-6">
+						<div class="form-check">
+							<input type="radio" name="radioRequired" id="radio1" ng-model="form.radioRequired" value="foo" class="form-check-input" required />
+							<label class="form-check-label" for="radio1"> Radio Button 1</label>
+						</div>
+						<div class="form-check">
+							<input type="radio" name="radioRequired" id="radio2" ng-model="form.radioRequired" value="bar" class="form-check-input" required />
+							<label class="form-check-label" for="radio2"> Radio Button 2</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mb-3 d-flex align-items-center">
+					<label class="col-form-label col-sm-3">Required Checkbox <span class="text-danger">*</span></label>
+					<div class="col-sm-6">
+						<div class="form-check">
+							<input type="checkbox" name="requiredCheckbox" id="check2" ng-model="form.requiredCheckbox" value="foo" class="form-check-input" required />
+							<label class="form-check-label" for="check2"> Checkbox</label>
+						</div>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3" for="message">Message (20 chars min, 200 max) <span class="text-danger">*</span></label>
+					<div class="col-sm-6">
+						<textarea class="form-control" name="message" rows="4" ng-minlength="20" ng-maxlength="200" ng-model="form.message" placeholder="Range from 20 - 200" required></textarea>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3" for="email">Email Address</label>
+					<div class="col-sm-6">
+						<input type="email" class="form-control" name="email" placeholder="Email" ng-model="form.email" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3" for="website">Website</label>
+					<div class="col-sm-6">
+						<input type="url" class="form-control" name="website" placeholder="url" ng-model="form.url" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3" for="message">Number</label>
+					<div class="col-sm-6">
+						<input type="number" class="form-control" name="number" placeholder="Number" ng-model="form.number" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label class="col-form-label col-sm-3" for="message">Regular Expression</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" name="alphabets" placeholder="Alphabets" ng-model="form.alphabets" ng-pattern="/^[A-z]+$/" />
+					</div>
+				</div>
+			</div>
+			<!-- END panel-body -->
+			<!-- BEGIN panel-footer -->
+			<div class="panel-footer">
+				<button type="submit" class="btn btn-success w-100px">Validate</button>
+			</div>
+			<!-- END panel-footer -->
+			<!-- BEGIN hljs-wrapper -->
+			<div class="hljs-wrapper">
+				<pre><code class="html" data-url="../assets/data/form-validation-angular/code-1.json"></code></pre>
+			</div>
+			<!-- END hljs-wrapper -->
+		</div>
+		<!-- END panel -->
+	</form>
+</div>

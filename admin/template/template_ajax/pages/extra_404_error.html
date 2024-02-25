@@ -1,0 +1,42 @@
+<!-- BEGIN error -->
+<div class="error">
+	<div class="error-code">404</div>
+	<div class="error-content">
+		<div class="error-message">We couldn't find it...</div>
+		<div class="error-desc mb-4">
+			The page you're looking for doesn't exist. <br />
+			Perhaps, there pages will help find what you're looking for.
+		</div>
+		<div>
+			<a href="#pages/index.html" data-toggle="ajax" class="btn btn-success px-3">Go Home</a>
+		</div>
+	</div>
+</div>
+<!-- END error -->
+
+<!-- ================== BEGIN page-js ================== -->
+<script>
+	App.setPageTitle('Color Admin | 404 Error Page');
+	App.setPageOption({
+		appWithoutSidebar: true,
+		appWithoutHeader: true,
+		appClass: 'p-0',
+		appContentClass: 'p-0',
+		bodyClass: 'pace-top',
+		clearOptionOnLeave: true
+	});
+	App.restartGlobalFunction();
+
+	$.when(
+		$.getScript('../assets/plugins/@highlightjs/cdn-assets/highlight.min.js'),
+		$.Deferred(function( deferred ){
+			$(deferred.resolve);
+		})
+	).done(function() {
+		$.getScript('../assets/js/demo/render.highlight.js'),
+		$.Deferred(function( deferred ){
+			$(deferred.resolve);
+		})
+	});
+</script>
+<!-- ================== END page-js ================== -->

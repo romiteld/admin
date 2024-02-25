@@ -1,0 +1,32 @@
+.payment-type {
+	font-size: rem(34px);
+	margin: 0;
+	padding: 0;
+	
+	& > li {
+		line-height: 1;
+		padding: 0;
+		
+		@if $enable-rtl {
+			float: right;
+		} @else {
+			float: left;
+		}
+		
+		& + li {
+			@if $enable-rtl {
+				margin-right: rem(10px);
+			} @else {
+				margin-left: rem(10px);
+			}
+		}
+		& a {
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		}
+		&.active {
+			& a {
+				color: var(--#{$prefix}component-color);
+			}
+		}
+	}
+}

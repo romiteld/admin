@@ -1,0 +1,18 @@
+.post-by {
+	display: block;
+	font-size: $font-size-sm;
+	line-height: $line-height-lg;
+	color: $gray-600;
+	margin-bottom: rem(15px);
+	
+	& .divider {
+		margin: 0 rem(10px);
+		color: $gray-400;
+		position: relative;
+		top: -1px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: $font-size-sm;
+		line-height: $line-height-base;
+	}
+}

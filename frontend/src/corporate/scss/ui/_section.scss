@@ -1,0 +1,119 @@
+.section {
+	position: relative;
+	padding: $global-container-padding-y 0;
+	
+	& .section-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	& .section-container {
+		position: relative;
+	}
+	& .section-logo {
+		font-size: $h2-font-size;
+		font-weight: $headings-font-weight;
+		line-height: $headings-line-height;
+		
+		& .logo-brand {
+			width: rem(80px);
+			height: rem(80px);
+			border: 40px solid transparent;
+			border-color: $gray-500 $gray-600 $gray-700;
+			border-radius: 0 40px 0;
+		}
+	}
+	& .section-logo-title {
+		font-size: $h5-font-size;
+		color: $gray-800;
+		font-weight: $font-weight-normal;
+	}
+	& .section-logo-desc {
+		font-size: $h6-font-size;
+		color: $gray-500;
+		font-weight: $font-weight-bold;
+	}
+	& .section-subtitle {
+		font-size: $h5-font-size;
+		color: $gray-500;
+		font-weight: $headings-font-weight;
+		margin-bottom: $spacer * 1.5;
+	}
+	& .section-title {
+		font-size: $h1-font-size;
+		font-weight: $headings-font-weight;
+		line-height: $headings-line-height;
+		margin-bottom: $spacer;
+	}
+	& .section-desc {
+		font-size: $h5-font-size;
+		margin-bottom: $spacer * 2;
+	}
+	& .section-btn {
+		text-decoration: none;
+		color: var(--#{$prefix}component-color);
+		font-weight: $headings-font-weight;
+		display: inline-flex;
+		align-items: center;
+		transition: color .2s linear;
+
+		& i {
+			border: 2px solid rgba(var(--#{$prefix}component-color-rgb), .5);
+			width: rem(40px);
+			height: rem(40px);
+			margin-right: $spacer;
+			border-radius: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&:hover {
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		}
+	}
+	&.section-hero {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+	
+		& .section-hero-content {
+			flex: 1;
+		
+			& .hero-title {
+				color: $white;
+				font-weight: $font-weight-bold;
+				line-height: $headings-line-height;
+				font-size: $font-size-base * 3;
+				margin-bottom: $spacer * 2;
+				font-weight: $headings-font-weight;
+			}
+			& .hero-btn {
+				text-decoration: none;
+				color: $white;
+				font-weight: $headings-font-weight;
+				display: inline-flex;
+				align-items: center;
+				transition: color .2s linear;
+		
+				& i {
+					border: 2px solid rgba($white, .5);
+					width: rem(40px);
+					height: rem(40px);
+					margin-right: $spacer;
+					border-radius: 40px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				&:hover {
+					color: rgba($white, .5);
+				}
+			}
+		}
+	}
+}

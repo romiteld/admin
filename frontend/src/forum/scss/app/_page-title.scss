@@ -1,0 +1,84 @@
+.page-title {
+	padding: rem(90px) 0 rem(30px);
+	position: relative;
+	
+	& h1 {
+		color: $white;
+		font-weight: bold;
+		font-size: $font-size-lg * 2; 
+		margin: 0;
+		
+		@include media-breakpoint-down(lg) {
+			font-size: $font-size-lg * 1.5;
+		}
+	}
+	& p {
+		font-size: $font-size-base * 1.5;
+		font-style: italic;
+		font-family: Times New Roman;
+		margin: 0;
+		color: rgba($white, .8);
+	}
+	& + .content {
+		margin-top: 0;
+		padding-top: rem(45px);
+		
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(30px);
+		}
+	}
+  &.has-bg {
+    position: relative;
+    overflow: hidden;
+  
+    & .bg-cover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($black, .4);
+      }
+      &.bottom {
+        background-position: bottom;
+      }
+      &.top {
+        background-position: top;
+      }
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    & .container {
+      position: relative;
+    }
+    
+    & .breadcrumb {
+			color: $white;
+			
+			& li {
+				& a {
+					color: rgba($white, .75);
+				}
+			}
+		}
+  }
+  & .breadcrumb {
+		background: none;
+		padding: 0;
+		font-weight: normal;
+		margin-bottom: rem(10px);
+	}
+}

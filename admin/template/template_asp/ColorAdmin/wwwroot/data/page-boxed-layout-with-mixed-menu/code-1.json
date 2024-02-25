@@ -1,0 +1,5 @@
+@{
+  ViewData["AppClass"] = "app-with-top-menu";
+  ViewData["AppTopMenu"] = "true";
+  ViewData["AppBodyClass"] = "boxed-layout";
+}

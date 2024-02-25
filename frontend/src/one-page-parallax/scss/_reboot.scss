@@ -1,0 +1,25 @@
+body {
+	letter-spacing: $body-letter-spacing;
+	-webkit-font-smoothing: antialiased;
+	
+	@if $enable-rtl {
+		direction: rtl;
+		
+		& .dropdown-menu {
+			text-align: right;
+		}
+	}
+	
+	&.page-navbar-fixed-top {
+		padding-top: rem(70px);
+	}
+	&.page-navbar-fixed-top-sm {
+		padding-top: rem(51px);
+	}
+}
+p {
+	font-size: $font-size-sm;
+}
+.nav {
+	padding: 0;
+}

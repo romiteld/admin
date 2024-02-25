@@ -1,0 +1,51 @@
+.section-container {
+	padding: rem(45px) 0;
+	
+	@include clearfix();
+	@include media-breakpoint-down(lg) {
+		padding: rem(30px) 0;
+	}
+	
+	&.has-bg {
+		position: relative;
+		color: $white;
+		
+		& .cover-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+			
+			& img {
+				max-width: 100%;
+				
+				@include media-breakpoint-down(md) {
+					max-width: inherit;
+					max-height: 100%;
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba($dark, .75);
+			}
+		}
+		& .container {
+			position: relative;
+			z-index: 1020;
+		}
+		& .breadcrumb {
+			& .breadcrumb-item {
+				& a {
+					color: $white;
+				}
+			}
+		}
+	}
+}

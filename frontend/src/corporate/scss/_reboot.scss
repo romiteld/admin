@@ -1,0 +1,8 @@
+body {
+	letter-spacing: $body-letter-spacing;
+	-webkit-font-smoothing: antialiased;
+	
+	@if $enable-rtl {
+		direction: rtl;
+	}
+}

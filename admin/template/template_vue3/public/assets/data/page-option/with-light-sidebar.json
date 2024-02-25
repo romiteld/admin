@@ -1,0 +1,17 @@
+<script>
+import { useAppOptionStore } from '@/stores/app-option';
+
+const appOption = useAppOptionStore();
+
+export default {
+  mounted() {
+    appOption.appSidebarLight = true;
+    appOption.appHeaderInverse = true;
+  },
+  beforeRouteLeave (to, from, next) {
+    appOption.appSidebarLight = false;
+    appOption.appHeaderInverse = false;
+    next();
+  }
+}
+</script>

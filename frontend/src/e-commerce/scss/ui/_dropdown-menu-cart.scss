@@ -1,0 +1,133 @@
+.dropdown-menu-cart {
+	width: rem(360px);
+	
+	@if $enable-rtl {
+		right: auto !important;
+		left: 0 !important;
+		margin-left: rem(-145px) !important;
+	} @else {
+		left: auto !important;
+		right: 0 !important;
+		margin-right: rem(-145px) !important;
+	}
+	
+	@include media-breakpoint-down(md) {
+		body .header .dropdown & {
+			transform: none !important;
+			top: 100% !important;
+			margin: 0 !important;
+		}
+	}
+	
+	& .cart-header {
+		padding: rem(15px);
+		
+		& + .cart-body {
+			border-top: 1px solid var(--#{$prefix}component-dropdown-border-color);
+		}
+	}
+	& .cart-body {
+		padding: rem(15px);
+		
+		& + .cart-footer {
+			border-top: 1px solid var(--#{$prefix}component-dropdown-border-color);
+		}
+	}
+	& .cart-footer {
+		padding: rem(15px);
+	}
+	& .cart-item {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		& > li {
+			display: table;
+			width: 100%;
+			
+			& + li {
+				padding-top: rem(10px);
+				border-top: 1px solid var(--#{$prefix}component-dropdown-border-color);
+				margin-top: rem(10px);
+			}
+			& > div {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			& h4 {
+				font-size: rem(14px);
+				margin: rem(3px) 0;
+			}
+			& .price {
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+				font-weight: $font-weight-bold;
+				margin: 0;
+			}
+		}
+	}
+	& .cart-title {
+		font-weight: $font-weight-bold;
+		font-size: rem(14px);
+		margin: 0;
+	}
+	& .cart-item-image {
+		width: rem(80px);
+		height: rem(60px);
+		padding: rem(5px);
+		overflow: hidden;
+		text-align: center;
+		border: 1px solid var(--#{$prefix}component-dropdown-border-color);
+		display: flex;
+		align-items: center;
+		border-radius: $border-radius;
+		
+		@if $enable-rtl {
+			float: right;
+		} @else {
+			float: left;
+		}
+		
+		& + .cart-item-info {
+			@if $enable-rtl {
+				padding-right: rem(15px);
+			} @else {
+				padding-left: rem(15px);
+			}
+		}
+		& img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	& .cart-item-info {
+		width: 80%;
+		
+		& + .cart-item-close {
+			@if $enable-rtl {
+				padding-right: rem(15px);
+			} @else {
+				padding-left: rem(15px);
+			}
+		}
+	}
+	& .cart-item-close {
+		& a {
+			font-size: rem(18px);
+			color: var(--#{$prefix}component-color);
+			height: rem(24px);
+			width: rem(24px);
+			text-align: center;
+			line-height: rem(24px);
+			display: block;
+			text-decoration: none;
+			background: var(--#{$prefix}light);
+			border-radius: 24px;
+			
+			&:hover,
+			&:focus {
+				background: $gray-500;
+				color: $gray-700;
+			}
+		}
+	}
+}

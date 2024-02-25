@@ -1,0 +1,115 @@
+.pricing-table {
+	list-style-type: none;
+	margin: 0 rem(-10px);
+	padding: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	
+	@include clearfix();
+	@include media-breakpoint-down(lg) {
+		display: block;
+	}
+	
+	& > li {
+		padding: rem(10px);
+		
+		@include media-breakpoint-down(lg) {
+			width: auto !important;
+		}
+	}
+	&.pricing-col-4 > li {
+		width: 25%;
+	}
+	&.pricing-col-3 > li {
+		width: 33.33333%;
+	}
+	& .pricing-container {
+		overflow: hidden;
+		background: $gray-900;
+		border-radius: $border-radius-lg;
+		box-shadow: 0 3px var(--#{$prefix}light);
+	}
+	& h3 {
+		background: shade-color($dark, 50%);
+		margin: 0;
+		color: $white;
+		font-size: $font-size-base;
+		padding: rem(15px) rem(30px);
+		font-weight: bold;
+		
+		.dark-mode & {
+			background: $gray-900;
+		}
+	}
+	& .features {
+		list-style-type: none;
+		margin: 0;
+		padding: 0 rem(30px);
+		background: var(--#{$prefix}light);
+		
+		& > li {
+			padding: rem(10px) 0;
+			
+			& + li {
+				border-top: 1px solid var(--#{$prefix}component-border-color);
+			}
+		}
+	}
+	& .price {
+		width: 100%;
+		background: $dark;
+		
+		& .price-figure {
+			height: rem(80px);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		& .price-number {
+			font-size: $font-size-lg * 1.75;
+			color: var(--#{$prefix}app-theme);
+			display: block;
+		}
+		& .price-tenure {
+			font-size: $font-size-sm;
+			color: rgba(var(--#{$prefix}app-theme-color-rgb), .75);
+			display: block;
+			text-align: center;
+			margin-top: rem(-5px);
+		}
+	}
+	& .footer {
+		background: shade-color($gray-900, 50%);
+		padding: rem(15px) rem(20px);
+	}
+	& .highlight {
+		padding: 0px;
+		margin-top: rem(-30px);
+		
+		@include media-breakpoint-down(lg) {
+			margin-top: 0;
+			padding: rem(10px);
+		}
+		
+		& .features > li {
+			padding: rem(15px) 0;
+		}
+		& h3 {
+			padding: rem(20px) rem(30px);
+			background: rgba(var(--#{$prefix}app-theme-rgb), .5);
+		}
+		& .price {
+			background: var(--#{$prefix}app-theme);
+			color: var(--#{$prefix}app-theme-color);
+			
+			& .price-figure {
+				height: rem(90px);
+			}
+			& .price-number {
+				color: var(--#{$prefix}app-theme-color);
+			}
+		}
+	}
+}

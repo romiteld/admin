@@ -1,0 +1,306 @@
+
+<!-- BEGIN breadcrumb -->
+<ol class="breadcrumb float-xl-end">
+	<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+	<li class="breadcrumb-item"><a href="javascript:;">UI Elements</a></li>
+	<li class="breadcrumb-item active">Typography</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Typography <small>header small text goes here...</small></h1>
+<!-- END page-header -->
+
+<!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Headings">
+			<h1>h1. Heading 1</h1>
+			<h2>h2. Heading 2</h2>
+			<h3>h3. Heading 3</h3>
+			<h4>h4. Heading 4</h4>
+			<h5>h5. Heading 5</h5>
+			<h6>h6. Heading 6</h6>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code1"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		
+		<!-- BEGIN panel -->
+		<panel title="small, semiBold, Bold, Italic">
+			<div class="text-dark">
+				<div class="row fs-14px">
+					<div class="col-md-6">
+						<div class="fs-12px"><small>This line of text is meant to be treated as fine print.</small></div>
+						<div><em>rendered as italicized text</em></div>
+					</div>
+					<div class="col-md-6">
+						<div><span class="semi-bold">rendered as semi bold text</span></div>
+						<div><strong>rendered as bold text</strong></div>
+					</div>
+				</div>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code2"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Alignment Classes">
+			<div class="text-dark">
+				<p class="text-star">Left aligned text.</p>
+				<p class="text-center">Center aligned text.</p>
+				<p class="text-end">Right aligned text.</p>
+			</div>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code3"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Emphasis classes">
+			<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+			<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+			<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+			<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+			<p class="text-success mb-0">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code4"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Unordered List">
+			<div class="text-dark">
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Nulla volutpat aliquam velit
+						<ul>
+						<li>Phasellus iaculis neque</li>
+						<li>Purus sodales ultricies</li>
+						</ul>
+					</li>
+					<li>Faucibus porta lacus fringilla vel</li>
+				</ul>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code5"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Ordered List">
+			<div class="text-dark">
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Integer molestie lorem at massa</li>
+					<li>Facilisis in pretium nisl aliquet</li>
+					<li>Nulla volutpat aliquam velit</li>
+					<li>Faucibus porta lacus fringilla vel</li>
+					<li>Aenean sit amet erat nunc</li>
+					<li>Eget porttitor lorem</li>
+				</ol>
+			</div>
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code6"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Unstyled & Inline List Classes">
+			<div class="text-dark">
+				<ul class="list-unstyled">
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Integer molestie lorem at massa</li>
+					<li>Facilisis in pretium nisl aliquet</li>
+					<li>Nulla volutpat aliquam velit</li>
+				</ul>
+				<hr class="my-3" />
+				<ul class="list-inline">
+					<li class="list-inline-item">Lorem ipsum dolor sit amet</li>
+					<li class="list-inline-item">Consectetur adipiscing elit</li>
+					<li class="list-inline-item">Integer molestie lorem at massa</li>
+				</ul>
+			</div>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code7"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Body Copy">
+			<p>
+				Quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, 
+				nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+			</p>
+			<p>
+				Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus
+				auctor fringilla. 
+			</p>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code8"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Lead body copy">
+			<p class="lead">
+				Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+			</p>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code9"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Abbreviation">
+			<p>An abbreviation of the word attribute is  <abbr title="attribute">attr</abbr></p>
+			<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code10"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Addresses">
+			<address>
+				<strong>Twitter, Inc.</strong><br />
+				795 Folsom Ave, Suite 600<br />
+				San Francisco, CA 94107<br />
+				<abbr title="Phone">P:</abbr> (123) 456-7890
+			</address>
+			<address>
+				<strong>Full Name</strong><br />
+				<a href="mailto:#">first.last&#64;example.com</a>
+			</address>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code11"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Blockquote">
+			<blockquote class="blockquote">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<footer class="blockquote-footer">Someone famous <cite title="Source Title">Source Title</cite></footer>
+			</blockquote>
+			<blockquote class="blockquote text-end">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<footer class="blockquote-footer">Someone famous <cite title="Source Title">Source Title</cite></footer>
+			</blockquote>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code12"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Description List">
+			<dl>
+				<dt class="text-dark">Description lists</dt>
+				<dd>A description list is perfect for defining terms.</dd>
+				<dt class="text-dark mt-10px">Euismod</dt>
+				<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+				<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+				<dt class="text-dark mt-10px">Malesuada porta</dt>
+				<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+			</dl>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code13"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+		<!-- BEGIN panel -->
+		<panel title="Horizontal Description List">
+			<dl>
+				<dt>Description lists</dt>
+				<dd>A description list is perfect for defining terms.</dd>
+				<dt>Euismod</dt>
+				<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+				<dt>Malesuada porta</dt>
+				<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+			</dl>
+			
+			<ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code14"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->

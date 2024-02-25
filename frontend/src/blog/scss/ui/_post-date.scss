@@ -1,0 +1,42 @@
+.post-date {
+	font-size: $font-size-lg * 0.75;
+	line-height: $line-height-sm * 0.75;
+	margin: 0;
+	padding: rem(10px);
+	text-align: center;
+	font-weight: bold;
+	
+	& .day {
+		color: var(--#{$prefix}component-color);
+		font-size: $font-size-lg * 1.5;
+		display: block;
+	}
+	& .month {
+		display: block;
+		margin-top: rem(5px);
+		color: var(--#{$prefix}component-color);
+	}
+	& + .post-likes {
+		border-top: 2px solid var(--#{$prefix}component-border-color);
+	}
+	
+	@include media-breakpoint-down(md) {
+		padding: 0;
+		margin: 0;
+		line-height: $line-height-sm;
+		display: inline-block;
+		
+		& .day,
+		& .month {
+			font-size: $font-size-sm;
+			margin: 0;
+			display: inline-block;
+		}
+		& + .post-likes {
+			border-top: none;
+			border-left: 2px solid var(--#{$prefix}component-border-color);
+			margin-left: rem(10px);
+			padding-left: rem(12px);
+		}
+	}
+}

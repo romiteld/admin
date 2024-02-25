@@ -1,0 +1,38 @@
+.work {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: rem(10px);
+	
+	& .image {
+		& img {
+			max-width: 100%;
+		}
+	}
+	& .desc {
+		padding: rem(12px) rem(15px);
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 100%;
+		background: rgba($black, .75);
+		transition: all .2s linear;
+		
+		& .desc-title {
+			font-size: $font-size-base;
+			display: block;
+			font-weight: 600;
+			color: $white;
+		}
+		& .desc-text {
+			font-size: $font-size-sm * 0.9;
+			color: rgba($white, .75);
+			display: block;
+		}
+	}
+	&:hover,
+	&:focus {
+		& .desc {
+			margin-top: rem(-62px);
+		}
+	}
+}

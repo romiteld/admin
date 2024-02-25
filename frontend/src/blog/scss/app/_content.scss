@@ -1,0 +1,10 @@
+.content {
+	margin: rem(65px) 0 rem(60px);
+	padding-top: rem(45px);
+	position: relative;
+	z-index: $app-content-zindex;
+	
+	@include media-breakpoint-down(md) {
+		padding-top: rem(30px);
+	}
+}

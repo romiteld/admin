@@ -1,0 +1,9 @@
+<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/js/one-page-parallax/vendor.min.js"></script>
+	<script src="../assets/js/one-page-parallax/app.min.js"></script>
+	@@if (context.script && script.length > 0) {
+	<!-- ================== BEGIN page-js ================== -->@@for (var i = 0; i < script.length; i++) {
+	<script src="`+script[i]+`"></script>}
+	<!-- ================== END page-js ================== -->}
+</body>
+</html>

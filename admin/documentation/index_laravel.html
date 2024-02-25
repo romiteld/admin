@@ -1,0 +1,889 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+    <!-- Bootstrap styles -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+    <link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Admin Template</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">Design Template</a>
+						</li>
+						<li class="">
+							<a href="index_ajax.html">Ajax Version</a>
+						</li>
+						<li class="">
+							<a href="index_angular_1x.html">Angular 1.x</a>
+						</li>
+						<li class="">
+							<a href="index_angular_17.html">Angular 17.0</a>
+						</li>
+						<li class="active">
+							<a href="index_laravel.html">Laravel Version</a>
+						</li>
+						<li class="">
+							<a href="index_vue.html">Vue Version</a>
+						</li>
+						<li class="">
+							<a href="index_react.html">React Version</a>
+						</li>
+						<li class="">
+							<a href="index_asp.html">ASP.NET</a>
+						</li>
+						<li>
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Laravel 10 Version&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.3.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well with-cover">
+					<div class="well-cover" style="background-image: url(assets/images/laravel.jpg); background-size: auto 80%; background-position: center; background-repeat: no-repeat; background-color: #fff;"></div>
+					<p>
+						<strong>
+							Last Updated: 15/November/2023<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+					<li><a href="#fileStructure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#pageStructure"><i class="icon-chevron-right"></i>Page Structure</a></li>
+					<li><a href="#page-head"><i class="icon-chevron-right"></i>Page Head</a></li>
+					<li><a href="#page-top-menu"><i class="icon-chevron-right"></i>Page Top Menu</a></li>
+					<li><a href="#page-sidebar"><i class="icon-chevron-right"></i>Page Sidebar</a></li>
+					<li><a href="#page-content"><i class="icon-chevron-right"></i>Page Content</a></li>
+					<li><a href="#page-end"><i class="icon-chevron-right"></i>End of Page (Javascripts)</a></li>
+					<li><a href="#page-options"><i class="icon-chevron-right"></i>Page Options</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-switch-design"><i class="icon-chevron-right"></i>Switch Design <span class="label">NEW</span></a></li>
+					<li><a href="#page-scss"><i class="icon-chevron-right"></i>SCSS</a></li>
+					<li><a href="#npm-package"><i class="icon-chevron-right"></i>NPM Package</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="installation"><strong>A) Installation</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Follow the following step to install the laravel in your localhost<br />
+							You may refer to their official documentation for how to setup the development environment. <br />
+							<a href="https://laravel.com/docs/5.5/installation" target="_blank">Setup Guide</a>
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt; 
+cd /your-path-url/template_laravel
+composer install
+npm install --force
+npm run dev
+php artisan serve
+
+&lt;!-- browse the url --&gt; 
+http://127.0.0.1:8000/
+</pre>
+						<p>
+							Make sure PHP >= 8.0.0 & node.js has been installed on your localhost / server
+						</p>
+						<hr />
+						<p>Copy over the required image from global <code>assets</code> folder</p>
+<pre class="prettyprint linenums">
+&lt;!-- copy the following folder--&gt;
+/admin/template/assets/img
+ 
+&lt;!-- paste it into laravel folder --&gt;
+/admin/template/template_laravel/public/assets/img
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="fileStructure"><strong>B) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for Laravel Version</p>
+						
+<pre class="prettyprint linenums">
+template_laravel/
+├── artisan
+├── composer.json
+├── package.json
+├── phpunit.xml
+├── readme.md
+├── server.php
+├── webpack.mix.js
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+│   ├── lang
+│   └── views
+│       ├── includes
+│       ├── layouts
+│       └── pages
+├── routes/
+├── storage/
+└── tests/
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="pageStructure"><strong>C) Page Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>We split the header, sidebar, top menu, footer and etc into few other part and include it in the base file. Base file has been located in <code>/resources/views/layouts/default.blade.php</code>.</p>
+<pre class="prettyprint linenums">
+@include('includes.component.page-loader')
+
+&lt;div id="app" class="app app-sidebar-fixed {{ $appClass }}"&gt;
+  
+  @includeWhen(!$appHeaderHide, 'includes.header')
+  
+  @includeWhen($appTopMenu, 'includes.top-menu')
+  
+  @includeWhen(!$appSidebarHide, 'includes.sidebar')
+  
+  @includeWhen($appSidebarTwo, 'includes.sidebar-right')
+  
+  &lt;div id="content" class="app-content {{ $appContentClass }}"&gt;
+    @yield('content')
+  &lt;/div&gt;
+  
+  @include('includes.component.theme-panel')
+  
+  @include('includes.component.scroll-top-btn')
+  
+&lt;/div&gt;
+
+@yield('outside-content')
+
+@include('includes.page-js')
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-head"><strong>D) Page Head</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Page head contains metadata, javascript and css files:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="{{ app()-&gt;getLocale() }}"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;Color Admin | @yield('title')&lt;/title&gt;
+  &lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" 
+    name="viewport" /&gt;
+  &lt;meta content="" name="description" /&gt;
+  &lt;meta content="" name="author" /&gt;
+
+  &lt;!-- ================== BEGIN BASE CSS STYLE ================== --&gt;
+  &lt;link href="/assets/css/vendor.min.css" rel="stylesheet" /&gt;
+  &lt;link href="/assets/css/app.min.css" rel="stylesheet" /&gt;
+  &lt;!-- ================== END BASE CSS STYLE ================== --&gt;
+
+  @stack('css')
+&lt;/head&gt;
+@php
+  $bodyClass = (!empty($appBoxedLayout)) ? 'boxed-layout ' : '';
+  $bodyClass .= (!empty($paceTop)) ? 'pace-top ' : $bodyClass;
+  $bodyClass .= (!empty($bodyClass)) ? $bodyClass . ' ' : $bodyClass;
+  $appSidebarHide = (!empty($appSidebarHide)) ? $appSidebarHide : '';
+  $appHeaderHide = (!empty($appHeaderHide)) ? $appHeaderHide : '';
+  $appSidebarTwo = (!empty($appSidebarTwo)) ? $appSidebarTwo : '';
+  $appSidebarSearch = (!empty($appSidebarSearch)) ? $appSidebarSearch : '';
+  $appTopMenu = (!empty($appTopMenu)) ? $appTopMenu : '';
+  
+  $appClass = (!empty($appTopMenu)) ? 'app-with-top-menu ' : '';
+  $appClass .= (!empty($appHeaderHide)) ? 'app-without-header ' : ' app-header-fixed ';
+  $appClass .= (!empty($appSidebarEnd)) ? 'app-with-end-sidebar ' : '';
+  $appClass .= (!empty($appSidebarWide)) ? 'app-with-wide-sidebar ' : '';
+  $appClass .= (!empty($appSidebarHide)) ? 'app-without-sidebar ' : '';
+  $appClass .= (!empty($appSidebarMinified)) ? 'app-sidebar-minified ' : '';
+  $appClass .= (!empty($appSidebarTwo)) ? 'app-with-two-sidebar app-sidebar-end-toggled ' : '';
+  $appClass .= (!empty($appContentFullHeight)) ? 'app-content-full-height ' : '';
+  
+  $appContentClass = (!empty($appContentClass)) ? $appContentClass : '';
+@endphp
+&lt;body class="{{ $bodyClass }}"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-top-menu"><strong>E) Top Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+@php
+  $appHeaderAttr = (!empty($appHeaderInverse)) ? ' data-bs-theme=dark' : '';
+  $appHeaderMenu = (!empty($appHeaderMenu)) ? $appHeaderMenu : '';
+  $appHeaderMegaMenu = (!empty($appHeaderMegaMenu)) ? $appHeaderMegaMenu : ''; 
+  $appHeaderTopMenu = (!empty($appHeaderTopMenu)) ? $appHeaderTopMenu : '';
+@endphp
+
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"{{ $appHeaderAttr }}&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    @if ($appSidebarTwo)
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-end-mobile"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    @endif
+    &lt;a href="/" class="navbar-brand"&gt;&lt;span class="navbar-logo"&gt;&lt;/span&gt; &lt;b&gt;Color&lt;/b&gt; Admin&lt;/a&gt;
+    @if ($appHeaderMegaMenu && !$appSidebarTwo)
+    &lt;button type="button" class="navbar-mobile-toggler" data-bs-toggle="collapse" data-bs-target="#top-navbar"&gt;
+      &lt;span class="fa-stack fa-lg"&gt;
+        &lt;i class="far fa-square fa-stack-2x"&gt;&lt;/i&gt;
+        &lt;i class="fa fa-cog fa-stack-1x mt-1px"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+    @endif
+    @if($appTopMenu && !$appSidebarHide && !$appSidebarTwo)
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-top-menu-mobile"&gt;
+      &lt;span class="fa-stack fa-lg"&gt;
+        &lt;i class="far fa-square fa-stack-2x"&gt;&lt;/i&gt;
+        &lt;i class="fa fa-cog fa-stack-1x mt-1px"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+    @endif
+    @if($appTopMenu && $appSidebarHide && !$appSidebarTwo)
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-top-menu-mobile"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    @endif
+    @if (!$appSidebarHide)
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    @endif
+  &lt;/div&gt;
+  
+  @includeWhen($appHeaderMegaMenu, 'includes.component.header-mega-menu')
+  
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;div class="navbar-item navbar-form"&gt;
+      &lt;form action="" method="POST" name="search"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;input type="text" class="form-control" placeholder="Enter keyword" /&gt;
+          &lt;button type="submit" class="btn btn-search"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class="navbar-item dropdown"&gt;
+      &lt;a href="#" data-bs-toggle="dropdown" class="navbar-link dropdown-toggle icon"&gt;
+        &lt;i class="fa fa-bell"&gt;&lt;/i&gt;
+        &lt;span class="badge"&gt;5&lt;/span&gt;
+      &lt;/a&gt;
+      @include('includes.component.header-dropdown-notification')
+    &lt;/div&gt;
+    
+    @isset($appHeaderLanguageBar)
+      @include('includes.component.header-language-bar')
+    @endisset
+    
+    &lt;div class="navbar-item navbar-user dropdown"&gt;
+      &lt;a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown"&gt;
+        &lt;img src="/assets/img/user/user-13.jpg" alt="" /&gt; 
+        &lt;span&gt;
+          &lt;span class="d-none d-md-inline"&gt;Adam Schwartz&lt;/span&gt;
+          &lt;b class="caret"&gt;&lt;/b&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+      @include('includes.component.header-dropdown-profile')
+    &lt;/div&gt;
+    
+    @if($appSidebarTwo)
+    &lt;div class="navbar-divider d-none d-md-block"&gt;&lt;/div&gt;
+    &lt;div class="navbar-item d-none d-md-block"&gt;
+      &lt;a href="javascript:;" data-toggle="app-sidebar-end" class="navbar-link icon"&gt;
+        &lt;i class="fa fa-th"&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    @endif
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+&lt;/div&gt;
+&lt;!-- END #header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-sidebar"><strong>F) Sidebar</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+@php
+  $appSidebarClass = (!empty($appSidebarTransparent)) ? 'app-sidebar-transparent' : '';
+  $appSidebarAttr  = (!empty($appSidebarLight)) ? '' : ' data-bs-theme=dark';
+@endphp
+&lt;!-- BEGIN #sidebar --&gt;
+&lt;div id="sidebar" class="app-sidebar {{ $appSidebarClass }}" {{ $appSidebarAttr }}&gt;
+  &lt;!-- BEGIN scrollbar --&gt;
+  &lt;div class="app-sidebar-content" data-scrollbar="true" data-height="100%"&gt;
+    &lt;div class="menu"&gt;
+      @if (!$appSidebarSearch)
+        ...
+      @endif
+      
+      @if ($appSidebarSearch)
+        ...
+      @endif
+      
+      &lt;div class="menu-header"&gt;Navigation&lt;/div&gt;
+      @php
+        $currentUrl = (Request::path() != '/') ? '/'. Request::path() : '/';
+        
+        foreach (config('sidebar.menu') as $key =&gt; $menu) {
+          ...
+        }
+      @endphp
+      
+      &lt;!-- BEGIN minify-button --&gt;
+      &lt;div class="menu-item d-flex"&gt;
+        &lt;a href="javascript:;" class="app-sidebar-minify-btn ms-auto" data-toggle="app-sidebar-minify"&gt;&lt;i class="fa fa-angle-double-left"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;!-- END minify-button --&gt;
+    &lt;/div&gt;
+    &lt;!-- END menu --&gt;
+  &lt;/div&gt;
+  &lt;!-- END scrollbar --&gt;
+&lt;/div&gt;
+&lt;div class="app-sidebar-bg" data-bs-theme="dark"&gt;&lt;/div&gt;
+&lt;div class="app-sidebar-mobile-backdrop"&gt;
+  &lt;a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- END #sidebar --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content"><strong>G) Page Content</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Content block display the data from the single page
+						</p>
+<pre class="prettyprint linenums">
+&lt;div id="content" class="app-content {{ $appContentClass }}"&gt;
+  @yield('content')
+&lt;/div&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-end"><strong>H) End of Page (Javascript)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Javascript files loaded in the end of page. This will reduce page load time.
+						</p>
+<pre class="prettyprint linenums">
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="/assets/js/vendor.min.js"&gt;&lt;/script&gt;
+  &lt;script src="/assets/js/app.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+
+  @stack('scripts')
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-options"><strong>I) Page Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Here is the general option for the each case of page options. You may set the option in your view file.</p>
+						<h4>Option List</h4>
+<pre class="prettyprint linenums">
+@extends('layouts.default', [
+  'bodyClass' = > '',
+  'appClass' = > '',
+  'appTopMenu' => true,
+  'appSidebarEnd' => true,
+  'appSidebarLight' => true,
+  'appSidebarWide' => true,
+  'appSidebarHide' => true,
+  'appSidebarTransparent' => true,
+  'appSidebarMinified' => true,
+  'appSidebarTwo' => true,,
+  'appSidebarSearch' => true,
+  'appContentClass' => '',
+  'appContentFullHeight' => true
+])
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>J) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>.dark-mode</code> class to <code>&lt;html&gt;</code> in <code>template_laravel/resources/views/layouts/default.blade.php</code> order to enable the dark mode.</p>
+						<div class="alert alert-info">
+							If you have <b>pre-select</b> the dark-mode option in theme panel, do not forget to <b>clear</b> the browser cookie or <b>remove</b> the theme panel so that it won't affect the dark-mode class while page load.
+						</div>
+<pre class="prettyprint linenums">
+&lt;html lang="en" class="dark-mode"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-switch-design"><strong>K) Switch Design</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4 style="margin-bottom: 15px">Apple Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following variable from <code>template_laravel/webpack.mix.js</code>.</div>							
+<pre class="prettyprint linenums">
+var theme = 'apple';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px;">Add the following css link to <code>template_laravel/resources/views/includes/head.blade.php</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="/assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Ionicons and background color class is needed as well.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="ion-ios-pulse bg-gradient-blue"&gt;&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Facebook Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following variable from <code>template_laravel/webpack.mix.js</code>.</div>							
+<pre class="prettyprint linenums">
+var theme = 'facebook';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>.app-header-inverse</code> to the <code>.app-header</code> container in <code>template_laravel/resources/views/includes/header.blade.php</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="header" class="app-header" data-bs-theme="dark"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Transparent Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following variable from <code>template_laravel/webpack.mix.js</code>.</div>							
+<pre class="prettyprint linenums">
+var theme = 'transparent';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the <code>.app-cover</code> next to the <code>&lt;body&gt;</code> tag in <code>template_laravel/resources/views/layouts/default.blade.php</code>.</div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;!-- BEGIN page-cover --&gt;
+  &lt;div class="app-cover"&gt;&lt;/div&gt;
+  &lt;!-- END page-cover --&gt;
+  
+  ...
+&lt;/body&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Google Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following variable from <code>template_laravel/webpack.mix.js</code>.</div>							
+<pre class="prettyprint linenums">
+var theme = 'google';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>.app-with-wide-sidebar</code> to the <code>.app</code> container in <code>template_laravel/resources/views/layouts/default.blade.php</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="app" class="app app-header-fixed app-sidebar-fixed app-with-wide-sidebar"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_laravel/resources/views/includes/header.blade.php</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;
+      Color Admin
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Material Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following variable from <code>template_laravel/webpack.mix.js</code>.</div>							
+<pre class="prettyprint linenums">
+var theme = 'material';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>.app-with-wide-sidebar</code> to the <code>.app</code> container in <code>template_laravel/resources/views/includes/sidebar.blade.php</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="app" class="app app-header-fixed app-sidebar-fixed app-with-wide-sidebar"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_laravel/resources/views/includes/header.blade.php</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;
+      Color Admin Material
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							
+							<li>
+								<div style="padding-bottom: 5px">Add the floating navbar form to the <code>.app-header</code>  in <code>template_laravel/resources/views/includes/header.blade.php</code> AND <b>REMOVE</b> the default <code>.navbar-form</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;div class="navbar-item"&gt;
+      &lt;a href="#" data-toggle="app-header-floating-form" class="navbar-link icon"&gt;
+        &lt;i class="material-icons"&gt;search&lt;/i&gt;
+      &lt;/a&gt;
+      
+      &lt;!-- REMOVE IT --&gt;
+      &lt;div class="navbar-item navbar-form"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+  
+  &lt;div class="navbar-floating-form"&gt;
+    &lt;button class="search-btn" type="submit"&gt;&lt;i class="material-icons"&gt;search&lt;/i&gt;&lt;/button&gt;
+    &lt;input type="text" class="form-control" placeholder="Search Something..." /&gt;
+    &lt;a href="#" class="close" data-dismiss="app-header-floating-form"&gt;
+      &lt;i class="material-icons"&gt;close&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the <code>.app-loader</code>  in <code>template_laravel/resources/views/includes/component/page-loader.blade.php</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #loader --&gt;
+&lt;div id="loader" class="app-loader"&gt;
+  &lt;div class="material-loader"&gt;
+    &lt;svg class="circular" viewBox="25 25 50 50"&gt;
+      &lt;circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+    &lt;div class="message"&gt;Loading...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END #loader --&gt;
+</pre>
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-scss"><strong>L) Using SCSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Laravel version now is fully scss configured. You may switch the Color Admin theme by changing the variable name in <code>webpack.mix.js</code>.</p>
+<pre class="prettyprint linenums">
+const theme = 'default';
+ 
+&lt;!-- theme option --&gt;
+const theme = 'apple';
+const theme = 'facebook';
+const theme = 'google';
+const theme = 'material';
+const theme = 'transparent';
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="npm-package"><strong>M) NPM Package</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of package that has been installed in this project. You may use the following example to find the package from their official website.
+							<code>https://www.npmjs.com/package/</code><code>laravel-mix</code>
+						</p>
+<pre class="prettyprint linenums">
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "devDependencies": {
+    "axios": "^1.6.1",
+    "laravel-mix": "^6.0.49",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.31",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "vue": "^3.3.8",
+    "webpack": "^5.89.0"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.0.0",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fullcalendar/bootstrap": "^6.1.9",
+    "@fullcalendar/core": "^6.1.9",
+    "@fullcalendar/daygrid": "^6.1.9",
+    "@fullcalendar/interaction": "^6.1.9",
+    "@fullcalendar/list": "^6.1.9",
+    "@fullcalendar/timegrid": "^6.1.9",
+    "@highlightjs/cdn-assets": "^11.9.0",
+    "abpetkov-powerange": "github:npmcomponent/abpetkov-powerange",
+    "angular": "^1.8.2",
+    "angular-ui-bootstrap": "^2.5.6",
+    "angular-ui-router": "^1.0.30",
+    "animate.css": "^4.1.1",
+    "apexcharts": "^3.44.0",
+    "blueimp-file-upload": "^10.32.0",
+    "blueimp-gallery": "^3.4.0",
+    "bootstrap": "^5.3.2",
+    "bootstrap-datepicker": "^1.10.0",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "bootstrap-datetime-picker": "^2.4.4",
+    "bootstrap-icons": "^1.11.1",
+    "bootstrap-social": "^5.1.1",
+    "bootstrap-timepicker": "^0.5.2",
+    "bootstrap3-wysihtml5-bower": "^0.3.3",
+    "chart.js": "^4.4.0",
+    "clipboard": "^2.0.11",
+    "d3": "^3.5.12",
+    "datatables.net": "^1.13.7",
+    "datatables.net-autofill": "^2.6.0",
+    "datatables.net-autofill-bs5": "^2.6.0",
+    "datatables.net-bs5": "^1.13.7",
+    "datatables.net-buttons": "^2.4.2",
+    "datatables.net-buttons-bs5": "^2.4.2",
+    "datatables.net-colreorder": "^1.7.0",
+    "datatables.net-colreorder-bs5": "^1.7.0",
+    "datatables.net-fixedcolumns": "^4.3.0",
+    "datatables.net-fixedcolumns-bs5": "^4.3.0",
+    "datatables.net-fixedheader": "^3.4.0",
+    "datatables.net-fixedheader-bs5": "^3.4.0",
+    "datatables.net-keytable": "^2.11.0",
+    "datatables.net-keytable-bs5": "^2.11.0",
+    "datatables.net-responsive": "^2.5.0",
+    "datatables.net-responsive-bs5": "^2.5.0",
+    "datatables.net-rowreorder": "^1.4.1",
+    "datatables.net-rowreorder-bs5": "^1.4.1",
+    "datatables.net-scroller": "^2.3.0",
+    "datatables.net-scroller-bs5": "^2.3.0",
+    "datatables.net-select": "^1.7.0",
+    "datatables.net-select-bs5": "^1.7.0",
+    "datepickk": "^1.4.1",
+    "dropzone": "^5.9.3",
+    "flag-icons": "^6.15.0",
+    "flot": "^4.2.6",
+    "gritter": "^1.7.4",
+    "intro.js": "^7.2.0",
+    "ion-rangeslider": "^2.3.1",
+    "ionicons": "^7.2.1",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.1",
+    "jquery-knob": "^1.2.11",
+    "jquery-migrate": "^3.4.1",
+    "jquery-mockjax": "^2.6.0",
+    "jquery-sparkline": "^2.4.0",
+    "jquery-ui-dist": "^1.13.2",
+    "jquery.maskedinput": "^1.4.1",
+    "js-cookie": "^3.0.5",
+    "jstree": "^3.3.16",
+    "jszip": "^3.10.1",
+    "jvectormap-content": "^0.1.0",
+    "jvectormap-next": "^3.1.1",
+    "kbw-countdown": "^2.1.1",
+    "lightbox2": "^2.11.4",
+    "lity": "^2.4.1",
+    "masonry-layout": "^4.2.2",
+    "moment": "^2.29.4",
+    "nvd3": "^1.8.6",
+    "oclazyload": "^1.1.0",
+    "pace-js": "^1.2.4",
+    "parsleyjs": "^2.9.2",
+    "pdfmake": "^0.2.8",
+    "perfect-scrollbar": "^1.5.5",
+    "photoswipe": "^5.4.2",
+    "raphael": "^2.3.0",
+    "select-picker": "^0.3.2",
+    "select2": "^4.0.13",
+    "simple-line-icons": "^2.5.5",
+    "spectrum-colorpicker2": "^2.0.10",
+    "summernote": "^0.8.20",
+    "sweetalert": "^2.1.2",
+    "swiper": "^11.0.4",
+    "switchery": "github:abpetkov/switchery",
+    "tag-it": "^2.0.0",
+    "x-editable-bs4": "^1.5.6"
+  }
+}
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

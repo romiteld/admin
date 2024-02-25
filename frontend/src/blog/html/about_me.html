@@ -1,0 +1,67 @@
+@@include('./partial/head.html', {
+	"title": "Blog Concept Front End Theme", 
+	"css": [
+	]}
+)
+	@@include('./partial/header.html')
+	
+	<!-- begin #page-title -->
+	<div id="page-title" class="page-title has-bg">
+		<div class="bg-cover" data-paroller="true" data-paroller-factor="0.5" data-paroller-factor-xs="0.2" style="background: url(../assets/img/cover/cover-7.jpg) center 0px / cover no-repeat"></div>
+		<div class="container">
+			<h1>Official Color Admin Blog</h1>
+			<p>Blog Concept Front End Page</p>
+		</div>
+	</div>
+	<!-- end #page-title -->
+	
+	<!-- begin #content -->
+	<div id="content" class="content">
+		<!-- begin container -->
+		<div class="container">
+			<!-- begin row -->
+			<div class="row gx-5">
+				<!-- begin col-9 -->
+				<div class="col-lg-9">
+					<!-- begin section-container -->
+					<div class="section-container">
+						<div class="post-image">
+							<div class="post-image-cover" style="background-image: url(../assets/img/about/about-me.jpg)"></div>
+						</div>
+						<h3 class="about-me-title">Dagan Ammiel</h3>
+						<p class="about-me-desc">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id efficitur ipsum. 
+							Praesent vulputate vulputate metus vulputate hendrerit. Sed in magna sit amet lorem congue 
+							semper non vel tellus. Nam tempor molestie aliquet. Fusce ultrices magna efficitur, 
+							sodales turpis ut, suscipit tortor. Mauris at sem pellentesque, fringilla ligula vel, 
+							luctus metus.
+						</p>
+						<p class="about-me-desc">
+							Morbi convallis volutpat quam, sit amet fermentum massa. 
+							Nulla ac faucibus risus. Suspendisse ante elit, faucibus sed pharetra nec, 
+							laoreet sed enim. Integer consectetur, risus id semper porttitor, lacus dolor euismod magna, 
+							id consectetur dui mi vitae lorem. Nam ac malesuada urna, vel mollis eros. Aliquam erat volutpat.
+						</p>
+					</div>
+					<!-- end section-container -->
+				</div>
+				<!-- end col-9 -->
+				<!-- begin col-3 -->
+				<div class="col-lg-3">
+					@@include('./partial/sidebar.html')
+				</div>
+				<!-- end col-3 -->
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end container -->
+	</div>
+	<!-- end #content -->
+  
+	@@include('./partial/footer.html')
+	@@include('./partial/theme-panel.html')
+	
+@@include('./partial/script.html', {
+	"script": [
+	]}
+)

@@ -1,0 +1,386 @@
+<!-- BEGIN #sidebar -->
+<div id="sidebar" class="app-sidebar" ng-controller="sidebarController" ng-attr-data-bs-theme="{{!setting.layout.appSidebarLight ? 'dark' : 'light'}}" ng-class="{ 'app-sidebar-transparent': setting.layout.appSidebarTransparent }">
+  <!-- BEGIN scrollbar -->
+  <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+  	<!-- BEGIN menu -->
+		<div class="menu">
+			<div class="menu-profile" ng-if="!setting.layout.appSidebarSearch">
+				<a href="javascript:;" class="menu-profile-link" data-toggle="app-sidebar-profile" data-target="#appSidebarProfileMenu">
+					<div class="menu-profile-cover with-shadow"></div>
+					<div class="menu-profile-image">
+						<img src="../assets/img/user/user-13.jpg" alt="" />
+					</div>
+					<div class="menu-profile-info">
+						<div class="d-flex align-items-center">
+							<div class="flex-grow-1">
+								Sean Ngu
+							</div>
+							<div class="menu-caret ms-auto"></div>
+						</div>
+						<small>Front end developer</small>
+					</div>
+				</a>
+			</div>
+			<div id="appSidebarProfileMenu" class="collapse" ng-if="!setting.layout.appSidebarSearch">
+				<div class="menu-item pt-5px">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon"><i class="fa fa-cog"></i></div>
+						<div class="menu-text">Settings</div>
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon"><i class="fa fa-pencil-alt"></i></div>
+						<div class="menu-text"> Send Feedback</div>
+					</a>
+				</div>
+				<div class="menu-item pb-5px">
+					<a href="javascript:;" class="menu-link">
+						<div class="menu-icon"><i class="fa fa-question-circle"></i></div>
+						<div class="menu-text"> Helps</div>
+					</a>
+				</div>
+				<div class="menu-divider m-0"></div>
+			</div>
+			<div class="menu-search mb-n3" ng-if="setting.layout.appSidebarSearch">
+				<input type="text" class="form-control" placeholder="Sidebar menu filter..." data-sidebar-search="true" />
+			</div>
+			<div class="menu-header">Navigation</div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.dashboard')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-sitemap"></i></div>
+					<div class="menu-text">Dashboard</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.dashboard.v1"><div class="menu-text">Dashboard v1</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.dashboard.v2"><div class="menu-text">Dashboard v2</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.dashboard.v3"><div class="menu-text">Dashboard v3</div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.email')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-hdd"></i></div>
+					<div class="menu-text">Email</div>
+					<div class="menu-badge">10</div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.email.inbox">Inbox</a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.email.compose">Compose</a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.email.detail">Detail</a></div>
+        </div>
+      </div>
+      <div class="menu-item" ui-sref-active="active">
+        <a class="menu-link" ui-sref="app.widget">
+					<div class="menu-icon"><i class="fab fa-simplybuilt"></i></div>
+					<div class="menu-text">Widgets <span class="menu-label">NEW</span></div> 
+        </a>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.ui')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-gem"></i></div>
+					<div class="menu-text">UI Elements <span class="menu-label">NEW</span></div> 
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.general"><div class="menu-text">General <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.typography"><div class="menu-text">Typography</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.tabsAccordions"><div class="menu-text">Tabs & Accordions</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.unlimitedTabs"><div class="menu-text">Unlimited Nav Tabs</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.modalNotification"><div class="menu-text">Modal & Notification <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.widgetBoxes"><div class="menu-text">Widget Boxes</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.mediaObject"><div class="menu-text">Media Object</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.buttons"><div class="menu-text">Buttons <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.iconFontAwesome"><div class="menu-text">FontAwesome</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.iconBootstrapIcons"><div class="menu-text">Bootstrap Icons <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.iconDuotoneIcons"><div class="menu-text">Duotone Icons <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.iconSimpleLineIcons"><div class="menu-text">Simple Line Icons</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.iconIonicons"><div class="menu-text">Ionicons</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.tree"><div class="menu-text">Tree View</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.languageBarIcon"><div class="menu-text">Language Bar & Icon</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.socialButtons"><div class="menu-text">Social Buttons</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.tour"><div class="menu-text">Intro JS</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.ui.offcanvasToasts"><div class="menu-text">Offcanvas & Toasts <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+        </div>
+      </div>
+      <div class="menu-item" ui-sref-active="active">
+        <a class="menu-link" ui-sref="app.bootstrap5">
+          <div class="menu-icon-img">
+            <img src="../assets/img/logo/logo-bs5.png" alt="" />
+          </div>
+          <div class="menu-text">Bootstrap 5 <span class="menu-label">NEW</span></div> 
+        </a>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.form')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-list-ol"></i></div>
+					<div class="menu-text">Form Stuff <span class="menu-label">NEW</span></div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.elements"><div class="menu-text">Form Elements <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.plugins"><div class="menu-text">Form Plugins <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.sliderSwitcher"><div class="menu-text">Form Slider + Switcher</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.validation"><div class="menu-text">Form Validation</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.wizards"><div class="menu-text">Wizards <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.wysiwyg"><div class="menu-text">WYSIWYG</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.xEditable"><div class="menu-text">X-Editable</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.multipleFileUpload"><div class="menu-text">Multiple File Upload</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.summernote"><div class="menu-text">Summernote</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.form.dropzone"><div class="menu-text">Dropzone</div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.table')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-table"></i></div>
+					<div class="menu-text">Tables</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active">
+          	<a class="menu-link" ui-sref="app.table.basic"><div class="menu-text">Basic Tables</div></a>
+          </div>
+          <div class="menu-item has-sub" ng-class="{active:$state.includes('app.table.manage')}">
+            <a class="menu-link" href="javascript:;">
+            	<div class="menu-text">Managed Tables</div>
+            	<div class="menu-caret"></div>
+            </a>
+            <div class="menu-submenu">
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.default"><div class="menu-text">Default</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.buttons"><div class="menu-text">Buttons</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.colReorder"><div class="menu-text">ColReorder</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.fixedColumns"><div class="menu-text">Fixed Columns</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.fixedHeader"><div class="menu-text">Fixed Header</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.keyTable"><div class="menu-text">KeyTable</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.responsive"><div class="menu-text">Responsive</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.rowReorder"><div class="menu-text">RowReorder</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.scroller"><div class="menu-text">Scroller</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.select"><div class="menu-text">Select</div></a></div>
+              <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.table.manage.combine"><div class="menu-text">Extension Combination</div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.pos')}">
+				<a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-cash-register"></i></div>
+					<div class="menu-text">POS System <span class="menu-label">NEW</span></div> 
+					<div class="menu-caret"></div>
+				</a>
+				<div class="menu-submenu">
+					<div class="menu-item"><a class="menu-link" ui-sref="app.pos.customerOrder"><div class="menu-text">Customer Order</div></a></div>
+					<div class="menu-item"><a class="menu-link" ui-sref="app.pos.kitchenOrder"><div class="menu-text">Kitchen Order</div></a></div>
+					<div class="menu-item"><a class="menu-link" ui-sref="app.pos.counterCheckout"><div class="menu-text">Counter Checkout</div></a></div>
+					<div class="menu-item"><a class="menu-link" ui-sref="app.pos.tableBooking"><div class="menu-text">Table Booking</div></a></div>
+					<div class="menu-item"><a class="menu-link" ui-sref="app.pos.menuStock"><div class="menu-text">Menu Stock</div></a></div>
+				</div>
+			</div>
+      <div class="menu-item has-sub">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-star"></i></div>
+					<div class="menu-text">Front End <span class="menu-label">NEW</span></div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item"><a class="menu-link" href="../../../frontend/template/template_one_page_parallax/index.html" target="_blank"><div class="menu-text">One Page Parallax</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../../../frontend/template/template_blog/index.html" target="_blank"><div class="menu-text">Blog</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../../../frontend/template/template_forum/index.html" target="_blank"><div class="menu-text">Forum</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../../../frontend/template/template_e_commerce/index.html" target="_blank"><div class="menu-text">E-Commerce</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../../../frontend/template/template_corporate/index.html" target="_blank"><div class="menu-text">Corporate <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-envelope"></i></div>
+					<div class="menu-text">Email Template</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item"><a class="menu-link" href="views/email_system.html"><div class="menu-text">System Template</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="views/email_newsletter.html"><div class="menu-text">Newsletter Template</div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.chart')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-chart-pie"></i></div>
+					<div class="menu-text">Chart <span class="menu-label">NEW</span></div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.chart.flot"><div class="menu-text">Flot Chart</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.chart.js"><div class="menu-text">Chart JS</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.chart.d3"><div class="menu-text">d3 Chart</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.chart.apex"><div class="menu-text">Apex Chart <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+        </div>
+      </div>
+      <div class="menu-item" ui-sref-active="active">
+      	<a class="menu-link" ui-sref="app.calendar">
+					<div class="menu-icon"><i class="fa fa-calendar"></i></div>
+					<div class="menu-text">Calendar</div>
+				</a>
+			</div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.map')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-map"></i></div>
+					<div class="menu-text">Map</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.map.vector"><div class="menu-text">Vector Map</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.map.google"><div class="menu-text">Google Map</div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.gallery')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-image"></i></div>
+					<div class="menu-text">Gallery</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.gallery.v1"><div class="menu-text">Gallery v1</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.gallery.v2"><div class="menu-text">Gallery v2</div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.options')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-cogs"></i></div>
+					<div class="menu-text">Page Options <span class="menu-label">NEW</span></div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageBlank"><div class="menu-text">Blank Page</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithFooter"><div class="menu-text">Page with Footer</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithFixedFooter"><div class="menu-text">Page with Fixed Footer <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithoutSidebar"><div class="menu-text">Page without Sidebar</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithRightSidebar"><div class="menu-text">Page with Right Sidebar</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithMinifiedSidebar"><div class="menu-text">Page with Minified Sidebar</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithTwoSidebar"><div class="menu-text">Page with Two Sidebar</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageFullHeightContent"><div class="menu-text">Full Height Content</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithWideSidebar"><div class="menu-text">Page with Wide Sidebar</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithLightSidebar"><div class="menu-text">Page with Light Sidebar</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithMegaMenu"><div class="menu-text">Page with Mega Menu</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithTopMenu"><div class="menu-text">Page with Top Menu</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithBoxedLayout"><div class="menu-text">Page with Boxed Layout</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithMixedMenu"><div class="menu-text">Page with Mixed Menu</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithBoxedMixedMenu"><div class="menu-text">Boxed Layout with Mixed Menu</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithTransparentSidebar"><div class="menu-text">Page with Transparent Sidebar</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithSearchSidebar"><div class="menu-text">Page with Search Sidebar <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.options.pageWithHoverSidebar"><div class="menu-text">Page with Hover Sidebar <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.extra')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-gift"></i></div>
+					<div class="menu-text">Extra <span class="menu-label">NEW</span></div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.timeline"><div class="menu-text">Timeline</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="comingSoon"><div class="menu-text">Coming Soon Page</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.searchResults"><div class="menu-text">Search Results</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.invoice"><div class="menu-text">Invoice</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="error"><div class="menu-text">404 Error Page</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.profile"><div class="menu-text">Profile Page</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.scrumBoard"><div class="menu-text">Scrum Board <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.cookieAcceptanceBanner"><div class="menu-text">Cookie Acceptance Banner <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.orders"><div class="menu-text">Orders <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.orderDetails"><div class="menu-text">Order Details <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.products"><div class="menu-text">Products <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+        	<div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.productDetails"><div class="menu-text">Product Details <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.fileManager"><div class="menu-text">File Manager <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.pricingPage"><div class="menu-text">Pricing Page <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.messengerPage"><div class="menu-text">Messenger Page <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.dataManagement"><div class="menu-text">Data Management <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.extra.settingsPage"><div class="menu-text">Settings Page <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-key"></i></div>
+					<div class="menu-text">Login & Register</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="member.login.v1"><div class="menu-text">Login</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="member.login.v2"><div class="menu-text">Login v2</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="member.login.v3"><div class="menu-text">Login v3</div></a></div>
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="member.register"><div class="menu-text">Register v3</div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-cubes"></i></div>
+					<div class="menu-text">Version <span class="menu-label">NEW</span></div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item"><a class="menu-link" href="../template_html/index_v2.html"><div class="menu-text">HTML</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_ajax/index.html"><div class="menu-text">AJAX</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="#"><div class="menu-text">ANGULAR JS</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_angularjs17/index.html"><div class="menu-text">ANGULAR JS 17</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="javascript:alert('Laravel 10 Version only available in downloaded version.');"><div class="menu-text">LARAVEL 10</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_vue3/index.html"><div class="menu-text">VUE 3 + Vite JS</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_react/index.html"><div class="menu-text">REACT 18</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="javascript:alert('.NET Core 7.0 MVC Version only available in downloaded version.');"><div class="menu-text">ASP.NET</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_material/index_v2.html"><div class="menu-text">MATERIAL DESIGN</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_apple/index_v2.html"><div class="menu-text">APPLE DESIGN</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_transparent/index_v2.html"><div class="menu-text">TRANSPARENT DESIGN <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_facebook/index_v2.html"><div class="menu-text">FACEBOOK DESIGN <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+          <div class="menu-item"><a class="menu-link" href="../template_google/index_v2.html"><div class="menu-text">GOOGLE DESIGN <i class="fa fa-paper-plane text-theme"></i></div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub" ng-class="{active:$state.includes('app.helper')}">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-medkit"></i></div>
+					<div class="menu-text">Helper</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item" ui-sref-active="active"><a class="menu-link" ui-sref="app.helper.css"><div class="menu-text">Predefined CSS Classes</div></a></div>
+        </div>
+      </div>
+      <div class="menu-item has-sub">
+        <a class="menu-link" href="javascript:;">
+					<div class="menu-icon"><i class="fa fa-align-left"></i></div>
+					<div class="menu-text">Menu Level</div>
+					<div class="menu-caret"></div>
+        </a>
+        <div class="menu-submenu">
+          <div class="menu-item has-sub">
+            <a class="menu-link" href="javascript:;">
+							<div class="menu-text">Menu 1.1</div>
+							<div class="menu-caret"></div>
+            </a>
+            <div class="menu-submenu">
+              <div class="menu-item has-sub">
+                <a class="menu-link" href="javascript:;">
+									<div class="menu-text">Menu 2.1</div>
+									<div class="menu-caret"></div>
+                </a>
+                <div class="menu-submenu">
+                  <div class="menu-item"><a class="menu-link" href="javascript:;"><div class="menu-text">Menu 3.1</div></a></div>
+                  <div class="menu-item"><a class="menu-link" href="javascript:;"><div class="menu-text">Menu 3.2</div></a></div>
+                </div>
+              </div>
+              <div class="menu-item"><a class="menu-link" href="javascript:;"><div class="menu-text">Menu 2.2</div></a></div>
+              <div class="menu-item"><a class="menu-link" href="javascript:;"><div class="menu-text">Menu 2.3</div></a></div>
+            </div>
+          </div>
+          <div class="menu-item"><a class="menu-link" href="javascript:;"><div class="menu-text">Menu 1.2</div></a></div>
+          <div class="menu-item"><a class="menu-link" href="javascript:;"><div class="menu-text">Menu 1.3</div></a></div>
+        </div>
+      </div>
+      
+      <!-- BEGIN minify-button -->
+			<div class="menu-item d-flex">
+				<a href="javascript:;" class="app-sidebar-minify-btn ms-auto" data-toggle="app-sidebar-minify"><i class="fa fa-angle-double-left"></i></a>
+			</div>
+			<!-- END minify-button -->
+    </div>
+    <!-- end sidebar nav -->
+  </div>
+  <!-- END scrollbar -->
+</div>
+<div class="app-sidebar-bg" ng-attr-data-bs-theme="{{!setting.layout.appSidebarLight ? 'dark' : 'light'}}"></div>
+<div class="app-sidebar-mobile-backdrop"><a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a></div>
+<!-- END #sidebar -->

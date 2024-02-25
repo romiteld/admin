@@ -1,0 +1,3 @@
+@{
+  ViewData["AppSidebarSearch"] = "true";
+}

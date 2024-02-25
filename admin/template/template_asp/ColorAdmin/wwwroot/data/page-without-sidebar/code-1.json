@@ -1,0 +1,4 @@
+@{
+  ViewData["AppSidebarNone"] = "true";
+  ViewData["AppClass"] = "app-without-sidebar";
+}

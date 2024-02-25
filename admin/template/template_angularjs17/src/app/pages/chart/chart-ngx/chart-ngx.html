@@ -1,0 +1,247 @@
+<!-- BEGIN breadcrumb -->
+<ol class="breadcrumb float-xl-end">
+	<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+	<li class="breadcrumb-item"><a href="javascript:;">Chart</a></li>
+	<li class="breadcrumb-item active">Ngx Chart</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Ngx Chart <small>header small text goes here...</small></h1>
+<!-- END page-header -->
+
+<!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Basic Line Chart">
+      <div class="h-250px">
+        <ngx-charts-line-chart
+          [animations]="false"
+          [scheme]="chartColor"
+          [results]="chartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [xAxisLabel]="'Census Date'"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'GDP Per Capita'"
+          [roundDomains]="true"
+          [autoScale]="true">
+        </ngx-charts-line-chart>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code1"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Area Chart">
+      <div class="h-250px">
+        <ngx-charts-area-chart-stacked
+          [animations]="false"
+          [scheme]="chartColor"
+          [results]="areaChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [xAxisLabel]="'Census Date'"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'GDP Per Capita'">
+        </ngx-charts-area-chart-stacked>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code2"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->
+<!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Bar Chart">
+      <div class="h-250px">
+        <ngx-charts-bar-vertical
+          [scheme]="chartColor"
+          [results]="barChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [xAxisLabel]="'Census Date'"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'GDP Per Capita'">
+        </ngx-charts-bar-vertical>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code3"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Stacked Bar Chart">
+      <div class="h-250px">
+        <ngx-charts-bar-vertical-stacked
+          [scheme]="chartColor"
+          [results]="stackedBarChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [xAxisLabel]="'Census Date'"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'GDP Per Capita'">
+        </ngx-charts-bar-vertical-stacked>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code4"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row --><!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Pie Chart">
+      <div class="h-250px">
+        <ngx-charts-pie-chart
+          [scheme]="chartColor"
+          [results]="pieChartData"
+          [legend]="false"
+          [explodeSlices]="false"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code5"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Pie Grid">
+      <div class="h-250px">
+        <ngx-charts-pie-grid
+          [scheme]="chartColor"
+          [results]="pieChartData">
+        </ngx-charts-pie-grid>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code6"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->
+<!-- BEGIN row -->
+<div class="row">
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Heat Map">
+      <div class="h-250px">
+        <ngx-charts-heat-map
+          [scheme]="chartColor"
+          [results]="heatMapChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [xAxisLabel]="'Census Date'"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'GDP Per Capita'">
+        </ngx-charts-heat-map>
+			</div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code7"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+	<!-- BEGIN col-6 -->
+	<div class="col-xl-6">
+		<!-- BEGIN panel -->
+		<panel title="Polar Chart">
+      <div class="h-250px">
+        <ngx-charts-polar-chart
+          [animations]="false"
+          [scheme]="chartColor"
+          [results]="chartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [xAxisLabel]="'Census Date'"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'GDP Per Capita'"
+          [roundDomains]="true"
+          [autoScale]="true">
+        </ngx-charts-polar-chart>
+      </div>
+      <ng-container outsideBody>
+				<!-- BEGIN hljs-wrapper -->
+				<div class="hljs-wrapper">
+					<pre><code class="xml" [highlight]="code8"></code></pre>
+				</div>
+				<!-- END hljs-wrapper -->
+			</ng-container>
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-6 -->
+</div>
+<!-- END row -->

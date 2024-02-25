@@ -1,0 +1,16 @@
+.post-title {
+	margin: 0 0 rem(5px);
+	font-size: $font-size-lg * 1.5;
+	line-height: $line-height-base;
+	font-weight: $font-weight-bold;
+	color: var(--#{$prefix}component-color);
+	
+	& a {
+		color: var(--#{$prefix}component-color);
+	}
+	
+	@include media-breakpoint-down(md) {
+		font-size: $font-size-base * 1.5;
+		line-height: $line-height-sm;
+	}
+}

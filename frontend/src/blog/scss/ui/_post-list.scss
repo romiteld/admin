@@ -1,0 +1,34 @@
+.post-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	@include clearfix();
+	
+	& > li {
+		padding: 0;
+		
+		& + li {
+			margin-top: rem(60px);
+		
+			@include media-breakpoint-down(md) {
+				margin-top: rem(45px);
+			}
+		}
+	}
+	& blockquote {
+		border: none;
+		background: var(--#{$prefix}light);
+		font-size: $font-size-lg * 1.125;
+		line-height: $line-height-lg;
+		padding: rem(30px);
+		color: var(--#{$prefix}component-color);
+		margin-bottom: rem(30px);
+		
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(25px);
+			padding: rem(20px);
+			line-height: $line-height-base;
+		}
+	}
+}

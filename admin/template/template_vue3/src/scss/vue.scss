@@ -1,0 +1,651 @@
+@import 'default/styles';
+
+/* v-calendar */
+body {
+	.vc-container {
+		font-size: $font-size-base;
+	
+		& .vc-header {
+			& .vc-title {
+				font-size: $font-size-base * 1.25;
+				color: var(--#{$prefix}component-color);
+				background: none;
+			}
+			& .vc-arrow {
+				background: none;
+			}
+		}
+		& .vc-weeks {
+			& .vc-weekday {
+				color: rgba(var(--#{$prefix}component-color-rgb), .35);
+			}
+		}
+		& .vc-day {
+			& .vc-day-content {
+				color: var(--#{$prefix}component-color);
+				font-size: $font-size-base;
+			}
+			&.is-not-in-month {
+				display: none;
+			}
+			&.is-today {
+				& .vc-day-content {
+					background: var(--#{$prefix}component-active-bg) !important;
+					color: var(--#{$prefix}component-active-color) !important;
+				}
+			}
+		}
+		& .vc-highlights {
+			& .vc-highlight {
+				background: var(--#{$prefix}component-hover-bg) !important;
+				color: var(--#{$prefix}component-hover-color) !important;
+			}
+			& + .vc-day-content {
+				color: var(--#{$prefix}component-hover-color) !important;
+			}
+		}
+		& .vc-popover-content {
+			font-size: $font-size-base;
+		}
+}
+}
+
+/* vue3-progress */
+body {
+	& .vue3-progress-bar-container .vue3-progress-bar {
+		height: rem(3px);
+		background: var(--app-theme);
+	}
+}
+
+/* datepicker */
+body {
+	& .dp__menu,
+	& .dp__calendar_wrap,
+	& .dp__main {
+		font-family: $font-family-base;
+		font-size: $font-size-base;
+	}
+	& .dp__theme_light {
+		--dp-background-color: #{$dropdown-bg};
+		--dp-text-color: var(--#{$prefix}component-color);
+		--dp-hover-color: var(--#{$prefix}component-dropdown-hover-bg);
+		--dp-hover-text-color: var(--#{$prefix}component-color);
+		--dp-hover-icon-color: #{rgba(var(--#{$prefix}component-color-rgb), .5)};
+		--dp-primary-color: var(--#{$prefix}app-theme);
+		--dp-primary-text-color: var(--#{$prefix}app-theme-color);
+		--dp-secondary-color: var(--#{$prefix}-gray-500);
+		--dp-border-color: #{$dropdown-border-color};
+		--dp-menu-border-color: var(--#{$prefix}component-border-color);
+		--dp-border-color-hover: #{$input-border-color};
+		--dp-disabled-color: var(--#{$prefix}-gray-500);
+		--dp-scroll-bar-background: #{rgba(var(--#{$prefix}component-color-rgb), .25)};
+		--dp-scroll-bar-color: var(--#{$prefix}-gray-500);
+		--dp-success-color: #{$success};
+		--dp-success-color-disabled: var(--#{$prefix}component-color);
+		--dp-icon-color: #{rgba(var(--#{$prefix}component-color-rgb), .5)};
+		--dp-danger-color: #{$danger};
+	}
+	& .dp__cell_inner,
+	& .dp__calendar_header_item {
+		padding: $spacer * .25;
+		width: rem(40px);
+		height: rem(34px);
+	}
+	& .dp__month_year_row {
+		padding: $spacer * .25;
+		height: rem(40px);
+	}
+	& .dp__calendar_row {
+		padding: 0 $spacer * .25;
+	}
+	& .dp__inner_nav {
+		width: rem(34px);
+		height: rem(34px);
+	}
+	& .dp__action_buttons {
+		display: flex;
+		justify-content: end;
+	}
+	& .dp__range_end, 
+	& .dp__range_start, 
+	& .dp__active_date {
+		background: var(--#{$prefix}component-active-bg);
+		color: var(--#{$prefix}component-active-color);
+	}
+	& .dp__action {
+		display: inline-block;
+		font-family: $btn-font-family;
+		font-weight: $btn-font-weight;
+		line-height: $btn-line-height;
+		color: var(--#{$prefix}btn-color);
+		text-align: center;
+		text-decoration: if($link-decoration == none, null, none);
+		white-space: $btn-white-space;
+		vertical-align: middle;
+		cursor: if($enable-button-pointers, pointer, null);
+		user-select: none;
+		background-color: transparent;
+		border: $btn-border-width solid var(--#{$prefix}btn-border-color);
+		font-size: $font-size-sm;
+		@include transition($btn-transition);
+		
+		&.dp__cancel {
+    	@include button-outline-variant($default);
+		}
+		&.dp__select {
+    	@include button-outline-variant($theme);
+		}
+		&:hover {
+			color: var(--#{$prefix}btn-hover-color);
+			background: var(--#{$prefix}btn-hover-bg);
+		}
+		& + .dp__action {
+			@if $enable-rtl {
+				margin-right: $spacer * .5;
+			} @else {
+				margin-left: $spacer * .5;
+			}
+		}
+	}
+	& .dp__input {
+		display: block;
+		width: 100%;
+		font-family: $font-family-base;
+		font-weight: $input-font-weight;
+		line-height: $input-line-height;
+		color: $input-color;
+		background-color: $input-bg;
+		background-clip: padding-box;
+		border: $input-border-width solid var(--#{$prefix}component-border-color);
+		appearance: none;
+		
+		@include font-size($input-font-size);
+		@include border-radius($input-border-radius, 0);
+		@include box-shadow($input-box-shadow);
+		
+		&::placeholder {
+  		font-family: $input-font-family;
+  		color: $input-placeholder-color;
+		}
+		&:hover {
+			border-color: var(--#{$prefix}component-border-color);
+		}
+		&.dp__input_focus {
+			color: $input-focus-color;
+			background-color: $input-focus-bg;
+			border-color: $input-focus-border-color;
+			outline: 0;
+			@if $enable-shadows {
+				@include box-shadow($input-box-shadow, $input-focus-box-shadow);
+			} @else {
+				box-shadow: $input-focus-box-shadow;
+			}
+		}
+	}
+}
+
+/* simple-typeahead */
+body {
+	& .simple-typeahead {
+    & .simple-typeahead-input {
+    	display: block;
+			width: 100%;
+			font-family: $font-family-base;
+			font-weight: $input-font-weight;
+			line-height: $input-line-height;
+			color: $input-color;
+			background-color: $input-bg;
+			background-clip: padding-box;
+  		padding: $input-padding-y $input-padding-x;
+			border: $input-border-width solid var(--#{$prefix}component-border-color);
+			appearance: none;
+		
+			@include font-size($input-font-size);
+			@include border-radius($input-border-radius, 0);
+			@include box-shadow($input-box-shadow);
+  		@include transition($input-transition);
+		
+			&::placeholder {
+				font-family: $input-font-family;
+				color: $input-placeholder-color;
+			}
+			&:focus {
+				color: $input-focus-color;
+				background-color: $input-focus-bg;
+				border-color: $input-focus-border-color;
+				outline: 0;
+				@if $enable-shadows {
+					@include box-shadow($input-box-shadow, $input-focus-box-shadow);
+				} @else {
+					box-shadow: $input-focus-box-shadow;
+				}
+			}
+    }
+		& .simple-typeahead-list {
+			background: $dropdown-bg;
+			border: 1px solid $dropdown-border-color !important;
+			padding: $dropdown-padding-y 0;
+		
+			& .simple-typeahead-list-item {
+				background: none !important;
+				border: none !important;
+				color: $dropdown-link-color !important;
+				padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+				
+				&:hover {
+					background: $dropdown-link-hover-bg !important;
+					color: $dropdown-link-hover-color !important;
+				}
+			}
+		}
+  }
+}
+
+/* vue-tags-input */
+body {
+	& .vue-tags-input {
+		display: block;
+		width: 100%;
+		font-weight: $input-font-weight;
+		line-height: $input-line-height;
+		color: $input-color;
+		background-color: $input-bg !important;
+		background-clip: padding-box;
+		padding: $input-padding-y $input-padding-x;
+		border: $input-border-width solid var(--#{$prefix}component-border-color);
+		appearance: none;
+		max-width: 100% !important;
+	
+		@include font-size($input-font-size);
+		@include border-radius($input-border-radius, 0);
+		@include box-shadow($input-box-shadow);
+		@include transition($input-transition);
+	
+		&::placeholder {
+			font-family: $input-font-family;
+			color: $input-placeholder-color;
+		}
+		&.ti-focus {
+			color: $input-focus-color;
+			background-color: $input-focus-bg;
+			border-color: $input-focus-border-color;
+			outline: 0;
+			@if $enable-shadows {
+				@include box-shadow($input-box-shadow, $input-focus-box-shadow);
+			} @else {
+				box-shadow: $input-focus-box-shadow;
+			}
+		}
+		& .ti-input {
+			border: none;
+			padding: 0;
+			margin: 0 $input-padding-x * -.25;
+			
+			& .ti-tags {
+				& .ti-tag {
+					padding: rem(3px) rem(8px);
+					margin: rem(-2px) $input-padding-x * .25;
+					border-radius: $border-radius-sm;
+					background: var(--#{$prefix}component-active-bg);
+					font-weight: $font-weight-bold;
+					color: var(--#{$prefix}component-active-color);
+					font-size: $font-size-base;
+				}
+				& .ti-new-tag-input-wrapper {
+					margin: 0;
+					padding: 0 $input-padding-x * .5;
+					
+					& .ti-new-tag-input {
+						background: $input-bg;
+						line-height: $input-line-height;
+						color: $input-color;
+						font-size: $input-font-size;
+						
+						&::placeholder {
+							font-family: $input-font-family;
+							color: $input-placeholder-color;
+						}
+					}
+				}
+			}
+		}
+		& .ti-autocomplete {
+			background: $dropdown-bg;
+			border: 1px solid $dropdown-border-color !important;
+			padding: $dropdown-padding-y 0;
+			
+			& .ti-item {
+				& > div {
+					padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+				}
+				&.ti-selected-item {
+					background: var(--#{$prefix}component-dropdown-hover-bg);
+					color: var(--#{$prefix}component-dropdown-hover-color);
+				}
+			}
+		}
+	}
+	& .mailbox {
+		& .vue-tags-input {
+			border-color: transparent !important;
+			box-shadow: none !important;
+		}
+	}
+}
+
+/* quill-editor */
+body {
+	& .ql-toolbar,
+	& .ql-container {
+		border-color: var(--#{$prefix}component-border-color) !important;
+	}
+	& .border-0 .ql-toolbar {
+		border-top: none !important;
+		border-left: none !important;
+		border-right: none !important;
+	}
+	& .border-0 .ql-container {
+		border: none !important;
+	}
+}
+
+/* vue-select */
+body {
+	& .v-select {
+		--vs-controls-color: #{ $input-color };
+		--vs-actions-padding: 0;
+		--vs-controls-size: 0.75;
+		--vs-dropdown-bg: #{ $dropdown-bg };
+		--vs-selected-color: #{ $input-color };
+		--vs-selected-border-width: 0;
+		--vs-line-height: #{ $input-line-height };
+		--vs-dropdown-option--active-bg: var(--#{$prefix}app-theme);
+		--vs-dropdown-option--active-color: #{ rgba($black, .75) };
+		
+		& .vs__dropdown-toggle {
+			display: flex;
+			width: 100%;
+			padding: $form-select-padding-y $form-select-padding-x;
+			// stylelint-disable-next-line property-no-vendor-prefix
+			-moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
+			border: $form-select-border-width solid var(--#{$prefix}component-border-color);
+			@include border-radius($form-select-border-radius, 0);
+			@include box-shadow($form-select-box-shadow);
+			@include transition($form-select-transition);
+			appearance: none;
+
+			&:focus {
+				border-color: $form-select-focus-border-color;
+				outline: 0;
+				@if $enable-shadows {
+					@include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+				} @else {
+					// Avoid using mixin so we can pass custom focus shadow properly
+					box-shadow: $form-select-focus-box-shadow;
+				}
+			}
+			& .vs__selected-options {
+				padding: 0;
+			}
+			& .vs__search, 
+			& .vs__search:focus {
+				margin: 0;
+				border: none;
+				font-family: $form-select-font-family;
+				@include font-size($form-select-font-size);
+				font-weight: $form-select-font-weight;
+				line-height: $form-select-line-height;
+				color: var(--#{$prefix}component-color);
+			}
+		}
+		& .vs__dropdown-menu {
+			padding: $dropdown-padding-y $dropdown-padding-x;
+			border: 1px solid $dropdown-border-color;
+			box-shadow: $dropdown-box-shadow;
+		}
+		& .vs__selected-options {
+			& .vs__selected {
+				margin: 0;
+				
+				@if $enable-rtl {
+					margin-left: $spacer * .5;
+				} @else {
+					margin-right: $spacer * .5;
+				}
+			}
+		}
+		& .vs__search {
+			padding: 0;
+		}
+		& .vs__clear {
+			margin-top: rem(-4px);
+		}
+		& .vs__dropdown-option {
+			padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+			
+			&:hover,
+			&:focus {
+				background: var(--#{$prefix}component-dropdown-hover-bg);
+				color: var(--#{$prefix}component-dropdown-hover-color);
+			}
+		}
+		& .vs__dropdown-option--highlight {
+			background: var(--#{$prefix}component-dropdown-hover-bg);
+			color: var(--#{$prefix}component-dropdown-hover-color);
+		}
+		
+		&.vs--multiple {
+			& .vs__selected-options {
+				& .vs__selected {
+					--vs-controls-color: #{ rgba($black, .75) };
+					
+					background: var(--#{$prefix}component-active-bg);
+					color: var(--#{$prefix}component-active-color);
+					font-size: $font-size-base;
+					font-weight: 500;
+					padding: rem(1px) $spacer * .5;
+					margin-top: rem(-1px);
+					margin-bottom: rem(-1px);
+					border-radius: $border-radius-sm;
+					
+					& .vs__deselect {
+						transform: scale(0.8);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* vue-colorpicker */
+body {
+	& .hu-color-picker {
+		padding: 0;
+		background: none;
+		box-shadow: none;
+		
+		& .color-type {
+			& .name {
+				color: $white;
+				background: var(--#{$prefix}-gray-600);
+			}
+			& .value {
+				background: var(--#{$prefix}-gray-900);
+				
+				@include transition($input-transition);
+				
+				&:focus {
+					border-color: $input-focus-border-color;
+					outline: 0;
+					
+					@if $enable-shadows {
+						@include box-shadow($input-box-shadow, $input-focus-box-shadow);
+					} @else {
+						box-shadow: $input-focus-box-shadow;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* vue3-table-lite */
+body {
+	& .vtl.vue-table.vtl-card {
+		padding: 0;
+		background: none;
+		
+		&:before,
+		&:after {
+			display: none;
+		}
+		& .card-title {
+			display: none;
+		}
+		& .vtl-card-body {
+			padding: 0;
+			
+			&:before,
+			&:after {
+				display: none;
+			}
+			& .dataTables_wrapper {
+				padding: 0 $spacer * .5;
+			}
+		}
+		& .vtl-table {
+			color: var(--#{$prefix}component-color);
+			
+			& .vtl-thead {
+				& th {
+					background: none;
+					color: var(--#{$prefix}component-color);
+				}
+			}
+			& td,
+			& th {
+				border-color: var(--#{$prefix}component-border-color);
+				padding: $table-cell-padding-y $table-cell-padding-x;
+			}
+			& .vtl-tbody-tr {
+				&:hover {
+					color: currentColor;
+					background-color: $table-hover-bg;
+				}
+			}
+		}
+		& .vtl-paging-count-dropdown,
+		& .vtl-paging-page-dropdown {
+			padding: $form-select-padding-y-sm $form-select-indicator-padding $form-select-padding-y-sm $form-select-padding-x-sm;
+			-moz-padding-start: subtract($form-select-padding-x, 3px);
+			font-family: $form-select-font-family;
+			font-weight: $form-select-font-weight;
+			line-height: $form-select-line-height;
+			color: $form-select-color;
+			background-color: $form-select-bg;
+			background-image: escape-svg($form-select-indicator);
+			background-repeat: no-repeat;
+			background-position: $form-select-bg-position;
+			background-size: $form-select-bg-size;
+			border: $form-select-border-width solid $form-select-border-color;
+			appearance: none;
+			margin: 0 $spacer;
+			
+			@include font-size($form-select-font-size-sm);
+			@include border-radius($form-select-border-radius, 0);
+			@include box-shadow($form-select-box-shadow);
+			@include transition($form-select-transition);
+
+			&:focus {
+				border-color: $form-select-focus-border-color;
+				outline: 0;
+				@if $enable-shadows {
+					@include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+				} @else {
+					box-shadow: $form-select-focus-box-shadow;
+				}
+			}
+			
+			&:disabled {
+				color: $form-select-disabled-color;
+				background-color: $form-select-disabled-bg;
+				border-color: $form-select-disabled-border-color;
+			}
+			&:-moz-focusring {
+				color: transparent;
+				text-shadow: 0 0 0 $form-select-color;
+			}
+		}
+		& .vtl-paging {
+			& .vtl-paging-info {
+				flex: 0 0 100%;
+				max-width: 100%;
+				text-align: center;
+			}
+			& .vtl-paging-change-div,
+			& .vtl-paging-pagination-div {
+				flex: 0 0 100%;
+				max-width: 100%;
+				text-align: center;
+			}
+			& .vtl-paging-change-div {
+				margin: $spacer 0;
+			}
+			& .dataTables_paginate {
+				text-align: center;
+				
+				& .vtl-paging-pagination-ul {
+					justify-content: center;
+					
+					& .page-link {
+						position: relative;
+						display: block;
+						color: $pagination-color;
+						text-decoration: if($link-decoration == none, null, none);
+						background-color: $pagination-bg;
+						border: $pagination-border-width solid $pagination-border-color;
+						border-radius: $border-radius;
+						@include transition($pagination-transition);
+
+						&:hover {
+							z-index: 2;
+							color: $pagination-hover-color;
+							text-decoration: if($link-hover-decoration == underline, none, null);
+							background-color: $pagination-hover-bg;
+							border-color: $pagination-hover-border-color;
+						}
+
+						&:focus {
+							z-index: 3;
+							color: $pagination-focus-color;
+							background-color: $pagination-focus-bg;
+							outline: $pagination-focus-outline;
+							box-shadow: $pagination-focus-box-shadow;
+						}
+					}
+					& .page-item {
+						&:not(:first-child) .page-link {
+							margin-left: $pagination-margin-start;
+						}
+
+						&.active .page-link,
+						&.vtl-paging-pagination-page-li-number.disabled .page-link {
+							z-index: 3;
+							color: $pagination-active-color;
+							@include gradient-bg($pagination-active-bg);
+							border-color: $pagination-active-border-color;
+						}
+						&.disabled .page-link {
+							color: $pagination-disabled-color;
+							pointer-events: none;
+							background-color: $pagination-disabled-bg;
+							border-color: $pagination-disabled-border-color;
+						}
+					}
+
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+.testimonials {
+	padding-bottom: rem(30px);
+	
+	@include media-breakpoint-down(lg) {
+		padding-bottom: rem(30px);
+	}
+	
+	& .item {
+		padding-top: rem(15px);
+	}
+	& .carousel-indicators {
+		bottom: 0;
+		
+		& li {
+			background: rgba($white, .4);
+			border: none;
+			width: rem(12px);
+			height: rem(12px);
+			margin: rem(1px) rem(3px);
+			border-radius: $border-radius-lg * 2;
+			transition: all .2s linear;
+			
+			&:hover,
+			&:focus {
+				background: rgba($white, .7);
+			}
+			&.active {
+				background: $white;
+			}
+		}
+	}
+	& blockquote {
+		border: none;
+		text-align: center;
+		color: $white;
+		position: relative;
+		font-weight: 300;
+		margin-bottom: rem(15px);
+		padding: rem(15px);
+		font-size: rem(20px);
+		
+		@include media-breakpoint-down(lg) {
+			padding: rem(15px) rem(45px);
+		}
+		
+		& .fa-quote-left,
+		& .fa-quote-right {
+			font-size: rem(32px);
+			position: absolute;
+			margin-top: 15px;
+			color: #8F8E8E;
+			
+			@if $enable-rtl {
+				margin-right: 15px;
+			} @else {
+				margin-left: 15px;
+			}
+			@include media-breakpoint-down(lg) {
+				font-size: rem(24px);
+			}
+		}
+		& .fa-quote-left {
+			margin-top: -15px;
+			
+			@if $enable-rtl {
+				margin-right: -43px;
+			} @else {
+				margin-left: -43px;
+			}
+
+		}
+	}
+	& .name {
+		color: $white;
+		margin-bottom: rem(15px);
+		
+		& span {
+			@if $enable-rtl {
+				margin-right: 5px;
+			} @else {
+				margin-left: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,117 @@
+.about-author {
+	position: relative;
+	
+	@include media-breakpoint-down(lg) {
+		margin-bottom: rem(30px);
+	}
+	
+	& .quote {
+		position: relative;
+		padding: rem(30px) rem(60px);
+		margin-bottom: rem(15px);
+		background: var(--#{$prefix}light);
+		border-radius: $border-radius-lg * 2;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: rem(-20px);
+			border: 10px solid transparent;
+			border-top-color: var(--#{$prefix}light);
+			
+			@if $enable-rtl {
+				right: rem(95px);
+				border-right-color: var(--#{$prefix}light);
+			} @else {
+				left: rem(95px);
+				border-left-color: var(--#{$prefix}light);
+			}
+		}
+		& h3 {
+			margin: 0;
+			font-weight: 300;
+			font-style: italic;
+			line-height: $line-height-base;
+			color: var(--#{$prefix}component-color);
+		}
+		& .fa {
+			&.fa-quote-left,
+			&.fa-quote-right {
+				font-size: $font-size-base * 2;
+				position: absolute;
+				top: rem(30px);
+				margin-top: -$font-size-base;
+				line-height: 1;
+				color: rgba(var(--#{$prefix}component-color-rgb), .25);
+				
+				@if $enable-rtl {
+					right: rem(30px);
+				} @else {
+					left: rem(30px);
+				}
+			}
+			&.fa-quote-right {
+				bottom: rem(30px);
+				top: auto;
+				margin-top: 0;
+				margin-bottom: -$font-size-base;
+				
+				@if $enable-rtl {
+					left: rem(30px);
+					right: auto;
+				} @else {
+					left: auto;
+					right: rem(30px);
+				}
+			}
+		}
+	}
+	& .author {
+		position: relative;
+		margin-bottom: rem(15px);
+		
+		@if $enable-rtl {
+			text-align: left;
+			padding-right: rem(100px);
+		} @else {
+			text-align: right;
+			padding-left: rem(100px);
+		}
+		
+		& .image {
+			position: absolute;
+			top: rem(-40px);
+			background: var(--#{$prefix}body-bg);
+			border: 5px solid var(--#{$prefix}body-bg);
+			width: rem(100px);
+			overflow: hidden;
+			border-radius: 50%;
+			
+			@if $enable-rtl {
+				right: rem(-10px);
+			} @else {
+				left: rem(-10px);
+			}
+			@include media-breakpoint-down(lg) {
+				width: rem(80px);
+			}
+			
+			& img {
+				max-width: 100%;
+			}
+		}
+		& .info {
+			color: var(--#{$prefix}component-color);
+			font-weight: $font-weight-bold;
+			font-size: $font-size-lg;
+			
+			& small,
+			& a {
+				display: block;
+				font-size: $font-size-sm;
+				font-weight: normal;
+				color: rgba(var(--#{$prefix}component-color-rgb), .5);
+			}
+		}
+	}
+}

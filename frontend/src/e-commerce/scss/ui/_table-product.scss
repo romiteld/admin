@@ -1,0 +1,39 @@
+.table.table-product {
+	line-height: $line-height-lg;
+	
+	& .field {
+		width: 30%;
+		font-size: $font-size-lg;
+		font-weight: $font-weight-bold;
+		
+		@include media-breakpoint-down(lg) {
+			font-size: $font-size-base;
+		}
+	}
+	& th,
+	& td {
+		padding: rem(20px) rem(25px) rem(20px) 0;
+		
+		@include media-breakpoint-down(lg) {
+			padding: rem(15px) rem(15px) rem(15px) 0;
+		}
+	}
+	& th {
+		font-size: rem(18px);
+		border: none;
+		
+		@include media-breakpoint-down(lg) {
+			font-size: rem(16px);
+		}
+	}
+	&.table-striped {
+		& th,
+		& td {
+			padding: rem(20px) rem(25px);
+			
+			@include media-breakpoint-down(lg) {
+				padding: rem(10px) rem(15px);
+			}
+		}
+	}
+}

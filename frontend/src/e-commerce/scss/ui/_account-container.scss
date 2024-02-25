@@ -1,0 +1,115 @@
+.account-container {
+	background: var(--#{$prefix}component-bg);
+	position: relative;
+	border-radius: $border-radius-lg;
+	display: flex;
+	
+	@include media-breakpoint-down(md) {
+		display :block;
+	}
+	
+	& .account-sidebar {
+		width: rem(300px);
+		padding: rem(30px) rem(30px);
+		position: relative;
+		overflow: hidden;
+		
+		@if $enable-rtl {
+			border-radius: 0 $border-radius-lg $border-radius-lg 0;
+		} @else {
+			border-radius: $border-radius-lg 0 0 $border-radius-lg;
+		}
+		
+		@include media-breakpoint-down(lg) {
+			width: rem(240px);
+		}
+		@include media-breakpoint-down(md) {
+			width: auto;
+			position: relative;
+			padding: rem(15px);
+			border-radius: $border-radius-lg $border-radius-lg 0 0;
+		}
+		
+		& .account-sidebar-cover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			
+			@include media-breakpoint-down(md) {
+				display: flex;
+				align-items: center;
+			}
+			
+			& img {
+				max-height: 100%;
+				
+				@include media-breakpoint-down(md) {
+					max-width: 100%;
+					max-height: inherit;
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: rgba($dark, 0.9);
+			}
+		}
+		& .account-sidebar-content {
+			position: relative;
+			color: $white;
+			
+			& h4 {
+				font-size: rem(20px);
+				font-weight: $font-weight-bold;
+				margin: 0 0 rem(15px);
+			}
+			& p {
+				color: rgba($white, .75);
+			}
+		}
+	}
+	& .account-body {
+		padding: rem(30px) rem(30px);
+		
+		@include media-breakpoint-down(md) {
+			padding: rem(15px);
+		}
+		
+		& h4 {
+			font-weight: $font-weight-bold;
+			font-size: rem(20px);
+			margin: 0 0 rem(15px);
+		}
+		& .nav.nav-list {
+			margin-bottom: rem(30px);
+			display: block;
+			padding: 0;
+			
+			& > li {
+				& > a {
+					padding: 0;
+					color: var(--#{$prefix}component-color);
+					
+					&:hover,
+					&:focus {
+						background: none;
+						color: var(--#{$prefix}component-color);
+						text-decoration: none;
+					}
+				}
+				& + li {
+					margin-top: rem(5px);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.about-us {
+	padding: rem(30px) 0;
+	
+	& h1 {
+		font-size: rem(64px);
+		margin: rem(30px) 0;
+		
+		@include media-breakpoint-down(md) {
+			font-size: rem(48px);
+			margin: 0 0 rem(15px) 0;
+		}
+  }
+  & p {
+		font-size: rem(24px);
+		margin: 0 0 rem(30px);
+		color: rgba($white, .65);
+		line-height: $line-height-lg;
+		
+		@include media-breakpoint-down(md) {
+			font-size: rem(18px);
+			margin: 0;
+			line-height: $line-height-base;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+<panel>
+  <panel-header>
+    <panel-title>Panel Header with Dropdown</panel-title>
+    <div class="btn-group my-n1">
+      <button type="button" class="btn btn-success btn-xs">Action</button>
+      <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-bs-toggle="dropdown"><b class="caret"></b></button>
+      <div class="dropdown-menu dropdown-menu-end">
+        <a href="javascript:;" class="dropdown-item">Action</a>
+        <a href="javascript:;" class="dropdown-item">Another action</a>
+        <a href="javascript:;" class="dropdown-item">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a href="javascript:;" class="dropdown-item">Separated link</a>
+      </div>
+    </div>
+  </panel-header>
+</panel>

@@ -1,0 +1,210 @@
+.slider .carousel,
+.carousel .carousel-inner,
+.carousel .carousel-inner .item,
+.carousel .carousel-inner .carousel-item {
+	min-height: rem(450px);
+	
+	@include media-breakpoint-down(sm) {
+		min-height: rem(300px);
+	}
+}
+
+.carousel {
+	& .container {
+		position: relative;
+	}
+	& .carousel-control-prev,
+	& .carousel-control-next {
+		background: rgba($black, .6) !important;
+		width: rem(40px);
+		height: rem(60px);
+		top: 50%;
+		margin-top: rem(-30px);
+		z-index: 10;
+		
+		& i {
+			display: block;
+			margin: 0;
+			text-align: center;
+			line-height: rem(60px);
+			height: rem(60px);
+			font-size: rem(32px);
+		}
+	}
+	& .carousel-caption {
+		text-shadow: none;
+		right: 0;
+		left: 0;
+		bottom: auto;
+		top: rem(60px);
+		bottom: rem(60px);
+		font-weight: 300;
+		
+		@include media-breakpoint-down(sm) {
+			padding-top: rem(40px);
+			padding-bottom: rem(40px);
+			text-align: center;
+			top: 0;
+			bottom: 0;
+			background: rgba($black, .35);
+		}
+		
+		& .container {
+			padding: 0 rem(60px);
+			
+			@include media-breakpoint-down(sm) {
+				padding: 0;
+			}
+		}
+		& .title {
+			font-size: rem(64px);
+			margin: 0;
+			
+			@include media-breakpoint-down(sm) {
+				font-size: rem(48px);
+			}
+		}
+		& .price {
+			font-size: rem(36px);
+			margin: 0;
+			font-weight: 600;
+			
+			@include media-breakpoint-down(sm) {
+				font-size: rem(28px);
+				margin-bottom: 0 !important;
+			}
+			
+			& small {
+				font-size: rem(24px);
+				
+				@include media-breakpoint-down(sm) {
+					font-size: rem(18px);
+				}
+			}
+			& span {
+				background: rgba($black, .5);
+				color: $white;
+				padding-left: rem(10px);
+				padding-right: rem(10px);
+			}
+		}
+		& .btn {
+			border: 2px solid $white;
+			color: $white;
+			font-weight: 600;
+			padding: rem(10px) rem(30px);
+			margin-top: rem(30px);
+			border-radius: $border-radius-lg;
+			
+			@include media-breakpoint-down(sm) {
+				margin-top: rem(15px);
+			}
+			
+			&:hover,
+			&:focus {
+				background: $white;
+				color: $dark;
+			}
+		}
+		& p {
+			margin-bottom: 0;
+			font-size: rem(26px);
+			
+			@include media-breakpoint-down(sm) {
+				font-size: rem(18px);
+			}
+		}
+		&.text-inverse {
+			& .btn {
+				border-color: $dark;
+				color: $dark;
+				
+				&:hover,
+				&:focus {
+					background: $dark;
+					color: $white;
+				}
+			}
+		}
+		&.carousel-caption-right {
+			@if $enable-rtl {
+				text-align: left;
+			} @else {
+				text-align: right;
+			}
+			
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+				top: 0;
+				bottom: 0;
+				background: rgba($black, .35);
+			}
+		}
+		&.carousel-caption-left {
+			@if $enable-rtl {
+				text-align: right;
+			} @else {
+				text-align: left;
+			}
+			
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+				top: 0;
+				bottom: 0;
+				background: rgba($black, .35);
+			}
+		}
+	}
+	& .carousel-item-cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	& .carousel-indicators li {
+		border-width: 2px;
+	}
+	& .product-img {
+		position: absolute;
+		top: rem(40px);
+		max-height: rem(370px);
+		
+		&.left {
+			@if $enable-rtl {
+				right: rem(60px);
+			} @else {
+				left: rem(60px);
+			}
+			
+			@include media-breakpoint-down(sm) {
+				left: 10%;
+				right: 10%;
+				max-width: 80%;
+			}
+		}
+		&.right {
+			@if $enable-rtl {
+				left: rem(60px);
+			} @else {
+				right: rem(60px);
+			}
+			
+			@include media-breakpoint-down(sm) {
+				left: 10%;
+				right: 10%;
+				max-width: 80%;
+			}
+		}
+		&.bottom {
+			bottom: 0;
+		}
+	}
+	& .bg-cover-img {
+		max-width: 100%;
+		position: absolute;
+		min-height: 100%;
+	}
+}

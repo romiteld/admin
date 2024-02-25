@@ -1,0 +1,93 @@
+@@include('./partial/head.html', {
+	"title": "Login v2", 
+	"bodyAttr": "class='pace-top'",
+	"css": [
+	]}
+)
+	
+	<!-- BEGIN #app -->
+	<div id="app" class="app">
+		<!-- BEGIN login -->
+		<div class="login login-v2 fw-bold">
+			<!-- BEGIN login-cover -->
+			<div class="login-cover">
+				<div class="login-cover-img" style="background-image: url(../assets/img/login-bg/login-bg-17.jpg)" data-id="login-cover-image"></div>
+				<div class="login-cover-bg"></div>
+			</div>
+			<!-- END login-cover -->
+			
+			<!-- BEGIN login-container -->
+			<div class="login-container">
+				<!-- BEGIN login-header -->
+				<div class="login-header">
+					<div class="brand">
+						<div@@if(context.theme != 'google'){ class="d-flex align-items-center"}>
+							@@if(context.theme != 'facebook' && context.theme != 'google') {<span class="logo">@@if(context.theme == 'apple') {<ion-icon name="cloud"></ion-icon>}</span>}@@if(context.theme == 'facebook') {<i class="fab fa-facebook-square fa-lg me-3"></i>}@@if(context.theme == 'google'){<span class="logo">
+								<span class="text-blue">G</span>
+								<span class="text-red">o</span>
+								<span class="text-orange">o</span>
+								<span class="text-blue">g</span>
+								<span class="text-green">l</span>
+								<span class="text-red">e</span>
+							</span>} <b>Color</b> Admin
+						</div>
+						<small>Bootstrap 5 Responsive Admin Template</small>
+					</div>
+					<div class="icon">
+						<i class="fa fa-lock"></i>
+					</div>
+				</div>
+				<!-- END login-header -->
+				
+				<!-- BEGIN login-content -->
+				<div class="login-content">
+					<form action="index.html" method="GET">
+						<div class="form-floating mb-20px">
+							<input type="text" class="form-control fs-13px h-45px border-0" placeholder="Email Address" id="emailAddress" />
+							<label for="emailAddress" class="d-flex align-items-center @@if(context.theme != 'transparent'){text-gray-600}@@if(context.theme == 'transparent'){text-gray-300} fs-13px">Email Address</label>
+						</div>
+						<div class="form-floating mb-20px">
+							<input type="password" class="form-control fs-13px h-45px border-0" placeholder="Password" />
+							<label for="emailAddress" class="d-flex align-items-center @@if(context.theme != 'transparent'){text-gray-600}@@if(context.theme == 'transparent'){text-gray-300} fs-13px">Password</label>
+						</div>
+						<div class="form-check mb-20px">
+							<input class="form-check-input border-0" type="checkbox" value="1" id="rememberMe" />
+							<label class="form-check-label fs-13px @@if(context.theme != 'material'){text-gray-500}@@if(context.theme == 'material'){text-gray-300}" for="rememberMe">
+								Remember Me
+							</label>
+						</div>
+						<div class="mb-20px">
+							<button type="submit" class="btn btn-theme d-block w-100 h-45px btn-lg">Sign me in</button>
+						</div>
+						<div class="@@if(context.theme != 'material'){text-gray-500}@@if(context.theme == 'material'){text-gray-300}">
+							Not a member yet? Click <a href="javascript:;" class="text-white">here</a> to register.
+						</div>
+					</form>
+				</div>
+				<!-- END login-content -->
+			</div>
+			<!-- END login-container -->
+		</div>
+		<!-- END login -->
+		
+		<!-- BEGIN login-bg -->
+		<div class="login-bg-list clearfix">
+			<div class="login-bg-list-item active"><a href="javascript:;" class="login-bg-list-link" data-toggle="login-change-bg" data-img="../assets/img/login-bg/login-bg-17.jpg" style="background-image: url(../assets/img/login-bg/login-bg-17.jpg)"></a></div>
+			<div class="login-bg-list-item"><a href="javascript:;" class="login-bg-list-link" data-toggle="login-change-bg" data-img="../assets/img/login-bg/login-bg-16.jpg" style="background-image: url(../assets/img/login-bg/login-bg-16.jpg)"></a></div>
+			<div class="login-bg-list-item"><a href="javascript:;" class="login-bg-list-link" data-toggle="login-change-bg" data-img="../assets/img/login-bg/login-bg-15.jpg" style="background-image: url(../assets/img/login-bg/login-bg-15.jpg)"></a></div>
+			<div class="login-bg-list-item"><a href="javascript:;" class="login-bg-list-link" data-toggle="login-change-bg" data-img="../assets/img/login-bg/login-bg-14.jpg" style="background-image: url(../assets/img/login-bg/login-bg-14.jpg)"></a></div>
+			<div class="login-bg-list-item"><a href="javascript:;" class="login-bg-list-link" data-toggle="login-change-bg" data-img="../assets/img/login-bg/login-bg-13.jpg" style="background-image: url(../assets/img/login-bg/login-bg-13.jpg)"></a></div>
+			<div class="login-bg-list-item"><a href="javascript:;" class="login-bg-list-link" data-toggle="login-change-bg" data-img="../assets/img/login-bg/login-bg-12.jpg" style="background-image: url(../assets/img/login-bg/login-bg-12.jpg)"></a></div>
+		</div>
+		<!-- END login-bg -->
+		
+		@@include('./partial/theme-panel.html')
+		@@include('./partial/scroll-top-btn.html')
+	</div>
+	<!-- END #app -->
+	
+@@include('./partial/script.html', {
+	"script": [
+		"../assets/js/demo/login-v2.demo.js"
+	]}
+)

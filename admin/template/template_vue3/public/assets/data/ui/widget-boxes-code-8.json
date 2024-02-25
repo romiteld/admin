@@ -1,0 +1,7 @@
+<panel>
+  <panel-body>
+    <perfect-scrollbar class="h-300px">
+      ...
+    </perfect-scrollbar>
+  </panel-body>
+</panel>

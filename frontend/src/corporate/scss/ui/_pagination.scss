@@ -1,0 +1,10 @@
+.pagination {
+	& .page-item {
+		& + .page-item {
+			margin-left: $spacer * 0.6;
+		}
+		& .page-link {
+			border-radius: 40px;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+<!-- BEGIN breadcrumb -->
+<ol class="breadcrumb float-xl-end">
+	<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+	<li class="breadcrumb-item"><a href="javascript:;">Gallery</a></li>
+	<li class="breadcrumb-item active">Gallery v2</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Gallery v2 <small>header small text goes here...</small></h1>
+<!-- END page-header -->
+
+<div class="row gx-1">
+  <div class="col-lg-2 col-md-4 col-6" *ngFor='let in of counter(69); let i = index'>
+  	<a href="/assets/img/gallery/gallery-{{(i + 1)}}.jpg" data-lity class="ratio ratio-4x3 mb-1 d-block">
+  		<div class="bg-size-cover bg-position-center" style="background-image: url(/assets/img/gallery/gallery-{{(i + 1)}}-thumb.jpg);"></div>
+  	</a>
+  </div>
+</div>

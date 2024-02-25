@@ -1,0 +1,101 @@
+<ul class="breadcrumb">
+	<li class="breadcrumb-item"><a href="#">Chart</a></li>
+	<li class="breadcrumb-item active">Chart JS</li>
+</ul>
+
+<h1 class="page-header">
+	Chart JS <small>page header description goes here...</small>
+</h1>
+
+<div class="row">
+	<div class="col-xl-6">
+		<!-- BEGIN #chartJsLineChart -->
+		<div id="chartJsLineChart" class="mb-5">
+			<panel title="Line Chart">
+				<canvas baseChart [type]="'line'" [data]="lineChartData" [options]="lineChartOptions" [legend]="lineChartLegend"></canvas>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code1"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #chartJsLineChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #chartJsBarChart -->
+		<div id="chartJsBarChart" class="mb-5">
+			<panel title="Bar Chart">
+				<canvas baseChart [type]="'bar'" [data]="barChartData" [options]="barChartOptions" [legend]="barChartLegend"></canvas>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code2"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #chartJsBarChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #chartJsRadarChart -->
+		<div id="chartJsRadarChart" class="mb-5">
+			<panel title="Radar Chart">
+				<canvas baseChart [type]="'radar'" [data]="radarChartData" [options]="radarChartOptions" [legend]="radarChartLegend"></canvas>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code3"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #chartJsRadarChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #chartJsPolarAreaChart -->
+		<div id="chartJsPolarAreaChart" class="mb-5">
+			<panel title="Polar Area Chart">
+				<div class="h-300px w-300px mx-auto">
+					<canvas baseChart [type]="'polarArea'" [data]="polarAreaChartData" [options]="polarAreaChartOptions" [legend]="polarAreaChartLegend"></canvas>
+				</div>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code4"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #chartJsPolarAreaChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #chartJsPieChart -->
+		<div id="chartJsPieChart" class="mb-5">
+			<panel title="Pie Chart">
+				<div class="h-300px w-300px mx-auto">
+					<canvas baseChart [type]="'pie'" [data]="pieChartData" [options]="pieChartOptions" [legend]="pieChartLegend"></canvas>
+				</div>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code5"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #chartJsPieChart -->
+	</div>
+	<div class="col-xl-6">
+		<!-- BEGIN #chartJsDoughnutChart -->
+		<div id="chartJsDoughnutChart" class="mb-5">
+			<panel title="Doughnut Chart">
+				<div class="h-300px w-300px mx-auto">
+					<canvas baseChart [type]="'doughnut'" [data]="doughnutChartData" [options]="doughnutChartOptions" [legend]="doughnutChartLegend"></canvas>
+				</div>
+				<ng-container outsideBody>
+					<div class="hljs-wrapper">
+						<pre><code class="xml" [highlight]="code6"></code></pre>
+					</div>
+				</ng-container>
+			</panel>
+		</div>
+		<!-- END #chartJsDoughnutChart -->
+	</div>
+</div>

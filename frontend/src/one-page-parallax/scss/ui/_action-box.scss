@@ -1,0 +1,36 @@
+.action-box {
+	& h3 {
+		margin-bottom: rem(5px);
+		margin-top: rem(3px);
+		
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(10px);
+			margin-top: 0;
+		}
+	}
+	& p {
+		margin-bottom: rem(0px);
+		color: rgba($white, .75);
+		
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(30px);
+		}
+	}
+	& .btn-outline-white {
+		border-color: rgba($white, .5);
+	}
+	& .icon-large {
+		font-size: rem(48px);
+		line-height: rem(50px);
+		width: rem(50px);
+		text-align: center;
+		
+		@if $enable-rtl {
+			float: right;
+			margin-left: rem(20px);
+		} @else {
+			float: left;
+			margin-right: rem(20px);
+		}
+	}
+}

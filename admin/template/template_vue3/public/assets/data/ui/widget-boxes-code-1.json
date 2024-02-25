@@ -1,0 +1,9 @@
+<panel>
+  <panel-header>
+    <panel-title>Panel (Default)</panel-title>
+    <panel-toolbar />
+  </panel-header>
+  <panel-body>
+    <p>Panel Content Here</p>
+  </panel-body>
+</panel>

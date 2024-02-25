@@ -1,0 +1,104 @@
+<!-- BEGIN #header -->
+<div id="header" class="app-header" ng-controller="headerController" ng-attr-data-bs-theme="{{setting.layout.appHeaderDark ? 'dark' : ''}}">
+	<!-- BEGIN navbar-header -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-end-mobile" ng-if="setting.layout.appSidebarTwo">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a ui-sref="app.dashboard.v1" class="navbar-brand"><span class="navbar-logo"></span> <b>Color</b> Admin</a>
+		<button type="button" class="navbar-mobile-toggler" ng-if="setting.layout.appMegaMenu" data-bs-toggle="collapse" data-bs-target="#top-navbar">
+			<span class="fa-stack fa-lg">
+				<i class="far fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x mt-1px"></i>
+			</span>
+		</button>
+		<button type="button" class="navbar-mobile-toggler" ng-if="setting.layout.appTopMenu" data-toggle="app-top-menu-mobile">
+			<span class="fa-stack fa-lg">
+				<i class="far fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x mt-1px"></i>
+			</span>
+		</button>
+		<button type="button" class="navbar-mobile-toggler" ng-if="!setting.layout.appSidebarNone" data-toggle="app-sidebar-mobile">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<!-- END navbar-header -->
+	
+	
+	<!-- BEGIN header-nav -->
+	<div class="navbar-nav">
+		<!-- BEGIN navbar-collapse -->
+		<div class="collapse navbar-collapse" id="top-navbar" ng-if="setting.layout.appHeaderMegaMenu">
+			<div ng-include src="'template/header-mega-menu.html'"></div>
+		</div>
+		<!-- end navbar-collapse -->
+		<div class="navbar-item navbar-form">
+			<form action="" method="POST" name="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter keyword" />
+					<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+				</div>
+			</form>
+		</div>
+		<div class="navbar-item dropdown">
+			<a href="#" data-bs-toggle="dropdown" class="navbar-link dropdown-toggle icon">
+				<i class="fa fa-bell"></i>
+				<span class="badge">0</span>
+			</a>
+			<div class="dropdown-menu media-list dropdown-menu-end">
+				<div class="dropdown-header">NOTIFICATIONS (0)</div>
+				<div class="text-center w-300px py-3">
+					No notification found
+				</div>
+			</div>
+		</div>
+		<div class="navbar-item dropdown" ng-if="setting.layout.appHeaderLanguageBar">
+			<a href="#" class="navbar-link dropdown-toggle" data-bs-toggle="dropdown">
+				<span class="fi fi-us" title="us"></span>
+				<span class="d-none d-sm-inline ms-1">EN</span> <b class="caret"></b>
+			</a>
+			<div class="dropdown-menu dropdown-menu-end">
+				<a href="javascript:;" class="dropdown-item"><span class="fi fi-us me-2" title="us"></span> English</a>
+				<a href="javascript:;" class="dropdown-item"><span class="fi fi-cn me-2" title="cn"></span> Chinese</a>
+				<a href="javascript:;" class="dropdown-item"><span class="fi fi-jp me-2" title="jp"></span> Japanese</a>
+				<a href="javascript:;" class="dropdown-item"><span class="fi fi-be me-2" title="be"></span> Belgium</a>
+				<div class="dropdown-divider"></div>
+				<a href="javascript:;" class="dropdown-item text-center">more options</a>
+			</div>
+		</div>
+		<div class="navbar-item navbar-user dropdown">
+			<a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+				<div class="image image-icon bg-gray-800 text-gray-600">
+					<i class="fa fa-user"></i>
+				</div>
+				<span>
+					<span class="d-none d-md-inline">Adam Schwartz</span>
+					<b class="caret"></b>
+				</span>
+			</a>
+			<div class="dropdown-menu dropdown-menu-end me-1">
+				<a href="javascript:;" class="dropdown-item">Edit Profile</a>
+				<a href="javascript:;" class="dropdown-item d-flex align-items-center">
+					Inbox
+					<span class="badge bg-danger ms-auto pb-4px rounded-pill">2</span>
+				</a>
+				<a href="javascript:;" class="dropdown-item">Calendar</a>
+				<a href="javascript:;" class="dropdown-item">Setting</a>
+				<div class="dropdown-divider"></div>
+				<a href="javascript:;" class="dropdown-item">Log Out</a>
+			</div>
+		</div>
+		<div class="navbar-divider d-none d-md-block" ng-if="setting.layout.appSidebarTwo"></div>
+		<div class="navbar-item d-none d-md-block" ng-if="setting.layout.appSidebarTwo">
+			<a href="javascript:;" data-toggle="app-sidebar-end" class="navbar-link icon">
+				<i class="fa fa-th"></i>
+			</a>
+		</div>
+	</div>
+	<!-- END header-nav -->
+</div>
+<!-- END #header -->

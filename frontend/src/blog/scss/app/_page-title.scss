@@ -1,0 +1,75 @@
+.page-title {
+	padding: rem(165px) 0 rem(100px);
+	text-align: center;
+	position: relative;
+	z-index: $app-content-zindex;
+	
+	& h1 {
+		color: $white;
+		font-weight: bold;
+		font-size: $font-size-lg * 3; 
+	}
+	& p {
+		font-size: $font-size-base * 1.5;
+		font-style: italic;
+		font-family: Times New Roman;
+		margin: 0;
+		color: rgba($white, .8);
+	}
+	& + .content {
+		margin-top: 0;
+		padding-top: rem(60px);
+	}
+  &.has-bg {
+    position: relative;
+    overflow: hidden;
+  
+    & .bg-cover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($black, .4);
+      }
+      &.bottom {
+        background-position: bottom;
+      }
+      &.top {
+        background-position: top;
+      }
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    & .container {
+      position: relative;
+    }
+  }
+	
+	@include media-breakpoint-down(md) {
+		padding: rem(125px) 0 rem(60px);
+		
+		& h1 {
+			font-size: $font-size-base * 3;
+		}
+		& p {
+			font-size: $font-size-sm * 1.5;
+		}
+		& + .content {
+			padding-top: rem(30px);
+		}
+	}
+}

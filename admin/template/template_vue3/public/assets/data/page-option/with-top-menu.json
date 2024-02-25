@@ -1,0 +1,17 @@
+<script>
+import { useAppOptionStore } from '@/stores/app-option';
+
+const appOption = useAppOptionStore();
+
+export default {
+  mounted() {
+    appOptions.appTopMenu = true;
+    appOptions.appSidebarHide = true;
+  },
+  beforeRouteLeave (to, from, next) {
+    appOptions.appTopMenu = false;
+    appOptions.appSidebarHide = false;
+    next();
+  }
+}
+</script>

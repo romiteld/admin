@@ -1,0 +1,207 @@
+.dropdown {
+	&.dropdown-full-width {
+		position: initial;
+		
+		@include media-breakpoint-down(sm) {
+			position: relative;
+		}
+		
+		& .dropdown-menu {
+			left: 0 !important;
+			right: 0 !important;
+			top: 100% !important;
+			transform: none !important;
+		}
+	}
+	& .dropdown-menu {
+		@if $enable-rtl {
+			text-align: right;
+		} @else {
+			text-align: left;
+		}
+	}
+	& .dropdown-menu-container {
+		width: 100%;
+		min-width: rem(700px);
+		padding: rem(15px) rem(5px);
+		display: flex;
+		
+		@include media-breakpoint-down(md) {
+			display: block;
+			min-width: inherit;
+			padding: rem(15px);
+		}
+		
+		& .title {
+			font-weight: $font-weight-bolder;
+			margin: 0 0 rem(15px);
+			font-size: rem(15px);
+			
+			@include media-breakpoint-down(md) {
+				font-size: rem(14px);
+			}
+		}
+	}
+	& .dropdown-menu-sidebar {
+		display: table-cell;
+		width: rem(240px);
+		min-width: rem(240px);
+		vertical-align: top;
+		padding: rem(5px) rem(20px);
+		
+		@include media-breakpoint-down(md) {
+			display: block;
+			width: auto;
+			padding: 0;
+		}
+		
+		& + .dropdown-menu-content {
+			@if $enable-rtl {
+				border-right: 1px solid var(--#{$prefix}component-dropdown-border-color);
+				padding-right: rem(30px);
+			} @else {
+				border-left: 1px solid var(--#{$prefix}component-dropdown-border-color);
+				padding-left: rem(30px);
+			}
+			
+			@include media-breakpoint-down(md) {
+				border-top: 1px solid var(--#{$prefix}component-dropdown-border-color);
+				padding-top: rem(25px);
+				margin-top: rem(25px);
+				
+				@if $enable-rtl {
+					border-right: none;
+					padding-right: 0;
+				} @else {
+					border-left: none;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	& .dropdown-menu-content {
+		display: table-cell;
+		padding: rem(5px) rem(20px);
+		vertical-align: top;
+		
+		@include media-breakpoint-down(md) {
+			padding: 0;
+			display: block;
+			
+			& .row {
+				& > div {
+					&:last-child {
+						margin-bottom: rem(15px);
+					}
+				}
+			}
+		}
+	}
+	& .dropdown-menu-list {
+		list-style-type: none;
+		margin: 0 0 rem(25px);
+		padding: 0;
+		
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(10px);
+			display: flex;
+			flex-wrap: wrap;
+		}
+		
+		& .dropdown-header {
+			padding: rem(5px) 0;
+			line-height: rem(20px);
+			margin-bottom: rem(10px);
+			border-bottom: 1px solid var(--#{$prefix}component-dropdown-border-color);
+		}
+		& > li {
+			@include media-breakpoint-down(md) {
+				width: 50%;
+				margin-bottom: rem(5px);
+			}
+		
+			& + li {
+				margin-top: rem(8px);
+				
+				@include media-breakpoint-down(md) {
+					margin-top: 0;
+				}
+			}
+			& > a {
+				display: block;
+				line-height: rem(20px);
+				color: var(--#{$prefix}component-color);
+				font-size: rem(13px);
+				
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					color: var(--#{$prefix}app-theme);
+				}
+			}
+			&.active {
+				& > a {
+					&:hover,
+					&:focus {
+						opacity: 0.5;
+						color: var(--#{$prefix}component-color);
+					}
+				}
+			}
+		}
+	}
+	& .dropdown-brand-list {
+		list-style-type: none;
+		margin: 0 0 rem(15px);
+		padding: 0;
+		
+		& > li {
+			display: inline-block;
+			padding: 0;
+			margin-bottom: rem(5px);
+			
+			@if $enable-rtl {
+				margin-left: rem(5px);
+			} @else {
+				margin-right: rem(5px);
+			}
+			
+			& a {
+				display: block;
+				height: rem(60px);
+				padding: rem(10px);
+				min-width: rem(60px);
+				max-width: rem(120px);
+				text-align: center;
+				border: 1px solid var(--#{$prefix}component-dropdown-border-color);
+				border-radius: $border-radius-lg;
+				display: flex;
+				align-items: center;
+				
+				&:hover,
+				&:focus {
+					border-color: var(--#{$prefix}component-color);
+				}
+			}
+			& img {
+				max-height: 100%;
+				max-width: 100%;
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+				filter: gray;
+				-webkit-filter: grayscale(100%);
+				opacity: 0.5;
+				display: block;
+				margin: 0 auto;
+				transition: all .2s linear;
+			}
+			&:hover,
+			&:focus {
+				& img {
+					filter: none;
+					-webkit-filter: none;
+					opacity: 1.0;
+				}
+			}
+		}
+	}
+}

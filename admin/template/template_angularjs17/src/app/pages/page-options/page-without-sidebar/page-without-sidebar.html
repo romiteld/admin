@@ -1,0 +1,31 @@
+<!-- BEGIN breadcrumb -->
+<ol class="breadcrumb float-xl-end">
+  <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+  <li class="breadcrumb-item"><a href="javascript:;">Page Options</a></li>
+  <li class="breadcrumb-item active">Page without Sidebar</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Page without Sidebar <small>header small text goes here...</small></h1>
+<!-- END page-header -->
+
+<!-- BEGIN panel -->
+<panel title="Installation Settings">
+	Add the following app settings to your <code>page.ts</code> or 
+	change the variable from <code>/config/app-settings.ts</code> to make it affected globally.
+
+	<ng-container outsideBody>
+		<!-- BEGIN hljs-wrapper -->
+		<div class="hljs-wrapper">
+			<pre><code class="xml" [highlight]="code"></code></pre>
+		</div>
+		<!-- END hljs-wrapper -->
+	</ng-container>
+</panel>
+<!-- END panel -->
+
+<p>
+  <a routerLink="/page-option/page-with-fixed-footer" class="btn btn-success">
+    <i class="fa fa-arrow-circle-left"></i> Back to previous page
+  </a>
+</p>

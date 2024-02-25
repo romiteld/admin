@@ -1,0 +1,26 @@
+<script>
+import { useAppOptionStore } from '@/stores/app-option';
+
+const appOption = useAppOptionStore();
+
+export default {
+  mounted() {
+    appOption.appContentFullHeight = true;
+    appOption.appContentClass = 'p-0';
+  },
+  beforeRouteLeave (to, from, next) {
+    appOption.appContentFullHeight = false;
+    appOption.appContentClass = '';
+    next();
+  }
+}
+</script>
+<template>
+  <div class="d-flex flex-column h-100">
+    <!-- BEGIN content-container -->
+    <perfect-scrollbar class="app-content-padding flex-grow-1 overflow-hidden h-100">
+      ...
+    </perfect-scrollbar>
+    <!-- END content-container -->
+  </div>
+</template>

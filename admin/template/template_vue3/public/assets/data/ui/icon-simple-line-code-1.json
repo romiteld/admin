@@ -1,0 +1,7 @@
+<!-- include -->
+<script>
+import 'simple-line-icons/css/simple-line-icons.css';
+</script>
+
+<!-- icon -->
+<i class="icon-user"></i>

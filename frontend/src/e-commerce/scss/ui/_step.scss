@@ -1,0 +1,86 @@
+.step {
+	@include clearfix();
+	
+	& a {
+		color: $gray-600;
+		display: block;
+		text-decoration: none;
+		
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
+	& .number {
+		font-size: rem(24px);
+		width: rem(30px);
+		height: rem(24px);
+		text-align: center;
+		line-height: 1;
+		margin-top: rem(5px);
+		margin-bottom: rem(5px);
+		position: relative;
+		
+		@if $enable-rtl {
+			float: right;
+		} @else {
+			float: left;
+		}
+		
+		@include media-breakpoint-down(md) {
+			font-size: rem(20px);
+			height: rem(20px);
+			width: rem(26px);
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: rem(-8px);
+			height: 2px;
+			background: $gray-600;
+		}
+		& + .info {
+			@if $enable-rtl {
+				margin-right: rem(40px);
+			} @else {
+				margin-left: rem(40px);
+			}
+			
+			@include media-breakpoint-down(md) {
+				@if $enable-rtl {
+					margin-right: rem(36px);
+				} @else {
+					margin-left: rem(36px);
+				}
+			}
+		}
+	}
+	& .desc {
+		font-size: rem(12px);
+		color: $gray-600;
+	}
+	& .title {
+		font-size: rem(16px);
+		font-weight: 600;
+		
+		@include media-breakpoint-down(md) {
+			font-size: rem(14px);
+		}
+	}
+	&.active {
+		& a {
+			color: $white;
+		}
+		& .number {
+			&:before {
+				background: var(--#{$prefix}app-theme);
+			}
+		}
+		& .desc {
+			color: $gray-400;
+		}
+	}
+}

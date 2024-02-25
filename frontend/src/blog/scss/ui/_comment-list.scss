@@ -1,0 +1,123 @@
+.comment-list {
+	list-style-type: none;
+	margin: 0 0 rem(30px);
+	padding: 0;
+	color: var(--#{$prefix}component-color);
+	
+	& > li {
+		padding: rem(20px);
+		
+		@include clearfix();
+		
+		& + li {
+			border-top: 2px solid var(--#{$prefix}component-border-color);
+		}
+		& .comment-avatar {
+			width: rem(70px);
+			height: rem(70px);
+			overflow: hidden;
+			float: left;
+			margin-right: rem(20px);
+			font-size: $font-size-lg * 3.5;
+			line-height: $line-height-lg;
+			text-align: center;
+			background: var(--#{$prefix}light);
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+			border-radius: $border-radius-lg * 10;
+		
+			& img {
+				max-width: 100%;
+				display: block;
+			}
+			& + .comment-container {
+				margin-left: rem(90px);
+			}
+		}
+		& .comment-author {
+			font-size: $font-size-lg;
+			color: var(--#{$prefix}component-color);
+			font-weight: $font-weight-bold;
+			margin-bottom: rem(5px);
+		}
+		& .comment-date {
+			font-size: 80%;
+			font-weight: normal;
+			margin-left: rem(3px);
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		}
+		& .comment-content {
+			margin-bottom: rem(30px);
+			color: rgba(var(--#{$prefix}component-color-rgb), .75);
+			line-height: $line-height-lg;
+		}
+		& .comment-rating {
+			text-align: right;
+			color: rgba(var(--#{$prefix}component-color-rgb), .5);
+		}
+		& .comment-btn {
+			margin-bottom: rem(10px);
+			
+			& a {
+				color: var(--#{$prefix}component-color);
+				font-size: $font-size-sm;
+				border: 2px solid var(--#{$prefix}component-border-color);
+				padding: rem(5px) rem(10px);
+				text-decoration: none;
+				border-radius: $border-radius * 10;
+				
+				&:hover {
+					background: var(--#{$prefix}light);
+				}
+			}
+		}
+	}
+	& .comment-list {
+		border-bottom: none;
+		margin-top: rem(30px);
+		margin-bottom: 0;
+		border-top: 2px solid var(--#{$prefix}component-border-color);
+		
+		& > li {
+			padding-bottom: 0;
+			padding-right: 0;
+		}
+	}
+	
+	@include media-breakpoint-down(md) {
+    & > li {
+    	padding: rem(25px) 0;
+    	
+			& .comment-avatar {
+				width: rem(40px);
+				height: rem(40px);
+				margin-right: rem(10px);
+				font-size: $font-size-lg * 2;
+				line-height: $line-height-lg;
+				line-height: 56px;
+			
+				& + .comment-container {
+					margin-left: rem(55px);
+				}
+			}
+			& .comment-content {
+				font-size: $font-size-sm;
+				margin-bottom: rem(15px);
+			}
+			& .comment-btn {
+				float: none !important;
+				margin-bottom: rem(15px);
+				
+				& a {
+					font-size: $font-size-sm * 0.9;
+				}
+			}
+			& .comment-rating {
+				text-align: left;
+				font-size: $font-size-sm * 0.9;
+			}
+    }
+		& .comment-list {
+			margin-top: rem(25px);
+		}
+	}
+}

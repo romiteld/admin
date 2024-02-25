@@ -1,0 +1,150 @@
+@@include('./partial/head.html', {
+	"title": "Contact Us", 
+	"css": [
+	]}
+)
+
+	<!-- begin #page-container -->
+	<div id="page-container">
+		@@include('./partial/header.html', {"headerDefault": "true"})
+		
+		<!-- BEGIN section -->
+		<div class="section py-5">
+			<!-- BEGIN section-bg -->
+			<div class="section-bg" style="background-image: url(../assets/img/corporate/img-27.jpg);"></div>
+			<div class="section-bg bg-gray-800 opacity-50"></div>
+			<!-- END section-bg -->
+			
+			<!-- BEGIN container -->
+			<div class="container position-relative text-white text-center">
+				<div class="display-6 fw-bolder">Contact Us</div>
+			</div>
+			<!-- END container -->
+		</div>
+		<!-- END section -->
+		
+		<!-- BEGIN section -->
+		<div class="section py-5">
+			<!-- BEGIN container -->
+			<div class="container">
+				<!-- BEGIN row -->
+				<div class="row justify-content-center">
+					<!-- BEGIN col-10 -->
+					<div class="col-lg-10">
+						<!-- BEGIN contact-us-input -->
+						<div class="mb-3 fw-bold text-gray-600 fs-16px">Search for a topic so we can connect you with the right articles and support teams</div>
+						<div class="d-flex mb-5">
+							<div class="position-relative flex-fill pe-3">
+								<button type="button" class="btn btn-default btn-lg position-absolute start-0 height-50px bg-none border-0"><i class="fa fa-search fa-fw"></i></button>
+								<input type="text" class="form-control form-control-lg ps-5 fw-bold rounded-2 height-50px" placeholder="Ask about a topic" />
+							</div>
+							<div class="w-150px">
+								<button type="button" class="btn btn-lg btn-secondary d-block w-100 fw-bold rounded-2 height-50px">Search</button>
+							</div>
+						</div>
+						<!-- END contact-us-input -->
+						
+						<!-- BEGIN row -->
+						<div class="row gx-5 mb-5">
+							<!-- BEGIN col-6 -->
+							<div class="col-lg-6 mb-5 mb-lg-0">
+								<h4>Help Center</h4>
+								<p>
+									Find more information via the articles below about using Color Admin in the Help Center.
+								</p>
+								<h6 class="fs-15px">Common articles:</h6>
+								<ul class="fs-15px mb-20px">
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">Upgrade to Bootstrap 5</a></li>
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">ASP.NET Core 7.0 installation</a></li>
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">Gulp and nodejs installation</a></li>
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">Customize the theme color via SASS</a></li>
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">Android / IOS integration</a></li>
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">Helper mixin SASS</a></li>
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">Bootstrap Icons v1.+</a></li>
+									<li class="mb-1"><a href="#" class="text-decoration-none text-gray-600">Angular 16 upgrade guide</a></li>
+								</ul>
+								<a href="#" class="btn btn-lg d-block w-100 btn-default rounded-2 fw-bold fs-16px py-3">Explore the Color Admin Help Center</a>
+							</div>
+							<!-- END col-6 -->
+							<!-- BEGIN col-6 -->
+							<div class="col-lg-6">
+								<h4>Contact Form</h4>
+								<p>
+									If you have any questions, please do not hesitate get in touch with us via the methods below:
+								</p>
+								<form action="" method="POST" name="contact_form">
+									<div class="row gx-2">
+										<div class="col-lg-6 mb-2">
+											<input type="text" class="form-control form-control-lg rounded-2" placeholder="Name *"  name="name" />
+										</div>
+										<div class="col-lg-6 mb-2">
+											<input type="text" class="form-control form-control-lg rounded-2" placeholder="Email *"  name="email" />
+										</div>
+									</div>
+									<div class="mb-2">
+										<input type="text" class="form-control form-control-lg rounded-2" placeholder="Subject *" name="subject" />
+									</div>
+									<div class="mb-2 pb-2px">
+										<textarea class="form-control" rows="6" name="message" placeholder="Messages *"></textarea>
+									</div>
+									<button class="btn btn-lg d-block w-100 btn-primary rounded-2 fw-bold fs-16px py-3">Send us an Email</button>
+								</form>
+							</div>
+							<!-- END col-6 -->
+						</div>
+						<!-- END row -->
+						
+						<h5 class="mb-3">Our Contacts</h5>
+						<!-- BEGIN row -->
+						<div class="row gx-4">
+							<!-- BEGIN col-8 -->
+							<div class="col-lg-8 mb-3 mb-lg-0">
+								<div class="ratio ratio-16x9">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3306.9584799260138!2d-118.49437019999998!3d34.019276700000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4cedd1266ff%3A0x1ffe328381544853!2sGoogle+Inc!5e0!3m2!1sen!2s!4v1435718319426" allowfullscreen></iframe>
+								</div>
+							</div>
+							<!-- END col-8 -->
+							<!-- BEGIN col-4 -->
+							<div class="col-lg-4">
+								<div><b>SeanTheme Store, Inc</b></div>
+								<p>
+									795 Folsom Ave, Suite 600<br />
+									San Francisco, CA 94107<br />
+									P: (123) 456-7890<br />
+								</p>
+								<div class="mb-1"><b>Email:</b></div>
+								<p>
+									<a href="mailto:hello@emailaddress.com" class="text-decoration-none text-gray-600">info@seantheme.com</a><br />
+									<a href="mailto:hello@emailaddress.com" class="text-decoration-none text-gray-600">business@seantheme.com</a><br />
+									<a href="mailto:hello@emailaddress.com" class="text-decoration-none text-gray-600">support@seantheme.com</a><br />
+								</p>
+								<div class="mb-2"><b>Social Network:</b></div>
+								<p>
+									<a href="#" class="text-decoration-none text-gray-600"><i class="fab fa-facebook-f fa-fw fa-lg me-2"></i></a>
+									<a href="#" class="text-decoration-none text-gray-600"><i class="fab fa-twitter fa-fw fa-lg me-2"></i></a>
+									<a href="#" class="text-decoration-none text-gray-600"><i class="fab fa-google-plus fa-fw fa-lg me-2"></i></a>
+									<a href="#" class="text-decoration-none text-gray-600"><i class="fab fa-instagram fa-fw fa-lg me-2"></i></a>
+									<a href="#" class="text-decoration-none text-gray-600"><i class="fab fa-dribbble fa-fw fa-lg me-2"></i></a>
+								</p>
+							</div>
+							<!-- END col-4 -->
+						</div>
+						<!-- END row -->
+					</div>
+					<!-- END col-10 -->
+				</div>
+				<!-- END row -->
+			</div>
+			<!-- END container -->
+		</div>
+		<!-- END section -->
+		
+		@@include('./partial/theme-panel.html')
+		@@include('./partial/footer.html')
+	</div>
+	<!-- end page container -->
+	
+@@include('./partial/script.html', {
+	"script": [
+	]}
+)
